@@ -27,3 +27,8 @@ TIMESTAMP	EVENT	LOCUS	ORIGIN	NUMBER	UID	SRC	COMMENT	DB.OPERATOR
 "2020-03-13 16:12:00"	detected	St. Petersburg		3		https://www.rosminzdrav.ru/ministry/covid19	https://www.kommersant.ru/doc/4289624 Italy, France, Austria, probably Germany or Switzerland	Alexei Kouprianov
 "2020-03-13 16:12:00"	detected	Leningrad region		1		https://www.rosminzdrav.ru/ministry/covid19	https://www.kommersant.ru/doc/4289624 Italy, France, Austria, probably Germany or Switzerland	Alexei Kouprianov
 "2020-03-13 16:12:00"	detected	Perm krai		1		https://www.rosminzdrav.ru/ministry/covid19	https://www.kommersant.ru/doc/4289624 Italy, France, Austria, probably Germany or Switzerland	Alexei Kouprianov
+"2020-03-14 18:07:00"	detected	Moscow		9		https://www.kommersant.ru/doc/4290127		Alexei Kouprianov
+"2020-03-14 18:07:00"	detected	Moscow region		1		https://www.kommersant.ru/doc/4290127		Alexei Kouprianov
+"2020-03-14 18:07:00"	detected	St. Petersburg		1		https://www.kommersant.ru/doc/4290127		Alexei Kouprianov
+"2020-03-14 18:07:00"	detected	Kemerovo		2		https://www.kommersant.ru/doc/4290127		Alexei Kouprianov
+"2020-03-14 18:07:00"	detected	Kaliningrad		1		https://www.kommersant.ru/doc/4290127		Alexei Kouprianov
