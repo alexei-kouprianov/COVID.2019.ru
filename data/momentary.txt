@@ -1,0 +1,29 @@
+TIMESTAMP	EVENT	LOCUS	ORIGIN	NUMBER	UID	SRC	COMMENT	DB.OPERATOR
+"2020-01-31 15:38:00"	detected	Chita	China	1	Chita.00001	https://www.kommersant.ru/doc/4240914	Region assumed on the basis of https://www.kommersant.ru/doc/4251287	Alexei Kouprianov
+"2020-01-31 15:38:00"	detected	Tiumen	China	1	Tiumen.00001	https://www.kommersant.ru/doc/4240914	https://www.kommersant.ru/doc/4241057	Alexei Kouprianov
+"2020-02-11 15:20:00"	healed	Tiumen	China	1	Tiumen.00001	https://www.kommersant.ru/doc/4251287		Alexei Kouprianov
+"2020-02-12 07:18:00"	healed	Chita	China	1	Chita.00001	https://www.kommersant.ru/doc/4251627	Ван Юнбинь (https://www.kommersant.ru/doc/4251627)	Alexei Kouprianov
+"2020-02-17 12:56:00"	detected	Kazan	Diamond Princess	1		https://www.kommersant.ru/doc/4258974	Hospitalised: https://www.kommersant.ru/doc/4267279	Alexei Kouprianov
+"2020-02-18 12:00:00"	detected	Kazan	Diamond Princess	1		https://www.kommersant.ru/doc/4268803	Timestamp assumed arbitrarily on the basis of https://www.kommersant.ru/doc/4285154; Hospitalised: https://www.kommersant.ru/doc/4268803	Alexei Kouprianov
+"2020-02-26 17:00:00"	detected	Kazan	Diamond Princess	1		https://www.kommersant.ru/doc/4268803	https://www.kommersant.ru/doc/4267281	Alexei Kouprianov
+"2020-03-02 22:29:00"	detected	Moscow region	Italy	1	Mos.00001	https://www.rosminzdrav.ru/news/2020/03/02/13456-o-podtverzhdennom-sluchae-novoy-koronavirusnoy-infektsii-covid-2019-v-rossii	https://www.kommersant.ru/doc/4275147	Alexei Kouprianov
+"2020-03-05 11:26:00"	detected	St. Petersburg	Italy	1	StPb.00001	https://www.kommersant.ru/doc/4277083		Alexei Kouprianov
+"2020-03-06 19:00:00"	detected	Moscow	Italy	5		https://www.rosminzdrav.ru/news/2020/03/06/13492-o-podtverzhdennyh-sluchayah-novoy-koronavirusnoy-infektsii-covid-2019-v-rossii		Alexei Kouprianov
+"2020-03-06 19:00:00"	detected	Nizhnii Novgorod	Italy	1		https://www.rosminzdrav.ru/news/2020/03/06/13492-o-podtverzhdennyh-sluchayah-novoy-koronavirusnoy-infektsii-covid-2019-v-rossii		Alexei Kouprianov
+"2020-03-07 15:03:00"	detected	Lipetsk	Italy	3		https://rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13920	Timestamp based on https://www.kommersant.ru/doc/4282941	Alexei Kouprianov
+"2020-03-07 15:03:00"	detected	St. Petersburg	Italy	1		https://rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13920	Timestamp based on https://www.kommersant.ru/doc/4282942	Alexei Kouprianov
+"2020-03-07 19:05:00"	detected	Moscow region	Switzerland	1		https://www.kommersant.ru/doc/4282964		Alexei Kouprianov
+"2020-03-08 15:31:00"	detected	Kaliningrad	Italy	1		https://www.kommersant.ru/doc/4283050		Alexei Kouprianov
+"2020-03-08 15:31:00"	detected	Belgorod	Italy	1		https://www.kommersant.ru/doc/4283051		Alexei Kouprianov
+"2020-03-08 15:31:00"	detected	Moscow region	Italy	1		https://www.kommersant.ru/doc/4283052		Alexei Kouprianov
+"2020-03-09 14:59:00"	detected	Moscow	Italy	3		https://www.kommersant.ru/doc/4283199		Alexei Kouprianov
+"2020-03-11 20:20:00"	detected	Moscow	Italy	6		https://www.kommersant.ru/doc/4284478		Alexei Kouprianov
+"2020-03-11 20:20:00"	detected	Moscow region	Italy	2		https://www.kommersant.ru/doc/4284478		Alexei Kouprianov
+"2020-03-12 19:27:00"	detected	Moscow		4		https://www.kommersant.ru/doc/4285290		Alexei Kouprianov
+"2020-03-12 19:27:00"	detected	Krasnodar		1		https://www.kommersant.ru/doc/4285290		Alexei Kouprianov
+"2020-03-12 19:27:00"	detected	Kaliningrad		1		https://www.kommersant.ru/doc/4285290		Alexei Kouprianov
+"2020-03-13 16:12:00"	detected	Moscow		5		https://www.rosminzdrav.ru/ministry/covid19	https://www.kommersant.ru/doc/4289624 Italy, France, Austria, probably Germany or Switzerland	Alexei Kouprianov
+"2020-03-13 16:12:00"	detected	Moscow region		1		https://www.rosminzdrav.ru/ministry/covid19	https://www.kommersant.ru/doc/4289624 Italy, France, Austria, probably Germany or Switzerland	Alexei Kouprianov
+"2020-03-13 16:12:00"	detected	St. Petersburg		3		https://www.rosminzdrav.ru/ministry/covid19	https://www.kommersant.ru/doc/4289624 Italy, France, Austria, probably Germany or Switzerland	Alexei Kouprianov
+"2020-03-13 16:12:00"	detected	Leningrad region		1		https://www.rosminzdrav.ru/ministry/covid19	https://www.kommersant.ru/doc/4289624 Italy, France, Austria, probably Germany or Switzerland	Alexei Kouprianov
+"2020-03-13 16:12:00"	detected	Perm krai		1		https://www.rosminzdrav.ru/ministry/covid19	https://www.kommersant.ru/doc/4289624 Italy, France, Austria, probably Germany or Switzerland	Alexei Kouprianov

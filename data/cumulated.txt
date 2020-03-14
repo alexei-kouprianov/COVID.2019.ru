@@ -1,0 +1,11 @@
+TIMESTAMP	EVENT	CITISENSHIP	NUMBER	SRC
+2020-01-31 15:38	cumulative infected	China	2	https://www.kommersant.ru/doc/4240914
+2020-03-06 19:00	cumulative infected	Russia	7	https://www.rosminzdrav.ru/news/2020/03/06/13492-o-podtverzhdennyh-sluchayah-novoy-koronavirusnoy-infektsii-covid-2019-v-rossii
+2020-03-06 19:00	cumulative infected	China	2	https://www.rosminzdrav.ru/news/2020/03/06/13492-o-podtverzhdennyh-sluchayah-novoy-koronavirusnoy-infektsii-covid-2019-v-rossii
+2020-03-06 19:00	cumulative infected	Italy	1	https://www.rosminzdrav.ru/news/2020/03/06/13492-o-podtverzhdennyh-sluchayah-novoy-koronavirusnoy-infektsii-covid-2019-v-rossii
+2020-03-06 19:00	cumulative cleared	China	2	https://www.rosminzdrav.ru/news/2020/03/06/13492-o-podtverzhdennyh-sluchayah-novoy-koronavirusnoy-infektsii-covid-2019-v-rossii
+2020-03-13 16:12	cumulative infected	Russia	42	https://www.rosminzdrav.ru/ministry/covid19
+2020-03-13 16:12	cumulative infected	China	2	https://www.rosminzdrav.ru/ministry/covid19
+2020-03-13 16:12	cumulative infected	Italy	1	https://www.rosminzdrav.ru/ministry/covid19
+2020-03-13 16:12	cumulative cleared	China	2	https://www.rosminzdrav.ru/ministry/covid19
+2020-03-13 16:12	cumulative cleared	Russia	1	https://www.rosminzdrav.ru/ministry/covid19
