@@ -58,11 +58,11 @@ covid.2019.ru.i.reg.df <- covid.2019.ru.i.reg.df[order(-covid.2019.ru.i.reg.df$N
 # Basic plots
 
 png("../plots/COVID.2019.cumulated.png", height=750, width=1000, res=120, pointsize=10)
-par(mar=c(6,5,4,2)+.1, mgp=c(4,1,0))
+par(mar=c(6,5,4,2)+.1)
 
 plot(covid.2019.ru.i.dyn$TIME, covid.2019.ru.i.dyn$CUMSUM, type="l",
 ylim=c(0, max(covid.2019.ru.i.dyn$CUMSUM)),
-xlab="Timeline", ylab="Open COVID-2019 cases", main="Russian Federation",
+xlab="", ylab="Open COVID-2019 cases", main="Russian Federation",
 axes=FALSE)
 
 points(covid.2019.ru.i.dyn$TIME, covid.2019.ru.i.dyn$NUMBER, type="h", col=2)
@@ -73,11 +73,12 @@ axis(2)
 dev.off()
 
 png("../plots/COVID.2019.barplot.regions.png", height=750, width=1000, res=120, pointsize=10)
-par(mar=c(10,5,4,2)+.1, mgp=c(8,1,0))
+par(mar=c(10,5,4,2)+.1)
 
 barplot(covid.2019.ru.i.reg.df$NUMBER, 
 names.arg=covid.2019.ru.i.reg.df$LOCUS, 
-xlab="Regions", ylab=paste("Open COVID-2019 cases, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), main="Russian Federation",
+xlab="", 
+ylab=paste("Open COVID-2019 cases, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), main="Russian Federation",
 las=2)
 
 dev.off()
