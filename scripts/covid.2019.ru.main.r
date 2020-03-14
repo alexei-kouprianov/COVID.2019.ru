@@ -1,4 +1,3 @@
-# setwd("/home/tinea/Documents/H_et_S/Projects/github/COVID.2019.ru/scripts")
 # Loading libraries
 
 library(maps)
