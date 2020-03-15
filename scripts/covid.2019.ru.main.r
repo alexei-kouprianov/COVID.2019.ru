@@ -78,7 +78,7 @@ par(mar=c(10,5,4,2)+.1)
 barplot(covid.2019.ru.i.reg.df$NUMBER, 
 names.arg=covid.2019.ru.i.reg.df$LOCUS, 
 xlab="", 
-ylab=paste("Open COVID-2019 cases, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), main="Russian Federation",
+ylab=paste("Total COVID-2019 cases, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), main="Russian Federation",
 las=2)
 
 dev.off()
