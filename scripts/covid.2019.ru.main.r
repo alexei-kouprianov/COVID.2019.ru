@@ -1,6 +1,7 @@
 # Loading libraries
 
 library(maps)
+Sys.setlocale("LC_TIME", "en_US.UTF-8")
 
 # Reading data
 
@@ -62,7 +63,9 @@ par(mar=c(6,5,4,2)+.1)
 
 plot(covid.2019.ru.i.dyn$TIME, covid.2019.ru.i.dyn$CUMSUM, type="l",
 ylim=c(0, max(covid.2019.ru.i.dyn$CUMSUM)),
-xlab="", ylab="Open COVID-2019 cases", main="Russian Federation",
+xlab="", 
+ylab="Total COVID-2019 cases detected", 
+main="Russian Federation",
 axes=FALSE)
 
 points(covid.2019.ru.i.dyn$TIME, covid.2019.ru.i.dyn$NUMBER, type="h", col=2)
@@ -78,7 +81,8 @@ par(mar=c(10,5,4,2)+.1)
 barplot(covid.2019.ru.i.reg.df$NUMBER, 
 names.arg=covid.2019.ru.i.reg.df$LOCUS, 
 xlab="", 
-ylab=paste("Total COVID-2019 cases, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), main="Russian Federation",
+ylab=paste("Total COVID-2019 cases, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), 
+main="Russian Federation",
 las=2)
 
 dev.off()

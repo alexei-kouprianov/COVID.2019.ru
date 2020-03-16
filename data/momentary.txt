@@ -34,3 +34,6 @@ TIMESTAMP	EVENT	LOCUS	ORIGIN	NUMBER	UID	SRC	COMMENT	DB.OPERATOR
 "2020-03-14 18:07:00"	detected	Kaliningrad		1		https://www.kommersant.ru/doc/4290127		Alexei Kouprianov
 "2020-03-15 16:42:00"	detected	Moscow region		3		https://www.kommersant.ru/doc/4290271		Alexei Kouprianov
 "2020-03-15 16:42:00"	detected	Tiumen		1		https://www.kommersant.ru/doc/4290271	There are also rumours about 1 or 2 cases in Chukotka : https://www.kommersant.ru/doc/4290159	Alexei Kouprianov
+"2020-03-16 12:54:00"	detected	Krasnoyarsk		1		https://www.kommersant.ru/doc/4290670		Alexei Kouprianov
+"2020-03-16 15:45:00"	detected	Moscow		21		https://www.kommersant.ru/doc/4290816	21+5 assumed on the basis of the following calculation. https://www.kommersant.ru/doc/4285154 update shows 53 cases for Moscow; 27 new cases for 2020-03-16. 1 case ascribed to Krasnoyarsk; The remaining 26 are split in 21+5 because, as for 2020-03-15, there were 32 cases in Moscow.	Alexei Kouprianov
+"2020-03-16 15:45:00"	detected	Russia (unspecified)		5		https://www.kommersant.ru/doc/4290816	21+5 assumed on the basis of the following calculation. https://www.kommersant.ru/doc/4285154 update shows 53 cases for Moscow; 27 new cases for 2020-03-16. 1 case ascribed to Krasnoyarsk; The remaining 26 are split in 21+5 because, as for 2020-03-15, there were 32 cases in Moscow.	Alexei Kouprianov
