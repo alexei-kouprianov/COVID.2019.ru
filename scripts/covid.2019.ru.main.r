@@ -1,35 +1,54 @@
-# Loading libraries
+###############################################################
+# Loading libraries, setting locale for time
 
 library(maps)
 Sys.setlocale("LC_TIME", "en_US.UTF-8")
 
+###############################################################
 # Reading data
 
 covid.2019.ru <- read.table("../data/momentary.txt", h=TRUE, sep="\t")
 covid.2019.breaks <- read.table("../misc/breaks.txt", h=TRUE, sep="\t")
+covid.2019.coord <- read.table("../misc/coord.txt", h=TRUE, sep="\t")
 
+###############################################################
 # Trimming timestamps
 
 covid.2019.ru$TIME <- strptime(covid.2019.ru$TIMESTAMP, "%Y-%m-%d %H:%M:%S")
 covid.2019.breaks$TIME <- strptime(covid.2019.breaks$TIMESTAMP, "%Y-%m-%d %H:%M:%S")
 
+###############################################################
 # Subsetting
 
+# The quick from the dead
 covid.2019.ru.i <- droplevels(subset(covid.2019.ru, covid.2019.ru$EVENT == "detected"))
 covid.2019.ru.h <- subset(covid.2019.ru, covid.2019.ru$EVENT == "healed")
 
+###############################################################
+# Data transformations
+
+# Timeseries list
 covid.2019.ru.i.ts <- NULL
 
 for(i in 1:length(levels(covid.2019.ru.i$TIMESTAMP))){
 covid.2019.ru.i.ts[[i]] <- subset(covid.2019.ru.i, covid.2019.ru.i$TIMESTAMP == levels(covid.2019.ru.i$TIMESTAMP)[i])
 }
 
+# Barplot regions list
 covid.2019.ru.i.reg <- NULL
 
 for(i in 1:length(levels(covid.2019.ru.i$LOCUS))){
 covid.2019.ru.i.reg[[i]] <- subset(covid.2019.ru.i, covid.2019.ru.i$LOCUS == levels(covid.2019.ru.i$LOCUS)[i])
 }
 
+# Mapping regions list
+covid.2019.ru.i.reg.0 <- NULL
+
+for(i in 1:length(levels(covid.2019.ru.i$LOCUS.0))){
+covid.2019.ru.i.reg.0[[i]] <- subset(covid.2019.ru.i, covid.2019.ru.i$LOCUS.0 == levels(covid.2019.ru.i$LOCUS.0)[i])
+}
+
+# Dynamics data frame
 covid.2019.ru.i.dyn <- NULL
 
 for(i in 1:length(levels(covid.2019.ru.i$TIMESTAMP))){
@@ -43,6 +62,7 @@ sum(covid.2019.ru.i.ts[[i]]$NUMBER))
 colnames(covid.2019.ru.i.dyn) <- c("TIME","NUMBER")
 covid.2019.ru.i.dyn$CUMSUM <- cumsum(covid.2019.ru.i.dyn$NUMBER)
 
+# Barplot regions data frame
 covid.2019.ru.i.reg.df <- NULL
 
 for(i in 1:length(levels(covid.2019.ru.i$LOCUS))){
@@ -53,11 +73,24 @@ sum(covid.2019.ru.i.reg[[i]]$NUMBER))
 }
 
 colnames(covid.2019.ru.i.reg.df) <- c("LOCUS","NUMBER")
+covid.2019.ru.i.reg.ordered.df <- covid.2019.ru.i.reg.df[order(-covid.2019.ru.i.reg.df$NUMBER),]
 
-covid.2019.ru.i.reg.df <- covid.2019.ru.i.reg.df[order(-covid.2019.ru.i.reg.df$NUMBER),]
+# Mapping regions data frame
+covid.2019.ru.i.reg.0.df <- NULL
 
+for(i in 1:length(levels(covid.2019.ru.i$LOCUS.0))){
+covid.2019.ru.i.reg.0.df <- rbind.data.frame(covid.2019.ru.i.reg.0.df,
+cbind.data.frame(covid.2019.ru.i.reg.0[[i]]$LOCUS.0[1],
+sum(covid.2019.ru.i.reg.0[[i]]$NUMBER))
+)
+}
+
+colnames(covid.2019.ru.i.reg.0.df) <- c("LOCUS","NUMBER")
+
+###############################################################
 # Basic plots
 
+# Cumulated growth
 png("../plots/COVID.2019.cumulated.png", height=750, width=1000, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1)
 
@@ -75,14 +108,27 @@ axis(2)
 
 dev.off()
 
+# Regions barplot
 png("../plots/COVID.2019.barplot.regions.png", height=750, width=1000, res=120, pointsize=10)
 par(mar=c(10,5,4,2)+.1)
 
-barplot(covid.2019.ru.i.reg.df$NUMBER, 
-names.arg=covid.2019.ru.i.reg.df$LOCUS, 
+barplot(covid.2019.ru.i.reg.ordered.df$NUMBER, 
+names.arg=covid.2019.ru.i.reg.ordered.df$LOCUS, 
 xlab="", 
 ylab=paste("Total COVID-2019 cases, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), 
 main="Russian Federation",
 las=2)
+
+dev.off()
+
+# Map
+png("../plots/COVID.2019.map.regions.png", height=750, width=1000, res=120, pointsize=10)
+
+map(region="Russia", fill=TRUE, col=8) 
+mtext(paste("Total COVID-2019 cases, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), 
+side=1, line=2) 
+mtext("Russian Federation", font=2, cex=1.2, side=3, line=3)
+
+points(covid.2019.coord$LON, covid.2019.coord$LAT, cex=sqrt(covid.2019.ru.i.reg.0.df$NUMBER/2), pch=21, bg=2)
 
 dev.off()
