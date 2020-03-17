@@ -3,9 +3,9 @@ TIMESTAMP	EVENT	LOCUS	ORIGIN	NUMBER	UID	SRC	COMMENT	DB.OPERATOR
 "2020-01-31 15:38:00"	detected	Tiumen	China	1	Tiumen.00001	https://www.kommersant.ru/doc/4240914	https://www.kommersant.ru/doc/4241057	Alexei Kouprianov
 "2020-02-11 15:20:00"	healed	Tiumen	China	1	Tiumen.00001	https://www.kommersant.ru/doc/4251287		Alexei Kouprianov
 "2020-02-12 07:18:00"	healed	Chita	China	1	Chita.00001	https://www.kommersant.ru/doc/4251627	Ван Юнбинь (https://www.kommersant.ru/doc/4251627)	Alexei Kouprianov
-"2020-02-17 12:56:00"	detected	Kazan	Diamond Princess	1		https://www.kommersant.ru/doc/4258974	Hospitalised: https://www.kommersant.ru/doc/4267279	Alexei Kouprianov
-"2020-02-18 12:00:00"	detected	Kazan	Diamond Princess	1		https://www.kommersant.ru/doc/4268803	Timestamp assumed arbitrarily on the basis of https://www.kommersant.ru/doc/4285154; Hospitalised: https://www.kommersant.ru/doc/4268803	Alexei Kouprianov
-"2020-02-26 17:00:00"	detected	Kazan	Diamond Princess	1		https://www.kommersant.ru/doc/4268803	https://www.kommersant.ru/doc/4267281	Alexei Kouprianov
+"2020-02-17 12:56:00"	detected	Kazan	Diamond Princess	1	DP.3	https://www.kommersant.ru/doc/4258974	Hospitalised: https://www.kommersant.ru/doc/4267279	Alexei Kouprianov
+"2020-02-18 12:00:00"	detected	Kazan	Diamond Princess	1	DP.3	https://www.kommersant.ru/doc/4268803	Timestamp assumed arbitrarily on the basis of https://www.kommersant.ru/doc/4285154; Hospitalised: https://www.kommersant.ru/doc/4268803	Alexei Kouprianov
+"2020-02-26 17:00:00"	detected	Kazan	Diamond Princess	1	DP.3	https://www.kommersant.ru/doc/4268803	https://www.kommersant.ru/doc/4267281	Alexei Kouprianov
 "2020-03-02 22:29:00"	detected	Moscow region	Italy	1	Mos.00001	https://www.rosminzdrav.ru/news/2020/03/02/13456-o-podtverzhdennom-sluchae-novoy-koronavirusnoy-infektsii-covid-2019-v-rossii	https://www.kommersant.ru/doc/4275147	Alexei Kouprianov
 "2020-03-05 11:26:00"	detected	St. Petersburg	Italy	1	StPb.00001	https://www.kommersant.ru/doc/4277083		Alexei Kouprianov
 "2020-03-06 19:00:00"	detected	Moscow	Italy	5		https://www.rosminzdrav.ru/news/2020/03/06/13492-o-podtverzhdennyh-sluchayah-novoy-koronavirusnoy-infektsii-covid-2019-v-rossii		Alexei Kouprianov
@@ -35,5 +35,26 @@ TIMESTAMP	EVENT	LOCUS	ORIGIN	NUMBER	UID	SRC	COMMENT	DB.OPERATOR
 "2020-03-15 16:42:00"	detected	Moscow region		3		https://www.kommersant.ru/doc/4290271		Alexei Kouprianov
 "2020-03-15 16:42:00"	detected	Tiumen		1		https://www.kommersant.ru/doc/4290271	There are also rumours about 1 or 2 cases in Chukotka : https://www.kommersant.ru/doc/4290159	Alexei Kouprianov
 "2020-03-16 12:54:00"	detected	Krasnoyarsk		1		https://www.kommersant.ru/doc/4290670		Alexei Kouprianov
-"2020-03-16 15:45:00"	detected	Moscow		21		https://www.kommersant.ru/doc/4290816	21+5 assumed on the basis of the following calculation. https://www.kommersant.ru/doc/4285154 update shows 53 cases for Moscow; 27 new cases for 2020-03-16. 1 case ascribed to Krasnoyarsk; The remaining 26 are split in 21+5 because, as for 2020-03-15, there were 32 cases in Moscow.	Alexei Kouprianov
-"2020-03-16 15:45:00"	detected	Russia (unspecified)		5		https://www.kommersant.ru/doc/4290816	21+5 assumed on the basis of the following calculation. https://www.kommersant.ru/doc/4285154 update shows 53 cases for Moscow; 27 new cases for 2020-03-16. 1 case ascribed to Krasnoyarsk; The remaining 26 are split in 21+5 because, as for 2020-03-15, there were 32 cases in Moscow.	Alexei Kouprianov
+"2020-03-16 15:45:00"	detected	Moscow		21		https://www.kommersant.ru/doc/4290816	21+3+2 assumed on the basis of the following calculation. https://www.kommersant.ru/doc/4285154 update shows 53 cases for Moscow; 27 new cases for 2020-03-16. 1 case ascribed to Krasnoyarsk; The remaining 26 are split in 21+5 because, as for 2020-03-15, there were 32 cases in Moscow. Te remainig 5 are split into 3+2 on the basis of https://ria.ru/20200317/1568706559.html it was stated that 3 new cases are registered in St. Petersburg. It is also possible that the number is 3 persons higher because some report +30 cases, taking 63, not 66 as a base (it is not clear whether 3 Diamond Princess cases were counted in or not, when reporting 93 for 2020-03-16).	Alexei Kouprianov
+"2020-03-16 15:45:00"	detected	St. Petersburg		3		https://www.kommersant.ru/doc/4290816	21+3+2 assumed on the basis of the following calculation. https://www.kommersant.ru/doc/4285154 update shows 53 cases for Moscow; 27 new cases for 2020-03-16. 1 case ascribed to Krasnoyarsk; The remaining 26 are split in 21+5 because, as for 2020-03-15, there were 32 cases in Moscow. Te remainig 5 are split into 3+2 on the basis of https://ria.ru/20200317/1568706559.html it was stated that 3 new cases are registered in St. Petersburg. It is also possible that the number is 3 persons higher because some report +30 cases, taking 63, not 66 as a base (it is not clear whether 3 Diamond Princess cases were counted in or not, when reporting 93 for 2020-03-16).	Alexei Kouprianov
+"2020-03-16 15:45:00"	detected	Russia (unspecified)		2		https://www.kommersant.ru/doc/4290816	21+3+2 assumed on the basis of the following calculation. https://www.kommersant.ru/doc/4285154 update shows 53 cases for Moscow; 27 new cases for 2020-03-16. 1 case ascribed to Krasnoyarsk; The remaining 26 are split in 21+5 because, as for 2020-03-15, there were 32 cases in Moscow. Te remainig 5 are split into 3+2 on the basis of https://ria.ru/20200317/1568706559.html it was stated that 3 new cases are registered in St. Petersburg. It is also possible that the number is 3 persons higher because some report +30 cases, taking 63, not 66 as a base (it is not clear whether 3 Diamond Princess cases were counted in or not, when reporting 93 for 2020-03-16).	Alexei Kouprianov
+"2020-03-16 22:00:00"	healed	Kazan	Diamond Princess	3		https://coronavirus-monitor.ru/ for 2020-03-16 late in the evening	Information cumulative, no breakdown by days	Alexei Kouprianov
+"2020-03-16 22:00:00"	healed	Moscow		1		https://coronavirus-monitor.ru/ for 2020-03-16 late in the evening	Information cumulative, no breakdown by days	Alexei Kouprianov
+"2020-03-17 08:50:00"	healed	St. Petersburg	Italy	1	StPb.00001	https://ria.ru/20200317/1568706559.html	An Italian citizen and <a contacting woman> released <yesterday>.	Alexei Kouprianov
+"2020-03-17 08:50:00"	healed	St. Petersburg		1		https://ria.ru/20200317/1568706559.html	An Italian citizen and <a contacting woman> released <yesterday>.	Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Moscow		4		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Samara		1		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Tagliatti		1		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Kaliningrad		2		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Tver		2		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Moscow region		1		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Krasnoyarsk		1		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Tambov		1		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Kaluga		1		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Nizhnii Novgorod		1		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Penza		1		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Ekaterinburg		1		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Arkhngelsj		1		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Yaroslavl		1		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Kazan		1		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Khakassia		1		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
