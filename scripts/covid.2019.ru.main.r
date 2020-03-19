@@ -101,10 +101,35 @@ ylab="Total COVID-2019 cases detected",
 main="Russian Federation",
 axes=FALSE)
 
-points(covid.2019.ru.i.dyn$TIME, covid.2019.ru.i.dyn$NUMBER, type="h", col=2)
+points(covid.2019.ru.i.dyn$TIME, covid.2019.ru.i.dyn$NUMBER, type="h", col=2, lwd=3)
 
-axis.POSIXct(1, at=covid.2019.breaks$TIME, las=2)
+axis.POSIXct(1, 
+at=seq(min(covid.2019.breaks$TIME), max(covid.2019.breaks$TIME), by="week"), 
+format = "%Y-%m-%d", 
+las=2)
 axis(2)
+
+dev.off()
+
+# Cumulated growth, log scale
+png("../plots/COVID.2019.cumulated.log10.png", height=750, width=1000, res=120, pointsize=10)
+par(mar=c(6,5,4,2)+.1)
+
+plot(covid.2019.ru.i.dyn$TIME, log10(covid.2019.ru.i.dyn$CUMSUM), type="l",
+ylim=c(0, max(log10(covid.2019.ru.i.dyn$CUMSUM))),
+xlab="", 
+ylab="Total COVID-2019 cases detected (logarithmic scale)", 
+main="Russian Federation",
+axes=FALSE)
+
+points(covid.2019.ru.i.dyn$TIME, log10(covid.2019.ru.i.dyn$NUMBER), type="h", col=2, lwd=3)
+
+axis.POSIXct(1, 
+at=seq(min(covid.2019.breaks$TIME), max(covid.2019.breaks$TIME), by="week"), 
+format = "%Y-%m-%d", 
+las=2)
+axis(2, at=log10(c(1,10,100)), labels=c(1,10,100))
+axis(2, at=log10(c(1:10, seq(10,100,10), seq(100,1000,100))), labels=FALSE)
 
 dev.off()
 
