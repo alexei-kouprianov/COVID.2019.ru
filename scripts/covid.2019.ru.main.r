@@ -1,30 +1,45 @@
-###############################################################
+################################################################
 # Loading libraries, setting locale for time
 
 library(maps)
 Sys.setlocale("LC_TIME", "en_US.UTF-8")
 
-###############################################################
+################################################################
 # Reading data
 
 covid.2019.ru <- read.table("../data/momentary.txt", h=TRUE, sep="\t")
 covid.2019.breaks <- read.table("../misc/breaks.txt", h=TRUE, sep="\t")
 covid.2019.coord <- read.table("../misc/coord.txt", h=TRUE, sep="\t")
 
-###############################################################
+################################################################
+# Disaggregating
+
+covid.2019.ru.da <- NULL
+
+for(i in 1:nrow(covid.2019.ru)){
+	for(j in 1:covid.2019.ru[i,]$NUMBER){
+	covid.2019.ru.da <- rbind.data.frame(covid.2019.ru.da, covid.2019.ru[i,])
+	}
+}
+
+################################################################
 # Trimming timestamps
 
 covid.2019.ru$TIME <- strptime(covid.2019.ru$TIMESTAMP, "%Y-%m-%d %H:%M:%S")
+covid.2019.ru.da$TIME <- strptime(covid.2019.ru.da$TIMESTAMP, "%Y-%m-%d %H:%M:%S")
 covid.2019.breaks$TIME <- strptime(covid.2019.breaks$TIMESTAMP, "%Y-%m-%d %H:%M:%S")
 
-###############################################################
+################################################################
 # Subsetting
 
 # The quick from the dead
 covid.2019.ru.i <- droplevels(subset(covid.2019.ru, covid.2019.ru$EVENT == "detected"))
 covid.2019.ru.h <- subset(covid.2019.ru, covid.2019.ru$EVENT == "healed")
 
-###############################################################
+covid.2019.ru.da.i <- droplevels(subset(covid.2019.ru.da, covid.2019.ru.da$EVENT == "detected"))
+covid.2019.ru.da.h <- subset(covid.2019.ru.da, covid.2019.ru.da$EVENT == "healed")
+
+################################################################
 # Data transformations
 
 # Timeseries list
@@ -32,6 +47,13 @@ covid.2019.ru.i.ts <- NULL
 
 for(i in 1:length(levels(covid.2019.ru.i$TIMESTAMP))){
 covid.2019.ru.i.ts[[i]] <- subset(covid.2019.ru.i, covid.2019.ru.i$TIMESTAMP == levels(covid.2019.ru.i$TIMESTAMP)[i])
+}
+
+# Cumulated true time timeseries list
+covid.2019.ru.i.true_ts <- NULL
+
+for(i in 1:length(covid.2019.breaks$TIME)){
+covid.2019.ru.i.true_ts[[i]] <- subset(covid.2019.ru.da.i, covid.2019.ru.da.i$TIME < covid.2019.breaks$TIME[i])
 }
 
 # Barplot regions list
@@ -87,7 +109,7 @@ sum(covid.2019.ru.i.reg.0[[i]]$NUMBER))
 
 colnames(covid.2019.ru.i.reg.0.df) <- c("LOCUS","NUMBER")
 
-###############################################################
+################################################################
 # Basic plots
 
 # Cumulated growth
@@ -157,3 +179,31 @@ mtext("Russian Federation", font=2, cex=1.2, side=3, line=3)
 points(covid.2019.coord$LON, covid.2019.coord$LAT, cex=sqrt(covid.2019.ru.i.reg.0.df$NUMBER/2), pch=21, bg=2)
 
 dev.off()
+
+################################################################
+# # Do not execute this part of the code mindlessly!
+# # Map animated
+# dir.create("../plots/map.animated/")
+#
+# for(i in 1:length(covid.2019.ru.i.true_ts)){
+# 	if(i < 10){
+# 	png(file=paste("../plots/map.animated/COVID.2019.map.regions.00",i,".png", sep=""), height=750, width=1000, res=120, pointsize=10)
+# 	}else if(i < 100){
+# 	png(file=paste("../plots/map.animated/COVID.2019.map.regions.0",i,".png", sep=""), height=750, width=1000, res=120, pointsize=10)
+# 	}else{
+# 	png(file=paste("../plots/map.animated/COVID.2019.map.regions.",i,".png", sep=""), height=750, width=1000, res=120, pointsize=10)
+# 	}
+#
+# map(region="Russia", fill=TRUE, col=8) 
+# mtext(paste("Total COVID-2019 cases, as of",covid.2019.breaks$TIMESTAMP[i]), 
+# side=1, line=2, cex=2) 
+# mtext("Russian Federation", font=2, cex=2, side=3, line=3)
+#
+# points(covid.2019.coord$LON, covid.2019.coord$LAT, cex=sqrt(as.data.frame(table(covid.2019.ru.i.true_ts[[i]]$LOCUS.0))$Freq/2), pch=21, bg=2)
+#
+# dev.off()
+# }
+#
+# # ffmpeg command line: 
+# #
+# # ffmpeg -r 2 -f image2 -s 1000x750 -i COVID.2019.map.regions.%03d.png -vcodec libx264 -crf 25 -pix_fmt yuv420p COVID.2019.ru.map.animated.mp4

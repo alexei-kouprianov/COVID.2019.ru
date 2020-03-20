@@ -71,7 +71,7 @@ TIMESTAMP	EVENT	LOCUS.0	LOCUS	ORIGIN	NUMBER	UID	SRC	COMMENT	DB.OPERATOR
 "2020-03-19 16:01:00"	detected	Khabarovsk	Khabarovsk		3		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
 "2020-03-19 16:01:00"	detected	Tambov	Tambov		2		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
 "2020-03-19 16:01:00"	detected	Voronezh	Voronezh		2		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
-"2020-03-19 16:01:00"	detected	Kirovsk	Kirovsk		2		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
+"2020-03-19 16:01:00"	detected	Kirov	Kirov		2		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
 "2020-03-19 16:01:00"	detected	Krasnodar	Krasnodar		2		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
 "2020-03-19 16:01:00"	detected	Ivanovo	Ivanovo		1		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
 "2020-03-19 16:01:00"	detected	Ryazan	Ryazan		1		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
@@ -86,3 +86,12 @@ TIMESTAMP	EVENT	LOCUS.0	LOCUS	ORIGIN	NUMBER	UID	SRC	COMMENT	DB.OPERATOR
 "2020-03-19 16:01:00"	detected	Cheboksary	Cheboksary		1		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
 "2020-03-19 16:01:00"	detected	Yakutsk	Yakutsk		1		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
 "2020-03-19 16:01:00"	detected	Perm krai	Perm krai		1		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
+"2020-03-20 16:00:00"	detected	Moscow	Moscow		33		https://www.rbc.ru/society/20/03/2020/5e74cd909a79476f50f154de		Alexei Kouprianov
+"2020-03-20 16:00:00"	detected	Moscow	Moscow region		1		https://www.rbc.ru/society/20/03/2020/5e74cd909a79476f50f154de		Alexei Kouprianov
+"2020-03-20 16:00:00"	detected	Yakutsk	Yakutsk		6		https://www.rbc.ru/society/20/03/2020/5e74cd909a79476f50f154de		Alexei Kouprianov
+"2020-03-20 16:00:00"	detected	St. Petersburg	St. Petersburg		4		https://www.rbc.ru/society/20/03/2020/5e74cd909a79476f50f154de		Alexei Kouprianov
+"2020-03-20 16:00:00"	detected	Samara	Samara		4		https://www.rbc.ru/society/20/03/2020/5e74cd909a79476f50f154de		Alexei Kouprianov
+"2020-03-20 16:00:00"	detected	Kirov	Kirov		2		https://www.rbc.ru/society/20/03/2020/5e74cd909a79476f50f154de		Alexei Kouprianov
+"2020-03-20 16:00:00"	detected	Novosibirsk	Novosibirsk		2		https://www.rbc.ru/society/20/03/2020/5e74cd909a79476f50f154de		Alexei Kouprianov
+"2020-03-20 16:00:00"	detected	Ulianovsk	Ulianovsk		1		https://www.rbc.ru/society/20/03/2020/5e74cd909a79476f50f154de		Alexei Kouprianov
+"2020-03-20 16:00:00"	detected	Tiumen	Tiumen		1		https://www.rbc.ru/society/20/03/2020/5e74cd909a79476f50f154de		Alexei Kouprianov
