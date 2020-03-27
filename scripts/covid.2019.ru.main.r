@@ -49,28 +49,37 @@ for(i in 1:length(levels(covid.2019.ru.i$TIMESTAMP))){
 covid.2019.ru.i.ts[[i]] <- subset(covid.2019.ru.i, covid.2019.ru.i$TIMESTAMP == levels(covid.2019.ru.i$TIMESTAMP)[i])
 }
 
-# Cumulated true time timeseries list
-covid.2019.ru.i.true_ts <- NULL
+# Noncumulated true time timeseries list
+covid.2019.ru.i.moment_ts <- NULL
 
 for(i in 1:length(covid.2019.breaks$TIME)){
-covid.2019.ru.i.true_ts[[i]] <- subset(covid.2019.ru.da.i, covid.2019.ru.da.i$TIME < covid.2019.breaks$TIME[i])
+covid.2019.ru.i.moment_ts[[i]] <- subset(covid.2019.ru.da.i, 
+covid.2019.ru.da.i$TIME < covid.2019.breaks$TIME[i] &
+covid.2019.ru.da.i$TIME > covid.2019.breaks$TIME[i-1])
 }
 
-# Barplot regions list
+# Cumulated true time timeseries list for a map;
+covid.2019.ru.i.cumul_ts <- NULL
+
+for(i in 1:length(covid.2019.breaks$TIME)){
+covid.2019.ru.i.cumul_ts[[i]] <- subset(covid.2019.ru.da.i, covid.2019.ru.da.i$TIME < covid.2019.breaks$TIME[i])
+}
+
+# Barplot regions list;
 covid.2019.ru.i.reg <- NULL
 
 for(i in 1:length(levels(covid.2019.ru.i$LOCUS))){
 covid.2019.ru.i.reg[[i]] <- subset(covid.2019.ru.i, covid.2019.ru.i$LOCUS == levels(covid.2019.ru.i$LOCUS)[i])
 }
 
-# Mapping regions list
+# Mapping regions list;
 covid.2019.ru.i.reg.0 <- NULL
 
 for(i in 1:length(levels(covid.2019.ru.i$LOCUS.0))){
 covid.2019.ru.i.reg.0[[i]] <- subset(covid.2019.ru.i, covid.2019.ru.i$LOCUS.0 == levels(covid.2019.ru.i$LOCUS.0)[i])
 }
 
-# Dynamics data frame
+# Dynamics data frame;
 covid.2019.ru.i.dyn <- NULL
 
 for(i in 1:length(levels(covid.2019.ru.i$TIMESTAMP))){
@@ -109,6 +118,41 @@ sum(covid.2019.ru.i.reg.0[[i]]$NUMBER))
 
 colnames(covid.2019.ru.i.reg.0.df) <- c("LOCUS","NUMBER")
 
+# Momentary data
+
+RUS <- NULL
+
+for(i in 1:length(covid.2019.ru.i.moment_ts)){
+RUS <- c(RUS, nrow(covid.2019.ru.i.moment_ts[[i]]))
+}
+
+# Singling out Moscow and St. Petersburg
+
+Mos <- NULL
+
+for(i in 1:length(covid.2019.ru.i.moment_ts)){
+Mos <- c(Mos, nrow(subset(covid.2019.ru.i.moment_ts[[i]], covid.2019.ru.i.moment_ts[[i]]$LOCUS.0 == "Moscow")))
+}
+
+SPb <- NULL
+
+for(i in 1:length(covid.2019.ru.i.moment_ts)){
+SPb <- c(SPb, nrow(subset(covid.2019.ru.i.moment_ts[[i]], covid.2019.ru.i.moment_ts[[i]]$LOCUS.0 == "St. Petersburg")))
+}
+
+covid.2019.ru.i.dyn.tt <- cbind.data.frame(
+  covid.2019.breaks$TIME,
+  RUS,
+  Mos,
+  SPb
+)
+
+colnames(covid.2019.ru.i.dyn.tt) <- c("TIME","RUS","Mos","SPb")
+
+covid.2019.ru.i.dyn.tt$RUS.CS <- cumsum(covid.2019.ru.i.dyn.tt$RUS)
+covid.2019.ru.i.dyn.tt$Mos.CS <- cumsum(covid.2019.ru.i.dyn.tt$Mos)
+covid.2019.ru.i.dyn.tt$SPb.CS <- cumsum(covid.2019.ru.i.dyn.tt$SPb)
+
 ################################################################
 # Basic plots
 
@@ -124,6 +168,30 @@ main="Russian Federation",
 axes=FALSE)
 
 points(covid.2019.ru.i.dyn$TIME, covid.2019.ru.i.dyn$NUMBER, type="h", col=2, lwd=3)
+
+axis.POSIXct(1, 
+at=seq(min(covid.2019.breaks$TIME), max(covid.2019.breaks$TIME), by="week"), 
+format = "%Y-%m-%d", 
+las=2)
+axis(2)
+
+dev.off()
+
+# Cumulated growth, by regions
+
+png("../plots/COVID.2019.cumulated.by_regions.png", height=750, width=1000, res=120, pointsize=10)
+par(mar=c(6,5,4,2)+.1)
+
+plot(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.i.dyn.tt$Mos.CS, 
+type="l", col=2, xlab="", 
+ylab="Total COVID-2019 cases detected", 
+main="Russian Federation",
+axes=FALSE)
+
+points(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.i.dyn.tt$SPb.CS, type="l",col=4)
+points(covid.2019.ru.i.dyn.tt$TIME, (covid.2019.ru.i.dyn.tt$RUS.CS - (covid.2019.ru.i.dyn.tt$Mos.CS + covid.2019.ru.i.dyn.tt$SPb.CS)), type="l",col=3)
+
+legend("topleft", lt=1, col=c(2,4,3), legend=c("Moscow","St. Petersburg","The rest of Russia"), bty="n")
 
 axis.POSIXct(1, 
 at=seq(min(covid.2019.breaks$TIME), max(covid.2019.breaks$TIME), by="week"), 
@@ -155,9 +223,34 @@ axis(2, at=log10(c(1:10, seq(10,100,10), seq(100,1000,100))), labels=FALSE)
 
 dev.off()
 
+# Cumulated growth, log scale, by regions
+png("../plots/COVID.2019.cumulated.log.10.by_regions.png", height=750, width=1000, res=120, pointsize=10)
+par(mar=c(6,5,4,2)+.1)
+
+plot(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$Mos.CS), 
+type="l", col=2, 
+xlab="", 
+ylab="Total COVID-2019 cases detected (logarithmic scale)", 
+main="Russian Federation",
+axes=FALSE)
+
+points(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$SPb.CS), type="l",col=4)
+points(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$RUS.CS - (covid.2019.ru.i.dyn.tt$Mos.CS + covid.2019.ru.i.dyn.tt$SPb.CS)), type="l",col=3)
+
+axis.POSIXct(1, 
+at=seq(min(covid.2019.breaks$TIME), max(covid.2019.breaks$TIME), by="week"), 
+format = "%Y-%m-%d", 
+las=2)
+axis(2, at=log10(c(1,10,100)), labels=c(1,10,100))
+axis(2, at=log10(c(1:10, seq(10,100,10), seq(100,1000,100))), labels=FALSE)
+
+legend("topleft", lt=1, col=c(2,4,3), legend=c("Moscow","St. Petersburg","The rest of Russia"), bty="n")
+
+dev.off()
+
 # Regions barplot
 png("../plots/COVID.2019.barplot.regions.png", height=750, width=1000, res=120, pointsize=10)
-par(mar=c(10,5,4,2)+.1)
+par(mar=c(10,5,4,2)+.1, cex.axis=.7)
 
 barplot(covid.2019.ru.i.reg.ordered.df$NUMBER, 
 names.arg=covid.2019.ru.i.reg.ordered.df$LOCUS, 
@@ -185,7 +278,7 @@ dev.off()
 # # Map animated
 # dir.create("../plots/map.animated/")
 #
-# for(i in 1:length(covid.2019.ru.i.true_ts)){
+# for(i in 1:length(covid.2019.ru.i.cumul_ts)){
 # 	if(i < 10){
 # 	png(file=paste("../plots/map.animated/COVID.2019.map.regions.00",i,".png", sep=""), height=750, width=1000, res=120, pointsize=10)
 # 	}else if(i < 100){
@@ -199,7 +292,7 @@ dev.off()
 # side=1, line=2, cex=2) 
 # mtext("Russian Federation", font=2, cex=2, side=3, line=3)
 #
-# points(covid.2019.coord$LON, covid.2019.coord$LAT, cex=sqrt(as.data.frame(table(covid.2019.ru.i.true_ts[[i]]$LOCUS.0))$Freq/2), pch=21, bg=2)
+# points(covid.2019.coord$LON, covid.2019.coord$LAT, cex=sqrt(as.data.frame(table(covid.2019.ru.i.cumul_ts[[i]]$LOCUS.0))$Freq/2), pch=21, bg=2)
 #
 # dev.off()
 # }
