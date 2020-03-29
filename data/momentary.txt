@@ -1,176 +1,229 @@
-TIMESTAMP	EVENT	LOCUS.0	LOCUS	LOCUS.ORIG	ORIGIN	NUMBER	UID	SRC	COMMENT	DB.OPERATOR
-"2020-01-31 15:38:00"	detected	Chita	Chita		China	1	Chita.00001	https://www.kommersant.ru/doc/4240914	Region assumed on the basis of https://www.kommersant.ru/doc/4251287	Alexei Kouprianov
-"2020-01-31 15:38:00"	detected	Tiumen	Tiumen		China	1	Tiumen.00001	https://www.kommersant.ru/doc/4240914	https://www.kommersant.ru/doc/4241057	Alexei Kouprianov
-"2020-02-11 15:20:00"	healed	Tiumen	Tiumen		China	1	Tiumen.00001	https://www.kommersant.ru/doc/4251287		Alexei Kouprianov
-"2020-02-12 07:18:00"	healed	Chita	Chita		China	1	Chita.00001	https://www.kommersant.ru/doc/4251627	Ван Юнбинь (https://www.kommersant.ru/doc/4251627)	Alexei Kouprianov
-"2020-02-17 12:56:00"	detected	Kazan	Kazan		Diamond Princess	1	DP.1	https://www.kommersant.ru/doc/4258974	Hospitalised: https://www.kommersant.ru/doc/4267279	Alexei Kouprianov
-"2020-02-18 12:00:00"	detected	Kazan	Kazan		Diamond Princess	1	DP.2	https://www.kommersant.ru/doc/4268803	Timestamp assumed arbitrarily on the basis of https://www.kommersant.ru/doc/4285154; Hospitalised: https://www.kommersant.ru/doc/4268803	Alexei Kouprianov
-"2020-02-26 17:00:00"	detected	Kazan	Kazan		Diamond Princess	1	DP.3	https://www.kommersant.ru/doc/4268803	https://www.kommersant.ru/doc/4267281	Alexei Kouprianov
-"2020-03-02 22:29:00"	detected	Moscow	Moscow region		Italy	1	Mos.00001	https://www.rosminzdrav.ru/news/2020/03/02/13456-o-podtverzhdennom-sluchae-novoy-koronavirusnoy-infektsii-covid-2019-v-rossii	https://www.kommersant.ru/doc/4275147	Alexei Kouprianov
-"2020-03-05 11:26:00"	detected	St. Petersburg	St. Petersburg		Italy	1	StPb.00001	https://www.kommersant.ru/doc/4277083		Alexei Kouprianov
-"2020-03-06 19:00:00"	detected	Moscow	Moscow		Italy	5		https://www.rosminzdrav.ru/news/2020/03/06/13492-o-podtverzhdennyh-sluchayah-novoy-koronavirusnoy-infektsii-covid-2019-v-rossii		Alexei Kouprianov
-"2020-03-06 19:00:00"	detected	Nizhnii Novgorod	Nizhnii Novgorod		Italy	1		https://www.rosminzdrav.ru/news/2020/03/06/13492-o-podtverzhdennyh-sluchayah-novoy-koronavirusnoy-infektsii-covid-2019-v-rossii		Alexei Kouprianov
-"2020-03-07 15:03:00"	detected	Lipetsk	Lipetsk		Italy	3		https://rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13920	Timestamp based on https://www.kommersant.ru/doc/4282941	Alexei Kouprianov
-"2020-03-07 15:03:00"	detected	St. Petersburg	St. Petersburg		Italy	1		https://rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13920	Timestamp based on https://www.kommersant.ru/doc/4282942	Alexei Kouprianov
-"2020-03-07 19:05:00"	detected	Moscow	Moscow region		Switzerland	1		https://www.kommersant.ru/doc/4282964		Alexei Kouprianov
-"2020-03-08 15:31:00"	detected	Kaliningrad	Kaliningrad		Italy	1		https://www.kommersant.ru/doc/4283050		Alexei Kouprianov
-"2020-03-08 15:31:00"	detected	Belgorod	Belgorod		Italy	1		https://www.kommersant.ru/doc/4283051		Alexei Kouprianov
-"2020-03-08 15:31:00"	detected	Moscow	Moscow region		Italy	1		https://www.kommersant.ru/doc/4283052		Alexei Kouprianov
-"2020-03-09 14:59:00"	detected	Moscow	Moscow		Italy	3		https://www.kommersant.ru/doc/4283199		Alexei Kouprianov
-"2020-03-11 20:20:00"	detected	Moscow	Moscow		Italy	6		https://www.kommersant.ru/doc/4284478		Alexei Kouprianov
-"2020-03-11 20:20:00"	detected	Moscow	Moscow region		Italy	2		https://www.kommersant.ru/doc/4284478		Alexei Kouprianov
-"2020-03-12 19:27:00"	detected	Moscow	Moscow			4		https://www.kommersant.ru/doc/4285290		Alexei Kouprianov
-"2020-03-12 19:27:00"	detected	Krasnodar	Krasnodar			1		https://www.kommersant.ru/doc/4285290		Alexei Kouprianov
-"2020-03-12 19:27:00"	detected	Kaliningrad	Kaliningrad			1		https://www.kommersant.ru/doc/4285290		Alexei Kouprianov
-"2020-03-13 16:12:00"	detected	Moscow	Moscow			5		https://www.rosminzdrav.ru/ministry/covid19	https://www.kommersant.ru/doc/4289624 Italy, France, Austria, probably Germany or Switzerland	Alexei Kouprianov
-"2020-03-13 16:12:00"	detected	Moscow	Moscow region			1		https://www.rosminzdrav.ru/ministry/covid19	https://www.kommersant.ru/doc/4289624 Italy, France, Austria, probably Germany or Switzerland	Alexei Kouprianov
-"2020-03-13 16:12:00"	detected	St. Petersburg	St. Petersburg			3		https://www.rosminzdrav.ru/ministry/covid19	https://www.kommersant.ru/doc/4289624 Italy, France, Austria, probably Germany or Switzerland	Alexei Kouprianov
-"2020-03-13 16:12:00"	detected	St. Petersburg	Leningrad region			1		https://www.rosminzdrav.ru/ministry/covid19	https://www.kommersant.ru/doc/4289624 Italy, France, Austria, probably Germany or Switzerland	Alexei Kouprianov
-"2020-03-13 16:12:00"	detected	Perm krai	Perm krai			1		https://www.rosminzdrav.ru/ministry/covid19	https://www.kommersant.ru/doc/4289624 Italy, France, Austria, probably Germany or Switzerland	Alexei Kouprianov
-"2020-03-14 18:07:00"	detected	Moscow	Moscow			9		https://www.kommersant.ru/doc/4290127		Alexei Kouprianov
-"2020-03-14 18:07:00"	detected	Moscow	Moscow region			1		https://www.kommersant.ru/doc/4290127		Alexei Kouprianov
-"2020-03-14 18:07:00"	detected	St. Petersburg	St. Petersburg			1		https://www.kommersant.ru/doc/4290127		Alexei Kouprianov
-"2020-03-14 18:07:00"	detected	Kemerovo	Kemerovo			2		https://www.kommersant.ru/doc/4290127		Alexei Kouprianov
-"2020-03-14 18:07:00"	detected	Kaliningrad	Kaliningrad			1		https://www.kommersant.ru/doc/4290127		Alexei Kouprianov
-"2020-03-15 16:42:00"	detected	Moscow	Moscow region			3		https://www.kommersant.ru/doc/4290271		Alexei Kouprianov
-"2020-03-15 16:42:00"	detected	Tiumen	Tiumen			1		https://www.kommersant.ru/doc/4290271	There are also rumours about 1 or 2 cases in Chukotka : https://www.kommersant.ru/doc/4290159	Alexei Kouprianov
-"2020-03-16 12:54:00"	detected	Krasnoyarsk	Krasnoyarsk			1		https://www.kommersant.ru/doc/4290670		Alexei Kouprianov
-"2020-03-16 15:45:00"	detected	Moscow	Moscow			21		https://www.kommersant.ru/doc/4290816	21+3+2 assumed on the basis of the following calculation. https://www.kommersant.ru/doc/4285154 update shows 53 cases for Moscow; 27 new cases for 2020-03-16. 1 case ascribed to Krasnoyarsk; The remaining 26 are split in 21+5 because, as for 2020-03-15, there were 32 cases in Moscow. Te remainig 5 are split into 3+2 on the basis of https://ria.ru/20200317/1568706559.html it was stated that 3 new cases are registered in St. Petersburg. It is also possible that the number is 3 persons higher because some report +30 cases, taking 63, not 66 as a base (it is not clear whether 3 Diamond Princess cases were counted in or not, when reporting 93 for 2020-03-16).	Alexei Kouprianov
-"2020-03-16 15:45:00"	detected	St. Petersburg	St. Petersburg			3		https://www.kommersant.ru/doc/4290816	21+3+2 assumed on the basis of the following calculation. https://www.kommersant.ru/doc/4285154 update shows 53 cases for Moscow; 27 new cases for 2020-03-16. 1 case ascribed to Krasnoyarsk; The remaining 26 are split in 21+5 because, as for 2020-03-15, there were 32 cases in Moscow. Te remainig 5 are split into 3+2 on the basis of https://ria.ru/20200317/1568706559.html it was stated that 3 new cases are registered in St. Petersburg. It is also possible that the number is 3 persons higher because some report +30 cases, taking 63, not 66 as a base (it is not clear whether 3 Diamond Princess cases were counted in or not, when reporting 93 for 2020-03-16).	Alexei Kouprianov
-"2020-03-16 15:45:00"	detected	Russia (unspecified)	Russia (unspecified)			2		https://www.kommersant.ru/doc/4290816	21+3+2 assumed on the basis of the following calculation. https://www.kommersant.ru/doc/4285154 update shows 53 cases for Moscow; 27 new cases for 2020-03-16. 1 case ascribed to Krasnoyarsk; The remaining 26 are split in 21+5 because, as for 2020-03-15, there were 32 cases in Moscow. Te remainig 5 are split into 3+2 on the basis of https://ria.ru/20200317/1568706559.html it was stated that 3 new cases are registered in St. Petersburg. It is also possible that the number is 3 persons higher because some report +30 cases, taking 63, not 66 as a base (it is not clear whether 3 Diamond Princess cases were counted in or not, when reporting 93 for 2020-03-16).	Alexei Kouprianov
-"2020-03-16 22:00:00"	healed	Kazan	Kazan		Diamond Princess	1	DP.1	https://coronavirus-monitor.ru/ for 2020-03-16 late in the evening	Information cumulative, no breakdown by days	Alexei Kouprianov
-"2020-03-16 22:00:00"	healed	Kazan	Kazan		Diamond Princess	1	DP.2	https://coronavirus-monitor.ru/ for 2020-03-16 late in the evening	Information cumulative, no breakdown by days	Alexei Kouprianov
-"2020-03-16 22:00:00"	healed	Kazan	Kazan		Diamond Princess	1	DP.3	https://coronavirus-monitor.ru/ for 2020-03-16 late in the evening	Information cumulative, no breakdown by days	Alexei Kouprianov
-"2020-03-16 22:00:00"	healed	Moscow	Moscow			1		https://coronavirus-monitor.ru/ for 2020-03-16 late in the evening	Information cumulative, no breakdown by days	Alexei Kouprianov
-"2020-03-17 08:50:00"	healed	St. Petersburg	St. Petersburg		Italy	1	StPb.00001	https://ria.ru/20200317/1568706559.html	An Italian citizen and <a contacting woman> released <yesterday>.	Alexei Kouprianov
-"2020-03-17 08:50:00"	healed	St. Petersburg	St. Petersburg			1		https://ria.ru/20200317/1568706559.html	An Italian citizen and <a contacting woman> released <yesterday>.	Alexei Kouprianov
-"2020-03-17 16:21:00"	detected	Moscow	Moscow			4		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
-"2020-03-17 16:21:00"	detected	Samara	Samara			1		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
-"2020-03-17 16:21:00"	detected	Samara	Tagliatti			1		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
-"2020-03-17 16:21:00"	detected	Kaliningrad	Kaliningrad			2		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
-"2020-03-17 16:21:00"	detected	Tver	Tver			2		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
-"2020-03-17 16:21:00"	detected	Moscow	Moscow region			1		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
-"2020-03-17 16:21:00"	detected	Krasnoyarsk	Krasnoyarsk			1		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
-"2020-03-17 16:21:00"	detected	Tambov	Tambov			1		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
-"2020-03-17 16:21:00"	detected	Kaluga	Kaluga			1		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
-"2020-03-17 16:21:00"	detected	Nizhnii Novgorod	Nizhnii Novgorod			1		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
-"2020-03-17 16:21:00"	detected	Penza	Penza			1		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
-"2020-03-17 16:21:00"	detected	Ekaterinburg	Ekaterinburg			1		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
-"2020-03-17 16:21:00"	detected	Arkhangelsk	Arkhangelsk			1		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
-"2020-03-17 16:21:00"	detected	Yaroslavl	Yaroslavl			1		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
-"2020-03-17 16:21:00"	detected	Kazan	Kazan			1		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
-"2020-03-17 16:21:00"	detected	Khakassia	Khakassia			1		https://tass.ru/obschestvo/8004627		Alexei Kouprianov
-"2020-03-18 14:31:00"	detected	Moscow	Moscow			31		https://lenta.ru/news/2020/03/18/147/		Alexei Kouprianov
-"2020-03-18 14:31:00"	detected	Tomsk	Tomsk			1		https://lenta.ru/news/2020/03/18/147/		Alexei Kouprianov
-"2020-03-18 14:31:00"	detected	Novosibirsk	Novosibirsk			1		https://lenta.ru/news/2020/03/18/147/		Alexei Kouprianov
-"2020-03-19 16:01:00"	detected	Moscow	Moscow			12		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
-"2020-03-19 16:01:00"	detected	Moscow	Moscow region			5		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
-"2020-03-19 16:01:00"	detected	Ekaterinburg	Ekaterinburg			5		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
-"2020-03-19 16:01:00"	detected	Tula	Tula			3		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
-"2020-03-19 16:01:00"	detected	Krasnoyarsk	Krasnoyarsk			3		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
-"2020-03-19 16:01:00"	detected	Khabarovsk	Khabarovsk			3		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
-"2020-03-19 16:01:00"	detected	Tambov	Tambov			2		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
-"2020-03-19 16:01:00"	detected	Voronezh	Voronezh			2		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
-"2020-03-19 16:01:00"	detected	Kirov	Kirov			2		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
-"2020-03-19 16:01:00"	detected	Krasnodar	Krasnodar			2		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
-"2020-03-19 16:01:00"	detected	Ivanovo	Ivanovo			1		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
-"2020-03-19 16:01:00"	detected	Ryazan	Ryazan			1		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
-"2020-03-19 16:01:00"	detected	Murmansk	Murmansk			1		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
-"2020-03-19 16:01:00"	detected	Nizhnii Novgorod	Nizhnii Novgorod			1		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
-"2020-03-19 16:01:00"	detected	Novosibirsk	Novosibirsk			1		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
-"2020-03-19 16:01:00"	detected	Orenburg	Orenburg			1		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
-"2020-03-19 16:01:00"	detected	Saratov	Saratov			1		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
-"2020-03-19 16:01:00"	detected	Tver	Tver			1		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
-"2020-03-19 16:01:00"	detected	St. Petersburg	St. Petersburg			1		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
-"2020-03-19 16:01:00"	detected	Khanty-Mansiisk	Khanty-Mansiisk			1		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
-"2020-03-19 16:01:00"	detected	Cheboksary	Cheboksary			1		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
-"2020-03-19 16:01:00"	detected	Yakutsk	Yakutsk			1		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
-"2020-03-19 16:01:00"	detected	Perm krai	Perm krai			1		https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556		Alexei Kouprianov
-"2020-03-20 16:00:00"	detected	Moscow	Moscow			33		https://www.rbc.ru/society/20/03/2020/5e74cd909a79476f50f154de		Alexei Kouprianov
-"2020-03-20 16:00:00"	detected	Moscow	Moscow region			1		https://www.rbc.ru/society/20/03/2020/5e74cd909a79476f50f154de		Alexei Kouprianov
-"2020-03-20 16:00:00"	detected	Yakutsk	Yakutsk			6		https://www.rbc.ru/society/20/03/2020/5e74cd909a79476f50f154de		Alexei Kouprianov
-"2020-03-20 16:00:00"	detected	St. Petersburg	St. Petersburg			4		https://www.rbc.ru/society/20/03/2020/5e74cd909a79476f50f154de		Alexei Kouprianov
-"2020-03-20 16:00:00"	detected	Samara	Samara			4		https://www.rbc.ru/society/20/03/2020/5e74cd909a79476f50f154de		Alexei Kouprianov
-"2020-03-20 16:00:00"	detected	Kirov	Kirov			2		https://www.rbc.ru/society/20/03/2020/5e74cd909a79476f50f154de		Alexei Kouprianov
-"2020-03-20 16:00:00"	detected	Novosibirsk	Novosibirsk			2		https://www.rbc.ru/society/20/03/2020/5e74cd909a79476f50f154de		Alexei Kouprianov
-"2020-03-20 16:00:00"	detected	Ulianovsk	Ulianovsk			1		https://www.rbc.ru/society/20/03/2020/5e74cd909a79476f50f154de		Alexei Kouprianov
-"2020-03-20 16:00:00"	detected	Tiumen	Tiumen			1		https://www.rbc.ru/society/20/03/2020/5e74cd909a79476f50f154de		Alexei Kouprianov
-"2020-03-21 16:42:00"	detected	Moscow	Moscow			6		https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac		Alexei Kouprianov
-"2020-03-21 16:42:00"	detected	Moscow	Moscow region			17		https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac		Alexei Kouprianov
-"2020-03-21 16:42:00"	detected	Kazan	Kazan			5		https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac		Alexei Kouprianov
-"2020-03-21 16:42:00"	detected	Nizhnii Novgorod	Nizhnii Novgorod			4		https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac		Alexei Kouprianov
-"2020-03-21 16:42:00"	detected	Ekaterinburg	Ekaterinburg			3		https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac		Alexei Kouprianov
-"2020-03-21 16:42:00"	detected	Tula	Tula			2		https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac		Alexei Kouprianov
-"2020-03-21 16:42:00"	detected	Kaliningrad	Kaliningrad			2		https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac		Alexei Kouprianov
-"2020-03-21 16:42:00"	detected	St. Petersburg	St. Petersburg			2		https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac		Alexei Kouprianov
-"2020-03-21 16:42:00"	detected	Krasnodar	Krasnodar			2		https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac		Alexei Kouprianov
-"2020-03-21 16:42:00"	detected	Nalchik	Nalchik			2		https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac		Alexei Kouprianov
-"2020-03-21 16:42:00"	detected	Ryazan	Ryazan			1		https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac		Alexei Kouprianov
-"2020-03-21 16:42:00"	detected	Kurgan	Kurgan			1		https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac		Alexei Kouprianov
-"2020-03-21 16:42:00"	detected	Cheliabinsk	Cheliabinsk			1		https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac		Alexei Kouprianov
-"2020-03-21 16:42:00"	detected	Stavropol	Stavropol			1		https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac		Alexei Kouprianov
-"2020-03-21 16:42:00"	detected	Krasnoyarsk	Krasnoyarsk			1		https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac		Alexei Kouprianov
-"2020-03-21 16:42:00"	detected	Khabarovsk	Khabarovsk			1		https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac		Alexei Kouprianov
-"2020-03-21 16:42:00"	detected	Khanty-Mansiisk	Khanty-Mansiisk			1		https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac		Alexei Kouprianov
-"2020-03-21 16:42:00"	detected	Crimea [annex.]	Crimea [annex.]			1		https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac		Alexei Kouprianov
-"2020-03-21 16:42:00"	healed	Moscow	Moscow			3		https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac		Alexei Kouprianov
-"2020-03-21 16:42:00"	healed	Moscow	Moscow region			1		https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac		Alexei Kouprianov
-"2020-03-22 16:11:00"	detected	Moscow	Moscow			54		https://www.kommersant.ru/doc/4299207		Alexei Kouprianov
-"2020-03-22 16:11:00"	detected	Kirov	Kirov			2		https://www.kommersant.ru/doc/4299207		Alexei Kouprianov
-"2020-03-22 16:11:00"	detected	Izhevsk	Izhevsk			2		https://www.kommersant.ru/doc/4299207		Alexei Kouprianov
-"2020-03-22 16:11:00"	detected	Novgorod	Novgorod			1		https://www.kommersant.ru/doc/4299207		Alexei Kouprianov
-"2020-03-22 16:11:00"	detected	Arkhangelsk	Arkhangelsk			1		https://www.kommersant.ru/doc/4299207		Alexei Kouprianov
-"2020-03-22 16:11:00"	detected	Briansk	Briansk			1		https://www.kommersant.ru/doc/4299207		Alexei Kouprianov
-"2020-03-23 09:11:00"	detected	Moscow	Moscow			71		https://ria.ru/20200323/1568995300.html		Alexei Kouprianov
-"2020-03-24 14:19:00"	detected	Moscow	Moscow	Москва		28		https://ria.ru/20200324/1569071483.html		Alexei Kouprianov
-"2020-03-24 14:19:00"	detected	St. Petersburg	St. Petersburg	Санкт-Петербург		5		https://ria.ru/20200324/1569071483.html		Alexei Kouprianov
-"2020-03-24 14:19:00"	detected	Voronezh	Voronezh	Воронежская область		4		https://ria.ru/20200324/1569071483.html		Alexei Kouprianov
-"2020-03-24 14:19:00"	detected	Ekaterinburg	Ekaterinburg	Свердловская область		4		https://ria.ru/20200324/1569071483.html		Alexei Kouprianov
-"2020-03-24 14:19:00"	detected	Ufa	Ufa	Башкирия		3		https://ria.ru/20200324/1569071483.html		Alexei Kouprianov
-"2020-03-24 14:19:00"	detected	Lipetsk	Lipetsk	Липецкая область		2		https://ria.ru/20200324/1569071483.html		Alexei Kouprianov
-"2020-03-24 14:19:00"	detected	Orel	Orel	Орловская область		2		https://ria.ru/20200324/1569071483.html		Alexei Kouprianov
-"2020-03-24 14:19:00"	detected	St. Petersburg	Leningrad region	Ленинградская область		2		https://ria.ru/20200324/1569071483.html		Alexei Kouprianov
-"2020-03-24 14:19:00"	detected	Vladivostok	Vladivostok	Приморский край		2		https://ria.ru/20200324/1569071483.html		Alexei Kouprianov
-"2020-03-24 14:19:00"	detected	Kaluga	Kaluga	Калужская область		1		https://ria.ru/20200324/1569071483.html		Alexei Kouprianov
-"2020-03-24 14:19:00"	detected	Groznyi	Groznyi	Чечня		1		https://ria.ru/20200324/1569071483.html		Alexei Kouprianov
-"2020-03-24 14:19:00"	detected	Volgograd	Volgograd	Волгоградская область		1		https://ria.ru/20200324/1569071483.html		Alexei Kouprianov
-"2020-03-24 14:19:00"	detected	Kazan	Kazan	Татарстан		1		https://ria.ru/20200324/1569071483.html		Alexei Kouprianov
-"2020-03-24 14:19:00"	detected	Samara	Samara	Самарская область		1		https://ria.ru/20200324/1569071483.html		Alexei Kouprianov
-"2020-03-25 11:00:00"	detected	Moscow	Moscow	Москва		120		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
-"2020-03-25 11:00:00"	detected	Moscow	Moscow region	Московская область		6		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
-"2020-03-25 11:00:00"	detected	Crimea [annex.]	Crimea [annex.]	Республика Крым		6		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
-"2020-03-25 11:00:00"	detected	Pskov	Pskov	Псковская область		4		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
-"2020-03-25 11:00:00"	detected	Krasnodar	Krasnodar	Краснодарский край		4		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
-"2020-03-25 11:00:00"	detected	Orenburg	Orenburg	Оренбургская область		3		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
-"2020-03-25 11:00:00"	detected	Yakutsk	Yakutsk	Республика Саха (Якутия)		3		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
-"2020-03-25 11:00:00"	detected	Tula	Tula	Тульская область		2		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
-"2020-03-25 11:00:00"	detected	Ufa	Ufa	Республика Коми		2		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
-"2020-03-25 11:00:00"	detected	Nalchik	Nalchik	Кабардино-Балкарская Республика		2		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
-"2020-03-25 11:00:00"	detected	Perm krai	Perm krai	Пермский край		2		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
-"2020-03-25 11:00:00"	detected	Briansk	Briansk	Брянская область		1		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
-"2020-03-25 11:00:00"	detected	Arkhangelsk	Arkhangelsk	Архангельская область		1		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
-"2020-03-25 11:00:00"	detected	Kaliningrad	Kaliningrad	Калининградская область		1		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
-"2020-03-25 11:00:00"	detected	Stavropol	Stavropol	Ставропольский край		1		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
-"2020-03-25 11:00:00"	detected	Rostov-Don	Rostov-Don	Ростовская область		1		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
-"2020-03-25 11:00:00"	detected	Syktyvkar	Syktyvkar	Республика Башкортостан		1		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
-"2020-03-25 11:00:00"	detected	Nizhnii Novgorod	Nizhnii Novgorod	Нижегородская область		1		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
-"2020-03-25 11:00:00"	detected	Penza	Penza	Пензенская область		1		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
-"2020-03-25 11:00:00"	detected	Cheliabinsk	Cheliabinsk	Челябинская область		1		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
-"2020-03-26 11:00:00"	detected	Moscow	Moscow	Москва		136		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
-"2020-03-26 11:00:00"	detected	Ekaterinburg	Ekaterinburg	Свердловская область		7		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
-"2020-03-26 11:00:00"	detected	St. Petersburg	St. Petersburg	Санкт-Петербург		5		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
-"2020-03-26 11:00:00"	detected	Perm krai	Perm krai	Пермский край		5		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
-"2020-03-26 11:00:00"	detected	Yakutsk	Yakutsk	Республика Саха (Якутия)		4		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
-"2020-03-26 11:00:00"	detected	Stavropol	Stavropol	Ставропольский край		3		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
-"2020-03-26 11:00:00"	detected	Kazan	Kazan	Республика Татарстан		3		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
-"2020-03-26 11:00:00"	detected	Cheliabinsk	Cheliabinsk	Челябинская область		3		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
-"2020-03-26 11:00:00"	detected	Krasnoyarsk	Krasnoyarsk	Красноярский край		3		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
-"2020-03-26 11:00:00"	detected	Pskov	Pskov	Псковская область		2		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
-"2020-03-26 11:00:00"	detected	Samara	Samara	Самарская область		2		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
-"2020-03-26 11:00:00"	detected	Khanty-Mansiisk	Khanty-Mansiisk	Ханты-Мансийский АО		2		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
-"2020-03-26 11:00:00"	detected	Ulan-Ude	Ulan-Ude	Республика Бурятия		2		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
-"2020-03-26 11:00:00"	detected	Khakassia	Khakassia	Республика Хакасия		1		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
-"2020-03-26 11:00:00"	detected	Kemerovo	Kemerovo	Кемеровская область		1		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
-"2020-03-26 11:00:00"	detected	Novosibirsk	Novosibirsk	Новосибирская область		1		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
-"2020-03-26 11:00:00"	detected	Tomsk	Tomsk	Томская область		1		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
-"2020-03-26 11:00:00"	detected	Khabarovsk	Khabarovsk	Хабаровский край		1		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
+TIMESTAMP	EVENT	LOCUS.0	LOCUS	LOCUS.ORIG	NUMBER	UID	ORIGIN	SRC	COMMENT	DB.OPERATOR
+"2020-01-31 15:38:00"	detected	Chita	Chita		1	Chita.00001	China	https://www.kommersant.ru/doc/4240914	Region assumed on the basis of https://www.kommersant.ru/doc/4251287	Alexei Kouprianov
+"2020-01-31 15:38:00"	detected	Tiumen	Tiumen		1	Tiumen.00001	China	https://www.kommersant.ru/doc/4240914	https://www.kommersant.ru/doc/4241057	Alexei Kouprianov
+"2020-02-11 15:20:00"	healed	Tiumen	Tiumen		1	Tiumen.00001	China	https://www.kommersant.ru/doc/4251287		Alexei Kouprianov
+"2020-02-12 07:18:00"	healed	Chita	Chita		1	Chita.00001	China	https://www.kommersant.ru/doc/4251627	Ван Юнбинь (https://www.kommersant.ru/doc/4251627)	Alexei Kouprianov
+"2020-02-17 12:56:00"	detected	Kazan	Kazan		1	DP.1	Diamond Princess	https://www.kommersant.ru/doc/4258974	Hospitalised: https://www.kommersant.ru/doc/4267279	Alexei Kouprianov
+"2020-02-18 12:00:00"	detected	Kazan	Kazan		1	DP.2	Diamond Princess	https://www.kommersant.ru/doc/4268803	Timestamp assumed arbitrarily on the basis of https://www.kommersant.ru/doc/4285154; Hospitalised: https://www.kommersant.ru/doc/4268803	Alexei Kouprianov
+"2020-02-26 17:00:00"	detected	Kazan	Kazan		1	DP.3	Diamond Princess	https://www.kommersant.ru/doc/4268803	https://www.kommersant.ru/doc/4267281	Alexei Kouprianov
+"2020-03-02 22:29:00"	detected	Moscow	Moscow region		1	Mos.00001	Italy	https://www.rosminzdrav.ru/news/2020/03/02/13456-o-podtverzhdennom-sluchae-novoy-koronavirusnoy-infektsii-covid-2019-v-rossii	https://www.kommersant.ru/doc/4275147 https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13870	Alexei Kouprianov
+"2020-03-05 11:26:00"	detected	St. Petersburg	St. Petersburg		1	StPb.00001	Italy	https://www.kommersant.ru/doc/4277083	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13897	Alexei Kouprianov
+"2020-03-06 19:00:00"	detected	Moscow	Moscow		5		Italy	https://www.rosminzdrav.ru/news/2020/03/06/13492-o-podtverzhdennyh-sluchayah-novoy-koronavirusnoy-infektsii-covid-2019-v-rossii	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13916	Alexei Kouprianov
+"2020-03-06 19:00:00"	detected	Nizhnii Novgorod	Nizhnii Novgorod		1		Italy	https://www.rosminzdrav.ru/news/2020/03/06/13492-o-podtverzhdennyh-sluchayah-novoy-koronavirusnoy-infektsii-covid-2019-v-rossii	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13916	Alexei Kouprianov
+"2020-03-07 15:03:00"	detected	Lipetsk	Lipetsk		3		Italy	https://rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13920	Timestamp based on https://www.kommersant.ru/doc/4282941	Alexei Kouprianov
+"2020-03-07 15:03:00"	detected	St. Petersburg	St. Petersburg		1		Italy	https://rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13920	Timestamp based on https://www.kommersant.ru/doc/4282942	Alexei Kouprianov
+"2020-03-07 19:05:00"	detected	Moscow	Moscow region		1		Switzerland	https://www.kommersant.ru/doc/4282964		Alexei Kouprianov
+"2020-03-08 15:31:00"	detected	Kaliningrad	Kaliningrad		1		Italy	https://www.kommersant.ru/doc/4283050	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13923	Alexei Kouprianov
+"2020-03-08 15:31:00"	detected	Belgorod	Belgorod		1		Italy	https://www.kommersant.ru/doc/4283051	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13923	Alexei Kouprianov
+"2020-03-08 16:00:00"	healed	Kazan	Kazan		1	DP.1	Diamond Princess	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13923	timestamp arbitrary, precise timing of the publication unknown; Initially, information cumulative, no breakdown by days from https://coronavirus-monitor.ru/ for 2020-03-16 late in the evening	Alexei Kouprianov
+"2020-03-08 16:00:00"	healed	Kazan	Kazan		1	DP.2	Diamond Princess	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13923	timestamp arbitrary, precise timing of the publication unknown; Initially, information cumulative, no breakdown by days from https://coronavirus-monitor.ru/ for 2020-03-16 late in the evening	Alexei Kouprianov
+"2020-03-08 16:00:00"	healed	Kazan	Kazan		1	DP.3	Diamond Princess	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13923	timestamp arbitrary, precise timing of the publication unknown; Initially, information cumulative, no breakdown by days from https://coronavirus-monitor.ru/ for 2020-03-16 late in the evening	Alexei Kouprianov
+"2020-03-08 16:00:00"	healed	Moscow	Moscow		1	Mos.00001		https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13923	timestamp arbitrary, precise timing of the publication unknown; Initially, information cumulative, no breakdown by days from https://coronavirus-monitor.ru/ for 2020-03-16 late in the evening	Alexei Kouprianov
+"2020-03-08 15:31:00"	detected	Moscow	Moscow region		1		Italy	https://www.kommersant.ru/doc/4283052	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13923	Alexei Kouprianov
+"2020-03-09 14:59:00"	detected	Moscow	Moscow		3		Italy	https://www.kommersant.ru/doc/4283199	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13925	Alexei Kouprianov
+"2020-03-11 20:20:00"	detected	Moscow	Moscow		6		Italy	https://www.kommersant.ru/doc/4284478	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13961 threshold decision	Alexei Kouprianov
+"2020-03-11 20:20:00"	detected	Moscow	Moscow region		2		Italy	https://www.kommersant.ru/doc/4284478	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13961 threshold decision	Alexei Kouprianov
+"2020-03-12 19:27:00"	detected	Moscow	Moscow		4			https://www.kommersant.ru/doc/4285290	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13971	Alexei Kouprianov
+"2020-03-12 19:27:00"	detected	Krasnodar	Krasnodar		1			https://www.kommersant.ru/doc/4285290	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13971	Alexei Kouprianov
+"2020-03-12 19:27:00"	detected	Kaliningrad	Kaliningrad		1			https://www.kommersant.ru/doc/4285290	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13971	Alexei Kouprianov
+"2020-03-13 16:12:00"	detected	Moscow	Moscow		5			https://www.rosminzdrav.ru/ministry/covid19	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13982 + https://www.kommersant.ru/doc/4289624 Italy, France, Austria, probably Germany or Switzerland	Alexei Kouprianov
+"2020-03-13 16:12:00"	detected	Moscow	Moscow region		1			https://www.rosminzdrav.ru/ministry/covid19	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13982 + https://www.kommersant.ru/doc/4289624 Italy, France, Austria, probably Germany or Switzerland	Alexei Kouprianov
+"2020-03-13 16:12:00"	detected	St. Petersburg	St. Petersburg		3			https://www.rosminzdrav.ru/ministry/covid19	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13982 + https://www.kommersant.ru/doc/4289624 Italy, France, Austria, probably Germany or Switzerland	Alexei Kouprianov
+"2020-03-13 16:12:00"	detected	St. Petersburg	Leningrad region		1			https://www.rosminzdrav.ru/ministry/covid19	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13982 + https://www.kommersant.ru/doc/4289624 Italy, France, Austria, probably Germany or Switzerland	Alexei Kouprianov
+"2020-03-13 16:12:00"	detected	Perm krai	Perm krai		1			https://www.rosminzdrav.ru/ministry/covid19	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13982 + https://www.kommersant.ru/doc/4289624 Italy, France, Austria, probably Germany or Switzerland	Alexei Kouprianov
+"2020-03-14 18:07:00"	detected	Moscow	Moscow		9			https://www.kommersant.ru/doc/4290127	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13988	Alexei Kouprianov
+"2020-03-14 18:07:00"	detected	Moscow	Moscow region		1			https://www.kommersant.ru/doc/4290127	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13988	Alexei Kouprianov
+"2020-03-14 18:07:00"	detected	St. Petersburg	St. Petersburg		1			https://www.kommersant.ru/doc/4290127	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13988	Alexei Kouprianov
+"2020-03-14 18:07:00"	detected	Kemerovo	Kemerovo		2			https://www.kommersant.ru/doc/4290127	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13988	Alexei Kouprianov
+"2020-03-14 18:07:00"	detected	Kaliningrad	Kaliningrad		1			https://www.kommersant.ru/doc/4290127	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13988	Alexei Kouprianov
+"2020-03-15 16:42:00"	detected	Moscow	Moscow region		3			https://www.kommersant.ru/doc/4290271	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13991 There are also rumours about 1 or 2 cases in Chukotka : https://www.kommersant.ru/doc/4290159	Alexei Kouprianov
+"2020-03-15 16:42:00"	detected	Tiumen	Tiumen		1			https://www.kommersant.ru/doc/4290271	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13991 There are also rumours about 1 or 2 cases in Chukotka : https://www.kommersant.ru/doc/4290159	Alexei Kouprianov
+"2020-03-16 12:54:00"	detected	Krasnoyarsk	Krasnoyarsk		1			https://www.kommersant.ru/doc/4290670		Alexei Kouprianov
+"2020-03-16 15:45:00"	detected	Moscow	Moscow		20			https://www.kommersant.ru/doc/4290816	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13999 + previous imprecise (inferred) calculations : 21+3+2 assumed on the basis of the following calculation. https://www.kommersant.ru/doc/4285154 update shows 53 cases for Moscow; 27 new cases for 2020-03-16. 1 case ascribed to Krasnoyarsk; The remaining 26 are split in 21+5 because, as for 2020-03-15, there were 32 cases in Moscow. Te remainig 5 are split into 3+2 on the basis of https://ria.ru/20200317/1568706559.html it was stated that 3 new cases are registered in St. Petersburg. It is also possible that the number is 3 persons higher because some report +30 cases, taking 63, not 66 as a base (it is not clear whether 3 Diamond Princess cases were counted in or not, when reporting 93 for 2020-03-16). 2 cases were initially classified as Russia (undefined); Now everything is corrected according the RosPotrebNadzor bulletin; Timestamp arbitrary, based on the Kommersant publication;	Alexei Kouprianov
+"2020-03-16 15:45:00"	detected	St. Petersburg	St. Petersburg		3			https://www.kommersant.ru/doc/4290816	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13999 + previous imprecise (inferred) calculations : 21+3+2 assumed on the basis of the following calculation. https://www.kommersant.ru/doc/4285154 update shows 53 cases for Moscow; 27 new cases for 2020-03-16. 1 case ascribed to Krasnoyarsk; The remaining 26 are split in 21+5 because, as for 2020-03-15, there were 32 cases in Moscow. Te remainig 5 are split into 3+2 on the basis of https://ria.ru/20200317/1568706559.html it was stated that 3 new cases are registered in St. Petersburg. It is also possible that the number is 3 persons higher because some report +30 cases, taking 63, not 66 as a base (it is not clear whether 3 Diamond Princess cases were counted in or not, when reporting 93 for 2020-03-16). 2 cases were initially classified as Russia (undefined); Now everything is corrected according the RosPotrebNadzor bulletin; Timestamp arbitrary, based on the Kommersant publication;	Alexei Kouprianov
+"2020-03-16 15:45:00"	detected	Moscow	Moscow region		1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13999	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13999 + previous imprecise (inferred) calculations : 21+3+2 assumed on the basis of the following calculation. https://www.kommersant.ru/doc/4285154 update shows 53 cases for Moscow; 27 new cases for 2020-03-16. 1 case ascribed to Krasnoyarsk; The remaining 26 are split in 21+5 because, as for 2020-03-15, there were 32 cases in Moscow. Te remainig 5 are split into 3+2 on the basis of https://ria.ru/20200317/1568706559.html it was stated that 3 new cases are registered in St. Petersburg. It is also possible that the number is 3 persons higher because some report +30 cases, taking 63, not 66 as a base (it is not clear whether 3 Diamond Princess cases were counted in or not, when reporting 93 for 2020-03-16). 2 cases were initially classified as Russia (undefined); Now everything is corrected according the RosPotrebNadzor bulletin; Timestamp arbitrary, based on the Kommersant publication;	Alexei Kouprianov
+"2020-03-16 15:45:00"	detected	Samara	Samara		3			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13999	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13999 + previous imprecise (inferred) calculations : 21+3+2 assumed on the basis of the following calculation. https://www.kommersant.ru/doc/4285154 update shows 53 cases for Moscow; 27 new cases for 2020-03-16. 1 case ascribed to Krasnoyarsk; The remaining 26 are split in 21+5 because, as for 2020-03-15, there were 32 cases in Moscow. Te remainig 5 are split into 3+2 on the basis of https://ria.ru/20200317/1568706559.html it was stated that 3 new cases are registered in St. Petersburg. It is also possible that the number is 3 persons higher because some report +30 cases, taking 63, not 66 as a base (it is not clear whether 3 Diamond Princess cases were counted in or not, when reporting 93 for 2020-03-16). 2 cases were initially classified as Russia (undefined); Now everything is corrected according the RosPotrebNadzor bulletin; Timestamp arbitrary, based on the Kommersant publication;	Alexei Kouprianov
+"2020-03-16 15:45:00"	detected	Kirov	Kirov		1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13999	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13999 + previous imprecise (inferred) calculations : 21+3+2 assumed on the basis of the following calculation. https://www.kommersant.ru/doc/4285154 update shows 53 cases for Moscow; 27 new cases for 2020-03-16. 1 case ascribed to Krasnoyarsk; The remaining 26 are split in 21+5 because, as for 2020-03-15, there were 32 cases in Moscow. Te remainig 5 are split into 3+2 on the basis of https://ria.ru/20200317/1568706559.html it was stated that 3 new cases are registered in St. Petersburg. It is also possible that the number is 3 persons higher because some report +30 cases, taking 63, not 66 as a base (it is not clear whether 3 Diamond Princess cases were counted in or not, when reporting 93 for 2020-03-16). 2 cases were initially classified as Russia (undefined); Now everything is corrected according the RosPotrebNadzor bulletin; Timestamp arbitrary, based on the Kommersant publication;	Alexei Kouprianov
+"2020-03-16 15:45:00"	healed	St. Petersburg	St. Petersburg		1	StPb.00001	Italy	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=13999	+ https://ria.ru/20200317/1568706559.html : An Italian citizen and <a contacting woman> released <yesterday>.	Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Moscow	Moscow		4			https://tass.ru/obschestvo/8004627	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14033	Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Samara	Samara		1			https://tass.ru/obschestvo/8004627	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14033	Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Samara	Tagliatti		1			https://tass.ru/obschestvo/8004627	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14033	Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Kaliningrad	Kaliningrad		2			https://tass.ru/obschestvo/8004627	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14033	Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Tver	Tver		2			https://tass.ru/obschestvo/8004627	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14033	Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Moscow	Moscow region		1			https://tass.ru/obschestvo/8004627	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14033	Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Krasnoyarsk	Krasnoyarsk		1			https://tass.ru/obschestvo/8004627	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14033	Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Tambov	Tambov		1			https://tass.ru/obschestvo/8004627	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14033	Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Kaluga	Kaluga		1			https://tass.ru/obschestvo/8004627	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14033	Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Nizhnii Novgorod	Nizhnii Novgorod		1			https://tass.ru/obschestvo/8004627	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14033	Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Penza	Penza		1			https://tass.ru/obschestvo/8004627	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14033	Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Ekaterinburg	Ekaterinburg		1			https://tass.ru/obschestvo/8004627	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14033	Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Arkhangelsk	Arkhangelsk		1			https://tass.ru/obschestvo/8004627	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14033	Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Yaroslavl	Yaroslavl		1			https://tass.ru/obschestvo/8004627	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14033	Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Kazan	Kazan		1			https://tass.ru/obschestvo/8004627	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14033	Alexei Kouprianov
+"2020-03-17 16:21:00"	detected	Khakassia	Khakassia		1			https://tass.ru/obschestvo/8004627	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14033	Alexei Kouprianov
+"2020-03-17 16:21:00"	healed	Russia (unspecified)	Russia (unspecified)		1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14033		Alexei Kouprianov
+"2020-03-18 14:31:00"	detected	Moscow	Moscow		31			https://lenta.ru/news/2020/03/18/147/	RPN says of 33 cases (when breaking down by regions: 31+1+1) : https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14045	Alexei Kouprianov
+"2020-03-18 14:31:00"	detected	Tomsk	Tomsk		1			https://lenta.ru/news/2020/03/18/147/	RPN says of 33 cases (when breaking down by regions: 31+1+1) : https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14045	Alexei Kouprianov
+"2020-03-18 14:31:00"	detected	Novosibirsk	Novosibirsk		1			https://lenta.ru/news/2020/03/18/147/	RPN says of 33 cases (when breaking down by regions: 31+1+1) : https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14045	Alexei Kouprianov
+"2020-03-19 16:01:00"	detected	Moscow	Moscow	Москва	12			https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14060	Alexei Kouprianov
+"2020-03-19 16:01:00"	detected	Moscow	Moscow region	Московская область	5			https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14060	Alexei Kouprianov
+"2020-03-19 16:01:00"	detected	Ekaterinburg	Ekaterinburg	Свердловская область	5			https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14060	Alexei Kouprianov
+"2020-03-19 16:01:00"	detected	Tula	Tula	Тульская область	3			https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14060	Alexei Kouprianov
+"2020-03-19 16:01:00"	detected	Krasnoyarsk	Krasnoyarsk	Красноярский край	3			https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14060	Alexei Kouprianov
+"2020-03-19 16:01:00"	detected	Khabarovsk	Khabarovsk	Хабаровский край	3			https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14060	Alexei Kouprianov
+"2020-03-19 16:01:00"	detected	Tambov	Tambov	Тамбовская область	2			https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14060	Alexei Kouprianov
+"2020-03-19 16:01:00"	detected	Voronezh	Voronezh	Воронежская область	2			https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14060	Alexei Kouprianov
+"2020-03-19 16:01:00"	detected	Kirov	Kirov	Кировская область	2			https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14060	Alexei Kouprianov
+"2020-03-19 16:01:00"	detected	Krasnodar	Krasnodar	Краснодарский край	2			https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14060	Alexei Kouprianov
+"2020-03-19 16:01:00"	detected	Ivanovo	Ivanovo	Ивановская область	1			https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14060	Alexei Kouprianov
+"2020-03-19 16:01:00"	detected	Ryazan	Ryazan	Рязанская область	1			https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14060	Alexei Kouprianov
+"2020-03-19 16:01:00"	detected	Murmansk	Murmansk	Мурманская область	1			https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14060	Alexei Kouprianov
+"2020-03-19 16:01:00"	detected	Nizhnii Novgorod	Nizhnii Novgorod	Нижегородская область	1			https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14060	Alexei Kouprianov
+"2020-03-19 16:01:00"	detected	Novosibirsk	Novosibirsk	Новосибирская область	1			https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14060	Alexei Kouprianov
+"2020-03-19 16:01:00"	detected	Orenburg	Orenburg	Оренбургская область	1			https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14060	Alexei Kouprianov
+"2020-03-19 16:01:00"	detected	Saratov	Saratov	Саратовская область	1			https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14060	Alexei Kouprianov
+"2020-03-19 16:01:00"	detected	Tver	Tver	Тверская область	1			https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14060	Alexei Kouprianov
+"2020-03-19 16:01:00"	detected	St. Petersburg	St. Petersburg	Санкт-Петербург	1			https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14060	Alexei Kouprianov
+"2020-03-19 16:01:00"	detected	Khanty-Mansiisk	Khanty-Mansiisk	Ханты-Мансийский АО	1			https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14060	Alexei Kouprianov
+"2020-03-19 16:01:00"	detected	Cheboksary	Cheboksary	Республика Чувашия	1			https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14060	Alexei Kouprianov
+"2020-03-19 16:01:00"	detected	Yakutsk	Yakutsk	Республика Саха (Якутия)	1			https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14060	Alexei Kouprianov
+"2020-03-19 16:01:00"	detected	Perm krai	Perm krai	Пермский край	1			https://www.rbc.ru/society/19/03/2020/5e736c549a7947c591ca5556	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14060	Alexei Kouprianov
+"2020-03-20 16:00:00"	detected	Moscow	Moscow	Москва	33			https://www.rbc.ru/society/20/03/2020/5e74cd909a79476f50f154de	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14070	Alexei Kouprianov
+"2020-03-20 16:00:00"	detected	Moscow	Moscow region	Московская область	1			https://www.rbc.ru/society/20/03/2020/5e74cd909a79476f50f154de	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14070	Alexei Kouprianov
+"2020-03-20 16:00:00"	detected	Yakutsk	Yakutsk	Республика Саха (Якутия)	6			https://www.rbc.ru/society/20/03/2020/5e74cd909a79476f50f154de	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14070	Alexei Kouprianov
+"2020-03-20 16:00:00"	detected	St. Petersburg	St. Petersburg	Санкт-Петербург	4			https://www.rbc.ru/society/20/03/2020/5e74cd909a79476f50f154de	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14070	Alexei Kouprianov
+"2020-03-20 16:00:00"	detected	Samara	Samara	Самарская область	4			https://www.rbc.ru/society/20/03/2020/5e74cd909a79476f50f154de	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14070	Alexei Kouprianov
+"2020-03-20 16:00:00"	detected	Kirov	Kirov	Кировская область	2			https://www.rbc.ru/society/20/03/2020/5e74cd909a79476f50f154de	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14070	Alexei Kouprianov
+"2020-03-20 16:00:00"	detected	Novosibirsk	Novosibirsk	Новосибирская область	2			https://www.rbc.ru/society/20/03/2020/5e74cd909a79476f50f154de	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14070	Alexei Kouprianov
+"2020-03-20 16:00:00"	detected	Ulianovsk	Ulianovsk	Ульяновская область	1			https://www.rbc.ru/society/20/03/2020/5e74cd909a79476f50f154de	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14070	Alexei Kouprianov
+"2020-03-20 16:00:00"	detected	Tiumen	Tiumen	Тюменская область	1			https://www.rbc.ru/society/20/03/2020/5e74cd909a79476f50f154de	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14070	Alexei Kouprianov
+"2020-03-21 16:42:00"	detected	Moscow	Moscow	Москва	6			https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14084	Alexei Kouprianov
+"2020-03-21 16:42:00"	detected	Moscow	Moscow region	Московская область	17			https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14084	Alexei Kouprianov
+"2020-03-21 16:42:00"	detected	Kazan	Kazan	Республика Татарстан	5			https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14084	Alexei Kouprianov
+"2020-03-21 16:42:00"	detected	Nizhnii Novgorod	Nizhnii Novgorod	Нижегородская область	4			https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14084	Alexei Kouprianov
+"2020-03-21 16:42:00"	detected	Ekaterinburg	Ekaterinburg	Свердловская область	3			https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14084	Alexei Kouprianov
+"2020-03-21 16:42:00"	detected	Tula	Tula	Тульская область	2			https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14084	Alexei Kouprianov
+"2020-03-21 16:42:00"	detected	Kaliningrad	Kaliningrad	Калининградская область	2			https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14084	Alexei Kouprianov
+"2020-03-21 16:42:00"	detected	St. Petersburg	St. Petersburg	Санкт-Петербург	2			https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14084	Alexei Kouprianov
+"2020-03-21 16:42:00"	detected	Krasnodar	Krasnodar	Краснодарский край	2			https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14084	Alexei Kouprianov
+"2020-03-21 16:42:00"	detected	Nalchik	Nalchik	Кабардино-Балкарская Республика	2			https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14084	Alexei Kouprianov
+"2020-03-21 16:42:00"	detected	Ryazan	Ryazan	Рязанская область	1			https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14084	Alexei Kouprianov
+"2020-03-21 16:42:00"	detected	Kurgan	Kurgan	Курганская область	1			https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14084	Alexei Kouprianov
+"2020-03-21 16:42:00"	detected	Cheliabinsk	Cheliabinsk	Челябинская область	1			https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14084	Alexei Kouprianov
+"2020-03-21 16:42:00"	detected	Stavropol	Stavropol	Ставропольский край	1			https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14084	Alexei Kouprianov
+"2020-03-21 16:42:00"	detected	Krasnoyarsk	Krasnoyarsk	Красноярский край	1			https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14084	Alexei Kouprianov
+"2020-03-21 16:42:00"	detected	Khabarovsk	Khabarovsk	Хабаровский край	1			https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14084	Alexei Kouprianov
+"2020-03-21 16:42:00"	detected	Khanty-Mansiisk	Khanty-Mansiisk	Ханты-Мансийский АО	1			https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14084	Alexei Kouprianov
+"2020-03-21 16:42:00"	detected	Crimea [annex.]	Crimea [annex.]	Республика Крым	1			https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14084	Alexei Kouprianov
+"2020-03-21 16:42:00"	healed	Moscow	Moscow		3			https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac		Alexei Kouprianov
+"2020-03-21 16:42:00"	healed	Moscow	Moscow region		1			https://www.rbc.ru/society/21/03/2020/5e7619ae9a79475d85d97aac		Alexei Kouprianov
+"2020-03-22 16:11:00"	detected	Moscow	Moscow	Москва	54			https://www.kommersant.ru/doc/4299207	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14086	Alexei Kouprianov
+"2020-03-22 16:11:00"	detected	Kirov	Kirov	Кировская область	2			https://www.kommersant.ru/doc/4299207	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14086	Alexei Kouprianov
+"2020-03-22 16:11:00"	detected	Udmurtia	Udmurtia	Удмуртская Республика	2			https://www.kommersant.ru/doc/4299207	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14086	Alexei Kouprianov
+"2020-03-22 16:11:00"	detected	Novgorod	Novgorod	Новгородская область	1			https://www.kommersant.ru/doc/4299207	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14086	Alexei Kouprianov
+"2020-03-22 16:11:00"	detected	Arkhangelsk	Arkhangelsk	Архангельская область	1			https://www.kommersant.ru/doc/4299207	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14086	Alexei Kouprianov
+"2020-03-22 16:11:00"	detected	Briansk	Briansk	Брянская область	1			https://www.kommersant.ru/doc/4299207	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14086	Alexei Kouprianov
+"2020-03-23 09:11:00"	detected	Moscow	Moscow	Москва	71			https://ria.ru/20200323/1568995300.html	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14087 healed data not processed	Alexei Kouprianov
+"2020-03-24 14:19:00"	detected	Moscow	Moscow	Москва	28			https://ria.ru/20200324/1569071483.html	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14104	Alexei Kouprianov
+"2020-03-24 14:19:00"	detected	St. Petersburg	St. Petersburg	Санкт-Петербург	5			https://ria.ru/20200324/1569071483.html	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14104	Alexei Kouprianov
+"2020-03-24 14:19:00"	detected	Voronezh	Voronezh	Воронежская область	4			https://ria.ru/20200324/1569071483.html	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14104	Alexei Kouprianov
+"2020-03-24 14:19:00"	detected	Ekaterinburg	Ekaterinburg	Свердловская область	4			https://ria.ru/20200324/1569071483.html	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14104	Alexei Kouprianov
+"2020-03-24 14:19:00"	detected	Ufa	Ufa	Башкирия	3			https://ria.ru/20200324/1569071483.html	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14104	Alexei Kouprianov
+"2020-03-24 14:19:00"	detected	Lipetsk	Lipetsk	Липецкая область	2			https://ria.ru/20200324/1569071483.html	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14104	Alexei Kouprianov
+"2020-03-24 14:19:00"	detected	Orel	Orel	Орловская область	2			https://ria.ru/20200324/1569071483.html	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14104	Alexei Kouprianov
+"2020-03-24 14:19:00"	detected	St. Petersburg	Leningrad region	Ленинградская область	2			https://ria.ru/20200324/1569071483.html	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14104	Alexei Kouprianov
+"2020-03-24 14:19:00"	detected	Vladivostok	Vladivostok	Приморский край	2			https://ria.ru/20200324/1569071483.html	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14104	Alexei Kouprianov
+"2020-03-24 14:19:00"	detected	Kaluga	Kaluga	Калужская область	1			https://ria.ru/20200324/1569071483.html	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14104	Alexei Kouprianov
+"2020-03-24 14:19:00"	detected	Groznyi	Groznyi	Чечня	1			https://ria.ru/20200324/1569071483.html	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14104	Alexei Kouprianov
+"2020-03-24 14:19:00"	detected	Volgograd	Volgograd	Волгоградская область	1			https://ria.ru/20200324/1569071483.html	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14104	Alexei Kouprianov
+"2020-03-24 14:19:00"	detected	Kazan	Kazan	Татарстан	1			https://ria.ru/20200324/1569071483.html	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14104	Alexei Kouprianov
+"2020-03-24 14:19:00"	detected	Samara	Samara	Самарская область	1			https://ria.ru/20200324/1569071483.html	https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14104	Alexei Kouprianov
+"2020-03-24 14:19:00"	healed	Moscow	Moscow region	Московская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14104	22 healed cumulated	Alexei Kouprianov
+"2020-03-24 14:19:00"	healed	Kemerovo	Kemerovo	Кемеровская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14104	22 healed cumulated	Alexei Kouprianov
+"2020-03-24 14:19:00"	healed	Krasnodar	Krasnodar	Краснодарский край	3			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14104	22 healed cumulated	Alexei Kouprianov
+"2020-03-25 11:00:00"	detected	Moscow	Moscow	Москва	120			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
+"2020-03-25 11:00:00"	detected	Moscow	Moscow region	Московская область	6			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
+"2020-03-25 11:00:00"	detected	Crimea [annex.]	Crimea [annex.]	Республика Крым	6			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
+"2020-03-25 11:00:00"	detected	Pskov	Pskov	Псковская область	4			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
+"2020-03-25 11:00:00"	detected	Krasnodar	Krasnodar	Краснодарский край	4			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
+"2020-03-25 11:00:00"	detected	Orenburg	Orenburg	Оренбургская область	3			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
+"2020-03-25 11:00:00"	detected	Yakutsk	Yakutsk	Республика Саха (Якутия)	3			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
+"2020-03-25 11:00:00"	detected	Tula	Tula	Тульская область	2			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
+"2020-03-25 11:00:00"	detected	Ufa	Ufa	Республика Коми	2			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
+"2020-03-25 11:00:00"	detected	Nalchik	Nalchik	Кабардино-Балкарская Республика	2			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
+"2020-03-25 11:00:00"	detected	Perm krai	Perm krai	Пермский край	2			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
+"2020-03-25 11:00:00"	detected	Briansk	Briansk	Брянская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
+"2020-03-25 11:00:00"	detected	Arkhangelsk	Arkhangelsk	Архангельская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
+"2020-03-25 11:00:00"	detected	Kaliningrad	Kaliningrad	Калининградская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
+"2020-03-25 11:00:00"	detected	Stavropol	Stavropol	Ставропольский край	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
+"2020-03-25 11:00:00"	detected	Rostov-Don	Rostov-Don	Ростовская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
+"2020-03-25 11:00:00"	detected	Syktyvkar	Syktyvkar	Республика Башкортостан	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
+"2020-03-25 11:00:00"	detected	Nizhnii Novgorod	Nizhnii Novgorod	Нижегородская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
+"2020-03-25 11:00:00"	detected	Penza	Penza	Пензенская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
+"2020-03-25 11:00:00"	detected	Cheliabinsk	Cheliabinsk	Челябинская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108		Alexei Kouprianov
+"2020-03-25 11:00:00"	healed	Moscow	Moscow	Москва	5			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108	29 healed cumulative	Alexei Kouprianov
+"2020-03-25 11:00:00"	healed	Nizhnii Novgorod	Nizhnii Novgorod	Нижегородская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108	29 healed cumulative	Alexei Kouprianov
+"2020-03-25 11:00:00"	healed	Kaliningrad	Kaliningrad	Калининградская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14108	29 healed cumulative	Alexei Kouprianov
+"2020-03-26 11:00:00"	detected	Moscow	Moscow	Москва	136			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
+"2020-03-26 11:00:00"	detected	Ekaterinburg	Ekaterinburg	Свердловская область	7			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
+"2020-03-26 11:00:00"	detected	St. Petersburg	St. Petersburg	Санкт-Петербург	5			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
+"2020-03-26 11:00:00"	detected	Perm krai	Perm krai	Пермский край	5			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
+"2020-03-26 11:00:00"	detected	Yakutsk	Yakutsk	Республика Саха (Якутия)	4			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
+"2020-03-26 11:00:00"	detected	Stavropol	Stavropol	Ставропольский край	3			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
+"2020-03-26 11:00:00"	detected	Kazan	Kazan	Республика Татарстан	3			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
+"2020-03-26 11:00:00"	detected	Cheliabinsk	Cheliabinsk	Челябинская область	3			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
+"2020-03-26 11:00:00"	detected	Krasnoyarsk	Krasnoyarsk	Красноярский край	3			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
+"2020-03-26 11:00:00"	detected	Pskov	Pskov	Псковская область	2			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
+"2020-03-26 11:00:00"	detected	Samara	Samara	Самарская область	2			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
+"2020-03-26 11:00:00"	detected	Khanty-Mansiisk	Khanty-Mansiisk	Ханты-Мансийский АО	2			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
+"2020-03-26 11:00:00"	detected	Ulan-Ude	Ulan-Ude	Республика Бурятия	2			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
+"2020-03-26 11:00:00"	detected	Khakassia	Khakassia	Республика Хакасия	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
+"2020-03-26 11:00:00"	detected	Kemerovo	Kemerovo	Кемеровская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
+"2020-03-26 11:00:00"	detected	Novosibirsk	Novosibirsk	Новосибирская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
+"2020-03-26 11:00:00"	detected	Tomsk	Tomsk	Томская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
+"2020-03-26 11:00:00"	detected	Khabarovsk	Khabarovsk	Хабаровский край	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115		Alexei Kouprianov
+"2020-03-26 11:00:00"	healed	Moscow	Moscow	Москва	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115	38 healed cumulative	Alexei Kouprianov
+"2020-03-26 11:00:00"	healed	Moscow	Moscow region	Московская область	5			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115	38 healed cumulative	Alexei Kouprianov
+"2020-03-26 11:00:00"	healed	St. Petersburg	St. Petersburg	Санкт-Петербург	3			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14115	38 healed cumulative	Alexei Kouprianov
+"2020-03-27 11:30:00"	detected	Moscow	Moscow	Москва	157			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14125	45 healed cumulated	Alexei Kouprianov
+"2020-03-27 11:30:00"	detected	Crimea [annex.]	Crimea [annex.]	Республика Крым	12			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14125		Alexei Kouprianov
+"2020-03-27 11:30:00"	detected	Moscow	Moscow region	Московская область	8			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14125		Alexei Kouprianov
+"2020-03-27 11:30:00"	detected	Volgograd	Volgograd	Волгоградская область	3			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14125		Alexei Kouprianov
+"2020-03-27 11:30:00"	detected	Groznyi	Groznyi	Чеченская Республика	2			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14125		Alexei Kouprianov
+"2020-03-27 11:30:00"	detected	Mordovia	Mordovia	Республика Мордовия	2			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14125		Alexei Kouprianov
+"2020-03-27 11:30:00"	detected	Udmurtia	Udmurtia	Удмуртская Республика	2			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14125		Alexei Kouprianov
+"2020-03-27 11:30:00"	detected	Samara	Samara	Самарская область	2			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14125		Alexei Kouprianov
+"2020-03-27 11:30:00"	detected	Ivanovo	Ivanovo	Ивановская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14125		Alexei Kouprianov
+"2020-03-27 11:30:00"	detected	Orel	Orel	Орловская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14125		Alexei Kouprianov
+"2020-03-27 11:30:00"	detected	Tula	Tula	Тульская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14125		Alexei Kouprianov
+"2020-03-27 11:30:00"	detected	Yaroslavl	Yaroslavl	Ярославская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14125		Alexei Kouprianov
+"2020-03-27 11:30:00"	detected	Dagestan	Dagestan	Республика Дагестан	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14125		Alexei Kouprianov
+"2020-03-27 11:30:00"	detected	Rostov-Don	Rostov-Don	Ростовская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14125		Alexei Kouprianov
+"2020-03-27 11:30:00"	detected	Kazan	Kazan	Республика Татарстан	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14125		Alexei Kouprianov
+"2020-03-27 11:30:00"	detected	Kirov	Kirov	Кировская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14125		Alexei Kouprianov
+"2020-03-28 12:20:00"	detected	Moscow	Moscow	Москва	114			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14132	49 healed cumulated	Alexei Kouprianov
+"2020-03-28 12:20:00"	detected	Moscow	Moscow region	Московская область	36			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14132		Alexei Kouprianov
+"2020-03-28 12:20:00"	detected	St. Petersburg	St. Petersburg	Санкт-Петербург	11			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14132		Alexei Kouprianov
+"2020-03-28 12:20:00"	detected	Krasnodar	Krasnodar	Краснодарский край	8			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14132		Alexei Kouprianov
+"2020-03-28 12:20:00"	detected	Ulan-Ude	Ulan-Ude	Республика Бурятия	6			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14132		Alexei Kouprianov
+"2020-03-28 12:20:00"	detected	Ivanovo	Ivanovo	Ивановская область	5			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14132		Alexei Kouprianov
+"2020-03-28 12:20:00"	detected	St. Petersburg	Leningrad region	Ленинградская область	4			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14132		Alexei Kouprianov
+"2020-03-28 12:20:00"	detected	Ekaterinburg	Ekaterinburg	Свердловская область	4			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14132		Alexei Kouprianov
+"2020-03-28 12:20:00"	detected	Cheliabinsk	Cheliabinsk	Челябинская область	4			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14132		Alexei Kouprianov
+"2020-03-28 12:20:00"	detected	Krasnoyarsk	Krasnoyarsk	Красноярский край	4			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14132		Alexei Kouprianov
+"2020-03-28 12:20:00"	detected	Sakhalin	Sakhalin	Сахалинская область	4			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14132		Alexei Kouprianov
+"2020-03-28 12:20:00"	detected	Lipetsk	Lipetsk	Липецкая область	3			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14132		Alexei Kouprianov
+"2020-03-28 12:20:00"	detected	Tula	Tula	Тульская область	3			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14132		Alexei Kouprianov
+"2020-03-28 12:20:00"	detected	Kaliningrad	Kaliningrad	Калининградская область	3			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14132		Alexei Kouprianov
+"2020-03-28 12:20:00"	detected	Kazan	Kazan	Республика Татарстан	3			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14132		Alexei Kouprianov
+"2020-03-28 12:20:00"	detected	Nizhnii Novgorod	Nizhnii Novgorod	Нижегородская область	3			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14132		Alexei Kouprianov
+"2020-03-28 12:20:00"	detected	Groznyi	Groznyi	Чеченская Республика	2			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14132		Alexei Kouprianov
+"2020-03-28 12:20:00"	detected	Orenburg	Orenburg	Оренбургская область	2			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14132		Alexei Kouprianov
+"2020-03-28 12:20:00"	detected	Novosibirsk	Novosibirsk	Новосибирская область	2			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14132		Alexei Kouprianov
+"2020-03-28 12:20:00"	detected	Briansk	Briansk	Брянская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14132		Alexei Kouprianov
+"2020-03-28 12:20:00"	detected	Kostroma	Kostroma	Костромская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14132		Alexei Kouprianov
+"2020-03-28 12:20:00"	detected	Smolensk	Smolensk	Смоленская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14132		Alexei Kouprianov
+"2020-03-28 12:20:00"	detected	Adygea	Adygea	Республика Адыгея	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14132		Alexei Kouprianov
+"2020-03-28 12:20:00"	detected	Perm krai	Perm krai	Пермский край	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14132		Alexei Kouprianov
+"2020-03-28 12:20:00"	detected	Saratov	Saratov	Саратовская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14132		Alexei Kouprianov
+"2020-03-28 12:20:00"	detected	Crimea [annex.]	Crimea [annex.]	Республика Крым	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14132		Alexei Kouprianov
