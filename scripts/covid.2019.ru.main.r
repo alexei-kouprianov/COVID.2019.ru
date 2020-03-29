@@ -240,11 +240,11 @@ axes=FALSE)
 points(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$SPb.CS), type="l",col=4)
 points(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$RUS.CS - (covid.2019.ru.i.dyn.tt$Mos.CS + covid.2019.ru.i.dyn.tt$SPb.CS)), type="l",col=3)
 
-rasterImage(cc.logo, 
-xleft = covid.2019.ru.i.dyn.tt$TIME[1], 
-xright=covid.2019.ru.i.dyn.tt$TIME[1]+dim(cc.logo)[2]*1200, 
-ytop = log10(100), 
-ybottom=log10(100)-dim(cc.logo)[1]/1600)
+# rasterImage(cc.logo, 
+# xleft = covid.2019.ru.i.dyn.tt$TIME[1], 
+# xright=covid.2019.ru.i.dyn.tt$TIME[1]+dim(cc.logo)[2]*1200, 
+# ytop = log10(100), 
+# ybottom=log10(100)-dim(cc.logo)[1]/1600)
 
 axis.POSIXct(1, 
 at=seq(min(covid.2019.breaks$TIME), max(covid.2019.breaks$TIME), by="week"), 
