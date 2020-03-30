@@ -119,7 +119,11 @@ sum(covid.2019.ru.i.reg.0[[i]]$NUMBER))
 )
 }
 
-colnames(covid.2019.ru.i.reg.0.df) <- c("LOCUS","NUMBER")
+colnames(covid.2019.ru.i.reg.0.df) <- c("LOCUS.1","NUMBER")
+
+covid.2019.ru.i.reg.0.df <- cbind.data.frame(covid.2019.ru.i.reg.0.df, covid.2019.coord)
+
+covid.2019.ru.i.reg.0.df <- covid.2019.ru.i.reg.0.df[order(-covid.2019.ru.i.reg.0.df$NUMBER),]
 
 # Momentary data
 
@@ -278,7 +282,12 @@ mtext(paste("Total COVID-2019 cases, as of",covid.2019.ru.i$TIMESTAMP[length(cov
 side=1, line=2) 
 mtext("Russian Federation", font=2, cex=1.2, side=3, line=3)
 
-points(covid.2019.coord$LON, covid.2019.coord$LAT, cex=sqrt(covid.2019.ru.i.reg.0.df$NUMBER)/2, pch=21, bg=2)
+points(
+covid.2019.ru.i.reg.0.df$LON, 
+covid.2019.ru.i.reg.0.df$LAT, 
+cex=sqrt(covid.2019.ru.i.reg.0.df$NUMBER)/2, 
+pch=21, bg=2
+)
 
 dev.off()
 
