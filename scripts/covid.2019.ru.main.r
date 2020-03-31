@@ -263,7 +263,7 @@ dev.off()
 
 # Regions barplot
 png("../plots/COVID.2019.barplot.regions.png", height=750, width=1000, res=120, pointsize=10)
-par(mar=c(10,5,4,2)+.1, cex.axis=.7)
+par(mar=c(10,5,4,2)+.1, cex.axis=.6)
 
 barplot(covid.2019.ru.i.reg.ordered.df$NUMBER, 
 names.arg=covid.2019.ru.i.reg.ordered.df$LOCUS, 
@@ -285,7 +285,7 @@ mtext("Russian Federation", font=2, cex=1.2, side=3, line=3)
 points(
 covid.2019.ru.i.reg.0.df$LON, 
 covid.2019.ru.i.reg.0.df$LAT, 
-cex=sqrt(covid.2019.ru.i.reg.0.df$NUMBER)/2, 
+cex=sqrt(covid.2019.ru.i.reg.0.df$NUMBER)/4, 
 pch=21, bg=2
 )
 
