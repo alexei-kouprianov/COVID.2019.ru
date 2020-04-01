@@ -274,6 +274,22 @@ las=2)
 
 dev.off()
 
+# Regions barplot logarithmic;
+png("../plots/COVID.2019.barplot.regions.log.10.png", height=750, width=1000, res=120, pointsize=10)
+par(mar=c(10,5,4,2)+.1, cex.axis=.6)
+
+barplot(log10(covid.2019.ru.i.reg.ordered.df$NUMBER), 
+names.arg=covid.2019.ru.i.reg.ordered.df$LOCUS, 
+xlab="", 
+ylab=paste("Total COVID-2019 cases, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)],"(logarithmic scale)"), 
+main="Russian Federation",
+las=2, axes=FALSE)
+
+axis(2, at=log10(c(1,10,100,1000)), labels=c(1,10,100,1000))
+axis(2, at=log10(c(1:9, seq(10,100,10), seq(200,1000,100), seq(2000,10000,1000))), labels=FALSE)
+
+dev.off()
+
 # Map
 png("../plots/COVID.2019.map.regions.png", height=750, width=1000, res=120, pointsize=10)
 

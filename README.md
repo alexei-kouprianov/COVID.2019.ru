@@ -14,4 +14,6 @@ The visualizations derived from these data are as follows:
 
 ![alt text](plots/COVID.2019.barplot.regions.png "COVID-2019 total cases for Rusia by regions")
 
+![alt text](plots/COVID.2019.barplot.regions.log.10.png "COVID-2019 total cases for Rusia by regions")
+
 ![alt text](plots/COVID.2019.map.regions.png "COVID-2019 total cases for Rusia, map")
