@@ -12,8 +12,12 @@ The visualizations derived from these data are as follows:
 
 ![alt text](plots/COVID.2019.cumulated.log.10.by_regions.png "Cumulated curve of COVID-2019 cases for Russia, y-logarithmic, by regions")
 
-![alt text](plots/COVID.2019.barplot.regions.png "COVID-2019 total cases for Rusia by regions")
+![alt text](plots/COVID.2019.barplot.regions.png "COVID-2019 total cases for Russia by regions")
 
-![alt text](plots/COVID.2019.barplot.regions.log.10.png "COVID-2019 total cases for Rusia by regions")
+![alt text](plots/COVID.2019.barplot.regions.log.10.png "COVID-2019 total cases for Russia by regions")
 
-![alt text](plots/COVID.2019.map.regions.png "COVID-2019 total cases for Rusia, map")
+![alt text](plots/COVID.2019.barplot.regions.per_100K.png "COVID-2019 total cases per 100K inhabitants for Russia by regions")
+
+![alt text](plots/COVID.2019.map.regions.png "COVID-2019 total cases for Russia, map")
+
+![alt text](plots/COVID.2019.map.regions.per_100K.png "COVID-2019 total cases per 100K inhabitants for Russia, map")

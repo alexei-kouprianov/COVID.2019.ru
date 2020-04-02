@@ -11,6 +11,7 @@ Sys.setlocale("LC_TIME", "en_US.UTF-8")
 covid.2019.ru <- read.table("../data/momentary.txt", h=TRUE, sep="\t")
 covid.2019.breaks <- read.table("../misc/breaks.txt", h=TRUE, sep="\t")
 covid.2019.coord <- read.table("../misc/coord.txt", h=TRUE, sep="\t")
+covid.2019.population <- read.table("../misc/population.txt", h=TRUE, sep="\t")
 # cc.logo <- readPNG("../misc/240px-Cc.logo.circle.svg.png")
 # cc_by.logo <- readPNG("../misc/Cc-by_new.svg.png")
 
@@ -106,8 +107,12 @@ sum(covid.2019.ru.i.reg[[i]]$NUMBER))
 )
 }
 
-colnames(covid.2019.ru.i.reg.df) <- c("LOCUS","NUMBER")
+colnames(covid.2019.ru.i.reg.df) <- c("LOCUS.1","NUMBER")
+covid.2019.ru.i.reg.df <- cbind.data.frame(covid.2019.ru.i.reg.df, covid.2019.population)
+covid.2019.ru.i.reg.df$PER.100K <- covid.2019.ru.i.reg.df$NUMBER/(covid.2019.ru.i.reg.df$POPULATION/100000)
+
 covid.2019.ru.i.reg.ordered.df <- covid.2019.ru.i.reg.df[order(-covid.2019.ru.i.reg.df$NUMBER),]
+covid.2019.ru.i.reg.ordered.PER.100K.df <- covid.2019.ru.i.reg.df[order(-covid.2019.ru.i.reg.df$PER.100K),]
 
 # Mapping regions data frame;
 covid.2019.ru.i.reg.0.df <- NULL
@@ -124,6 +129,8 @@ colnames(covid.2019.ru.i.reg.0.df) <- c("LOCUS.1","NUMBER")
 covid.2019.ru.i.reg.0.df <- cbind.data.frame(covid.2019.ru.i.reg.0.df, covid.2019.coord)
 
 covid.2019.ru.i.reg.0.df <- covid.2019.ru.i.reg.0.df[order(-covid.2019.ru.i.reg.0.df$NUMBER),]
+
+covid.2019.ru.i.reg.0.df$PER.100K <- covid.2019.ru.i.reg.0.df$NUMBER/(covid.2019.ru.i.reg.0.df$POPULATION/100000)
 
 # Momentary data
 
@@ -290,7 +297,20 @@ axis(2, at=log10(c(1:9, seq(10,100,10), seq(200,1000,100), seq(2000,10000,1000))
 
 dev.off()
 
-# Map
+# Regions barplot cases per 100K;
+png("../plots/COVID.2019.barplot.regions.per_100K.png", height=750, width=1000, res=120, pointsize=10)
+par(mar=c(10,5,4,2)+.1, cex.axis=.6)
+
+barplot(covid.2019.ru.i.reg.ordered.PER.100K.df$PER.100K, 
+names.arg=covid.2019.ru.i.reg.ordered.df$LOCUS, 
+xlab="", 
+ylab=paste("Total COVID-2019 cases per 100K, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), 
+main="Russian Federation",
+las=2)
+
+dev.off()
+
+# Map total cases;
 png("../plots/COVID.2019.map.regions.png", height=750, width=1000, res=120, pointsize=10)
 
 map(region="Russia", fill=TRUE, col=8) 
@@ -302,6 +322,23 @@ points(
 covid.2019.ru.i.reg.0.df$LON, 
 covid.2019.ru.i.reg.0.df$LAT, 
 cex=sqrt(covid.2019.ru.i.reg.0.df$NUMBER)/4, 
+pch=21, bg=2
+)
+
+dev.off()
+
+# Map total cases per 100K;
+png("../plots/COVID.2019.map.regions.per_100K.png", height=750, width=1000, res=120, pointsize=10)
+
+map(region="Russia", fill=TRUE, col=8) 
+mtext(paste("Total COVID-2019 cases per 100K, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), 
+side=1, line=2) 
+mtext("Russian Federation", font=2, cex=1.2, side=3, line=3)
+
+points(
+covid.2019.ru.i.reg.0.df$LON, 
+covid.2019.ru.i.reg.0.df$LAT, 
+cex=sqrt(covid.2019.ru.i.reg.0.df$PER.100K), 
 pch=21, bg=2
 )
 
