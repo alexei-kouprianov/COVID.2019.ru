@@ -170,7 +170,7 @@ covid.2019.ru.i.dyn.tt$SPb.CS <- cumsum(covid.2019.ru.i.dyn.tt$SPb)
 ################################################################
 # Basic plots
 
-# Cumulated growth
+# Cumulated growth;
 png("../plots/COVID.2019.cumulated.png", height=750, width=1000, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1)
 
@@ -191,7 +191,7 @@ axis(2)
 
 dev.off()
 
-# Cumulated growth, by regions
+# Cumulated growth, by regions;
 
 png("../plots/COVID.2019.cumulated.by_regions.png", height=750, width=1000, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1)
@@ -215,7 +215,7 @@ axis(2)
 
 dev.off()
 
-# Cumulated growth, log scale
+# Cumulated growth, log scale;
 png("../plots/COVID.2019.cumulated.log10.png", height=750, width=1000, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1)
 
@@ -237,7 +237,7 @@ axis(2, at=log10(c(1:9, seq(10,100,10), seq(200,1000,100), seq(2000,10000,1000))
 
 dev.off()
 
-# Cumulated growth, log scale, by regions
+# Cumulated growth, log scale, by regions;
 png("../plots/COVID.2019.cumulated.log.10.by_regions.png", height=750, width=1000, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1)
 
@@ -268,7 +268,7 @@ legend("topleft", lt=1, col=c(2,4,3), legend=c("Moscow","St. Petersburg","The re
 
 dev.off()
 
-# Regions barplot
+# Regions barplot;
 png("../plots/COVID.2019.barplot.regions.png", height=750, width=1000, res=120, pointsize=10)
 par(mar=c(10,5,4,2)+.1, cex.axis=.6)
 
