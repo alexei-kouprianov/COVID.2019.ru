@@ -302,7 +302,7 @@ png("../plots/COVID.2019.barplot.regions.per_100K.png", height=750, width=1000, 
 par(mar=c(10,5,4,2)+.1, cex.axis=.6)
 
 barplot(covid.2019.ru.i.reg.ordered.PER.100K.df$PER.100K, 
-names.arg=covid.2019.ru.i.reg.ordered.df$LOCUS, 
+names.arg=covid.2019.ru.i.reg.ordered.PER.100K.df$LOCUS, 
 xlab="", 
 ylab=paste("Total COVID-2019 cases per 100K, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), 
 main="Russian Federation",
