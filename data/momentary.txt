@@ -440,3 +440,17 @@ TIMESTAMP	EVENT	LOCUS.0	LOCUS	LOCUS.ORIG	NUMBER	UID	ORIGIN	SRC	COMMENT	DB.OPERAT
 "2020-04-04 11:30:00"	detected	Ekaterinburg	Ekaterinburg	Свердловская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14179		Alexei Kouprianov
 "2020-04-04 11:30:00"	detected	Omsk	Omsk	Омская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14179		Alexei Kouprianov
 "2020-04-04 11:30:00"	detected	Sakhalin	Sakhalin	Сахалинская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14179		Alexei Kouprianov
+"2020-04-05 13:40:00"	detected	Moscow	Moscow	Москва	536			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14182	355 healed cumulative	Alexei Kouprianov
+"2020-04-05 13:40:00"	detected	Moscow	Moscow region	Московская область	45			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14182		Alexei Kouprianov
+"2020-04-05 13:40:00"	detected	Nizhnii Novgorod	Nizhnii Novgorod	Нижегородская область	22			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14182		Alexei Kouprianov
+"2020-04-05 13:40:00"	detected	St. Petersburg	St. Petersburg	Санкт-Петербург	20			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14182		Alexei Kouprianov
+"2020-04-05 13:40:00"	detected	Tula	Tula	Тульская область	10			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14182		Alexei Kouprianov
+"2020-04-05 13:40:00"	detected	St. Petersburg	Leningrad region	Ленинградская область	10			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14182		Alexei Kouprianov
+"2020-04-05 13:40:00"	detected	Krasnoyarsk	Krasnoyarsk	Красноярский край	4			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14182		Alexei Kouprianov
+"2020-04-05 13:40:00"	detected	Khabarovsk	Khabarovsk	Ханты-Мансийский АО	3			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14182		Alexei Kouprianov
+"2020-04-05 13:40:00"	detected	Crimea [annex.]	Crimea [annex.]	Республика Крым	2			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14182		Alexei Kouprianov
+"2020-04-05 13:40:00"	detected	Kamchatka	Kamchatka	Камчатский край	2			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14182		Alexei Kouprianov
+"2020-04-05 13:40:00"	detected	Yaroslavl	Yaroslavl	Ярославская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14182		Alexei Kouprianov
+"2020-04-05 13:40:00"	detected	Cheliabinsk	Cheliabinsk	Челябинская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14182		Alexei Kouprianov
+"2020-04-05 13:40:00"	detected	Khabarovsk	Khabarovsk	Хабаровский край	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14182		Alexei Kouprianov
+"2020-04-05 13:40:00"	detected	Novosibirsk	Novosibirsk	Новосибирская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14182		Alexei Kouprianov
