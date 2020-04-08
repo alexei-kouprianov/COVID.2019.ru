@@ -167,6 +167,11 @@ covid.2019.ru.i.dyn.tt$RUS.CS <- cumsum(covid.2019.ru.i.dyn.tt$RUS)
 covid.2019.ru.i.dyn.tt$Mos.CS <- cumsum(covid.2019.ru.i.dyn.tt$Mos)
 covid.2019.ru.i.dyn.tt$SPb.CS <- cumsum(covid.2019.ru.i.dyn.tt$SPb)
 
+# Adding days count;
+
+covid.2019.ru.i.dyn.tt$DAYS <- rownames(covid.2019.ru.i.dyn.tt)
+covid.2019.ru.i.dyn.tt$DAYS <- as.numeric(covid.2019.ru.i.dyn.tt$DAYS)
+
 ################################################################
 # Basic plots
 
