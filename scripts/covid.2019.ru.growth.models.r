@@ -1,5 +1,10 @@
-# # Run first:
+################################################################
+# Nested under:
 # covid.2019.ru.main.r
+# 
+# requires:
+# source(covid.2019.ru.data_loader.r)
+# source("covid.2019.ru.data_transformations.r")
 #
 # # For more details, read: https://cran.r-project.org/web/packages/drc/drc.pdf
 # 
