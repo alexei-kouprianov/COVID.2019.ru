@@ -55,7 +55,7 @@ open (SRC03, '<stopcoronavirus.table.moment.sorted.txt') or die $!;
 open (TGT03, '>stopcoronavirus.table.moment.expanded.txt') or die $!;
 	while (<SRC03>) {
 		if($_ =~ m/^(.*?)\t(\d*)\t(\d*)\t(\d*)/a){
-		print TGT03 "detected\t$1\t$2\nhealed\t$1\t$3\ndeceased\t$1\t$4\n"; 
+		print TGT03 "detected\t$1\t$2\nrecovered\t$1\t$3\ndeceased\t$1\t$4\n"; 
 		}
 	}
 close TGT03;

@@ -27,69 +27,69 @@ covid.2019.breaks$TIME <- strptime(covid.2019.breaks$TIMESTAMP, "%Y-%m-%d %H:%M:
 # Subsetting
 
 # The quick from the dead
-covid.2019.ru.i <- droplevels(subset(covid.2019.ru, covid.2019.ru$EVENT == "detected"))
-covid.2019.ru.h <- subset(covid.2019.ru, covid.2019.ru$EVENT == "healed")
+covid.2019.ru.i <- subset(covid.2019.ru, covid.2019.ru$EVENT == "detected")
+covid.2019.ru.r <- subset(covid.2019.ru, covid.2019.ru$EVENT == "recovered")
 covid.2019.ru.d <- subset(covid.2019.ru, covid.2019.ru$EVENT == "deceased")
 
-covid.2019.ru.da.i <- droplevels(subset(covid.2019.ru.da, covid.2019.ru.da$EVENT == "detected"))
-covid.2019.ru.da.h <- droplevels(subset(covid.2019.ru.da, covid.2019.ru.da$EVENT == "healed"))
-covid.2019.ru.da.d <- droplevels(subset(covid.2019.ru.da, covid.2019.ru.da$EVENT == "deceased"))
+covid.2019.ru.da.i <- subset(covid.2019.ru.da, covid.2019.ru.da$EVENT == "detected")
+covid.2019.ru.da.r <- subset(covid.2019.ru.da, covid.2019.ru.da$EVENT == "recovered")
+covid.2019.ru.da.d <- subset(covid.2019.ru.da, covid.2019.ru.da$EVENT == "deceased")
 
 ################################################################
 # Data transformations
 
 # Timeseries list;
 covid.2019.ru.i.ts <- NULL
-covid.2019.ru.h.ts <- NULL
+covid.2019.ru.r.ts <- NULL
 covid.2019.ru.d.ts <- NULL
 
 for(i in 1:length(levels(covid.2019.ru.i$TIMESTAMP))){
 covid.2019.ru.i.ts[[i]] <- subset(covid.2019.ru.i, covid.2019.ru.i$TIMESTAMP == levels(covid.2019.ru.i$TIMESTAMP)[i])
-covid.2019.ru.h.ts[[i]] <- subset(covid.2019.ru.h, covid.2019.ru.h$TIMESTAMP == levels(covid.2019.ru.h$TIMESTAMP)[i])
+covid.2019.ru.r.ts[[i]] <- subset(covid.2019.ru.r, covid.2019.ru.r$TIMESTAMP == levels(covid.2019.ru.r$TIMESTAMP)[i])
 covid.2019.ru.d.ts[[i]] <- subset(covid.2019.ru.d, covid.2019.ru.d$TIMESTAMP == levels(covid.2019.ru.d$TIMESTAMP)[i])
 }
 
 # Noncumulated true time timeseries list;
 covid.2019.ru.i.moment_ts <- NULL
-covid.2019.ru.h.moment_ts <- NULL
+covid.2019.ru.r.moment_ts <- NULL
 covid.2019.ru.d.moment_ts <- NULL
 
 for(i in 1:length(covid.2019.breaks$TIME)){
 covid.2019.ru.i.moment_ts[[i]] <- subset(covid.2019.ru.da.i, covid.2019.ru.da.i$TIME < covid.2019.breaks$TIME[i] & covid.2019.ru.da.i$TIME > covid.2019.breaks$TIME[i-1])
-covid.2019.ru.h.moment_ts[[i]] <- subset(covid.2019.ru.da.h, covid.2019.ru.da.h$TIME < covid.2019.breaks$TIME[i] & covid.2019.ru.da.h$TIME > covid.2019.breaks$TIME[i-1])
+covid.2019.ru.r.moment_ts[[i]] <- subset(covid.2019.ru.da.r, covid.2019.ru.da.r$TIME < covid.2019.breaks$TIME[i] & covid.2019.ru.da.r$TIME > covid.2019.breaks$TIME[i-1])
 covid.2019.ru.d.moment_ts[[i]] <- subset(covid.2019.ru.da.d, covid.2019.ru.da.d$TIME < covid.2019.breaks$TIME[i] & covid.2019.ru.da.d$TIME > covid.2019.breaks$TIME[i-1])
 }
 
 # Cumulated true time timeseries list for a map;
 covid.2019.ru.i.cumul_ts <- NULL
-covid.2019.ru.h.cumul_ts <- NULL
+covid.2019.ru.r.cumul_ts <- NULL
 covid.2019.ru.d.cumul_ts <- NULL
 
 for(i in 1:length(covid.2019.breaks$TIME)){
 covid.2019.ru.i.cumul_ts[[i]] <- subset(covid.2019.ru.da.i, covid.2019.ru.da.i$TIME < covid.2019.breaks$TIME[i])
-covid.2019.ru.h.cumul_ts[[i]] <- subset(covid.2019.ru.da.h, covid.2019.ru.da.h$TIME < covid.2019.breaks$TIME[i])
+covid.2019.ru.r.cumul_ts[[i]] <- subset(covid.2019.ru.da.r, covid.2019.ru.da.r$TIME < covid.2019.breaks$TIME[i])
 covid.2019.ru.d.cumul_ts[[i]] <- subset(covid.2019.ru.da.d, covid.2019.ru.da.d$TIME < covid.2019.breaks$TIME[i])
 }
 
 # Barplot regions list;
 covid.2019.ru.i.reg <- NULL
-covid.2019.ru.h.reg <- NULL
+covid.2019.ru.r.reg <- NULL
 covid.2019.ru.d.reg <- NULL
 
 for(i in 1:length(levels(covid.2019.ru.i$LOCUS))){
 covid.2019.ru.i.reg[[i]] <- subset(covid.2019.ru.i, covid.2019.ru.i$LOCUS == levels(covid.2019.ru.i$LOCUS)[i])
-covid.2019.ru.h.reg[[i]] <- subset(covid.2019.ru.h, covid.2019.ru.h$LOCUS == levels(covid.2019.ru.h$LOCUS)[i])
+covid.2019.ru.r.reg[[i]] <- subset(covid.2019.ru.r, covid.2019.ru.r$LOCUS == levels(covid.2019.ru.r$LOCUS)[i])
 covid.2019.ru.d.reg[[i]] <- subset(covid.2019.ru.d, covid.2019.ru.d$LOCUS == levels(covid.2019.ru.d$LOCUS)[i])
 }
 
 # Mapping regions list;
 covid.2019.ru.i.reg.0 <- NULL
-covid.2019.ru.h.reg.0 <- NULL
+covid.2019.ru.r.reg.0 <- NULL
 covid.2019.ru.d.reg.0 <- NULL
 
 for(i in 1:length(levels(covid.2019.ru.i$LOCUS.0))){
 covid.2019.ru.i.reg.0[[i]] <- subset(covid.2019.ru.i, covid.2019.ru.i$LOCUS.0 == levels(covid.2019.ru.i$LOCUS.0)[i])
-covid.2019.ru.h.reg.0[[i]] <- subset(covid.2019.ru.i, covid.2019.ru.i$LOCUS.0 == levels(covid.2019.ru.i$LOCUS.0)[i])
+covid.2019.ru.r.reg.0[[i]] <- subset(covid.2019.ru.i, covid.2019.ru.i$LOCUS.0 == levels(covid.2019.ru.i$LOCUS.0)[i])
 covid.2019.ru.d.reg.0[[i]] <- subset(covid.2019.ru.i, covid.2019.ru.i$LOCUS.0 == levels(covid.2019.ru.i$LOCUS.0)[i])
 }
 

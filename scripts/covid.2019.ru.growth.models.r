@@ -108,6 +108,7 @@ axis(2)
 
 legend("topleft", 
 lty=c(2,3,2,3), 
+lwd=1.5,
 col=c(2,2,4,4), 
 legend=c(
 "Exponential (since February 1, 2020)",
@@ -147,6 +148,7 @@ axis(2, at=log10(c(1:9, seq(10,100,10), seq(200,1000,100), seq(2000,10000,1000))
 
 legend("topleft", 
 lty=c(2,3,2,3), 
+lwd=1.5,
 col=c(2,2,4,4), 
 legend=c(
 "Exponential (since February 1, 2020)",
@@ -168,7 +170,7 @@ plot(covid.2019.ru.i.dyn.tt$RUS.CS ~ covid.2019.ru.i.dyn.tt$DAYS,
 type="n", 
 xlim=c(0,(median(rmc.df$ll.3.e)*3)), ylim=c(0,max(rmc.df$ll.3.d)),
 main="Russian Federation",
-xlab="Days since 2020-03-02",
+xlab="Days since 2020-01-31",
 ylab="Total cases registered",
 axes=FALSE
 )
@@ -199,7 +201,7 @@ plot(log10(covid.2019.ru.i.dyn.tt$RUS.CS) ~ covid.2019.ru.i.dyn.tt$DAYS,
 type="n", 
 xlim=c(0,median(rmc.df$ll.3.e)*1.5), ylim=c(0,log10(max(rmc.df$ll.3.d))),
 main="Russian Federation",
-xlab="Days since 2020-03-02",
+xlab="Days since 2020-01-31",
 ylab="Total cases registered",
 axes=FALSE
 )
