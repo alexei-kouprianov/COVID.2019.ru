@@ -145,8 +145,12 @@ covid.2019.ru.i.reg.0.df$PER.100K <- covid.2019.ru.i.reg.0.df$NUMBER/(covid.2019
 # Momentary data
 
 RUS <- NULL
+RUS.newcases <- NULL
 
 for(i in 1:length(covid.2019.ru.i.moment_ts)){
+if(nrow(covid.2019.ru.i.moment_ts[[i]])==0){
+RUS.newcases <- c(RUS.newcases, NA)
+} else {RUS.newcases <- c(RUS.newcases, nrow(covid.2019.ru.i.moment_ts[[i]]))}
 RUS <- c(RUS, nrow(covid.2019.ru.i.moment_ts[[i]]))
 }
 
@@ -189,6 +193,7 @@ Chlb <-c(Chlb, nrow(subset(covid.2019.ru.i.moment_ts[[i]], covid.2019.ru.i.momen
 
 covid.2019.ru.i.dyn.tt <- cbind.data.frame(
   covid.2019.breaks$TIME,
+  RUS.newcases,
   RUS,
   Mos,
   SPb,
@@ -207,7 +212,7 @@ covid.2019.ru.i.dyn.tt <- cbind.data.frame(
   Chlb
 )
 
-colnames(covid.2019.ru.i.dyn.tt) <- c("TIME","RUS",
+colnames(covid.2019.ru.i.dyn.tt) <- c("TIME","RUS.newcases","RUS",
 "Mos",
 "SPb",
 "Volg",
