@@ -241,7 +241,10 @@ TIMESTAMP	EVENT	LOCUS.0	LOCUS	LOCUS.ORIG	NUMBER	UID	ORIGIN	SRC	COMMENT	DB.OPERAT
 "2020-03-28 12:20:00"	detected	Perm krai	Perm krai	Пермский край	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14132		Alexei Kouprianov
 "2020-03-28 12:20:00"	detected	Saratov	Saratov	Саратовская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14132		Alexei Kouprianov
 "2020-03-28 12:20:00"	detected	Crimea [annex.]	Crimea [annex.]	Республика Крым	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14132		Alexei Kouprianov
-"2020-03-28 12:20:00"	deceased	Orenburg	Orenburg		1			https://www.ural56.ru/news/643144/		Alexei Kouprianov
+"2020-03-28 12:20:00"	deceased	Moscow	Moscow		1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-03-28 12:20:00"	recovered	Tver	Tver	Тверская область	2			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-03-28 12:20:00"	recovered	Samara	Samara	Самарская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-03-28 12:20:00"	recovered	Tomsk	Tomsk	Томская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
 "2020-03-29 11:20:00"	detected	Moscow	Moscow	Москва	197			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14134	64 recovered accumulated	Alexei Kouprianov
 "2020-03-29 11:20:00"	detected	Moscow	Moscow region	Московская область	27			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14134		Alexei Kouprianov
 "2020-03-29 11:20:00"	detected	St. Petersburg	St. Petersburg	Санкт-Петербург	5			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14134		Alexei Kouprianov
@@ -268,7 +271,14 @@ TIMESTAMP	EVENT	LOCUS.0	LOCUS	LOCUS.ORIG	NUMBER	UID	ORIGIN	SRC	COMMENT	DB.OPERAT
 "2020-03-29 11:20:00"	detected	Tomsk	Tomsk	Томская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14134		Alexei Kouprianov
 "2020-03-29 11:20:00"	detected	Yakutsk	Yakutsk	Республика Саха (Якутия)	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14134		Alexei Kouprianov
 "2020-03-29 11:20:00"	detected	Amur region	Amur region	Амурская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14134		Alexei Kouprianov
-"2020-03-29 11:20:00"	deceased	Pskov	Pskov		1			https://ria.ru/20200329/1569322175.html		Alexei Kouprianov
+"2020-03-29 11:20:00"	deceased	Moscow	Moscow	Москва	2			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin		Alexei Kouprianov
+"2020-03-29 11:20:00"	deceased	Orenburg	Orenburg	Оренбургская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	https://www.ural56.ru/news/643144/	Alexei Kouprianov
+"2020-03-29 11:20:00"	deceased	St. Petersburg	St. Petersburg	Санкт-Петербург	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin		Alexei Kouprianov
+"2020-03-29 11:20:00"	recovered	Moscow	Moscow	Москва	10			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin		Alexei Kouprianov
+"2020-03-29 11:20:00"	recovered	Moscow	Moscow region	Московская область	2			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin		Alexei Kouprianov
+"2020-03-29 11:20:00"	recovered	Kemerovo	Kemerovo	Кемеровская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin		Alexei Kouprianov
+"2020-03-29 11:20:00"	recovered	Krasnodar	Krasnodar	Краснодарский край	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin		Alexei Kouprianov
+"2020-03-29 11:20:00"	recovered	Ekaterinburg	Ekaterinburg	Свердловская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin		Alexei Kouprianov
 "2020-03-30 12:00:00"	detected	Moscow	Moscow	Москва	212			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14137	62 recovered accumulated	Alexei Kouprianov
 "2020-03-30 12:00:00"	detected	Komi	Komi	Республика Коми	15			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14137		Alexei Kouprianov
 "2020-03-30 12:00:00"	detected	St. Petersburg	St. Petersburg	Санкт-Петербург	8			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14137		Alexei Kouprianov
@@ -304,7 +314,10 @@ TIMESTAMP	EVENT	LOCUS.0	LOCUS	LOCUS.ORIG	NUMBER	UID	ORIGIN	SRC	COMMENT	DB.OPERAT
 "2020-03-30 12:00:00"	detected	Altay krai	Altay krai	Алтайский край	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14137		Alexei Kouprianov
 "2020-03-30 12:00:00"	detected	Irkutsk	Irkutsk	Иркутская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14137		Alexei Kouprianov
 "2020-03-30 12:00:00"	detected	Novosibirsk	Novosibirsk	Новосибирская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14137		Alexei Kouprianov
-"2020-03-30 12:00:00"	deceased	Moscow	Moscow		4			https://www.kommersant.ru/doc/4308956		Alexei Kouprianov
+# 2020-03-30 12:00:00"	deceased	Moscow	Moscow		4			https://www.kommersant.ru/doc/4308956		Alexei Kouprianov
+"2020-03-30 12:00:00"	deceased	Pskov	Pskov		1			https://ria.ru/20200329/1569322175.html		Alexei Kouprianov
+"2020-03-30 12:00:00"	recovered	Kaliningrad	Kaliningrad	Калининградская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin		Alexei Kouprianov
+"2020-03-30 12:00:00"	recovered	Murmansk	Murmansk	Мурманская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin		Alexei Kouprianov
 "2020-03-31 12:20:00"	detected	Moscow	Moscow	Москва	387			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14147	121 cumulated recovered	Alexei Kouprianov
 "2020-03-31 12:20:00"	detected	St. Petersburg	St. Petersburg	Санкт-Петербург	48			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14147		Alexei Kouprianov
 "2020-03-31 12:20:00"	detected	Dagestan	Dagestan	Республика Дагестан	9			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14147		Alexei Kouprianov
@@ -320,7 +333,7 @@ TIMESTAMP	EVENT	LOCUS.0	LOCUS	LOCUS.ORIG	NUMBER	UID	ORIGIN	SRC	COMMENT	DB.OPERAT
 "2020-03-31 12:20:00"	detected	Bashkortostan	Bashkortostan	Республика Башкортостан	2			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14147		Alexei Kouprianov
 "2020-03-31 12:20:00"	detected	Tiumen	Tiumen	Тюменская область	2			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14147		Alexei Kouprianov
 "2020-03-31 12:20:00"	detected	Vladivostok	Vladivostok	Приморский край	2			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14147		Alexei Kouprianov
-"2020-03-31 12:20:00"	detected	Kostroma	Kostroma	Костромская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14147		Alexei Kouprianov
+"2020-03-31 12:20:00"	detected	Kostroma	Kostroma	Костромская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14147	стопкоронавирус.рф gives +2	Alexei Kouprianov
 "2020-03-31 12:20:00"	detected	Kalmykia	Kalmykia	Республика Калмыкия	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14147		Alexei Kouprianov
 "2020-03-31 12:20:00"	detected	Nizhnii Novgorod	Nizhnii Novgorod	Нижегородская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14147		Alexei Kouprianov
 "2020-03-31 12:20:00"	detected	Samara	Samara	Самарская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14147		Alexei Kouprianov
@@ -329,6 +342,20 @@ TIMESTAMP	EVENT	LOCUS.0	LOCUS	LOCUS.ORIG	NUMBER	UID	ORIGIN	SRC	COMMENT	DB.OPERAT
 "2020-03-31 12:20:00"	detected	Khabarovsk	Khabarovsk	Хабаровский край	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14147		Alexei Kouprianov
 "2020-03-31 12:20:00"	detected	Magadan	Magadan	Магаданская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14147		Alexei Kouprianov
 "2020-03-31 12:20:00"	detected	Crimea [annex.]	Crimea [annex.]	Республика Крым	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14147		Alexei Kouprianov
+"2020-03-31 12:20:00"	deceased	Moscow	Moscow	Москва	5			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-03-31 12:20:00"	deceased	Vladimir	Vladimir	Владимирская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-03-31 12:20:00"	deceased	Penza	Penza	Пензенская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-03-31 12:20:00"	deceased	St. Petersburg	St. Petersburg	Санкт-Петербург	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-03-31 12:20:00"	recovered	Moscow	Moscow	Москва	42			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-03-31 12:20:00"	recovered	Moscow	Moscow region	Московская область	4			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-03-31 12:20:00"	recovered	St. Petersburg	St. Petersburg	Санкт-Петербург	2			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-03-31 12:20:00"	recovered	Kirov	Kirov	Кировская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-03-31 12:20:00"	recovered	Krasnodar	Krasnodar	Краснодарский край	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-03-31 12:20:00"	recovered	Krasnoyarsk	Krasnoyarsk	Красноярский край	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-03-31 12:20:00"	recovered	Kurgan	Kurgan	Курганская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-03-31 12:20:00"	recovered	St. Petersburg	Leningrad region	Ленинградская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-03-31 12:20:00"	recovered	Vladivostok	Vladivostok	Приморский край	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-03-31 12:20:00"	recovered	Yaroslavl	Yaroslavl	Ярославская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
 "2020-04-01 11:15:00"	detected	Moscow	Moscow	Москва	267			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14157	190 cumulated recovered	Alexei Kouprianov
 "2020-04-01 11:15:00"	detected	Komi	Komi	Республика Коми	32			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14157		Alexei Kouprianov
 "2020-04-01 11:15:00"	detected	St. Petersburg	St. Petersburg	Санкт-Петербург	27			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14157		Alexei Kouprianov
@@ -364,6 +391,24 @@ TIMESTAMP	EVENT	LOCUS.0	LOCUS	LOCUS.ORIG	NUMBER	UID	ORIGIN	SRC	COMMENT	DB.OPERAT
 "2020-04-01 11:15:00"	detected	Vladivostok	Vladivostok	Приморский край	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14157		Alexei Kouprianov
 "2020-04-01 11:15:00"	detected	Khabarovsk	Khabarovsk	Хабаровский край	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14157		Alexei Kouprianov
 "2020-04-01 11:15:00"	detected	Sakhalin	Sakhalin	Сахалинская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14157		Alexei Kouprianov
+"2020-04-01 11:15:00"	deceased	Moscow	Moscow	Москва	5			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-01 11:15:00"	deceased	Moscow	Moscow region	Московская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-01 11:15:00"	deceased	Pskov	Pskov	Псковская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-01 11:15:00"	recovered	Moscow	Moscow	Москва	45			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-01 11:15:00"	recovered	Kaliningrad	Kaliningrad	Калининградская область	3			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-01 11:15:00"	recovered	Moscow	Moscow region	Московская область	3			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-01 11:15:00"	recovered	Tula	Tula	Тульская область	3			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-01 11:15:00"	recovered	Udmurtia	Udmurtia	Удмуртская Республика	3			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-01 11:15:00"	recovered	Voronezh	Voronezh	Воронежская область	2			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-01 11:15:00"	recovered	Novosibirsk	Novosibirsk	Новосибирская область	2			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-01 11:15:00"	recovered	Krasnodar	Krasnodar	Краснодарский край	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-01 11:15:00"	recovered	Bashkortostan	Bashkortostan	Республика Башкортостан	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-01 11:15:00"	recovered	Yakutsk	Yakutsk	Республика Саха (Якутия)	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-01 11:15:00"	recovered	Kazan	Kazan	Республика Татарстан	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-01 11:15:00"	recovered	Ryazan	Ryazan	Рязанская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-01 11:15:00"	recovered	Samara	Samara	Самарская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-01 11:15:00"	recovered	Saratov	Saratov	Саратовская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-01 11:15:00"	recovered	Tiumen	Tiumen	Тюменская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
 "2020-04-02 11:20:00"	detected	Moscow	Moscow	Москва	595			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14160	235	Alexei Kouprianov
 "2020-04-02 11:20:00"	detected	Moscow	Moscow region	Московская область	43			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14160		Alexei Kouprianov
 "2020-04-02 11:20:00"	detected	St. Petersburg	St. Petersburg	Санкт-Петербург	22			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14160		Alexei Kouprianov
@@ -393,6 +438,22 @@ TIMESTAMP	EVENT	LOCUS.0	LOCUS	LOCUS.ORIG	NUMBER	UID	ORIGIN	SRC	COMMENT	DB.OPERAT
 "2020-04-02 11:20:00"	detected	Belgorod	Belgorod	Белгородская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14160		Alexei Kouprianov
 "2020-04-02 11:20:00"	detected	Adygea	Adygea	Республика Адыгея	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14160		Alexei Kouprianov
 "2020-04-02 11:20:00"	detected	Altay krai	Altay krai	Алтайский край	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14160		Alexei Kouprianov
+"2020-04-02 11:20:00"	deceased	Moscow	Moscow	Москва	3			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-02 11:20:00"	deceased	Moscow	Moscow region	Московская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-02 11:20:00"	deceased	Perm krai	Perm krai	Пермский край	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-02 11:20:00"	deceased	Chechen rep.	Chechen rep.	Чеченская Республика	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-02 11:20:00"	recovered	Moscow	Moscow	Москва	25			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-02 11:20:00"	recovered	Ekaterinburg	Ekaterinburg	Свердловская область	7			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-02 11:20:00"	recovered	Yakutsk	Yakutsk	Республика Саха (Якутия)	3			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-02 11:20:00"	recovered	Cheliabinsk	Cheliabinsk	Челябинская область 	2			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-02 11:20:00"	recovered	Ivanovo	Ivanovo	Ивановская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-02 11:20:00"	recovered	Kaluga	Kaluga	Калужская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-02 11:20:00"	recovered	Krasnodar	Krasnodar	Краснодарский край	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-02 11:20:00"	recovered	Perm krai	Perm krai	Пермский край	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-02 11:20:00"	recovered	Vladivostok	Vladivostok	Приморский край	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-02 11:20:00"	recovered	Komi	Komi	Республика Коми	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-02 11:20:00"	recovered	Crimea [annex.]	Crimea [annex.]	Республика Крым	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-02 11:20:00"	recovered	Stavropol	Stavropol	Ставропольский край	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
 "2020-04-03 10:45:00"	detected	Moscow	Moscow	Москва	448			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14171	281 recovered cumulative	Alexei Kouprianov
 "2020-04-03 10:45:00"	detected	Moscow	Moscow region	Московская область	34			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14171		Alexei Kouprianov
 "2020-04-03 10:45:00"	detected	Krasnodar	Krasnodar	Краснодарский край	17			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14171		Alexei Kouprianov
@@ -425,6 +486,16 @@ TIMESTAMP	EVENT	LOCUS.0	LOCUS	LOCUS.ORIG	NUMBER	UID	ORIGIN	SRC	COMMENT	DB.OPERAT
 "2020-04-03 10:45:00"	detected	Buryatia	Buryatia	Республика Бурятия	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14171		Alexei Kouprianov
 "2020-04-03 10:45:00"	detected	Irkutsk	Irkutsk	Иркутская область	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14171		Alexei Kouprianov
 "2020-04-03 10:45:00"	detected	Khabarovsk	Khabarovsk	Хабаровский край	1			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14171		Alexei Kouprianov
+"2020-04-03 10:45:00"	deceased	Komi	Komi	Республика Коми	2			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-03 10:45:00"	deceased	Moscow	Moscow	Москва	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-03 10:45:00"	deceased	Perm krai	Perm krai	Пермский край	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-03 10:45:00"	recovered	Moscow	Moscow	Москва	28			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-03 10:45:00"	recovered	Samara	Samara	Самарская область	5			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-03 10:45:00"	recovered	Bashkortostan	Bashkortostan	Республика Башкортостан	4			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-03 10:45:00"	recovered	Kazan	Kazan	Республика Татарстан	4			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-03 10:45:00"	recovered	Perm krai	Perm krai	Пермский край	2			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-03 10:45:00"	recovered	Khanty-Mansiisk	Khanty-Mansiisk	Ханты-Мансийский АО	2			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
+"2020-04-03 10:45:00"	recovered	Ulianovsk	Ulianovsk	Ульяновская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed by Sergey Shpilkin	time adopted from the bulk of the lines for the day;	Alexei Kouprianov
 "2020-04-04 11:30:00"	detected	Moscow	Moscow	Москва	434			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14179	333	Alexei Kouprianov
 "2020-04-04 11:30:00"	detected	Moscow	Moscow region	Московская область	49			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14179		Alexei Kouprianov
 "2020-04-04 11:30:00"	detected	St. Petersburg	St. Petersburg	Санкт-Петербург	15			https://www.rospotrebnadzor.ru/about/info/news/news_details.php?ELEMENT_ID=14179		Alexei Kouprianov
@@ -929,3 +1000,87 @@ TIMESTAMP	EVENT	LOCUS.0	LOCUS	LOCUS.ORIG	NUMBER	UID	ORIGIN	SRC	COMMENT	DB.OPERAT
 "2020-04-11 11:15:00"	deceased	Moscow	Moscow region	Московская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
 "2020-04-11 11:15:00"	deceased	Stavropol	Stavropol	Ставропольский край	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
 "2020-04-11 11:15:00"	deceased	Khabarovsk	Khabarovsk	Хабаровский край	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Moscow	Moscow	Москва	1306			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Moscow	Moscow region	Московская область	278			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	St. Petersburg	St. Petersburg	Санкт-Петербург	69			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Murmansk	Murmansk	Мурманская область	61			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Nizhnii Novgorod	Nizhnii Novgorod	Нижегородская область	42			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Krasnodar	Krasnodar	Краснодарский край	31			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Krasnoyarsk	Krasnoyarsk	Красноярский край	25			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Vladimir	Vladimir	Владимирская область	23			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Mordovia	Mordovia	Республика Мордовия	23			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Bashkortostan	Bashkortostan	Республика Башкортостан	19			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Briansk	Briansk	Брянская область	18			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Ivanovo	Ivanovo	Ивановская область	18			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Chechen rep.	Chechen rep.	Чеченская Республика	17			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Ryazan	Ryazan	Рязанская область	16			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Perm krai	Perm krai	Пермский край	15			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Tambov	Tambov	Тамбовская область	15			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Rostov-on-Don	Rostov-on-Don	Ростовская область	14			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Yaroslavl	Yaroslavl	Ярославская область	14			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Voronezh	Voronezh	Воронежская область	12			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Buryatia	Buryatia	Республика Бурятия	12			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Yamalo-Nenets AO	Yamalo-Nenets AO	Ямало-Ненецкий автономный округ	12			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Amur region	Amur region	Амурская область	11			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Chuvashia	Chuvashia	Республика Чувашия	11			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Tiumen	Tiumen	Тюменская область	9			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Astrakhan	Astrakhan	Астраханская область	8			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Stavropol	Stavropol	Ставропольский край	8			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Ulianovsk	Ulianovsk	Ульяновская область	8			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Mari El	Mari El	Республика Марий Эл	7			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	N. Ossetia-Alania	N. Ossetia-Alania	Республика Северная Осетия — Алания	7			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Saratov	Saratov	Саратовская область	7			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Belgorod	Belgorod	Белгородская область	5			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Volgograd	Volgograd	Волгоградская область	5			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Irkutsk	Irkutsk	Иркутская область	5			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Nalchik	Nalchik	Кабардино-Балкарская Республика	5			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Kaliningrad	Kaliningrad	Калининградская область	5			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	St. Petersburg	Leningrad region	Ленинградская область	5			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Lipetsk	Lipetsk	Липецкая область	5			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Chita	Chita	Забайкальский край	4			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Ekaterinburg	Ekaterinburg	Свердловская область	4			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Vologda	Vologda	Вологодская область	3			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Kostroma	Kostroma	Костромская область	3			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Yakutsk	Yakutsk	Республика Саха (Якутия)	3			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Samara	Samara	Самарская область	3			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Tula	Tula	Тульская область	3			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Karachay-Cherkessia	Karachay-Cherkessia	Карачаево-Черкесская Республика	2			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Omsk	Omsk	Омская область	2			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Crimea [annex.]	Crimea [annex.]	Республика Крым	2			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Udmurtia	Udmurtia	Удмуртская Республика	2			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Kirov	Kirov	Кировская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Kurgan	Kurgan	Курганская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Kursk	Kursk	Курская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	detected	Vladivostok	Vladivostok	Приморский край	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	deceased	Moscow	Moscow	Москва	14			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	deceased	Moscow	Moscow region	Московская область	4			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	deceased	Chechen rep.	Chechen rep.	Чеченская Республика	2			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	deceased	Kostroma	Kostroma	Костромская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	deceased	Bashkortostan	Bashkortostan	Республика Башкортостан	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	deceased	Ingushetia	Ingushetia	Республика Ингушетия	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	deceased	Smolensk	Smolensk	Смоленская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	recovered	Moscow	Moscow	Москва	188			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	recovered	Moscow	Moscow region	Московская область	6			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	recovered	Dagestan	Dagestan	Республика Дагестан	5			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	recovered	Crimea [annex.]	Crimea [annex.]	Республика Крым	5			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	recovered	Kaliningrad	Kaliningrad	Калининградская область	4			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	recovered	Murmansk	Murmansk	Мурманская область	4			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	recovered	Tiumen	Tiumen	Тюменская область	4			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	recovered	Adygea	Adygea	Республика Адыгея	3			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	recovered	Kazan	Kazan	Республика Татарстан	3			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	recovered	Ekaterinburg	Ekaterinburg	Свердловская область	3			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	recovered	Volgograd	Volgograd	Волгоградская область	2			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	recovered	Voronezh	Voronezh	Воронежская область	2			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	recovered	Kaluga	Kaluga	Калужская область	2			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	recovered	Omsk	Omsk	Омская область	2			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	recovered	Mari El	Mari El	Республика Марий Эл	2			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	recovered	Rostov-on-Don	Rostov-on-Don	Ростовская область	2			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	recovered	Altay krai	Altay krai	Алтайский край	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	recovered	Belgorod	Belgorod	Белгородская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	recovered	Nalchik	Nalchik	Кабардино-Балкарская Республика	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	recovered	Orenburg	Orenburg	Оренбургская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	recovered	Buryatia	Buryatia	Республика Бурятия	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	recovered	Chuvashia	Chuvashia	Республика Чувашия	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	recovered	Stavropol	Stavropol	Ставропольский край	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	recovered	Cheliabinsk	Cheliabinsk	Челябинская область 	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov
+"2020-04-12 11:15:00"	recovered	Yaroslavl	Yaroslavl	Ярославская область	1			https://стопкоронавирус.рф/ robot-trimmed and post-processed		Alexei Kouprianov

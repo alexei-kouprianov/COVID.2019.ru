@@ -89,8 +89,8 @@ covid.2019.ru.d.reg.0 <- NULL
 
 for(i in 1:length(levels(covid.2019.ru.i$LOCUS.0))){
 covid.2019.ru.i.reg.0[[i]] <- subset(covid.2019.ru.i, covid.2019.ru.i$LOCUS.0 == levels(covid.2019.ru.i$LOCUS.0)[i])
-covid.2019.ru.r.reg.0[[i]] <- subset(covid.2019.ru.i, covid.2019.ru.i$LOCUS.0 == levels(covid.2019.ru.i$LOCUS.0)[i])
-covid.2019.ru.d.reg.0[[i]] <- subset(covid.2019.ru.i, covid.2019.ru.i$LOCUS.0 == levels(covid.2019.ru.i$LOCUS.0)[i])
+covid.2019.ru.r.reg.0[[i]] <- subset(covid.2019.ru.r, covid.2019.ru.i$LOCUS.0 == levels(covid.2019.ru.r$LOCUS.0)[i])
+covid.2019.ru.d.reg.0[[i]] <- subset(covid.2019.ru.d, covid.2019.ru.i$LOCUS.0 == levels(covid.2019.ru.d$LOCUS.0)[i])
 }
 
 # Dynamics data frame;
