@@ -1,6 +1,7 @@
 COVID.2019.ru.ods
 .~lock.COVID.2019.ru.ods#
 plots/map.animated
+plots/fit.animated
 scripts/.Rhistory
 scripts/.Rdata
 downloads

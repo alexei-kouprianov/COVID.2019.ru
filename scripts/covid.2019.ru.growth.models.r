@@ -25,6 +25,21 @@ covid.2019.ru.i.dyn.tt$RUS.CS ~ covid.2019.ru.i.dyn.tt$DAYS,
 fct = LL.3()
 )
 
+covid.2019.ru.full.Mos.ll.3 <- drm(
+covid.2019.ru.i.dyn.tt$Mos.CS ~ covid.2019.ru.i.dyn.tt$DAYS, 
+fct = LL.3()
+)
+
+covid.2019.ru.full.SPb.ll.3 <- drm(
+covid.2019.ru.i.dyn.tt$SPb.CS ~ covid.2019.ru.i.dyn.tt$DAYS, 
+fct = LL.3()
+)
+
+covid.2019.ru.full.RUS.Provinces.ll.3 <- drm(
+(covid.2019.ru.i.dyn.tt$RUS.CS - (covid.2019.ru.i.dyn.tt$Mos.CS + covid.2019.ru.i.dyn.tt$SPb.CS)) ~ covid.2019.ru.i.dyn.tt$DAYS, 
+fct = LL.3()
+)
+
 # Cutting off the initial disconnected cases;
 
 covid.2019.ru.i.dyn.tt.short <- covid.2019.ru.i.dyn.tt[33:nrow(covid.2019.ru.i.dyn.tt),]
@@ -50,6 +65,9 @@ fct = LL.3()
 # summary(covid.2019.ru.short.expoGrowth)
 # summary(covid.2019.ru.full.ll.3)
 # summary(covid.2019.ru.short.ll.3)
+# summary(covid.2019.ru.full.Mos.ll.3)
+# summary(covid.2019.ru.full.SPb.ll.3)
+# summary(covid.2019.ru.full.RUS.Provinces.ll.3)
 
 # Running model;
 
@@ -223,3 +241,100 @@ axis(2, at=log10(c(1,10,100,1000,10000,100000,1000000)), labels=c("1","10","100"
 axis(2, at=log10(c(1:9, seq(10,100,10), seq(200,1000,100), seq(2000,10000,1000), seq(20000,100000,10000), seq(200000,1000000,100000))), labels=FALSE)
 
 dev.off()
+
+# ################################################################
+# # # Do not execute this part of the code mindlessly!
+# dir.create("../plots/fit.animated/")
+#
+# # Running model plot animated;
+#
+# for(i in 1:nrow(rmc.df)){
+# if(i <= 9){
+#  png(file=paste("../plots/fit.animated/COVID.2019.fitting.rmc.00",i,".png", sep=""), height=750, width=1000, res=120, pointsize=10)
+#  } else if(i <= 99){
+#  png(file=paste("../plots/fit.animated/COVID.2019.fitting.rmc.0",i,".png", sep=""), height=750, width=1000, res=120, pointsize=10)
+#  } else {
+#  png(file=paste("../plots/fit.animated/COVID.2019.fitting.rmc.",i,".png", sep=""), height=750, width=1000, res=120, pointsize=10)
+#  }
+#  par(mar=c(6,5,4,2)+.1)
+#  
+#  plot(covid.2019.ru.i.dyn.tt$RUS.CS ~ covid.2019.ru.i.dyn.tt$DAYS, 
+#   type="n", 
+#   xlim=c(0,(median(rmc.df$ll.3.e)*2)), ylim=c(0,max(rmc.df$ll.3.d)),
+#   main=paste("Russian Federation,",covid.2019.ru.i.dyn.tt$TIME[i+32]),
+#   xlab="Days since 2020-01-31",
+#   ylab="Total cases registered", 
+#   axes=FALSE
+#  )
+#
+# for(k in 1:i){
+#  curve(rmc.df$ll.3.d[k]/(1+exp(rmc.df$ll.3.b[k]*(log(x/rmc.df$ll.3.e[k])))), n=1001, col=rgb(0,0,1,.2), add=TRUE)
+#  abline(v=rmc.df$ll.3.e[k], col=rgb(0,0,1,.2), lwd=1, lty=5)
+#  curve(rmc.df$eg.1[k]*exp((x)*rmc.df$eg.2[k]), n=1001, col=rgb(1,0,0,.2), add=TRUE)
+# }
+#
+# curve(rmc.df$ll.3.d[i]/(1+exp(rmc.df$ll.3.b[i]*(log(x/rmc.df$ll.3.e[i])))), n=1001, col=4, lwd=1.5, add=TRUE)
+# curve(rmc.df$eg.1[i]*exp(x*rmc.df$eg.2[i]), n=1001, col=2, lwd=1.5, add=TRUE)
+# abline(v=rmc.df$ll.3.e[i], col=4, lwd=1, lty=5)
+#
+# points(covid.2019.ru.i.dyn.tt$RUS.CS[1:32] ~ covid.2019.ru.i.dyn.tt$DAYS[1:32], 
+# pch=21, col="white", bg=1)
+# points(covid.2019.ru.i.dyn.tt$RUS.CS[1:i+32] ~ covid.2019.ru.i.dyn.tt$DAYS[1:i+32], 
+# pch=21, col="white", bg=1)
+#
+# axis(1)
+# axis(2)
+#
+# dev.off()
+# }
+#
+# # Running model plot animated log10;
+# dir.create("../plots/fit.animated/log10/")
+#
+# for(i in 1:nrow(rmc.df)){
+# if(i <= 9){
+#  png(file=paste("../plots/fit.animated/log10/COVID.2019.fitting.rmc.log10.00",i,".png", sep=""), height=750, width=1000, res=120, pointsize=10)
+#  } else if(i <= 99){
+#  png(file=paste("../plots/fit.animated/log10/COVID.2019.fitting.rmc.log10.0",i,".png", sep=""), height=750, width=1000, res=120, pointsize=10)
+#  } else {
+#  png(file=paste("../plots/fit.animated/log10/COVID.2019.fitting.rmc.log10.",i,".png", sep=""), height=750, width=1000, res=120, pointsize=10)
+#  }
+#  par(mar=c(6,5,4,2)+.1)
+#  
+#  plot(log10(covid.2019.ru.i.dyn.tt$RUS.CS) ~ covid.2019.ru.i.dyn.tt$DAYS, 
+#   type="n", 
+#   xlim=c(0,(median(rmc.df$ll.3.e)*2)), ylim=c(0,(log10(max(rmc.df$ll.3.d)))),
+#   main=paste("Russian Federation,",covid.2019.ru.i.dyn.tt$TIME[i+32]),
+#   xlab="Days since 2020-01-31",
+#   ylab="Total cases registered", 
+#   axes=FALSE
+#  )
+#
+# for(k in 1:i){
+#  curve(log10(rmc.df$ll.3.d[k]/(1+exp(rmc.df$ll.3.b[k]*(log(x/rmc.df$ll.3.e[k]))))), n=1001, col=rgb(0,0,1,.2), add=TRUE)
+#  abline(v=rmc.df$ll.3.e[k], col=rgb(0,0,1,.2), lwd=1, lty=5)
+#  curve(log10(rmc.df$eg.1[k]*exp((x)*rmc.df$eg.2[k])), n=1001, col=rgb(1,0,0,.2), add=TRUE)
+# }
+#
+# curve(log10(rmc.df$ll.3.d[i]/(1+exp(rmc.df$ll.3.b[i]*(log(x/rmc.df$ll.3.e[i]))))), n=1001, col=4, lwd=1.5, add=TRUE)
+# curve(log10(rmc.df$eg.1[i]*exp(x*rmc.df$eg.2[i])), n=1001, col=2, lwd=1.5, add=TRUE)
+# abline(v=rmc.df$ll.3.e[i], col=4, lwd=1, lty=5)
+#
+# points(log10(covid.2019.ru.i.dyn.tt$RUS.CS[1:32]) ~ covid.2019.ru.i.dyn.tt$DAYS[1:32], 
+# pch=21, col="white", bg=1)
+# points(log10(covid.2019.ru.i.dyn.tt$RUS.CS[1:i+32]) ~ covid.2019.ru.i.dyn.tt$DAYS[1:i+32], 
+# pch=21, col="white", bg=1)
+#
+# axis(1)
+# axis(2, 
+# at=log10(c(1:9,seq(10,90,10),seq(100,900,100),seq(1000,9000,1000),seq(10000,90000,10000),seq(100000,900000,100000),seq(1000000,9000000,1000000))),
+# labels=c("1",rep(NA,8),"10",rep(NA,8),"100",rep(NA,8),"1K",rep(NA,8),"10K",rep(NA,8),"100K",rep(NA,8),"1M",rep(NA,8))
+# )
+#
+# dev.off()
+# }
+#
+# # ffmpeg command line: 
+# #
+# # ffmpeg -r 2 -f image2 -s 1000x750 -i COVID.2019.fitting.rmc.%03d.png -vcodec libx264 -crf 25 -pix_fmt yuv420p COVID.2019.fitting.rmc.animated.mp4
+# # ffmpeg -r 2 -f image2 -s 1000x750 -i COVID.2019.fitting.rmc.log10.%03d.png -vcodec libx264 -crf 25 -pix_fmt yuv420p COVID.2019.fitting.rmc.log10.animated.mp4
