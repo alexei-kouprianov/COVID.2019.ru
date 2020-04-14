@@ -317,3 +317,19 @@ covid.2019.ru.d.dyn.tt <- cbind.data.frame(
 
 colnames(covid.2019.ru.d.dyn.tt) <- c("TIME","DEAD.newcases","DEAD")
 covid.2019.ru.d.dyn.tt$DEAD.CS <- cumsum(covid.2019.ru.d.dyn.tt$DEAD)
+
+covid.2019.ru.i.dyn.tot <- NULL
+covid.2019.ru.i.dyn.tmp <- NULL
+
+for(j in 1:length(levels(covid.2019.ru$LOCUS))){
+ covid.2019.ru.i.dyn.tmp <- NULL
+ for(i in 1:length(covid.2019.ru.i.moment_ts)){
+  covid.2019.ru.i.dyn.tmp <- c(covid.2019.ru.i.dyn.tmp, nrow(subset(covid.2019.ru.i.moment_ts[[i]], covid.2019.ru.i.moment_ts[[i]]$LOCUS == levels(covid.2019.ru$LOCUS)[j])))
+ }
+ covid.2019.ru.i.dyn.tot[[j]] <- as.data.frame(covid.2019.ru.i.dyn.tmp)
+ colnames(covid.2019.ru.i.dyn.tot[[j]]) <- levels(covid.2019.ru$LOCUS)[j]
+}
+
+for(j in 1:length(levels(covid.2019.ru$LOCUS))){
+ covid.2019.ru.i.dyn.tot[[j]]$CS <- cumsum(covid.2019.ru.i.dyn.tot[[j]][,1])
+}

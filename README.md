@@ -2,6 +2,8 @@
 
 This repo was created to keep records of the COVID-2019 epidemics in Russia. The dataset is based on the official reports of confimed cases. This means that the data lag behind the spread of the virus.
 
+All images originally published in this repository are licensed under cc-by-4.0
+
 The visualizations derived from these data are as follows:
 
 ![alt text](plots/COVID.2019.cumulated.png "Cumulated curve of COVID-2019 cases for Russia")

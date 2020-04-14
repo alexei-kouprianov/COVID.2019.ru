@@ -433,6 +433,45 @@ bty="n")
 
 dev.off()
 
+# plot(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$RUS.CS), type="n", ylim=c(0,(log10(max(covid.2019.ru.i.dyn.tt$RUS.CS)))))
+#
+# for(j in 1:length(levels(covid.2019.ru$LOCUS))){
+#  lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tot[[j]]$CS), col=rgb(0,0,0,.3))
+# }
+
+dir.create("../plots/regions/")
+
+for(i in 1:length(levels(covid.2019.ru$LOCUS))){
+
+png(file=paste("../plots/regions/COVID.2019.cumulated.log10.",i,".png", sep=""), height=750, width=1000, res=120, pointsize=10)
+par(mar=c(6,5,4,2)+.1, lwd=2)
+
+plot(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$RUS.CS), 
+type="n", 
+ylim=c(0,(log10(max(covid.2019.ru.i.dyn.tt$RUS.CS)))),
+main=paste("Russian Federation /",levels(covid.2019.ru$LOCUS)[i]),
+xlab="",
+ylab="Total COVID-2019 cases detected (logarithmic scale)",
+axes=FALSE
+)
+
+for(j in 1:length(levels(covid.2019.ru$LOCUS))){
+ lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tot[[j]]$CS), lwd=1.5, col=rgb(0,0,0,.15))
+}
+ lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tot[[i]]$CS), col="white", lwd=4)
+ lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tot[[i]]$CS), col=2, lwd=2)
+
+axis.POSIXct(1, 
+at=seq(min(covid.2019.breaks$TIME), max(covid.2019.breaks$TIME), by="week"), 
+format = "%Y-%m-%d", 
+las=2)
+axis(2, at=log10(c(1,10,100,1000,10000)), labels=c(1,10,100,1000,10000))
+axis(2, at=log10(c(1:9, seq(10,100,10), seq(200,1000,100), seq(2000,10000,1000), seq(20000,100000,10000))), labels=FALSE)
+
+dev.off()
+
+}
+
 ################################################################
 # # Do not execute this part of the code mindlessly!
 # # Map animated
@@ -460,4 +499,3 @@ dev.off()
 # # ffmpeg command line: 
 # #
 # # ffmpeg -r 2 -f image2 -s 1000x750 -i COVID.2019.map.regions.%03d.png -vcodec libx264 -crf 25 -pix_fmt yuv420p COVID.2019.ru.map.animated.mp4
-
