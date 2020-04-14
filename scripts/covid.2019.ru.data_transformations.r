@@ -247,7 +247,73 @@ covid.2019.ru.i.dyn.tt$Sam.CS <- cumsum(covid.2019.ru.i.dyn.tt$Sam)
 covid.2019.ru.i.dyn.tt$Ufa.CS <- cumsum(covid.2019.ru.i.dyn.tt$Ufa)
 covid.2019.ru.i.dyn.tt$Chlb.CS <- cumsum(covid.2019.ru.i.dyn.tt$Chlb)
 
+# y <- c(NA, covid.2019.ru.i.dyn.tt$RUS.CS[2:(length(covid.2019.ru.i.dyn.tt$RUS.CS))]/
+# covid.2019.ru.i.dyn.tt$RUS.CS[1:(length(covid.2019.ru.i.dyn.tt$RUS.CS)-1)])
+#
+# x <- covid.2019.ru.i.dyn.tt$RUS.CS[2:length(covid.2019.ru.i.dyn.tt$RUS.CS)]
+# xt <- covid.2019.ru.i.dyn.tt$TIME[2:length(covid.2019.ru.i.dyn.tt$TIME)]
+
+covid.2019.ru.i.dyn.tt$RUS.Prov.CS <- covid.2019.ru.i.dyn.tt$RUS.CS -
+(covid.2019.ru.i.dyn.tt$SPb.CS +
+covid.2019.ru.i.dyn.tt$Mos.CS)
+
+covid.2019.ru.i.dyn.tt$RUS.CS.diff <- c(NA, NA,
+covid.2019.ru.i.dyn.tt$RUS.CS[3:length(covid.2019.ru.i.dyn.tt$RUS.CS)]/
+covid.2019.ru.i.dyn.tt$RUS.CS[2:(length(covid.2019.ru.i.dyn.tt$RUS.CS)-1)])
+
+covid.2019.ru.i.dyn.tt$RUS.Prov.CS.diff <- c(NA, NA,
+covid.2019.ru.i.dyn.tt$RUS.Prov.CS[3:length(covid.2019.ru.i.dyn.tt$RUS.Prov.CS)]/
+covid.2019.ru.i.dyn.tt$RUS.Prov.CS[2:(length(covid.2019.ru.i.dyn.tt$RUS.Prov.CS)-1)])
+
+covid.2019.ru.i.dyn.tt$Mos.CS.diff <- c(rep(NA, 33),
+covid.2019.ru.i.dyn.tt$Mos.CS[34:length(covid.2019.ru.i.dyn.tt$Mos.CS)]/
+covid.2019.ru.i.dyn.tt$Mos.CS[33:(length(covid.2019.ru.i.dyn.tt$Mos.CS)-1)])
+
+covid.2019.ru.i.dyn.tt$SPb.CS.diff <- c(rep(NA, 36),
+covid.2019.ru.i.dyn.tt$SPb.CS[37:length(covid.2019.ru.i.dyn.tt$SPb.CS)]/
+covid.2019.ru.i.dyn.tt$SPb.CS[36:(length(covid.2019.ru.i.dyn.tt$SPb.CS)-1)])
+
 # Adding days count;
 
 covid.2019.ru.i.dyn.tt$DAYS <- rownames(covid.2019.ru.i.dyn.tt)
 covid.2019.ru.i.dyn.tt$DAYS <- as.numeric(covid.2019.ru.i.dyn.tt$DAYS)
+
+# Momentary data for recovered
+
+RUS.r <- NULL
+RUS.r.newcases <- NULL
+
+for(i in 1:length(covid.2019.ru.r.moment_ts)){
+if(nrow(covid.2019.ru.r.moment_ts[[i]])==0){
+RUS.r.newcases <- c(RUS.r.newcases, NA)
+} else {RUS.r.newcases <- c(RUS.r.newcases, nrow(covid.2019.ru.r.moment_ts[[i]]))}
+RUS.r <- c(RUS.r, nrow(covid.2019.ru.r.moment_ts[[i]]))
+}
+
+covid.2019.ru.r.dyn.tt <- cbind.data.frame(
+  covid.2019.breaks$TIME,
+  RUS.r.newcases,
+  RUS.r)
+
+colnames(covid.2019.ru.r.dyn.tt) <- c("TIME","RECOVERED.newcases","RECOVERED")
+covid.2019.ru.r.dyn.tt$RECOVERED.CS <- cumsum(covid.2019.ru.r.dyn.tt$RECOVERED)
+
+# Momentary data for deceased
+
+RUS.d <- NULL
+RUS.d.newcases <- NULL
+
+for(i in 1:length(covid.2019.ru.d.moment_ts)){
+if(nrow(covid.2019.ru.d.moment_ts[[i]])==0){
+RUS.d.newcases <- c(RUS.d.newcases, NA)
+} else {RUS.d.newcases <- c(RUS.d.newcases, nrow(covid.2019.ru.d.moment_ts[[i]]))}
+RUS.d <- c(RUS.d, nrow(covid.2019.ru.d.moment_ts[[i]]))
+}
+
+covid.2019.ru.d.dyn.tt <- cbind.data.frame(
+  covid.2019.breaks$TIME,
+  RUS.d.newcases,
+  RUS.d)
+
+colnames(covid.2019.ru.d.dyn.tt) <- c("TIME","DEAD.newcases","DEAD")
+covid.2019.ru.d.dyn.tt$DEAD.CS <- cumsum(covid.2019.ru.d.dyn.tt$DEAD)

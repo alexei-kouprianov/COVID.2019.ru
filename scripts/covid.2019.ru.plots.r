@@ -131,8 +131,8 @@ ylab=paste("Total COVID-2019 cases, as of",covid.2019.ru.i$TIMESTAMP[length(covi
 main="Russian Federation",
 las=2, axes=FALSE)
 
-axis(2, at=log10(c(1,10,100,1000)), labels=c(1,10,100,1000))
-axis(2, at=log10(c(1:9, seq(10,100,10), seq(200,1000,100), seq(2000,10000,1000))), labels=FALSE)
+axis(2, at=log10(c(1,10,100,1000,10000)), labels=c(1,10,100,1000,10000))
+axis(2, at=log10(c(1:9, seq(10,100,10), seq(200,1000,100), seq(2000,10000,1000), seq(20000,100000,10000))), labels=FALSE)
 
 dev.off()
 
@@ -314,19 +314,19 @@ legend(
 "topleft",
 lty=c(rep(1,8),rep(3,5)),
 col=c(1:8,1:5),
-legend=c("Volg",
-"Vrnz",
-"Ekb",
-"Kaz",
-"Kryr",
-"NNov",
-"Nvsb",
+legend=c("Volgograd",
+"Voronezh",
+"Ekaterinburg",
+"Kazan",
+"Krasnoyarsk",
+"Nizhnii Novgorod",
+"Novosibirsk",
 "Omsk",
 "Perm",
-"RoD",
-"Sam",
+"Rostov-on-Don",
+"Samara",
 "Ufa",
-"Chlb"),
+"Cheliabinsk"),
 bty="n"
 )
 
@@ -337,6 +337,99 @@ las=2)
 axis(2, at=log10(c(1,10,100,1000)), labels=c(1,10,100,1000))
 axis(2, at=log10(c(1:9, seq(10,100,10), seq(200,1000,100), seq(2000,10000,1000))), labels=FALSE)
 
+dev.off()
+
+# plot(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.i.dyn.tt$RUS.Prov.CS.diff, type="n")
+# lines(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.i.dyn.tt$RUS.Prov.CS.diff, col=3)
+# lines(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.i.dyn.tt$Mos.CS.diff, col=2)
+# lines(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.i.dyn.tt$SPb.CS.diff, col=4)
+
+png("../plots/COVID.2019.growth_ratio.png", height=750, width=1000, res=120, pointsize=10)
+par(mar=c(6,5,4,2)+.1, lwd=2)
+
+plot(covid.2019.ru.i.dyn.tt$TIME[33:(nrow(covid.2019.ru.i.dyn.tt))], 
+covid.2019.ru.i.dyn.tt$RUS.Prov.CS.diff[33:(nrow(covid.2019.ru.i.dyn.tt))], 
+type="n",
+main="Russian Federation",
+xlab="",
+ylab="The ratio of COVID-2019 cases detected day N to day N-1 (truncated)", 
+axes=FALSE)
+
+lines(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.i.dyn.tt$RUS.Prov.CS.diff, col=3)
+lines(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.i.dyn.tt$Mos.CS.diff, col=2)
+lines(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.i.dyn.tt$SPb.CS.diff, col=4)
+
+legend("topright",
+lty=1,
+lwd=2,
+col=c(2,4,3), 
+legend=c("Moscow","St. Petersburg","The rest of Russia"),
+bty="n")
+
+axis.POSIXct(1, 
+at=seq(min(covid.2019.breaks$TIME), max(covid.2019.breaks$TIME), by="week"), 
+format = "%Y-%m-%d", 
+las=2)
+axis(2)
+
+dev.off()
+
+png("../plots/COVID.2019.cumulated.TARD.png", height=750, width=1000, res=120, pointsize=10)
+par(mar=c(6,5,4,2)+.1, lwd=2)
+
+plot(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.i.dyn.tt$RUS.CS,
+ylim=c(0,max(covid.2019.ru.i.dyn.tt$RUS.CS, na.rm=TRUE)),
+type="l", col=2, lty=3,
+main="Russian Federation",
+xlab="",
+ylab="COVID-2019 cases", 
+axes=FALSE)
+
+lines(covid.2019.ru.d.dyn.tt$TIME, covid.2019.ru.d.dyn.tt$DEAD.CS)
+lines(covid.2019.ru.r.dyn.tt$TIME, covid.2019.ru.r.dyn.tt$RECOVERED.CS, col=3)
+lines(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.i.dyn.tt$RUS.CS-(covid.2019.ru.r.dyn.tt$RECOVERED.CS + covid.2019.ru.d.dyn.tt$DEAD.CS), col=2)
+
+axis.POSIXct(1, 
+at=seq(min(covid.2019.breaks$TIME), max(covid.2019.breaks$TIME), by="week"), 
+format = "%Y-%m-%d", 
+las=2)
+axis(2)
+
+legend("topleft",
+lty=c(3,1,1,1),
+col=c(2,2,3,1),
+legend=c("Detected","Active","Recovered","Deceased"),
+bty="n")
+
+dev.off()
+
+png("../plots/COVID.2019.cumulated.TARD.log10.png", height=750, width=1000, res=120, pointsize=10)
+par(mar=c(6,5,4,2)+.1, lwd=2)
+
+plot(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$RUS.CS),
+ylim=c(0,log10(max(covid.2019.ru.i.dyn.tt$RUS.CS, na.rm=TRUE))),
+type="l", col=2, lty=3,
+main="Russian Federation",
+xlab="",
+ylab="COVID-2019 cases (logarithmic scale)", 
+axes=FALSE)
+
+lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$RUS.CS-(covid.2019.ru.r.dyn.tt$RECOVERED.CS + covid.2019.ru.d.dyn.tt$DEAD.CS)), col=2)
+lines(covid.2019.ru.r.dyn.tt$TIME, log10(covid.2019.ru.r.dyn.tt$RECOVERED.CS), col=3)
+lines(covid.2019.ru.d.dyn.tt$TIME, log10(covid.2019.ru.d.dyn.tt$DEAD.CS))
+
+axis.POSIXct(1, 
+at=seq(min(covid.2019.breaks$TIME), max(covid.2019.breaks$TIME), by="week"), 
+format = "%Y-%m-%d", 
+las=2)
+axis(2, at=log10(c(1,10,100,1000,10000)), labels=c(1,10,100,1000,10000))
+axis(2, at=log10(c(1:9, seq(10,100,10), seq(200,1000,100), seq(2000,10000,1000), seq(20000,100000,10000))), labels=FALSE)
+
+legend("topleft",
+lty=c(3,1,1,1),
+col=c(2,2,3,1),
+legend=c("Detected","Active","Recovered","Deceased"),
+bty="n")
 
 dev.off()
 
@@ -367,3 +460,4 @@ dev.off()
 # # ffmpeg command line: 
 # #
 # # ffmpeg -r 2 -f image2 -s 1000x750 -i COVID.2019.map.regions.%03d.png -vcodec libx264 -crf 25 -pix_fmt yuv420p COVID.2019.ru.map.animated.mp4
+
