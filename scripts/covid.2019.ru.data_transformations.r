@@ -332,4 +332,22 @@ for(j in 1:length(levels(covid.2019.ru$LOCUS))){
 
 for(j in 1:length(levels(covid.2019.ru$LOCUS))){
  covid.2019.ru.i.dyn.tot[[j]]$CS <- cumsum(covid.2019.ru.i.dyn.tot[[j]][,1])
+ covid.2019.ru.i.dyn.tot[[j]]$CS.diff <- c(NA, 
+  covid.2019.ru.i.dyn.tot[[j]]$CS[2:length(covid.2019.ru.i.dyn.tot[[j]]$CS)]/
+  covid.2019.ru.i.dyn.tot[[j]]$CS[1:(length(covid.2019.ru.i.dyn.tot[[j]]$CS)-1)]
+  )
+}
+
+# List of truncated data.frames;
+
+covid.2019.ru.i.dyn.trunc <- NULL
+covid.2019.ru.i.dyn.trunc <- as.list(covid.2019.ru.i.dyn.trunc)
+
+for(j in 1:length(levels(covid.2019.ru$LOCUS))){
+ if(dim(subset(covid.2019.ru.i.dyn.tot[[j]], covid.2019.ru.i.dyn.tot[[j]]$"CS" >= 50))[1]>0){
+  covid.2019.ru.i.dyn.trunc[[j]] <- subset(covid.2019.ru.i.dyn.tot[[j]], covid.2019.ru.i.dyn.tot[[j]]$CS >= 50)
+ } else{
+  covid.2019.ru.i.dyn.trunc[[j]] <- cbind.data.frame(c(NA),c(NA),c(NA))
+  colnames(covid.2019.ru.i.dyn.trunc[[j]]) <- colnames(covid.2019.ru.i.dyn.tot[[j]])
+ }
 }

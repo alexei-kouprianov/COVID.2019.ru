@@ -443,7 +443,7 @@ dir.create("../plots/regions/")
 
 for(i in 1:length(levels(covid.2019.ru$LOCUS))){
 
-png(file=paste("../plots/regions/COVID.2019.cumulated.log10.",i,".png", sep=""), height=750, width=1000, res=120, pointsize=10)
+png(file=paste("../plots/regions/COVID.2019.cumulated.log10.",i,".png", sep=""), height=750, width=750, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1, lwd=2)
 
 plot(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$RUS.CS), 
@@ -471,6 +471,74 @@ axis(2, at=log10(c(1:9, seq(10,100,10), seq(200,1000,100), seq(2000,10000,1000),
 dev.off()
 
 }
+
+dir.create("../plots/regions/race/")
+
+for(i in 1:length(levels(covid.2019.ru$LOCUS))){
+if(nrow(covid.2019.ru.i.dyn.trunc[[i]]) > 1){
+if(i != 44){
+
+png(file=paste("../plots/regions/race/COVID.2019.race.log10.",i,".png", sep=""), height=750, width=750, res=120, pointsize=10)
+par(mar=c(6,5,4,2)+.1, lwd=2)
+
+plot(
+(1:length(log10(covid.2019.ru.i.dyn.trunc[[44]]$CS))), 
+log10(covid.2019.ru.i.dyn.trunc[[44]]$CS), 
+type="o", 
+col=rgb(0,0,0,.2),
+pch=20, cex=.75,
+main=paste("Russian Federation /",colnames(covid.2019.ru.i.dyn.trunc[[i]])[1]),
+xlab="Days since N=50 threshold",
+ylab="Total COVID-2019 cases detected (logarithmic scale)",
+axes=FALSE
+)
+
+text(
+x=length(covid.2019.ru.i.dyn.trunc[[44]]$CS),
+y=log10(covid.2019.ru.i.dyn.trunc[[44]]$CS[length(covid.2019.ru.i.dyn.trunc[[44]]$CS)]),
+labels=colnames(covid.2019.ru.i.dyn.trunc[[44]])[1],
+cex=.75,
+pos=2
+)
+
+for(j in 1:length(levels(covid.2019.ru$LOCUS))){
+ lines(
+ (1:length(log10(covid.2019.ru.i.dyn.trunc[[j]]$CS))), 
+ log10(covid.2019.ru.i.dyn.trunc[[j]]$CS), 
+ col=rgb(0,0,0,.2), 
+ type="o", pch=20, cex=.75)
+}
+
+lines(
+(1:length(log10(covid.2019.ru.i.dyn.trunc[[i]]$CS))), 
+log10(covid.2019.ru.i.dyn.trunc[[i]]$CS), 
+col="white", lwd=4,
+type="o", pch=20, cex=1)
+
+lines(
+(1:length(log10(covid.2019.ru.i.dyn.trunc[[i]]$CS))), 
+log10(covid.2019.ru.i.dyn.trunc[[i]]$CS), 
+col="red", lwd=2,
+type="o", pch=20, cex=.75)
+
+text(
+x=length(covid.2019.ru.i.dyn.trunc[[i]]$CS),
+y=log10(covid.2019.ru.i.dyn.trunc[[i]]$CS[length(covid.2019.ru.i.dyn.trunc[[i]]$CS)]),
+labels=colnames(covid.2019.ru.i.dyn.trunc[[i]])[1],
+pos=4, cex=.75
+)
+
+axis(1)
+axis(1, at=1:length(covid.2019.ru.i.dyn.trunc[[44]]$CS), labels=FALSE, tcl=-.25)
+
+axis(2, at=log10(c(100,1000,10000)), labels=c(100,1000,10000))
+axis(2, at=log10(c(seq(50,100,10), seq(200,1000,100), seq(2000,10000,1000), seq(20000,100000,10000))), labels=FALSE)
+
+dev.off()
+
+} # if(i != 44){};
+} # if(nrow(covid.2019.ru.i.dyn.trunc[[i]] > 2)){};
+} # for(i in 1:length(levels(covid.2019.ru$LOCUS))){};
 
 ################################################################
 # # Do not execute this part of the code mindlessly!
