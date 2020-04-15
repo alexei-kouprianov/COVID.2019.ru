@@ -476,14 +476,14 @@ dir.create("../plots/regions/race/")
 
 for(i in 1:length(levels(covid.2019.ru$LOCUS))){
 if(nrow(covid.2019.ru.i.dyn.trunc[[i]]) > 1){
-if(i != 44){
+if(i != 45){
 
 png(file=paste("../plots/regions/race/COVID.2019.race.log10.",i,".png", sep=""), height=750, width=750, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1, lwd=2)
 
 plot(
-(1:length(log10(covid.2019.ru.i.dyn.trunc[[44]]$CS))), 
-log10(covid.2019.ru.i.dyn.trunc[[44]]$CS), 
+(1:length(log10(covid.2019.ru.i.dyn.trunc[[45]]$CS))), 
+log10(covid.2019.ru.i.dyn.trunc[[45]]$CS), 
 type="o", 
 col=rgb(0,0,0,.2),
 pch=20, cex=.75,
@@ -494,9 +494,9 @@ axes=FALSE
 )
 
 text(
-x=length(covid.2019.ru.i.dyn.trunc[[44]]$CS),
-y=log10(covid.2019.ru.i.dyn.trunc[[44]]$CS[length(covid.2019.ru.i.dyn.trunc[[44]]$CS)]),
-labels=colnames(covid.2019.ru.i.dyn.trunc[[44]])[1],
+x=length(covid.2019.ru.i.dyn.trunc[[45]]$CS),
+y=log10(covid.2019.ru.i.dyn.trunc[[45]]$CS[length(covid.2019.ru.i.dyn.trunc[[45]]$CS)]),
+labels=colnames(covid.2019.ru.i.dyn.trunc[[45]])[1],
 cex=.75,
 pos=2
 )
@@ -529,7 +529,7 @@ pos=4, cex=.75
 )
 
 axis(1)
-axis(1, at=1:length(covid.2019.ru.i.dyn.trunc[[44]]$CS), labels=FALSE, tcl=-.25)
+axis(1, at=1:length(covid.2019.ru.i.dyn.trunc[[45]]$CS), labels=FALSE, tcl=-.25)
 
 axis(2, at=log10(c(100,1000,10000)), labels=c(100,1000,10000))
 axis(2, at=log10(c(seq(50,100,10), seq(200,1000,100), seq(2000,10000,1000), seq(20000,100000,10000))), labels=FALSE)
