@@ -12,6 +12,7 @@
 # install.packages("drc")
 
 library(drc)
+library(aomisc)
 
 # Fitting exponential and logistic growth;
 

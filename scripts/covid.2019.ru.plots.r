@@ -265,6 +265,8 @@ dev.off()
 png("../plots/COVID.2019.cumulated.log10.1M.png", height=750, width=1000, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1, lwd=2)
 
+nrow.tt <- nrow(covid.2019.ru.i.dyn.tt)
+
 plot(covid.2019.ru.i.dyn.tt$TIME[36:nrow.tt],
 log10(covid.2019.ru.i.dyn.tt$Volg.CS[36:nrow.tt]),
 type="n",
@@ -293,8 +295,6 @@ main="Russian Federation, \nregions with capitals of 1,000 K population and more
 xlab="",
 ylab="Total COVID-2019 cases detected (logarithmic scale)", 
 axes=FALSE)
-
-nrow.tt <- nrow(covid.2019.ru.i.dyn.tt)
 
 lines(covid.2019.ru.i.dyn.tt$TIME[36:nrow.tt], log10(covid.2019.ru.i.dyn.tt$Volg.CS[36:nrow.tt]), col=1)
 lines(covid.2019.ru.i.dyn.tt$TIME[36:nrow.tt], log10(covid.2019.ru.i.dyn.tt$Vrnz.CS[36:nrow.tt]), col=2)
@@ -458,8 +458,10 @@ axes=FALSE
 for(j in 1:length(levels(covid.2019.ru$LOCUS))){
  lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tot[[j]]$CS), lwd=1.5, col=rgb(0,0,0,.15))
 }
- lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tot[[i]]$CS), col="white", lwd=4)
- lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tot[[i]]$CS), col=2, lwd=2)
+lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tot[[i]]$CS), col="white", lwd=4)
+lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tot[[i]]$CS), col=2, lwd=2)
+
+abline(h=log10(50), lty=3, lwd=.75)
 
 axis.POSIXct(1, 
 at=seq(min(covid.2019.breaks$TIME), max(covid.2019.breaks$TIME), by="week"), 
