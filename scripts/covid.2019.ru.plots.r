@@ -478,14 +478,14 @@ dir.create("../plots/regions/race/")
 
 for(i in 1:length(levels(covid.2019.ru$LOCUS))){
 if(nrow(covid.2019.ru.i.dyn.trunc[[i]]) > 1){
-if(i != 45){
+if(i != 46){
 
 png(file=paste("../plots/regions/race/COVID.2019.race.log10.",i,".png", sep=""), height=750, width=750, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1, lwd=2)
 
 plot(
-(1:length(log10(covid.2019.ru.i.dyn.trunc[[45]]$CS))), 
-log10(covid.2019.ru.i.dyn.trunc[[45]]$CS), 
+(1:length(log10(covid.2019.ru.i.dyn.trunc[[46]]$CS))), 
+log10(covid.2019.ru.i.dyn.trunc[[46]]$CS), 
 type="o", 
 col=rgb(0,0,0,.2),
 pch=20, cex=.75,
@@ -495,10 +495,26 @@ ylab="Total COVID-2019 cases detected (logarithmic scale)",
 axes=FALSE
 )
 
+curve(log10(50*2^((x-1)/2)), col=4, lty=3, lwd=.5, add=TRUE)
+curve(log10(50*2^((x-1)/3)), col=4, lty=3, lwd=.5, add=TRUE)
+curve(log10(50*2^((x-1)/4)), col=4, lty=3, lwd=.5, add=TRUE)
+curve(log10(50*2^((x-1)/5)), col=4, lty=3, lwd=.5, add=TRUE)
+curve(log10(50*2^((x-1)/7)), col=4, lty=3, lwd=.5, add=TRUE)
+curve(log10(50*2^((x-1)/10)), col=4, lty=3, lwd=.5, add=TRUE)
+
+x.right <- nrow(covid.2019.ru.i.dyn.trunc[[46]])-1
+
+text(17, log10(50*2^((17-1)/2))+.01, col=4, labels="2 days", cex=.75, srt=60, pos=2)
+text(26, log10(50*2^((26-1)/3))+.01, col=4, labels="3 days", cex=.75, srt=50, pos=2)
+text(x.right, log10(50*2^((x.right-1)/4))+.01, col=4, labels="4 days", cex=.75, srt=43, pos=2)
+text(x.right, log10(50*2^((x.right-1)/5))+.01, col=4, labels="5 days", cex=.75, srt=33, pos=2)
+text(x.right, log10(50*2^((x.right-1)/7))+.01, col=4, labels="7 days", cex=.75, srt=25, pos=2)
+text(x.right, log10(50*2^((x.right-1)/10))+.01, col=4, labels="10 days", cex=.75, srt=19, pos=2)
+
 text(
-x=length(covid.2019.ru.i.dyn.trunc[[45]]$CS),
-y=log10(covid.2019.ru.i.dyn.trunc[[45]]$CS[length(covid.2019.ru.i.dyn.trunc[[45]]$CS)]),
-labels=colnames(covid.2019.ru.i.dyn.trunc[[45]])[1],
+x=length(covid.2019.ru.i.dyn.trunc[[46]]$CS),
+y=log10(covid.2019.ru.i.dyn.trunc[[46]]$CS[length(covid.2019.ru.i.dyn.trunc[[45]]$CS)]),
+labels=colnames(covid.2019.ru.i.dyn.trunc[[46]])[1],
 cex=.75,
 pos=2
 )
@@ -523,15 +539,16 @@ log10(covid.2019.ru.i.dyn.trunc[[i]]$CS),
 col="red", lwd=2,
 type="o", pch=20, cex=.75)
 
-text(
+shadowtext(
 x=length(covid.2019.ru.i.dyn.trunc[[i]]$CS),
 y=log10(covid.2019.ru.i.dyn.trunc[[i]]$CS[length(covid.2019.ru.i.dyn.trunc[[i]]$CS)]),
 labels=colnames(covid.2019.ru.i.dyn.trunc[[i]])[1],
+col="black", bg="white", r=.2,
 pos=4, cex=.75
 )
 
 axis(1)
-axis(1, at=1:length(covid.2019.ru.i.dyn.trunc[[45]]$CS), labels=FALSE, tcl=-.25)
+axis(1, at=1:length(covid.2019.ru.i.dyn.trunc[[46]]$CS), labels=FALSE, tcl=-.25)
 
 axis(2, at=log10(c(100,1000,10000)), labels=c(100,1000,10000))
 axis(2, at=log10(c(seq(50,100,10), seq(200,1000,100), seq(2000,10000,1000), seq(20000,100000,10000))), labels=FALSE)

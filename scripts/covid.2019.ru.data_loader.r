@@ -9,6 +9,7 @@
 # Loading libraries, setting locale for time
 
 library(maps)
+library(TeachingDemos)
 # library(png)
 Sys.setlocale("LC_TIME", "en_US.UTF-8")
 
