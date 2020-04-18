@@ -369,3 +369,11 @@ for(j in 1:length(levels(covid.2019.ru$LOCUS))){
   colnames(covid.2019.ru.i.dyn.trunc[[j]]) <- colnames(covid.2019.ru.i.dyn.tot[[j]])
  }
 }
+
+Moscow.pos <- NULL
+
+for(j in 1:length(levels(covid.2019.ru$LOCUS))){
+ if(colnames(covid.2019.ru.i.dyn.tot[[j]])[1]=="Moscow"){
+  Moscow.pos <- j
+ }
+}
