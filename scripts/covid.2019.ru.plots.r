@@ -177,7 +177,7 @@ mtext("Russian Federation", font=2, cex=1.2, side=3, line=3)
 points(
 covid.2019.ru.i.reg.0.df$LON, 
 covid.2019.ru.i.reg.0.df$LAT, 
-cex=sqrt(covid.2019.ru.i.reg.0.df$PER.100K), 
+cex=sqrt(covid.2019.ru.i.reg.0.df$PER.100K)/2, 
 pch=21, bg=2
 )
 
@@ -586,3 +586,69 @@ dev.off()
 # # ffmpeg command line: 
 # #
 # # ffmpeg -r 2 -f image2 -s 1000x750 -i COVID.2019.map.regions.%03d.png -vcodec libx264 -crf 25 -pix_fmt yuv420p COVID.2019.ru.map.animated.mp4
+
+# i <- 47
+# plot(1:nrow(covid.2019.ru.i.dyn.trunc[[46]]), 
+# covid.2019.ru.i.dyn.trunc[[46]]$CS.diff.7, 
+# type="l", 
+# ylim=c(1,1.7),
+# main=paste("Russian Federation /",colnames(covid.2019.ru.i.dyn.trunc[[j]])[1]),
+# xlab="Days since N=50 threshold",
+# ylab="Rt, running average for 7 days",
+# axes=FALSE
+# )
+# grid()
+# for(j in 1:length(levels(covid.2019.ru$LOCUS))){
+# lines(1:nrow(covid.2019.ru.i.dyn.trunc[[j]]), covid.2019.ru.i.dyn.trunc[[j]]$CS.diff.7, col=rgb(0,0,0,.3))
+# }
+#
+# lines(1:nrow(covid.2019.ru.i.dyn.trunc[[i]]), covid.2019.ru.i.dyn.trunc[[i]]$CS.diff.7, col="white", lwd=3)
+# lines(1:nrow(covid.2019.ru.i.dyn.trunc[[i]]), covid.2019.ru.i.dyn.trunc[[i]]$CS.diff.7, col=2)
+# points(x=nrow(covid.2019.ru.i.dyn.trunc[[i]])-3, y=(covid.2019.ru.i.dyn.trunc[[i]]$CS.diff.7[nrow(covid.2019.ru.i.dyn.trunc[[i]])-3]), pch=20, col=2)
+#
+# shadowtext(
+# x=nrow(covid.2019.ru.i.dyn.trunc[[i]])-3, 
+# y=(covid.2019.ru.i.dyn.trunc[[i]]$CS.diff.7[nrow(covid.2019.ru.i.dyn.trunc[[i]])-3]), 
+# cex=.75, 
+# col="black", bg="white", r=.2,
+# labels=colnames(covid.2019.ru.i.dyn.trunc[[i]])[1],
+# pos=4
+# )
+#
+# axis(1)
+# axis(1, at=1:nrow(covid.2019.ru.i.dyn.trunc[[46]]), labels=FALSE)
+# axis(2)
+#
+# plot(
+# 40:nrow(covid.2019.ru.i.dyn.tot[[46]]), 
+# covid.2019.ru.i.dyn.tot[[46]]$CS.diff.7[40:nrow(covid.2019.ru.i.dyn.tot[[46]])], 
+# type="l", ylim=c(1,1.7),
+# main=paste("Russian Federation /",colnames(covid.2019.ru.i.dyn.trunc[[j]])[1]),
+# xlab="Days since 2020-01-31",
+# ylab="Rt, running average for 7 days",
+# axes=FALSE
+# )
+# for(j in 1:length(levels(covid.2019.ru$LOCUS))){
+# grid()
+# lines(
+# 40:nrow(covid.2019.ru.i.dyn.tot[[j]]), 
+# covid.2019.ru.i.dyn.tot[[j]]$CS.diff.7[40:nrow(covid.2019.ru.i.dyn.tot[[j]])], 
+# col=rgb(0,0,0,.3))
+# }
+#
+# lines(1:nrow(covid.2019.ru.i.dyn.tot[[i]]), covid.2019.ru.i.dyn.tot[[i]]$CS.diff.7, col="white", lwd=3)
+# lines(1:nrow(covid.2019.ru.i.dyn.tot[[i]]), covid.2019.ru.i.dyn.tot[[i]]$CS.diff.7, col=2)
+# points(x=nrow(covid.2019.ru.i.dyn.tot[[i]])-3, y=(covid.2019.ru.i.dyn.tot[[i]]$CS.diff.7[nrow(covid.2019.ru.i.dyn.tot[[i]])-3]), pch=20, col=2)
+#
+# shadowtext(
+# x=nrow(covid.2019.ru.i.dyn.tot[[i]])-3, 
+# y=(covid.2019.ru.i.dyn.tot[[i]]$CS.diff.7[nrow(covid.2019.ru.i.dyn.tot[[i]])-3]), 
+# cex=.75, 
+# col="black", bg="white", r=.2,
+# labels=colnames(covid.2019.ru.i.dyn.tot[[i]])[1],
+# pos=4
+# )
+#
+# axis(1)
+# axis(1, at=1:nrow(covid.2019.ru.i.dyn.tot[[46]]), labels=FALSE)
+# axis(2)

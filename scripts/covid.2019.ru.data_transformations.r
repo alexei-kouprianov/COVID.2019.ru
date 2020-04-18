@@ -338,16 +338,34 @@ for(j in 1:length(levels(covid.2019.ru$LOCUS))){
   )
 }
 
+CS.diff.3 <- NULL 
+CS.diff.7 <- NULL 
+
+for(j in 1:(length(levels(covid.2019.ru$LOCUS)))){
+  CS.diff.3 <- NA 
+  CS.diff.7 <- c(NA,NA,NA) 
+ for(i in 2:(nrow(covid.2019.ru.i.dyn.tot[[j]])-1)){
+  CS.diff.3 <- c(CS.diff.3, mean(covid.2019.ru.i.dyn.tot[[j]]$CS.diff[(i-1):(i+1)], na.rm=TRUE))
+  }
+  CS.diff.3 <- c(CS.diff.3, NA)
+  covid.2019.ru.i.dyn.tot[[j]]$CS.diff.3 <- CS.diff.3
+ for(k in 4:(nrow(covid.2019.ru.i.dyn.tot[[j]])-3)){
+  CS.diff.7 <- c(CS.diff.7, mean(covid.2019.ru.i.dyn.tot[[j]]$CS.diff[(k-3):(k+3)], na.rm=TRUE))
+  }
+  CS.diff.7 <- c(CS.diff.7, NA, NA, NA)
+  covid.2019.ru.i.dyn.tot[[j]]$CS.diff.7 <- CS.diff.7
+}
+
 # List of truncated data.frames;
 
 covid.2019.ru.i.dyn.trunc <- NULL
 covid.2019.ru.i.dyn.trunc <- as.list(covid.2019.ru.i.dyn.trunc)
 
 for(j in 1:length(levels(covid.2019.ru$LOCUS))){
- if(dim(subset(covid.2019.ru.i.dyn.tot[[j]], covid.2019.ru.i.dyn.tot[[j]]$"CS" >= 50))[1]>0){
+ if(max(covid.2019.ru.i.dyn.tot[[j]]$"CS", na.rm=TRUE) >= 50){
   covid.2019.ru.i.dyn.trunc[[j]] <- subset(covid.2019.ru.i.dyn.tot[[j]], covid.2019.ru.i.dyn.tot[[j]]$CS >= 50)
  } else{
-  covid.2019.ru.i.dyn.trunc[[j]] <- cbind.data.frame(c(NA),c(NA),c(NA))
+  covid.2019.ru.i.dyn.trunc[[j]] <- cbind.data.frame(c(NA),c(NA),c(NA),c(NA),c(NA))
   colnames(covid.2019.ru.i.dyn.trunc[[j]]) <- colnames(covid.2019.ru.i.dyn.tot[[j]])
  }
 }
