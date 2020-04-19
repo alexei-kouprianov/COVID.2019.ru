@@ -8,6 +8,8 @@
 ################################################################
 # Disaggregating
 
+covid.2019.ru <- covid.2019.ru.raw[,c(1:4,6)]
+
 covid.2019.ru.da <- NULL
 
 for(i in 1:nrow(covid.2019.ru)){
@@ -22,6 +24,8 @@ for(i in 1:nrow(covid.2019.ru)){
 covid.2019.ru$TIME <- strptime(covid.2019.ru$TIMESTAMP, "%Y-%m-%d %H:%M:%S")
 covid.2019.ru.da$TIME <- strptime(covid.2019.ru.da$TIMESTAMP, "%Y-%m-%d %H:%M:%S")
 covid.2019.breaks$TIME <- strptime(covid.2019.breaks$TIMESTAMP, "%Y-%m-%d %H:%M:%S")
+
+covid.2019.ru.da <- covid.2019.ru.da[,c(2:4,6)]
 
 ################################################################
 # Subsetting
@@ -92,20 +96,6 @@ covid.2019.ru.i.reg.0[[i]] <- subset(covid.2019.ru.i, covid.2019.ru.i$LOCUS.0 ==
 covid.2019.ru.r.reg.0[[i]] <- subset(covid.2019.ru.r, covid.2019.ru.i$LOCUS.0 == levels(covid.2019.ru.r$LOCUS.0)[i])
 covid.2019.ru.d.reg.0[[i]] <- subset(covid.2019.ru.d, covid.2019.ru.i$LOCUS.0 == levels(covid.2019.ru.d$LOCUS.0)[i])
 }
-
-# Dynamics data frame;
-covid.2019.ru.i.dyn <- NULL
-
-for(i in 1:length(levels(covid.2019.ru.i$TIMESTAMP))){
-covid.2019.ru.i.dyn <- rbind.data.frame(covid.2019.ru.i.dyn,
-cbind.data.frame(
-covid.2019.ru.i.ts[[i]]$TIME[1],
-sum(covid.2019.ru.i.ts[[i]]$NUMBER))
-)
-}
-
-colnames(covid.2019.ru.i.dyn) <- c("TIME","NUMBER")
-covid.2019.ru.i.dyn$CUMSUM <- cumsum(covid.2019.ru.i.dyn$NUMBER)
 
 # Barplot regions data frame;
 covid.2019.ru.i.reg.df <- NULL
@@ -375,5 +365,27 @@ Moscow.pos <- NULL
 for(j in 1:length(levels(covid.2019.ru$LOCUS))){
  if(colnames(covid.2019.ru.i.dyn.tot[[j]])[1]=="Moscow"){
   Moscow.pos <- j
+ }
+}
+
+billionaires <- NULL
+
+for(j in 1:length(levels(covid.2019.ru$LOCUS))){
+if(colnames(covid.2019.ru.i.dyn.tot[[j]])[1]=="Moscow" |
+ colnames(covid.2019.ru.i.dyn.tot[[j]])[1]=="St. Petersburg" |
+ colnames(covid.2019.ru.i.dyn.tot[[j]])[1]=="Volgograd" |
+ colnames(covid.2019.ru.i.dyn.tot[[j]])[1]=="Voronezh" |
+ colnames(covid.2019.ru.i.dyn.tot[[j]])[1]=="Ekaterinburg" |
+ colnames(covid.2019.ru.i.dyn.tot[[j]])[1]=="Kazan" |
+ colnames(covid.2019.ru.i.dyn.tot[[j]])[1]=="Krasnoyarsk" |
+ colnames(covid.2019.ru.i.dyn.tot[[j]])[1]=="Nizhnii Novgorod" |
+ colnames(covid.2019.ru.i.dyn.tot[[j]])[1]=="Novosibirsk" |
+ colnames(covid.2019.ru.i.dyn.tot[[j]])[1]=="Omsk" |
+ colnames(covid.2019.ru.i.dyn.tot[[j]])[1]=="Perm krai" |
+ colnames(covid.2019.ru.i.dyn.tot[[j]])[1]=="Rostov-on-Don" |
+ colnames(covid.2019.ru.i.dyn.tot[[j]])[1]=="Samara" |
+ colnames(covid.2019.ru.i.dyn.tot[[j]])[1]=="Bashkortostan" |
+ colnames(covid.2019.ru.i.dyn.tot[[j]])[1]=="Cheliabinsk"){
+  billionaires <- c(billionaires, j)
  }
 }

@@ -160,7 +160,7 @@ mtext("Russian Federation", font=2, cex=1.2, side=3, line=3)
 points(
 covid.2019.ru.i.reg.0.df$LON, 
 covid.2019.ru.i.reg.0.df$LAT, 
-cex=sqrt(covid.2019.ru.i.reg.0.df$NUMBER)/4, 
+cex=sqrt(covid.2019.ru.i.reg.0.df$NUMBER)/8, 
 pch=21, bg=2
 )
 
