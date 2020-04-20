@@ -21,6 +21,11 @@ covid.2019.ru.i.dyn.tt$RUS.CS ~ covid.2019.ru.i.dyn.tt$DAYS,
 fct = DRC.expoGrowth()
 )
 
+covid.2019.ru.full.Mos.expoGrowth <- drm(
+covid.2019.ru.i.dyn.tt$Mos.CS ~ covid.2019.ru.i.dyn.tt$DAYS, 
+fct = DRC.expoGrowth()
+)
+
 covid.2019.ru.full.ll.3 <- drm(
 covid.2019.ru.i.dyn.tt$RUS.CS ~ covid.2019.ru.i.dyn.tt$DAYS, 
 fct = LL.3()
@@ -98,6 +103,28 @@ fct = LL.3()
 }
 
 colnames(rmc.df) <- c("eg.1","eg.2","ll.3.b","ll.3.d","ll.3.e")
+
+# RMC for Moscow
+
+rmc.Mos.df <- NULL
+
+for(i in 33:nrow(covid.2019.ru.i.dyn.tt)){
+
+rmc.Mos.df <- rbind.data.frame(rmc.Mos.df,
+c(
+drm(
+covid.2019.ru.i.dyn.tt.ts[[i]]$Mos.CS ~ covid.2019.ru.i.dyn.tt.ts[[i]]$DAYS, 
+fct = DRC.expoGrowth()
+)$coefficients,
+drm(
+covid.2019.ru.i.dyn.tt.ts[[i]]$Mos.CS ~ covid.2019.ru.i.dyn.tt.ts[[i]]$DAYS, 
+fct = LL.3()
+)$fit$par
+)
+)
+}
+
+colnames(rmc.Mos.df) <- c("eg.1","eg.2","ll.3.b","ll.3.d","ll.3.e")
 
 # Control plot;
 
@@ -219,7 +246,7 @@ par(mar=c(6,5,4,2)+.1)
 plot(log10(covid.2019.ru.i.dyn.tt$RUS.CS) ~ covid.2019.ru.i.dyn.tt$DAYS, 
 type="n", 
 xlim=c(0,median(rmc.df$ll.3.e)*1.5), ylim=c(0,log10(max(rmc.df$ll.3.d))),
-main="Russian Federation",
+main=paste("Russian Federation /",Sys.Date()),
 xlab="Days since 2020-01-31",
 ylab="Total cases registered",
 axes=FALSE
@@ -227,6 +254,7 @@ axes=FALSE
 
 for(i in 1:nrow(rmc.df)){
 curve(log10(rmc.df$ll.3.d[i]/(1+exp(rmc.df$ll.3.b[i]*(log((x)/rmc.df$ll.3.e[i]))))), col=rgb(0,0,1,.3), add=TRUE)
+abline(v=rmc.df$ll.3.e[i], col=rgb(0,0,1,.2), lwd=1, lty=5)
 curve(log10(rmc.df$eg.1[i]*exp((x)*rmc.df$eg.2[i])), col=rgb(1,0,0,.3), add=TRUE)
 }
 
@@ -235,6 +263,39 @@ curve(log10(covid.2019.ru.full.expoGrowth$coefficients[1]*exp(x*covid.2019.ru.fu
 abline(v=covid.2019.ru.full.ll.3$fit$par[3], col=4, lwd=1.5, lty=2)
 
 points(log10(covid.2019.ru.i.dyn.tt$RUS.CS) ~ covid.2019.ru.i.dyn.tt$DAYS, 
+pch=21, col="white", bg=1)
+
+axis(1)
+axis(2, at=log10(c(1,10,100,1000,10000,100000,1000000)), labels=c("1","10","100","1K","10K","100K","1000K"))
+axis(2, at=log10(c(1:9, seq(10,100,10), seq(200,1000,100), seq(2000,10000,1000), seq(20000,100000,10000), seq(200000,1000000,100000))), labels=FALSE)
+
+dev.off()
+
+### Running model for Moscow;
+
+png("../plots/COVID.2019.fitting.rmc.Mos.log10.png", height=750, width=1000, res=120, pointsize=10)
+par(mar=c(6,5,4,2)+.1)
+
+plot(log10(covid.2019.ru.i.dyn.tt$Mos.CS) ~ covid.2019.ru.i.dyn.tt$DAYS, 
+type="n", 
+xlim=c(0,median(rmc.df$ll.3.e)*1.5), ylim=c(0,log10(max(rmc.df$ll.3.d))),
+main=paste("Russian Federation / Moscow /",Sys.Date()),
+xlab="Days since 2020-01-31",
+ylab="Total cases registered",
+axes=FALSE
+)
+
+for(i in 1:nrow(rmc.Mos.df)){
+curve(log10(rmc.Mos.df$ll.3.d[i]/(1+exp(rmc.Mos.df$ll.3.b[i]*(log((x)/rmc.Mos.df$ll.3.e[i]))))), col=rgb(0,0,1,.3), add=TRUE)
+abline(v=rmc.Mos.df$ll.3.e[i], col=rgb(0,0,1,.2), lwd=1, lty=5)
+curve(log10(rmc.Mos.df$eg.1[i]*exp((x)*rmc.Mos.df$eg.2[i])), col=rgb(1,0,0,.3), add=TRUE)
+}
+
+curve(log10(covid.2019.ru.full.Mos.ll.3$fit$par[2]/(1+exp(covid.2019.ru.full.Mos.ll.3$fit$par[1]*(log(x/covid.2019.ru.full.Mos.ll.3$fit$par[3]))))), col=4, lwd=1.5, lty=2, add=TRUE)
+curve(log10(covid.2019.ru.full.Mos.expoGrowth$coefficients[1]*exp(x*covid.2019.ru.full.Mos.expoGrowth$coefficients[2])), col=2, lwd=1.5, lty=2, add=TRUE)
+abline(v=covid.2019.ru.full.Mos.ll.3$fit$par[3], col=4, lwd=1.5, lty=2)
+
+points(log10(covid.2019.ru.i.dyn.tt$Mos.CS) ~ covid.2019.ru.i.dyn.tt$DAYS, 
 pch=21, col="white", bg=1)
 
 axis(1)

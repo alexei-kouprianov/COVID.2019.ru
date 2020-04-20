@@ -695,3 +695,55 @@ dev.off()
 # # ffmpeg command line: 
 # #
 # # ffmpeg -r 2 -f image2 -s 1000x750 -i COVID.2019.map.regions.%03d.png -vcodec libx264 -crf 25 -pix_fmt yuv420p COVID.2019.ru.map.animated.mp4
+
+png("../plots/COVID.2019.hist.rt.png", height=750, width=1000, res=120, pointsize=10)
+
+hist(covid.2019.ru.i.rt.slice.noInf, breaks=32, col=8,
+main=paste("Russian Federation /", Sys.Date()),
+xlab="COVID-2019 Reproductive number (Rt) (rolling average for 7 days)",
+ylab="Number of regions with Rt this high"
+)
+abline(v=median(covid.2019.ru.i.rt.slice.noInf, na.rm=TRUE), col=3, lty=3, lwd=2)
+abline(v=mean(covid.2019.ru.i.rt.slice.noInf, na.rm=TRUE), col=2, lty=3, lwd=2)
+
+legend(
+"topright",
+lty=3,
+lwd=2,
+col=3:2,
+legend=c(
+paste("Median Rt =",round(median(covid.2019.ru.i.rt.slice.noInf, na.rm=TRUE),3)),
+paste("Mean Rt =",round(mean(covid.2019.ru.i.rt.slice.noInf, na.rm=TRUE),3))
+),
+bty="n"
+)
+
+dev.off()
+
+png("../plots/COVID.2019.hist.dt.png", height=750, width=1000, res=120, pointsize=10)
+
+hist(log(2, base=covid.2019.ru.i.rt.slice.noInf), 
+breaks=(ceiling(min(log(2, base=covid.2019.ru.i.rt.slice.noInf))-.5)-.5):
+(floor(max(log(2, base=covid.2019.ru.i.rt.slice.noInf))+.5)+.5), 
+col=8,
+,
+main=paste("Russian Federation /", Sys.Date()),
+xlab="COVID-2019 cases doubling time (days) based on Rt rolling average for 7 days",
+ylab="Number of regions with doubling time this high"
+)
+abline(v=median(log(2, base=covid.2019.ru.i.rt.slice.noInf)), col=3, lty=3, lwd=2)
+abline(v=mean(log(2, base=covid.2019.ru.i.rt.slice.noInf)), col=2, lty=3, lwd=2)
+
+legend(
+"topright",
+lty=3,
+lwd=2,
+col=3:2,
+legend=c(
+paste("Median DT =",round(median(log(2, base=covid.2019.ru.i.rt.slice.noInf)),2)),
+paste("Mean DT =",round(mean(log(2, base=covid.2019.ru.i.rt.slice.noInf)),2))
+),
+bty="n"
+)
+
+dev.off()

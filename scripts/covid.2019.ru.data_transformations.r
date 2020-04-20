@@ -368,6 +368,21 @@ for(j in 1:length(levels(covid.2019.ru$LOCUS))){
  }
 }
 
+# Summarising Rt rolling average;
+
+covid.2019.ru.i.rt.slice <- NULL
+
+for(i in 1:length(levels(covid.2019.ru$LOCUS))){
+covid.2019.ru.i.rt.slice <- c(covid.2019.ru.i.rt.slice,
+covid.2019.ru.i.dyn.tot[[i]]$CS.diff.7[nrow(covid.2019.ru.i.dyn.tot[[i]])-3])
+}
+
+covid.2019.ru.i.rt.slice.noInf <- subset(covid.2019.ru.i.rt.slice, covid.2019.ru.i.rt.slice < 100)
+covid.2019.ru.i.rt.slice.norm <- covid.2019.ru.i.rt.slice/max(covid.2019.ru.i.rt.slice.noInf)
+
+
+# Extracting billionaires from covid.2019.ru.i.dyn.tot; 
+
 billionaires <- NULL
 
 for(j in 1:length(levels(covid.2019.ru$LOCUS))){
