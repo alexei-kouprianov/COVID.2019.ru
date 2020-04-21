@@ -114,7 +114,7 @@ covid.2019.ru.i.reg.df$PER.100K <- covid.2019.ru.i.reg.df$NUMBER/(covid.2019.ru.
 covid.2019.ru.i.reg.ordered.df <- covid.2019.ru.i.reg.df[order(-covid.2019.ru.i.reg.df$NUMBER),]
 covid.2019.ru.i.reg.ordered.PER.100K.df <- covid.2019.ru.i.reg.df[order(-covid.2019.ru.i.reg.df$PER.100K),]
 
-# Mapping regions data frame;
+# Mapping regions data frame (part 1);
 covid.2019.ru.i.reg.0.df <- NULL
 
 for(i in 1:length(levels(covid.2019.ru.i$LOCUS.0))){
@@ -127,10 +127,6 @@ sum(covid.2019.ru.i.reg.0[[i]]$NUMBER))
 colnames(covid.2019.ru.i.reg.0.df) <- c("LOCUS.1","NUMBER")
 
 covid.2019.ru.i.reg.0.df <- cbind.data.frame(covid.2019.ru.i.reg.0.df, covid.2019.coord)
-
-covid.2019.ru.i.reg.0.df <- covid.2019.ru.i.reg.0.df[order(-covid.2019.ru.i.reg.0.df$NUMBER),]
-
-covid.2019.ru.i.reg.0.df$PER.100K <- covid.2019.ru.i.reg.0.df$NUMBER/(covid.2019.ru.i.reg.0.df$POPULATION/100000)
 
 # Momentary data
 
@@ -368,6 +364,14 @@ for(j in 1:length(levels(covid.2019.ru$LOCUS))){
  }
 }
 
+Leningrad_region.pos <- NULL
+
+for(j in 1:length(levels(covid.2019.ru$LOCUS))){
+ if(colnames(covid.2019.ru.i.dyn.tot[[j]])[1]=="Leningrad region"){
+  Leningrad_region.pos <- j
+ }
+}
+
 # Summarising Rt rolling average;
 
 covid.2019.ru.i.rt.slice <- NULL
@@ -380,6 +384,12 @@ covid.2019.ru.i.dyn.tot[[i]]$CS.diff.7[nrow(covid.2019.ru.i.dyn.tot[[i]])-3])
 covid.2019.ru.i.rt.slice.noInf <- subset(covid.2019.ru.i.rt.slice, covid.2019.ru.i.rt.slice < 100)
 covid.2019.ru.i.rt.slice.norm <- covid.2019.ru.i.rt.slice/max(covid.2019.ru.i.rt.slice.noInf)
 
+# Mapping regions data frame (part 2)
+covid.2019.ru.i.reg.0.df$CS.diff.7 <- covid.2019.ru.i.rt.slice[c(1:(Leningrad_region.pos-1), (Leningrad_region.pos+1):(Moscow.pos), (Moscow.pos+2):length(covid.2019.ru.i.rt.slice))]
+
+covid.2019.ru.i.reg.0.df <- covid.2019.ru.i.reg.0.df[order(-covid.2019.ru.i.reg.0.df$NUMBER),]
+
+covid.2019.ru.i.reg.0.df$PER.100K <- covid.2019.ru.i.reg.0.df$NUMBER/(covid.2019.ru.i.reg.0.df$POPULATION/100000)
 
 # Extracting billionaires from covid.2019.ru.i.dyn.tot; 
 
