@@ -16,7 +16,8 @@ Sys.setlocale("LC_TIME", "en_US.UTF-8")
 ################################################################
 # Reading data
 
-covid.2019.ru.raw <- read.table("../data/momentary.txt", h=TRUE, sep="\t")
+covid.2019.ru <- read.table("../data/momentary.txt", h=TRUE, sep="\t")
+covid.2019.ru.da <- read.table("../data/momentary.da.txt", h=TRUE, sep="\t")
 covid.2019.breaks <- read.table("../misc/breaks.txt", h=TRUE, sep="\t")
 covid.2019.coord <- read.table("../misc/coord.txt", h=TRUE, sep="\t")
 covid.2019.population <- read.table("../misc/population.txt", h=TRUE, sep="\t")

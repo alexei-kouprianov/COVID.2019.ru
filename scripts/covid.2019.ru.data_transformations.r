@@ -4,19 +4,8 @@
 # 
 # requires:
 # source(covid.2019.ru.data_loader.r)
-
+# 
 ################################################################
-# Disaggregating
-
-covid.2019.ru <- covid.2019.ru.raw[,c(1:4,6)]
-
-covid.2019.ru.da <- NULL
-
-for(i in 1:nrow(covid.2019.ru)){
-	for(j in 1:covid.2019.ru[i,]$NUMBER){
-	covid.2019.ru.da <- rbind.data.frame(covid.2019.ru.da, covid.2019.ru[i,])
-	}
-}
 
 ################################################################
 # Trimming timestamps
@@ -24,8 +13,6 @@ for(i in 1:nrow(covid.2019.ru)){
 covid.2019.ru$TIME <- strptime(covid.2019.ru$TIMESTAMP, "%Y-%m-%d %H:%M:%S")
 covid.2019.ru.da$TIME <- strptime(covid.2019.ru.da$TIMESTAMP, "%Y-%m-%d %H:%M:%S")
 covid.2019.breaks$TIME <- strptime(covid.2019.breaks$TIMESTAMP, "%Y-%m-%d %H:%M:%S")
-
-covid.2019.ru.da <- covid.2019.ru.da[,c(2:4,6)]
 
 ################################################################
 # Subsetting

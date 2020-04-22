@@ -1,6 +1,6 @@
 ################################################################
 # Loading libraries, setting locale for time, reading data
-
+ 
 source("covid.2019.ru.data_loader.r")
 
 ################################################################
