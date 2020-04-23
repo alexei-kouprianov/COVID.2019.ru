@@ -157,32 +157,22 @@ mtext(paste("Total COVID-2019 cases, as of",covid.2019.ru.i$TIMESTAMP[length(cov
 side=1, line=2) 
 mtext("Russian Federation", font=2, cex=1.2, side=3, line=3)
 
-points(
-covid.2019.ru.i.reg.0.df$LON, 
-covid.2019.ru.i.reg.0.df$LAT, 
-cex=sqrt(covid.2019.ru.i.reg.0.df$NUMBER)/8, 
-pch=21, bg=2
-)
+# points(
+# covid.2019.ru.i.reg.0.df$LON, 
+# covid.2019.ru.i.reg.0.df$LAT, 
+# cex=sqrt(covid.2019.ru.i.reg.0.df$NUMBER)/8, 
+# pch=21, bg=2
+# )
 
-# for(i in 1:nrow(covid.2019.ru.i.reg.0.df)){
-#  if(covid.2019.ru.i.rt.slice[i] != Inf){
-#  points(
-#  covid.2019.ru.i.reg.0.df$LON[i], 
-#  covid.2019.ru.i.reg.0.df$LAT[i], 
-#  cex=sqrt(covid.2019.ru.i.reg.0.df$NUMBER[i])/8, 
-#  pch=21, 
-#  bg=rainbow(16, s = 1, v = 1, start = 0, end = 2/6)[round(log(2, base=covid.2019.ru.i.reg.0.df$CS.diff.7[i]))]
-#  )
-#  } else {
-#  points(
-#  covid.2019.ru.i.reg.0.df$LON[i], 
-#  covid.2019.ru.i.reg.0.df$LAT[i], 
-#  cex=sqrt(covid.2019.ru.i.reg.0.df$NUMBER[i])/8, 
-#  pch=21, 
-#  bg=2
-#  )
-#  }
-# }
+for(i in 1:nrow(covid.2019.ru.i.reg.0.df)){
+ points(
+ covid.2019.ru.i.reg.0.df$LON[i], 
+ covid.2019.ru.i.reg.0.df$LAT[i], 
+ cex=sqrt(covid.2019.ru.i.reg.0.df$NUMBER[i])/8, 
+ pch=21, 
+ bg=rainbow(ceiling(max(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, na.rm=TRUE)), s = 1, v = 1, start = 0, end = 2/6)[round(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log[i])]
+ )
+}
 
 dev.off()
 
@@ -194,33 +184,32 @@ mtext(paste("Total COVID-2019 cases per 100K, as of",covid.2019.ru.i$TIMESTAMP[l
 side=1, line=2) 
 mtext("Russian Federation", font=2, cex=1.2, side=3, line=3)
 
-points(
-covid.2019.ru.i.reg.0.df$LON, 
-covid.2019.ru.i.reg.0.df$LAT, 
-cex=sqrt(covid.2019.ru.i.reg.0.df$PER.100K)/2, 
-pch=21, bg=2
-)
+# points(
+# covid.2019.ru.i.reg.0.df$LON, 
+# covid.2019.ru.i.reg.0.df$LAT, 
+# cex=sqrt(covid.2019.ru.i.reg.0.df$PER.100K)/2, 
+# pch=21, bg=2
+# )
 
-
-# for(i in 1:nrow(covid.2019.ru.i.reg.0.df)){
-#  if(covid.2019.ru.i.rt.slice[i] != Inf){
-#  points(
-#  covid.2019.ru.i.reg.0.df$LON[i], 
-#  covid.2019.ru.i.reg.0.df$LAT[i], 
-#  cex=sqrt(covid.2019.ru.i.reg.0.df$PER.100K[i])/2, 
-#  pch=21, 
-#  bg=rainbow(16, s = 1, v = 1, start = 0, end = 2/6)[round(log(2, base=covid.2019.ru.i.reg.0.df$CS.diff.7[i]))]
-#  )
-#  } else {
-#  points(
-#  covid.2019.ru.i.reg.0.df$LON[i], 
-#  covid.2019.ru.i.reg.0.df$LAT[i], 
-#  cex=sqrt(covid.2019.ru.i.reg.0.df$PER.100K[i])/2, 
-#  pch=21, 
-#  bg=2
-#  )
-#  }
-# }
+for(i in 1:nrow(covid.2019.ru.i.reg.0.df)){
+ if(covid.2019.ru.i.rt.slice[i] != Inf){
+ points(
+ covid.2019.ru.i.reg.0.df$LON[i], 
+ covid.2019.ru.i.reg.0.df$LAT[i], 
+ cex=sqrt(covid.2019.ru.i.reg.0.df$PER.100K[i])/2, 
+ pch=21, 
+ bg=rainbow(ceiling(max(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, na.rm=TRUE)), s = 1, v = 1, start = 0, end = 2/6)[round(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log[i])]
+ )
+ } else {
+ points(
+ covid.2019.ru.i.reg.0.df$LON[i], 
+ covid.2019.ru.i.reg.0.df$LAT[i], 
+ cex=sqrt(covid.2019.ru.i.reg.0.df$PER.100K[i])/2, 
+ pch=21, 
+ bg=2
+ )
+ }
+}
 
 dev.off()
 
@@ -780,10 +769,6 @@ dev.off()
 
 png("../plots/COVID.2019.hist.rt.png", height=750, width=1000, res=120, pointsize=10)
 
-# summary(covid.2019.ru.i.rt.slice.noInf)
-#    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-#   1.000   1.112   1.151   1.159   1.188   1.429 
-
 hist(covid.2019.ru.i.rt.slice.noInf, breaks=seq(.99,1.43,.02), col=8,
 main=paste("Russian Federation /", Sys.Date()),
 xlab="COVID-2019 Reproductive number (Rt) (rolling average for 7 days)",
@@ -808,20 +793,20 @@ dev.off()
 
 png("../plots/COVID.2019.hist.dt.png", height=750, width=1000, res=120, pointsize=10)
 
-hist(log(2, base=covid.2019.ru.i.rt.slice.noInf), 
-breaks=(ceiling(min(log(2, base=covid.2019.ru.i.rt.slice.noInf))-.5)-.5):
-(floor(max(log(2, base=covid.2019.ru.i.rt.slice.noInf))+.5)+.5), 
-col=rainbow(16, s = 1, v = 1, start = 0, end = 2/6),
+hist(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, 
+breaks=(ceiling(min(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, na.rm=TRUE)-.5)-.5):
+(floor(max(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, na.rm=TRUE)+.5)+.5), 
+col=rainbow(ceiling(max(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, na.rm=TRUE)), s = 1, v = 1, start = 0, end = 2/6),
 ,
 main=paste("Russian Federation /", Sys.Date()),
 xlab="COVID-2019 cases doubling time (days) based on Rt rolling average for 7 days",
 ylab="Number of regions with doubling time this high"
 )
 
-abline(v=median(log(2, base=covid.2019.ru.i.rt.slice.noInf)), col=3, lwd=2)
-abline(v=mean(log(2, base=covid.2019.ru.i.rt.slice.noInf)), col=5, lwd=2)
+abline(v=median(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, na.rm=TRUE), col=3, lwd=2)
+abline(v=mean(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, na.rm=TRUE), col=5, lwd=2)
 
-rug(log(2, base=covid.2019.ru.i.rt.slice.noInf))
+rug(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log)
 
 legend(
 "topright",
@@ -829,8 +814,8 @@ lty=1,
 lwd=2,
 col=c(3,5),
 legend=c(
-paste("Median DT =",round(median(log(2, base=covid.2019.ru.i.rt.slice.noInf)),2)),
-paste("Mean DT =",round(mean(log(2, base=covid.2019.ru.i.rt.slice.noInf)),2))
+paste("Median DT =",round(median(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, na.rm=TRUE),2)),
+paste("Mean DT =",round(mean(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, na.rm=TRUE),2))
 ),
 bty="n"
 )

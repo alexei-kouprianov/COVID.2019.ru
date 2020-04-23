@@ -401,11 +401,22 @@ covid.2019.ru.i.rt.slice <- c(covid.2019.ru.i.rt.slice,
 covid.2019.ru.dyn.tot[[i]]$CS.i.diff.7[nrow(covid.2019.ru.dyn.tot[[i]])-3])
 }
 
-covid.2019.ru.i.rt.slice.noInf <- subset(covid.2019.ru.i.rt.slice, covid.2019.ru.i.rt.slice < 100)
+covid.2019.ru.i.rt.slice.2log <- NULL
+
+for(i in 1:length(levels(covid.2019.ru$LOCUS))){
+ if(log(2, base=covid.2019.ru.i.rt.slice[i]) < Inf){
+ covid.2019.ru.i.rt.slice.2log <- c(covid.2019.ru.i.rt.slice.2log, log(2, base=covid.2019.ru.i.rt.slice[i]))
+ } else {
+ covid.2019.ru.i.rt.slice.2log <- c(covid.2019.ru.i.rt.slice.2log, NA)
+ }
+}
+
+covid.2019.ru.i.rt.slice.noInf <- subset(covid.2019.ru.i.rt.slice, covid.2019.ru.i.rt.slice < Inf)
 covid.2019.ru.i.rt.slice.norm <- covid.2019.ru.i.rt.slice/max(covid.2019.ru.i.rt.slice.noInf)
 
 # Mapping regions data frame (part 2)
 covid.2019.ru.i.reg.0.df$CS.i.diff.7 <- covid.2019.ru.i.rt.slice[c(1:(Leningrad_region.pos-1), (Leningrad_region.pos+1):(Moscow.pos), (Moscow.pos+2):length(covid.2019.ru.i.rt.slice))]
+covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log <- covid.2019.ru.i.rt.slice.2log[c(1:(Leningrad_region.pos-1), (Leningrad_region.pos+1):(Moscow.pos), (Moscow.pos+2):length(covid.2019.ru.i.rt.slice))]
 
 covid.2019.ru.i.reg.0.df <- covid.2019.ru.i.reg.0.df[order(-covid.2019.ru.i.reg.0.df$NUMBER),]
 
