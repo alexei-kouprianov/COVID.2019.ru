@@ -132,36 +132,9 @@ RUS <- c(RUS, nrow(covid.2019.ru.i.moment_ts[[i]]))
 Mos <- NULL
 SPb <- NULL
 
-Volg <- NULL
-Vrnz <- NULL
-Ekb <- NULL
-Kaz <- NULL
-Kryr <- NULL
-NNov <- NULL
-Nvsb <- NULL
-Omsk <- NULL
-Perm <- NULL
-RoD <- NULL
-Sam <- NULL
-Ufa <- NULL
-Chlb <- NULL
-
 for(i in 1:length(covid.2019.ru.i.moment_ts)){
 Mos <- c(Mos, nrow(subset(covid.2019.ru.i.moment_ts[[i]], covid.2019.ru.i.moment_ts[[i]]$LOCUS.0 == "Moscow")))
 SPb <- c(SPb, nrow(subset(covid.2019.ru.i.moment_ts[[i]], covid.2019.ru.i.moment_ts[[i]]$LOCUS.0 == "St. Petersburg")))
-Volg <-c(Volg, nrow(subset(covid.2019.ru.i.moment_ts[[i]], covid.2019.ru.i.moment_ts[[i]]$LOCUS.0 == "Volgograd")))
-Vrnz <-c(Vrnz, nrow(subset(covid.2019.ru.i.moment_ts[[i]], covid.2019.ru.i.moment_ts[[i]]$LOCUS.0 == "Voronezh")))
-Ekb <-c(Ekb, nrow(subset(covid.2019.ru.i.moment_ts[[i]], covid.2019.ru.i.moment_ts[[i]]$LOCUS.0 == "Ekaterinburg")))
-Kaz <-c(Kaz, nrow(subset(covid.2019.ru.i.moment_ts[[i]], covid.2019.ru.i.moment_ts[[i]]$LOCUS.0 == "Kazan")))
-Kryr <-c(Kryr, nrow(subset(covid.2019.ru.i.moment_ts[[i]], covid.2019.ru.i.moment_ts[[i]]$LOCUS.0 == "Krasnoyarsk")))
-NNov <-c(NNov, nrow(subset(covid.2019.ru.i.moment_ts[[i]], covid.2019.ru.i.moment_ts[[i]]$LOCUS.0 == "Nizhnii Novgorod")))
-Nvsb <-c(Nvsb, nrow(subset(covid.2019.ru.i.moment_ts[[i]], covid.2019.ru.i.moment_ts[[i]]$LOCUS.0 == "Novosibirsk")))
-Omsk <-c(Omsk, nrow(subset(covid.2019.ru.i.moment_ts[[i]], covid.2019.ru.i.moment_ts[[i]]$LOCUS.0 == "Omsk")))
-Perm <-c(Perm, nrow(subset(covid.2019.ru.i.moment_ts[[i]], covid.2019.ru.i.moment_ts[[i]]$LOCUS.0 == "Perm krai")))
-RoD <-c(RoD, nrow(subset(covid.2019.ru.i.moment_ts[[i]], covid.2019.ru.i.moment_ts[[i]]$LOCUS.0 == "Rostov-on-Don")))
-Sam <-c(Sam, nrow(subset(covid.2019.ru.i.moment_ts[[i]], covid.2019.ru.i.moment_ts[[i]]$LOCUS.0 == "Samara")))
-Ufa <-c(Ufa, nrow(subset(covid.2019.ru.i.moment_ts[[i]], covid.2019.ru.i.moment_ts[[i]]$LOCUS.0 == "Bashkortostan")))
-Chlb <-c(Chlb, nrow(subset(covid.2019.ru.i.moment_ts[[i]], covid.2019.ru.i.moment_ts[[i]]$LOCUS.0 == "Cheliabinsk")))
 }
 
 covid.2019.ru.i.dyn.tt <- cbind.data.frame(
@@ -169,56 +142,17 @@ covid.2019.ru.i.dyn.tt <- cbind.data.frame(
   RUS.newcases,
   RUS,
   Mos,
-  SPb,
-  Volg,
-  Vrnz,
-  Ekb,
-  Kaz,
-  Kryr,
-  NNov,
-  Nvsb,
-  Omsk,
-  Perm,
-  RoD,
-  Sam,
-  Ufa,
-  Chlb
+  SPb
 )
 
 colnames(covid.2019.ru.i.dyn.tt) <- c("TIME","RUS.newcases","RUS",
 "Mos",
 "SPb",
-"Volg",
-"Vrnz",
-"Ekb",
-"Kaz",
-"Kryr",
-"NNov",
-"Nvsb",
-"Omsk",
-"Perm",
-"RoD",
-"Sam",
-"Ufa",
-"Chlb"
 )
 
 covid.2019.ru.i.dyn.tt$RUS.CS <- cumsum(covid.2019.ru.i.dyn.tt$RUS)
 covid.2019.ru.i.dyn.tt$Mos.CS <- cumsum(covid.2019.ru.i.dyn.tt$Mos)
 covid.2019.ru.i.dyn.tt$SPb.CS <- cumsum(covid.2019.ru.i.dyn.tt$SPb)
-covid.2019.ru.i.dyn.tt$Volg.CS <- cumsum(covid.2019.ru.i.dyn.tt$Volg)
-covid.2019.ru.i.dyn.tt$Vrnz.CS <- cumsum(covid.2019.ru.i.dyn.tt$Vrnz)
-covid.2019.ru.i.dyn.tt$Ekb.CS <- cumsum(covid.2019.ru.i.dyn.tt$Ekb)
-covid.2019.ru.i.dyn.tt$Kaz.CS <- cumsum(covid.2019.ru.i.dyn.tt$Kaz)
-covid.2019.ru.i.dyn.tt$Kryr.CS <- cumsum(covid.2019.ru.i.dyn.tt$Kryr)
-covid.2019.ru.i.dyn.tt$NNov.CS <- cumsum(covid.2019.ru.i.dyn.tt$NNov)
-covid.2019.ru.i.dyn.tt$Nvsb.CS <- cumsum(covid.2019.ru.i.dyn.tt$Nvsb)
-covid.2019.ru.i.dyn.tt$Omsk.CS <- cumsum(covid.2019.ru.i.dyn.tt$Omsk)
-covid.2019.ru.i.dyn.tt$Perm.CS <- cumsum(covid.2019.ru.i.dyn.tt$Perm)
-covid.2019.ru.i.dyn.tt$RoD.CS <- cumsum(covid.2019.ru.i.dyn.tt$RoD)
-covid.2019.ru.i.dyn.tt$Sam.CS <- cumsum(covid.2019.ru.i.dyn.tt$Sam)
-covid.2019.ru.i.dyn.tt$Ufa.CS <- cumsum(covid.2019.ru.i.dyn.tt$Ufa)
-covid.2019.ru.i.dyn.tt$Chlb.CS <- cumsum(covid.2019.ru.i.dyn.tt$Chlb)
 
 # y <- c(NA, covid.2019.ru.i.dyn.tt$RUS.CS[2:(length(covid.2019.ru.i.dyn.tt$RUS.CS))]/
 # covid.2019.ru.i.dyn.tt$RUS.CS[1:(length(covid.2019.ru.i.dyn.tt$RUS.CS)-1)])
@@ -306,11 +240,12 @@ for(j in 1:length(levels(covid.2019.ru$LOCUS))){
   covid.2019.ru.d.dyn.tmp <- c(covid.2019.ru.d.dyn.tmp, nrow(subset(covid.2019.ru.d.moment_ts[[i]], covid.2019.ru.d.moment_ts[[i]]$LOCUS == levels(covid.2019.ru$LOCUS)[j])))
  }
  covid.2019.ru.dyn.tot[[j]] <- cbind.data.frame(
+  covid.2019.breaks$TIME,
   covid.2019.ru.i.dyn.tmp,
   covid.2019.ru.r.dyn.tmp,
   covid.2019.ru.d.dyn.tmp
   )
- colnames(covid.2019.ru.dyn.tot[[j]]) <- c("i","r","d")
+ colnames(covid.2019.ru.dyn.tot[[j]]) <- c("TIME","i","r","d")
 }
 
 names(covid.2019.ru.dyn.tot) <- levels(covid.2019.ru$LOCUS)
@@ -427,21 +362,23 @@ covid.2019.ru.i.reg.0.df$PER.100K <- covid.2019.ru.i.reg.0.df$NUMBER/(covid.2019
 billionaires <- NULL
 
 for(j in 1:length(levels(covid.2019.ru$LOCUS))){
-if(colnames(covid.2019.ru.dyn.tot[[j]])[1]=="Moscow" |
- colnames(covid.2019.ru.dyn.tot[[j]])[1]=="St. Petersburg" |
- colnames(covid.2019.ru.dyn.tot[[j]])[1]=="Volgograd" |
- colnames(covid.2019.ru.dyn.tot[[j]])[1]=="Voronezh" |
- colnames(covid.2019.ru.dyn.tot[[j]])[1]=="Ekaterinburg" |
- colnames(covid.2019.ru.dyn.tot[[j]])[1]=="Kazan" |
- colnames(covid.2019.ru.dyn.tot[[j]])[1]=="Krasnoyarsk" |
- colnames(covid.2019.ru.dyn.tot[[j]])[1]=="Nizhnii Novgorod" |
- colnames(covid.2019.ru.dyn.tot[[j]])[1]=="Novosibirsk" |
- colnames(covid.2019.ru.dyn.tot[[j]])[1]=="Omsk" |
- colnames(covid.2019.ru.dyn.tot[[j]])[1]=="Perm krai" |
- colnames(covid.2019.ru.dyn.tot[[j]])[1]=="Rostov-on-Don" |
- colnames(covid.2019.ru.dyn.tot[[j]])[1]=="Samara" |
- colnames(covid.2019.ru.dyn.tot[[j]])[1]=="Bashkortostan" |
- colnames(covid.2019.ru.dyn.tot[[j]])[1]=="Cheliabinsk"){
+if(names(covid.2019.ru.dyn.tot)[j]=="Moscow" |
+ names(covid.2019.ru.dyn.tot)[j]=="St. Petersburg" |
+ names(covid.2019.ru.dyn.tot)[j]=="Volgograd" |
+ names(covid.2019.ru.dyn.tot)[j]=="Voronezh" |
+ names(covid.2019.ru.dyn.tot)[j]=="Ekaterinburg" |
+ names(covid.2019.ru.dyn.tot)[j]=="Kazan" |
+ names(covid.2019.ru.dyn.tot)[j]=="Krasnoyarsk" |
+ names(covid.2019.ru.dyn.tot)[j]=="Nizhnii Novgorod" |
+ names(covid.2019.ru.dyn.tot)[j]=="Novosibirsk" |
+ names(covid.2019.ru.dyn.tot)[j]=="Omsk" |
+ names(covid.2019.ru.dyn.tot)[j]=="Perm krai" |
+ names(covid.2019.ru.dyn.tot)[j]=="Rostov-on-Don" |
+ names(covid.2019.ru.dyn.tot)[j]=="Samara" |
+ names(covid.2019.ru.dyn.tot)[j]=="Bashkortostan" |
+ names(covid.2019.ru.dyn.tot)[j]=="Cheliabinsk"){
   billionaires <- c(billionaires, j)
  }
 }
+
+billionaires.p <- billionaires[c(1:5,7:12,14:15)]

@@ -213,110 +213,33 @@ for(i in 1:nrow(covid.2019.ru.i.reg.0.df)){
 
 dev.off()
 
-# # Cumulated for 1M regional centres, log10 scale, uncut;
-#
-# png("../plots/COVID.2019.cumulated.log10.1M.png", height=750, width=1000, res=120, pointsize=10)
-# par(mar=c(6,5,4,2)+.1)
-#
-# plot(covid.2019.ru.i.dyn.tt$TIME,
-# log10(covid.2019.ru.i.dyn.tt$Volg.CS),
-# type="n",
-# ylim=c(0,
-#  log10(
-#   max(
-#    c(
-#     covid.2019.ru.i.dyn.tt$Volg.CS, 
-#     covid.2019.ru.i.dyn.tt$Vrnz.CS, 
-#     covid.2019.ru.i.dyn.tt$Ekb.CS, 
-#     covid.2019.ru.i.dyn.tt$Kaz.CS, 
-#     covid.2019.ru.i.dyn.tt$Kryr.CS, 
-#     covid.2019.ru.i.dyn.tt$NNov.CS, 
-#     covid.2019.ru.i.dyn.tt$Nvsb.CS, 
-#     covid.2019.ru.i.dyn.tt$Omsk.CS, 
-#     covid.2019.ru.i.dyn.tt$Perm.CS, 
-#     covid.2019.ru.i.dyn.tt$RoD.CS, 
-#     covid.2019.ru.i.dyn.tt$Sam.CS, 
-#     covid.2019.ru.i.dyn.tt$Ufa.CS, 
-#     covid.2019.ru.i.dyn.tt$Chlb.CS
-#    )
-#   )
-#  )
-# ),
-# main="Russian Federation, \nregions with capitals of 1,000 K population and more",
-# xlab="",
-# ylab="Total COVID-2019 cases detected (logarithmic scale)", 
-# axes=FALSE)
-#
-# lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$Volg.CS), col=1)
-# lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$Vrnz.CS), col=2)
-# lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$Ekb.CS), col=3)
-# lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$Kaz.CS), col=4)
-# lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$Kryr.CS), col=5)
-# lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$NNov.CS), col=6)
-# lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$Nvsb.CS), col=7)
-# lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$Omsk.CS), col=8)
-# lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$Perm.CS), col=1, lty=2)
-# lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$RoD.CS), col=2, lty=2)
-# lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$Sam.CS), col=3, lty=2)
-# lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$Ufa.CS), col=4, lty=2)
-# lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$Chlb.CS), col=5, lty=2)
-#
-# legend(
-# "topleft",
-# lty=c(rep(1,8),rep(2,5)),
-# col=c(1:8,1:5),
-# legend=c("Volg",
-# "Vrnz",
-# "Ekb",
-# "Kaz",
-# "Kryr",
-# "NNov",
-# "Nvsb",
-# "Omsk",
-# "Perm",
-# "RoD",
-# "Sam",
-# "Ufa",
-# "Chlb"),
-# bty="n"
-# )
-#
-# axis.POSIXct(1, 
-# at=seq(min(covid.2019.breaks$TIME), max(covid.2019.breaks$TIME), by="week"), 
-# format = "%Y-%m-%d", 
-# las=2)
-# axis(2, at=log10(c(1,10,100,1000)), labels=c(1,10,100,1000))
-# axis(2, at=log10(c(1:9, seq(10,100,10), seq(200,1000,100), seq(2000,10000,1000))), labels=FALSE)
-#
-# dev.off()
-#
 # Cumulated for 1M regional centres, log10 scale, cut at day 36;
 
 png("../plots/COVID.2019.cumulated.log10.1M.png", height=750, width=1000, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1, lwd=2)
 
-nrow.tt <- nrow(covid.2019.ru.i.dyn.tt)
+nrow.tt <- nrow(covid.2019.ru.dyn.tot[[1]])
 
-plot(covid.2019.ru.i.dyn.tt$TIME[36:nrow.tt],
-log10(covid.2019.ru.i.dyn.tt$Volg.CS[36:nrow.tt]),
+plot(covid.2019.ru.dyn.tot$"Nizhnii Novgorod"$TIME[36:nrow.tt],
+log10(covid.2019.ru.dyn.tot$"Nizhnii Novgorod"$CS.i[36:nrow.tt]),
 type="n",
 ylim=c(0,
  log10(
   max(
    c(
-    covid.2019.ru.i.dyn.tt$Volg.CS, 
-    covid.2019.ru.i.dyn.tt$Vrnz.CS, 
-    covid.2019.ru.i.dyn.tt$Ekb.CS, 
-    covid.2019.ru.i.dyn.tt$Kaz.CS, 
-    covid.2019.ru.i.dyn.tt$Kryr.CS, 
-    covid.2019.ru.i.dyn.tt$NNov.CS, 
-    covid.2019.ru.i.dyn.tt$Nvsb.CS, 
-    covid.2019.ru.i.dyn.tt$Omsk.CS, 
-    covid.2019.ru.i.dyn.tt$Perm.CS, 
-    covid.2019.ru.i.dyn.tt$RoD.CS, 
-    covid.2019.ru.i.dyn.tt$Sam.CS, 
-    covid.2019.ru.i.dyn.tt$Ufa.CS, 
-    covid.2019.ru.i.dyn.tt$Chlb.CS
+    covid.2019.ru.dyn.tot$"Bashkortostan"$CS.i, 
+    covid.2019.ru.dyn.tot$"Cheliabinsk"$CS.i,
+    covid.2019.ru.dyn.tot$"Ekaterinburg"$CS.i, 
+    covid.2019.ru.dyn.tot$"Kazan"$CS.i, 
+    covid.2019.ru.dyn.tot$"Krasnoyarsk"$CS.i, 
+    covid.2019.ru.dyn.tot$"Nizhnii Novgorod"$CS.i, 
+    covid.2019.ru.dyn.tot$"Novosibirsk"$CS.i, 
+    covid.2019.ru.dyn.tot$"Omsk"$CS.i, 
+    covid.2019.ru.dyn.tot$"Perm krai"$CS.i, 
+    covid.2019.ru.dyn.tot$"Rostov-on-Don"$CS.i, 
+    covid.2019.ru.dyn.tot$"Samara"$CS.i, 
+    covid.2019.ru.dyn.tot$"Volgograd"$CS.i, 
+    covid.2019.ru.dyn.tot$"Voronezh"$CS.i 
    )
   )
  )
@@ -326,37 +249,20 @@ xlab="",
 ylab="Total COVID-2019 cases detected (logarithmic scale)", 
 axes=FALSE)
 
-lines(covid.2019.ru.i.dyn.tt$TIME[36:nrow.tt], log10(covid.2019.ru.i.dyn.tt$Volg.CS[36:nrow.tt]), col=1)
-lines(covid.2019.ru.i.dyn.tt$TIME[36:nrow.tt], log10(covid.2019.ru.i.dyn.tt$Vrnz.CS[36:nrow.tt]), col=2)
-lines(covid.2019.ru.i.dyn.tt$TIME[36:nrow.tt], log10(covid.2019.ru.i.dyn.tt$Ekb.CS[36:nrow.tt]), col=3)
-lines(covid.2019.ru.i.dyn.tt$TIME[36:nrow.tt], log10(covid.2019.ru.i.dyn.tt$Kaz.CS[36:nrow.tt]), col=4)
-lines(covid.2019.ru.i.dyn.tt$TIME[36:nrow.tt], log10(covid.2019.ru.i.dyn.tt$Kryr.CS[36:nrow.tt]), col=5)
-lines(covid.2019.ru.i.dyn.tt$TIME[36:nrow.tt], log10(covid.2019.ru.i.dyn.tt$NNov.CS[36:nrow.tt]), col=6)
-lines(covid.2019.ru.i.dyn.tt$TIME[36:nrow.tt], log10(covid.2019.ru.i.dyn.tt$Nvsb.CS[36:nrow.tt]), col=7)
-lines(covid.2019.ru.i.dyn.tt$TIME[36:nrow.tt], log10(covid.2019.ru.i.dyn.tt$Omsk.CS[36:nrow.tt]), col=8)
-lines(covid.2019.ru.i.dyn.tt$TIME[36:nrow.tt], log10(covid.2019.ru.i.dyn.tt$Perm.CS[36:nrow.tt]), col=1, lty=3)
-lines(covid.2019.ru.i.dyn.tt$TIME[36:nrow.tt], log10(covid.2019.ru.i.dyn.tt$RoD.CS[36:nrow.tt]), col=2, lty=3)
-lines(covid.2019.ru.i.dyn.tt$TIME[36:nrow.tt], log10(covid.2019.ru.i.dyn.tt$Sam.CS[36:nrow.tt]), col=3, lty=3)
-lines(covid.2019.ru.i.dyn.tt$TIME[36:nrow.tt], log10(covid.2019.ru.i.dyn.tt$Ufa.CS[36:nrow.tt]), col=4, lty=3)
-lines(covid.2019.ru.i.dyn.tt$TIME[36:nrow.tt], log10(covid.2019.ru.i.dyn.tt$Chlb.CS[36:nrow.tt]), col=5, lty=3)
+for(i in 1:8){
+lines(covid.2019.ru.dyn.tot[[billionaires.p[i]]]$TIME[36:nrow.tt], log10(covid.2019.ru.dyn.tot[[billionaires.p[i]]]$CS.i[36:nrow.tt]), col=i, lwd=2) 
+}
+
+for(i in 9:13){
+lines(covid.2019.ru.dyn.tot[[billionaires.p[i]]]$TIME[36:nrow.tt], log10(covid.2019.ru.dyn.tot[[billionaires.p[i]]]$CS.i[36:nrow.tt]), col=i-8, lty=3, lwd=2) 
+}
 
 legend(
 "topleft",
 lty=c(rep(1,8),rep(3,5)),
+lwd=2,
 col=c(1:8,1:5),
-legend=c("Volgograd",
-"Voronezh",
-"Ekaterinburg",
-"Kazan",
-"Krasnoyarsk",
-"Nizhnii Novgorod",
-"Novosibirsk",
-"Omsk",
-"Perm",
-"Rostov-on-Don",
-"Samara",
-"Ufa",
-"Cheliabinsk"),
+legend=names(covid.2019.ru.dyn.tot)[billionaires.p],
 bty="n"
 )
 
@@ -368,11 +274,6 @@ axis(2, at=log10(c(1,10,100,1000)), labels=c(1,10,100,1000))
 axis(2, at=log10(c(1:9, seq(10,100,10), seq(200,1000,100), seq(2000,10000,1000))), labels=FALSE)
 
 dev.off()
-
-# plot(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.i.dyn.tt$RUS.Prov.CS.diff, type="n")
-# lines(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.i.dyn.tt$RUS.Prov.CS.diff, col=3)
-# lines(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.i.dyn.tt$Mos.CS.diff, col=2)
-# lines(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.i.dyn.tt$SPb.CS.diff, col=4)
 
 png("../plots/COVID.2019.growth_ratio.png", height=750, width=1000, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1, lwd=2)
@@ -486,20 +387,20 @@ axes=FALSE
 )
 
 for(j in 1:length(levels(covid.2019.ru$LOCUS))){
- lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.dyn.tot[[j]]$CS.i), lwd=1.5, col=rgb(0,0,0,.15))
+ lines(covid.2019.ru.dyn.tot[[j]]$TIME, log10(covid.2019.ru.dyn.tot[[j]]$CS.i), lwd=1.5, col=rgb(0,0,0,.15))
 }
-lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.dyn.tot[[i]]$CS.i), col="white", lwd=3)
-lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.dyn.tot[[i]]$CS.i), col="darkred", lwd=1)
-lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.dyn.tot[[i]]$CS.i-
+lines(covid.2019.ru.dyn.tot[[j]]$TIME, log10(covid.2019.ru.dyn.tot[[i]]$CS.i), col="white", lwd=3)
+lines(covid.2019.ru.dyn.tot[[j]]$TIME, log10(covid.2019.ru.dyn.tot[[i]]$CS.i), col="darkred", lwd=1)
+lines(covid.2019.ru.dyn.tot[[j]]$TIME, log10(covid.2019.ru.dyn.tot[[i]]$CS.i-
 (covid.2019.ru.dyn.tot[[i]]$CS.r+covid.2019.ru.dyn.tot[[i]]$CS.d)
 ), col="white", lwd=4)
-lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.dyn.tot[[i]]$CS.i-
+lines(covid.2019.ru.dyn.tot[[j]]$TIME, log10(covid.2019.ru.dyn.tot[[i]]$CS.i-
 (covid.2019.ru.dyn.tot[[i]]$CS.r+covid.2019.ru.dyn.tot[[i]]$CS.d)
 ), col=2, lwd=2)
-lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.dyn.tot[[i]]$CS.r), col="white", lwd=4)
-lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.dyn.tot[[i]]$CS.r), col="darkgreen", lwd=2)
-lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.dyn.tot[[i]]$CS.d), col="white", lwd=4)
-lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.dyn.tot[[i]]$CS.d), col=1, lwd=2)
+lines(covid.2019.ru.dyn.tot[[j]]$TIME, log10(covid.2019.ru.dyn.tot[[i]]$CS.r), col="white", lwd=4)
+lines(covid.2019.ru.dyn.tot[[j]]$TIME, log10(covid.2019.ru.dyn.tot[[i]]$CS.r), col="darkgreen", lwd=2)
+lines(covid.2019.ru.dyn.tot[[j]]$TIME, log10(covid.2019.ru.dyn.tot[[i]]$CS.d), col="white", lwd=4)
+lines(covid.2019.ru.dyn.tot[[j]]$TIME, log10(covid.2019.ru.dyn.tot[[i]]$CS.d), col=1, lwd=2)
 
 abline(h=log10(50), lty=3, lwd=.75)
 
