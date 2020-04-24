@@ -170,7 +170,7 @@ for(i in 1:nrow(covid.2019.ru.i.reg.0.df)){
  covid.2019.ru.i.reg.0.df$LAT[i], 
  cex=sqrt(covid.2019.ru.i.reg.0.df$NUMBER[i])/8, 
  pch=21, 
- bg=rainbow(ceiling(max(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, na.rm=TRUE)), s = 1, v = 1, start = 0, end = 2/6)[round(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log[i])]
+ bg=rainbow(ceiling(max(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, na.rm=TRUE)), s = 1, v = 1, start = 0, end = 6/6)[round(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log[i])]
  )
 }
 
@@ -198,7 +198,7 @@ for(i in 1:nrow(covid.2019.ru.i.reg.0.df)){
  covid.2019.ru.i.reg.0.df$LAT[i], 
  cex=sqrt(covid.2019.ru.i.reg.0.df$PER.100K[i])/2, 
  pch=21, 
- bg=rainbow(ceiling(max(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, na.rm=TRUE)), s = 1, v = 1, start = 0, end = 2/6)[round(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log[i])]
+ bg=rainbow(ceiling(max(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, na.rm=TRUE)), s = 1, v = 1, start = 0, end = 6/6)[round(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log[i])]
  )
  } else {
  points(
@@ -769,7 +769,7 @@ dev.off()
 
 png("../plots/COVID.2019.hist.rt.png", height=750, width=1000, res=120, pointsize=10)
 
-hist(covid.2019.ru.i.rt.slice.noInf, breaks=seq(.99,1.43,.02), col=8,
+hist(covid.2019.ru.i.rt.slice.noInf, breaks=seq(.99,1.45,.02), col=8,
 main=paste("Russian Federation /", Sys.Date()),
 xlab="COVID-2019 Reproductive number (Rt) (rolling average for 7 days)",
 ylab="Number of regions with Rt this high"
@@ -796,7 +796,8 @@ png("../plots/COVID.2019.hist.dt.png", height=750, width=1000, res=120, pointsiz
 hist(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, 
 breaks=(ceiling(min(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, na.rm=TRUE)-.5)-.5):
 (floor(max(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, na.rm=TRUE)+.5)+.5), 
-col=rainbow(ceiling(max(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, na.rm=TRUE)), s = 1, v = 1, start = 0, end = 2/6),
+col=rainbow(ceiling(max(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, na.rm=TRUE)), 
+s = 1, v = 1, start = 0, end = 6/6),
 ,
 main=paste("Russian Federation /", Sys.Date()),
 xlab="COVID-2019 cases doubling time (days) based on Rt rolling average for 7 days",
