@@ -213,6 +213,38 @@ for(i in 1:nrow(covid.2019.ru.i.reg.0.df)){
 
 dev.off()
 
+# Density maps
+
+png("../plots/COVID.2019.map.density.regions.per_100K.png", height=750, width=1000, res=120, pointsize=10)
+par(fg="white", bg=rgb(0,.1,.2,1))
+
+plot(ru.shape, xlim=c(20,180), col="white", border="white")
+plot(ru.shape, xlim=c(20,180), 
+col=rgb(1,.6,0,(covid.2019.ru.i.reg.df.dm_sorted$PER.100K/max(covid.2019.ru.i.reg.df.dm_sorted$PER.100K))^(1/4)), 
+border=rgb(1,.6,0,(covid.2019.ru.i.reg.df.dm_sorted$PER.100K/max(covid.2019.ru.i.reg.df.dm_sorted$PER.100K))^(1/4)), 
+add=TRUE)
+
+mtext(paste("Total COVID-2019 cases per 100K, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), 
+side=1, line=1) 
+mtext("Russian Federation", font=2, cex=1.2, side=3, line=0)
+
+dev.off()
+
+png("../plots/COVID.2019.map.density.regions.png", height=750, width=1000, res=120, pointsize=10)
+par(fg="white", bg=rgb(0,.1,.2,1))
+
+plot(ru.shape, xlim=c(20,180), col="white", border="white")
+plot(ru.shape, xlim=c(20,180), 
+col=rgb(1,.6,0,(covid.2019.ru.i.reg.df.dm_sorted$NUMBER/max(covid.2019.ru.i.reg.df.dm_sorted$NUMBER))^(1/4)), 
+border=rgb(1,.6,0,(covid.2019.ru.i.reg.df.dm_sorted$NUMBER/max(covid.2019.ru.i.reg.df.dm_sorted$NUMBER))^(1/4)), 
+add=TRUE)
+
+mtext(paste("Total COVID-2019 cases, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), 
+side=1, line=1) 
+mtext("Russian Federation", font=2, cex=1.2, side=3, line=0)
+
+dev.off()
+
 # Cumulated for 1M regional centres, log10 scale, cut at day 36;
 
 png("../plots/COVID.2019.cumulated.log10.1M.png", height=750, width=1000, res=120, pointsize=10)

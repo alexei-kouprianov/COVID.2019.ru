@@ -84,7 +84,7 @@ covid.2019.ru.r.reg.0[[i]] <- subset(covid.2019.ru.r, covid.2019.ru.i$LOCUS.0 ==
 covid.2019.ru.d.reg.0[[i]] <- subset(covid.2019.ru.d, covid.2019.ru.i$LOCUS.0 == levels(covid.2019.ru.d$LOCUS.0)[i])
 }
 
-# Barplot regions data frame;
+# Density mapping / barplot regions data frame;
 covid.2019.ru.i.reg.df <- NULL
 
 for(i in 1:length(levels(covid.2019.ru.i$LOCUS))){
@@ -96,10 +96,11 @@ sum(covid.2019.ru.i.reg[[i]]$NUMBER))
 
 colnames(covid.2019.ru.i.reg.df) <- c("LOCUS.1","NUMBER")
 covid.2019.ru.i.reg.df <- cbind.data.frame(covid.2019.ru.i.reg.df, covid.2019.population)
-covid.2019.ru.i.reg.df$PER.100K <- covid.2019.ru.i.reg.df$NUMBER/(covid.2019.ru.i.reg.df$POPULATION/100000)
 
-covid.2019.ru.i.reg.ordered.df <- covid.2019.ru.i.reg.df[order(-covid.2019.ru.i.reg.df$NUMBER),]
-covid.2019.ru.i.reg.ordered.PER.100K.df <- covid.2019.ru.i.reg.df[order(-covid.2019.ru.i.reg.df$PER.100K),]
+covid.2019.ru.i.reg.df.LOCUS.ch <- as.character(covid.2019.ru.i.reg.df$LOCUS)
+covid.2019.ru.i.reg.df$LOCUS.dm <- factor(covid.2019.ru.i.reg.df.LOCUS.ch, levels=ru.shape$LOCUS)
+
+covid.2019.ru.i.reg.df$PER.100K <- covid.2019.ru.i.reg.df$NUMBER/(covid.2019.ru.i.reg.df$POPULATION/100000)
 
 # Mapping regions data frame (part 1);
 covid.2019.ru.i.reg.0.df <- NULL
@@ -147,7 +148,7 @@ covid.2019.ru.i.dyn.tt <- cbind.data.frame(
 
 colnames(covid.2019.ru.i.dyn.tt) <- c("TIME","RUS.newcases","RUS",
 "Mos",
-"SPb",
+"SPb"
 )
 
 covid.2019.ru.i.dyn.tt$RUS.CS <- cumsum(covid.2019.ru.i.dyn.tt$RUS)
@@ -349,13 +350,22 @@ for(i in 1:length(levels(covid.2019.ru$LOCUS))){
 covid.2019.ru.i.rt.slice.noInf <- subset(covid.2019.ru.i.rt.slice, covid.2019.ru.i.rt.slice < Inf)
 covid.2019.ru.i.rt.slice.norm <- covid.2019.ru.i.rt.slice/max(covid.2019.ru.i.rt.slice.noInf)
 
-# Mapping regions data frame (part 2)
+# Point mapping regions data frame (part 2)
 covid.2019.ru.i.reg.0.df$CS.i.diff.7 <- covid.2019.ru.i.rt.slice[c(1:(Leningrad_region.pos-1), (Leningrad_region.pos+1):(Moscow.pos), (Moscow.pos+2):length(covid.2019.ru.i.rt.slice))]
 covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log <- covid.2019.ru.i.rt.slice.2log[c(1:(Leningrad_region.pos-1), (Leningrad_region.pos+1):(Moscow.pos), (Moscow.pos+2):length(covid.2019.ru.i.rt.slice))]
 
 covid.2019.ru.i.reg.0.df <- covid.2019.ru.i.reg.0.df[order(-covid.2019.ru.i.reg.0.df$NUMBER),]
 
 covid.2019.ru.i.reg.0.df$PER.100K <- covid.2019.ru.i.reg.0.df$NUMBER/(covid.2019.ru.i.reg.0.df$POPULATION/100000)
+
+# Density mapping regions data frame;
+
+covid.2019.ru.i.reg.df$CS.i.diff.7 <- covid.2019.ru.i.rt.slice
+covid.2019.ru.i.reg.df$CS.i.diff.7.2log <- covid.2019.ru.i.rt.slice.2log
+
+covid.2019.ru.i.reg.ordered.df <- covid.2019.ru.i.reg.df[order(-covid.2019.ru.i.reg.df$NUMBER),]
+covid.2019.ru.i.reg.ordered.PER.100K.df <- covid.2019.ru.i.reg.df[order(-covid.2019.ru.i.reg.df$PER.100K),]
+covid.2019.ru.i.reg.df.dm_sorted <- covid.2019.ru.i.reg.df[order(covid.2019.ru.i.reg.df$LOCUS.dm),]
 
 # Extracting billionaires from covid.2019.ru.dyn.tot; 
 
