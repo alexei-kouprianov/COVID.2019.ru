@@ -245,6 +245,40 @@ mtext("Russian Federation", font=2, cex=1.2, side=3, line=0)
 
 dev.off()
 
+# png("../plots/COVID.2019.map.density.regions.rt7.png", height=750, width=1000, res=120, pointsize=10)
+# par(fg="white", bg=rgb(0,.1,.2,1))
+#
+# plot(ru.shape, xlim=c(20,180), col="white", border="white")
+# plot(ru.shape, xlim=c(20,180), 
+# col=rgb(1,0,0,(covid.2019.ru.i.reg.df.dm_sorted$CS.i.diff.7/max(covid.2019.ru.i.reg.df.dm_sorted$CS.i.diff.7))^4), 
+# border=rgb(1,0,0,(covid.2019.ru.i.reg.df.dm_sorted$CS.i.diff.7/max(covid.2019.ru.i.reg.df.dm_sorted$CS.i.diff.7))^4), 
+# add=TRUE)
+#
+# mtext(paste("Total COVID-2019 cases per 100K, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), 
+# side=1, line=1) 
+# mtext("Russian Federation", font=2, cex=1.2, side=3, line=0)
+#
+# dev.off()
+
+png("../plots/COVID.2019.map.density.regions.rt7dt.png", height=750, width=1000, res=120, pointsize=10)
+par(fg="white", bg=rgb(0,.1,.2,1))
+
+plot(ru.shape, xlim=c(20,180), col="white", border="white")
+plot(ru.shape, xlim=c(20,180), 
+col=rgb(1,0,0,(covid.2019.ru.i.reg.df.dm_sorted$CS.i.diff.7/max(covid.2019.ru.i.reg.df.dm_sorted$CS.i.diff.7))^2), 
+border=rgb(1,0,0,(covid.2019.ru.i.reg.df.dm_sorted$CS.i.diff.7/max(covid.2019.ru.i.reg.df.dm_sorted$CS.i.diff.7))^2), 
+add=TRUE)
+plot(ru.shape, xlim=c(20,180), 
+col=rgb(.05,.5,.1,(covid.2019.ru.i.reg.df.dm_sorted$CS.i.diff.7.2log/max(covid.2019.ru.i.reg.df.dm_sorted$CS.i.diff.7.2log))^(1/2)), 
+border=rgb(.05,.5,.1,(covid.2019.ru.i.reg.df.dm_sorted$CS.i.diff.7.2log/max(covid.2019.ru.i.reg.df.dm_sorted$CS.i.diff.7.2log))^(1/2)), 
+add=TRUE)
+
+mtext(paste("COVID-2019 cases doubling times based on 7 days mean Rt, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), 
+side=1, line=1) 
+mtext("Russian Federation", font=2, cex=1.2, side=3, line=0)
+
+dev.off()
+
 # Cumulated for 1M regional centres, log10 scale, cut at day 36;
 
 png("../plots/COVID.2019.cumulated.log10.1M.png", height=750, width=1000, res=120, pointsize=10)
