@@ -170,7 +170,7 @@ for(i in 1:nrow(covid.2019.ru.i.reg.0.df)){
  covid.2019.ru.i.reg.0.df$LAT[i], 
  cex=sqrt(covid.2019.ru.i.reg.0.df$NUMBER[i])/8, 
  pch=21, 
- bg=rainbow(ceiling(max(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, na.rm=TRUE)), s = 1, v = 1, start = 0, end = 6/6)[round(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log[i])]
+ bg=rainbow(ceiling(max(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, na.rm=TRUE)), s = 1, v = 1, start = 0, end = 4.5/6)[round(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log[i])]
  )
 }
 
@@ -198,7 +198,7 @@ for(i in 1:nrow(covid.2019.ru.i.reg.0.df)){
  covid.2019.ru.i.reg.0.df$LAT[i], 
  cex=sqrt(covid.2019.ru.i.reg.0.df$PER.100K[i])/2, 
  pch=21, 
- bg=rainbow(ceiling(max(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, na.rm=TRUE)), s = 1, v = 1, start = 0, end = 6/6)[round(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log[i])]
+ bg=rainbow(ceiling(max(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, na.rm=TRUE)), s = 1, v = 1, start = 0, end = 4.5/6)[round(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log[i])]
  )
  } else {
  points(
@@ -278,6 +278,29 @@ side=1, line=1)
 mtext("Russian Federation", font=2, cex=1.2, side=3, line=0)
 
 dev.off()
+
+# png("../plots/COVID.2019.map.density.regions.rt7dt.01.png", height=750, width=1000, res=120, pointsize=10)
+# par(fg="white", bg=rgb(0,.1,.2,1))
+#
+# plot(ru.shape, xlim=c(20,180), col="white", border="white")
+# plot(ru.shape, xlim=c(20,180), 
+# col=rgb(
+# (covid.2019.ru.i.reg.df.dm_sorted$CS.i.diff.7/max(covid.2019.ru.i.reg.df.dm_sorted$CS.i.diff.7))^2,
+# (covid.2019.ru.i.reg.df.dm_sorted$CS.i.diff.7.2log/max(covid.2019.ru.i.reg.df.dm_sorted$CS.i.diff.7.2log))^(1/2),
+# 0,
+# 1), 
+# border=rgb(
+# (covid.2019.ru.i.reg.df.dm_sorted$CS.i.diff.7/max(covid.2019.ru.i.reg.df.dm_sorted$CS.i.diff.7))^2,
+# (covid.2019.ru.i.reg.df.dm_sorted$CS.i.diff.7.2log/max(covid.2019.ru.i.reg.df.dm_sorted$CS.i.diff.7.2log))^(1/2),
+# 0,
+# 1), 
+# add=TRUE)
+#
+# mtext(paste("COVID-2019 cases doubling times based on 7 days mean Rt, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), 
+# side=1, line=1) 
+# mtext("Russian Federation", font=2, cex=1.2, side=3, line=0)
+#
+# dev.off()
 
 # Cumulated for 1M regional centres, log10 scale, cut at day 36;
 
@@ -772,7 +795,7 @@ hist(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log,
 breaks=(ceiling(min(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, na.rm=TRUE)-.5)-.5):
 (floor(max(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, na.rm=TRUE)+.5)+.5), 
 col=rainbow(ceiling(max(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, na.rm=TRUE)), 
-s = 1, v = 1, start = 0, end = 6/6),
+s = 1, v = 1, start = 0, end = 4.5/6),
 ,
 main=paste("Russian Federation /", Sys.Date()),
 xlab="COVID-2019 cases doubling time (days) based on Rt rolling average for 7 days",

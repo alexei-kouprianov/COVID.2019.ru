@@ -16,8 +16,14 @@ The visualizations derived from these data are as follows:
 ![alt text](plots/COVID.2019.barplot.regions.log.10.png "COVID-2019 total cases for Russia by regions")
 ![alt text](plots/COVID.2019.barplot.regions.per_100K.png "COVID-2019 total cases per 100K inhabitants for Russia by regions")
 
+![alt text](plots/COVID.2019.hist.rt.png "COVID-2019 Rt 7 days rolling averages for regions of Russia")
+![alt text](plots/COVID.2019.hist.dt.png "COVID-2019 cases doubling time based on Rt 7 days rolling averages for regions of Russia")
 ![alt text](plots/COVID.2019.map.regions.png "COVID-2019 total cases for Russia, map")
 ![alt text](plots/COVID.2019.map.regions.per_100K.png "COVID-2019 total cases per 100K inhabitants for Russia, map")
+
+![alt text](plots/COVID.2019.map.density.regions.png "COVID-2019 total cases for Russia, density map")
+![alt text](plots/COVID.2019.map.density.regions.per_100K.png "COVID-2019 total cases per 100K inhabitants for Russia, density map")
+![alt text](plots/COVID.2019.map.density.regions.rt7dt.png "COVID-2019 cases doubling time based on Rt 7 days rolling averages for regions of Russia, density map")
 
 ![alt text](plots/COVID.2019.fitting.expGrowth_vs_LL.3.png "Fitting the data with exponent and log-logistic")
 ![alt text](plots/COVID.2019.fitting.expGrowth_vs_LL.3.log10.png "Fitting the data with exponent and log-logistic, y-logarithmic")
