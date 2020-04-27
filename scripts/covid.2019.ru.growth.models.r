@@ -3,7 +3,7 @@
 # covid.2019.ru.main.r
 # 
 # requires:
-# source(covid.2019.ru.data_loader.r)
+# source("covid.2019.ru.data_loader.r")
 # source("covid.2019.ru.data_transformations.r")
 #
 # # For more details, read: https://cran.r-project.org/web/packages/drc/drc.pdf
@@ -350,7 +350,7 @@ dev.off()
 # dev.off()
 # }
 #
-# # Running model plot animated log10;
+# Running model plot animated log10;
 # dir.create("../plots/fit.animated/log10/")
 #
 # for(i in 1:nrow(rmc.df)){

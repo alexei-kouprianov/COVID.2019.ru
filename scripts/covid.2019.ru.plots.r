@@ -3,7 +3,7 @@
 # covid.2019.ru.main.r
 # 
 # requires:
-# source(covid.2019.ru.data_loader.r)
+# source("covid.2019.ru.data_loader.r")
 # source("covid.2019.ru.data_transformations.r")
 
 ################################################################
@@ -702,13 +702,21 @@ dev.off()
 
 png("../plots/COVID.2019.hist.rt.png", height=750, width=1000, res=120, pointsize=10)
 
-hist(covid.2019.ru.i.rt.slice.noInf, breaks=seq(.99,1.45,.02), col=8,
+rt.slice.noInf.max <- .99
+
+while(rt.slice.noInf.max < max(covid.2019.ru.i.rt.slice.noInf)){
+rt.slice.noInf.max <- rt.slice.noInf.max + .02
+}
+
+hist(covid.2019.ru.i.rt.slice.noInf, breaks=seq(.99,rt.slice.noInf.max,.02), col=8,
 main=paste("Russian Federation /", Sys.Date()),
 xlab="COVID-2019 Reproductive number (Rt) (rolling average for 7 days)",
 ylab="Number of regions with Rt this high"
 )
 abline(v=median(covid.2019.ru.i.rt.slice.noInf, na.rm=TRUE), col=3, lty=3, lwd=2)
 abline(v=mean(covid.2019.ru.i.rt.slice.noInf, na.rm=TRUE), col=2, lty=3, lwd=2)
+
+rug(covid.2019.ru.i.rt.slice.noInf)
 
 legend(
 "topright",
