@@ -517,7 +517,6 @@ dir.create("../plots/regions/race/")
 
 for(i in 1:length(levels(covid.2019.ru$LOCUS))){
 if(nrow(covid.2019.ru.i.dyn.trunc[[i]]) > 1){
-if(i != Moscow.pos){
 
 png(file=paste("../plots/regions/race/COVID.2019.race.log10.",i,".png", sep=""), height=750, width=750, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1, lwd=2)
@@ -593,6 +592,8 @@ log10(covid.2019.ru.i.dyn.trunc[[i]]$CS.i-(covid.2019.ru.i.dyn.trunc[[i]]$CS.r+c
 col="red", lwd=2,
 type="o", pch=20, cex=.75)
 
+if(i != Moscow.pos){
+
 shadowtext(
 x=length(covid.2019.ru.i.dyn.trunc[[i]]$CS.i),
 y=log10(covid.2019.ru.i.dyn.trunc[[i]]$CS.i[length(covid.2019.ru.i.dyn.trunc[[i]]$CS.i)]),
@@ -600,6 +601,8 @@ labels=names(covid.2019.ru.i.dyn.trunc)[i],
 col="black", bg="white", r=.2,
 pos=4, cex=.75
 )
+
+} # if(i != Moscow.pos){};
 
 axis(1)
 axis(1, at=1:length(covid.2019.ru.i.dyn.trunc[[Moscow.pos]]$CS.i), labels=FALSE, tcl=-.25)
@@ -618,7 +621,6 @@ bty="n"
 
 dev.off()
 
-} # if(i != 44){};
 } # if(nrow(covid.2019.ru.i.dyn.trunc[[i]] > 2)){};
 } # for(i in 1:length(levels(covid.2019.ru$LOCUS))){};
 
