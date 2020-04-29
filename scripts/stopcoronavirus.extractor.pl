@@ -6,20 +6,41 @@ use strict;
 
 # Fetcher block;
 
-open (TGT00, '>stopcoronavirus.rf.txt') or die $!;
-print TGT00 get('https://стопкоронавирус.рф/');
+open (TGT00, '>stopcoronavirus.rf.20200429.txt') or die $!;
+print TGT00 get('https://стопкоронавирус.рф/information/');
 close TGT00;
 
 # Parser block #1;
 
-open (SRC01, '<stopcoronavirus.rf.txt') or die $!;
-open (TGT011, '>>stopcoronavirus.storage.cumulative.txt') or die $!;
-open (TGT012, '>stopcoronavirus.storage.moment.txt') or die $!;
+my $string = "";
+my $hh = "";
+my $mm = "";
+my $DD = "";
+my $MM = "";
+my $YYYY = "";
+my $JSON = "";
+
+open (SRC01, '<stopcoronavirus.rf.20200429.txt') or die $!;
+open (TGT011, '>>../downloads/countries/Russia/stopcoronavirus.storage.cumulative.20200429.txt') or die $!;
+open (TGT012, '>../downloads/countries/Russia/stopcoronavirus.storage.moment.20200429.json') or die $!;
+open (TGT013, '>../downloads/countries/Russia/stopcoronavirus.timestamp.moment.20200429.txt') or die $!;
 while (<SRC01>) {
-	if($_ =~ m/^.*\#map\_popup/a){
+	if($_ =~ m/\<h1 class\=\"cv\-section__title\"\>.*? \<br\>\<small\>(.*? )(\d*)\:(\d\d)\<\/small\>/a){
+		$string = $1;
+		$hh = $2;
+		$mm = $3;
+	}
+	elsif($_ =~ m/^.*?\<cv\-stats\-virus \:stats\-data\=\'.*\:charts\-data\=\'\[\{\"date\"\:\"(\d*)\.(\d*)\.(202\d)"/a){
+		$DD = $1;
+		$MM = $2;
+		$YYYY = $3;
+	}
+	elsif($_ =~ m/^.*?\<cv\-spread\-overview \:spread\-data\=\'(\[.*\])/a){
+		$JSON = $1;
+	}
 	print TGT011 $_, "\n";
 	print TGT012 $_;
-	}
+	
 }
 close TGT011;
 close TGT012;
@@ -45,20 +66,6 @@ close TGT021;
 close TGT022;
 close SRC02;
 
-open (SRC03, '<stopcoronavirus.table.moment.txt') or die $!;
-open (TGT03, '>stopcoronavirus.table.moment.sorted.txt') or die $!;
-	print TGT03 sort <SRC03>; 
-close TGT03;
-close SRC03;
-
-open (SRC03, '<stopcoronavirus.table.moment.sorted.txt') or die $!;
-open (TGT03, '>stopcoronavirus.table.moment.expanded.txt') or die $!;
-	while (<SRC03>) {
-		if($_ =~ m/^(.*?)\t(\d*)\t(\d*)\t(\d*)/a){
-		print TGT03 "detected\t$1\t$2\nrecovered\t$1\t$3\ndeceased\t$1\t$4\n"; 
-		}
-	}
-close TGT03;
-close SRC03;
-
+^.*?\<cv\-stats\-virus \:stats\-data\=\'.*\:charts\-data\=\'\[\{\"date\"\:\"(\d\d)\.(\d\d)\.(\d\d\d\d)\"
+^.*?\<cv\-spread\-overview \:spread\-data\=\'(\[.*\])
 

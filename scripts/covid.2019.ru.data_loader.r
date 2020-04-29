@@ -11,6 +11,8 @@
 library(maps)
 library(TeachingDemos)
 library(rgdal)
+library(rjson)
+
 # library(png)
 Sys.setlocale("LC_TIME", "en_US.UTF-8")
 

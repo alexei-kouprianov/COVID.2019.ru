@@ -768,7 +768,8 @@ rt.slice.noInf.max <- rt.slice.noInf.max + .02
 }
 
 hist(covid.2019.ru.i.rt.slice.noInf, breaks=seq(.99,rt.slice.noInf.max,.02), col=8,
-main=paste("Russian Federation /", Sys.Date()),
+main=paste("Russian Federation / ", daily.timestamp$V1),
+# main=paste("Russian Federation /", Sys.Date()),
 xlab="COVID-2019 Reproductive number (Rt) (rolling average for 7 days)",
 ylab="Number of regions with Rt this high"
 )
@@ -799,7 +800,8 @@ breaks=(ceiling(min(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, na.rm=TRUE)-.5)-.
 col=rainbow(ceiling(max(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, na.rm=TRUE)), 
 s = 1, v = 1, start = 0, end = 4.5/6),
 ,
-main=paste("Russian Federation /", Sys.Date()),
+main=paste("Russian Federation / ", daily.timestamp$V1),
+# main=paste("Russian Federation /", Sys.Date()),
 xlab="COVID-2019 cases doubling time (days) based on Rt rolling average for 7 days",
 ylab="Number of regions with doubling time this high"
 )

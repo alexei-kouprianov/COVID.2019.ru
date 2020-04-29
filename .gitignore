@@ -4,4 +4,5 @@ plots/map.animated
 plots/fit.animated
 scripts/.Rhistory
 scripts/.Rdata
-downloads
+downloads/countries
+private
