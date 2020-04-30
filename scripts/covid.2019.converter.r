@@ -1,7 +1,7 @@
-setwd("/home/tinea/Documents/H_et_S/Projects/github/COVID.2019.ru/scripts/")
+# setwd("/home/tinea/Documents/H_et_S/Projects/github/COVID.2019.ru/scripts/")
 
-daily.data.raw <- fromJSON(file="/home/tinea/Documents/H_et_S/Projects/github/COVID.2019.ru/downloads/stopcoronavirus.storage.moment.20200429.json")
-daily.timestamp <- read.table("/home/tinea/Documents/H_et_S/Projects/github/COVID.2019.ru/downloads/stopcoronavirus.timestamp.moment.20200429.txt")
+daily.data.raw <- fromJSON(file="../downloads/stopcoronavirus.storage.moment.20200429.json")
+daily.timestamp <- read.table("../downloads/stopcoronavirus.timestamp.moment.20200429.txt")
 
 title <- NULL
 code <- NULL
