@@ -1,0 +1,35 @@
+---
+title: "COVID-19 in Russia, daily report"
+output: html_document
+---
+
+**Коронавирус в России.** Графический update на **`r daily.timestamp$V1`**. Суммарное число зарегистрированных случаев по России ~ **`r round(covid.2019.ru.i.dyn.tt$RUS.CS[nrow(covid.2019.ru.i.dyn.tt)]/1000, 2)`** тыс. Прирост за сутки -- **`r round(covid.2019.ru.i.dyn.tt$RUS.newcases[nrow(covid.2019.ru.i.dyn.tt)]/1000, 2)`** тыс. Суммарное по Москве -- **`r round(covid.2019.ru.dyn.tot$"Moscow"$CS.i[nrow(covid.2019.ru.dyn.tot$"Moscow")]/1000, 2)`** тыс., по Петербургу -- **`r round(covid.2019.ru.dyn.tot$"St. Petersburg"$CS.i[nrow(covid.2019.ru.dyn.tot$"St. Petersburg")]/1000, 2)`** тыс. 
+
+**Лидеры по абсолютному приросту за сутки** (помимо Москвы и Московской обл.): 
+
+```{r results='asis', echo = FALSE}
+knitr::kable(incr.abs.t, caption="")
+```
+
+**Худшие показатели периода удвоения**, менее трех дней (по среднему приросту за последние семь дней): 
+
+```{r results='asis', echo = FALSE}
+knitr::kable(dt.worst, caption="")
+```
+
+**Лучшие показатели периода удвоения**, более двух недель (по среднему приросту за последние семь дней): 
+
+```{r results='asis', echo = FALSE}
+knitr::kable(dt.best, caption="")
+```
+
+В этой записи, как обычно, только обзорные графики. Публикация аппроксимаций и прогнозов по аппроксимациям временно приостановлена до переработки методики.
+
+**Техническое.** (1) Несколько упростил написание отчетов при помощи Rmd (R MarkDown). (2) В виду многочисленности графиков по регионам, публикую здесь только несколько кейсов, за остальными -- отсылаю к папкам в репозитории. 
+
+**Прямые ссылки:**
+
+* < https://github.com/alexei-kouprianov/COVID.2019.ru/tree/master/plots/regions >
+* < https://github.com/alexei-kouprianov/COVID.2019.ru/tree/master/plots/regions/race >
+
+**Скрипт и данные.** < https://github.com/alexei-kouprianov/COVID.2019.ru >
