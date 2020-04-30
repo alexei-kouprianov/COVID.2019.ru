@@ -25,11 +25,13 @@ knitr::kable(dt.best, caption="")
 
 В этой записи, как обычно, только обзорные графики. Публикация аппроксимаций и прогнозов по аппроксимациям временно приостановлена до переработки методики.
 
-**Техническое.** (1) Несколько упростил написание отчетов при помощи Rmd (R MarkDown). (2) В виду многочисленности графиков по регионам, публикую здесь только несколько кейсов, за остальными -- отсылаю к папкам в репозитории. 
+**Техническое.** В виду многочисленности графиков по регионам, отсылаю за ними к папкам в репозитории. 
 
 **Прямые ссылки:**
 
 * < https://github.com/alexei-kouprianov/COVID.2019.ru/tree/master/plots/regions >
 * < https://github.com/alexei-kouprianov/COVID.2019.ru/tree/master/plots/regions/race >
+* < https://github.com/alexei-kouprianov/COVID.2019.ru/tree/master/plots/regions/rt>
+* < https://github.com/alexei-kouprianov/COVID.2019.ru/tree/master/plots/regions/rt.race >
 
 **Скрипт и данные.** < https://github.com/alexei-kouprianov/COVID.2019.ru >
