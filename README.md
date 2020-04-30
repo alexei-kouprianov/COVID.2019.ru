@@ -8,6 +8,8 @@ The visualizations derived from these data are as follows:
 
 ![alt text](plots/COVID.2019.cumulated.png "Cumulated curve of COVID-2019 cases for Russia")
 ![alt text](plots/COVID.2019.cumulated.log10.png "Cumulated curve of COVID-2019 cases for Russia, y-logarithmic")
+![alt text](plots/COVID.2019.cumulated.TARD.png "Cumulated curve of COVID-2019 cases for Russia decomposed")
+![alt text](plots/COVID.2019.cumulated.TARD.log10.png "Cumulated curve of COVID-2019 cases for Russia decomposed, y-logarithmic")
 ![alt text](plots/COVID.2019.cumulated.by_regions.png "Cumulated curve of COVID-2019 cases for Russia, by regions")
 ![alt text](plots/COVID.2019.cumulated.log.10.by_regions.png "Cumulated curve of COVID-2019 cases for Russia, y-logarithmic, by regions")
 ![alt text](plots/COVID.2019.cumulated.log10.1M.png "Cumulated curve of COVID-2019 cases for Russia, y-logarithmic, by regions for regions with capital city population over 1000K")
