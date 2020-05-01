@@ -27,7 +27,7 @@ open (TGT011, '>>../downloads/stopcoronavirus.storage.cumulative.20200429.txt') 
 open (TGT012, '>../downloads/stopcoronavirus.storage.moment.20200429.json') or die $!;
 open (TGT013, '>../downloads/stopcoronavirus.timestamp.moment.20200429.txt') or die $!;
 while (<SRC01>) {
-	if($_ =~ m/\<h1 class\=\"cv\-section__title\"\>.*? \<br\>\<small\>(.*? )(\d*)\:(\d\d)\<\/small\>/a){
+	if($_ =~ m/\<h1 class\=\"cv\-section__title.*? \<br\>\<small\>(.*? )(\d*)\:(\d\d)\<\/small\>/a){
 		$string = $1;
 		$hh = $2;
 		$mm = $3;
