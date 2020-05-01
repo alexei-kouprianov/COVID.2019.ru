@@ -463,7 +463,7 @@ dir.create("../plots/regions/")
 
 for(i in 1:length(levels(covid.2019.ru$LOCUS))){
 
-png(file=paste("../plots/regions/COVID.2019.cumulated.log10.",i,".png", sep=""), height=750, width=750, res=120, pointsize=10)
+png(file=paste("../plots/regions/COVID.2019.cumulated.log10.",gsub(" ", "_", levels(covid.2019.ru$LOCUS)[i]),".png", sep=""), height=750, width=750, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1, lwd=2)
 
 plot(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$RUS.CS), 
@@ -518,7 +518,7 @@ dir.create("../plots/regions/race/")
 for(i in 1:length(levels(covid.2019.ru$LOCUS))){
 if(nrow(covid.2019.ru.i.dyn.trunc[[i]]) > 1){
 
-png(file=paste("../plots/regions/race/COVID.2019.race.log10.",i,".png", sep=""), height=750, width=750, res=120, pointsize=10)
+png(file=paste("../plots/regions/race/COVID.2019.race.log10.",gsub(" ", "_", levels(covid.2019.ru$LOCUS)[i]),".png", sep=""), height=750, width=750, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1, lwd=2)
 
 plot(
@@ -632,7 +632,7 @@ for(i in 1:length(levels(covid.2019.ru$LOCUS))){
 if(nrow(covid.2019.ru.i.dyn.trunc[[i]]) > 7){
 if(i != Moscow.pos){
 
-png(file=paste("../plots/regions/rt.race/COVID.2019.rt.race.log10.",i,".png", sep=""), height=750, width=750, res=120, pointsize=10)
+png(file=paste("../plots/regions/rt.race/COVID.2019.rt.race.log10.",gsub(" ", "_", levels(covid.2019.ru$LOCUS)[i]),".png", sep=""), height=750, width=750, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1, lwd=2)
 
 plot(1:nrow(covid.2019.ru.i.dyn.trunc[[Moscow.pos]]), 
@@ -687,7 +687,7 @@ dir.create("../plots/regions/rt/")
 for(i in 1:length(levels(covid.2019.ru$LOCUS))){
 if(sum(covid.2019.ru.dyn.tot[[i]]$CS.i.diff.7, na.rm=TRUE) > 0){
 
-png(file=paste("../plots/regions/rt/COVID.2019.rt.log10.",i,".png", sep=""), height=750, width=750, res=120, pointsize=10)
+png(file=paste("../plots/regions/rt/COVID.2019.rt.log10.",gsub(" ", "_", levels(covid.2019.ru$LOCUS)[i]),".png", sep=""), height=750, width=750, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1)
 
 plot(
