@@ -824,3 +824,43 @@ bty="n"
 )
 
 dev.off()
+
+png("../plots/COVID.2019.mortality.dyn.png", height=750, width=1000, res=120, pointsize=10)
+par(mar=c(6,5,4,2)+.1)
+
+plot(
+covid.2019.ru.i.dyn.tt$TIME[50:nrow(covid.2019.ru.d.dyn.tt)], 
+covid.2019.ru.d.dyn.tt$DEAD.CS[50:nrow(covid.2019.ru.d.dyn.tt)]/(covid.2019.ru.r.dyn.tt$RECOVERED.CS[50:nrow(covid.2019.ru.r.dyn.tt)] + covid.2019.ru.d.dyn.tt$DEAD.CS[50:nrow(covid.2019.ru.d.dyn.tt)]), 
+type="l", 
+ylim=c(0, max(covid.2019.ru.d.dyn.tt$DEAD.CS[50:nrow(covid.2019.ru.d.dyn.tt)]/(covid.2019.ru.r.dyn.tt$RECOVERED.CS[50:nrow(covid.2019.ru.r.dyn.tt)] + covid.2019.ru.d.dyn.tt$DEAD.CS[50:nrow(covid.2019.ru.d.dyn.tt)]))),
+main=paste("Russian Federation, mortality / ", covid.2019.ru.i.dyn.tt$TIME[nrow(covid.2019.ru.d.dyn.tt)]),
+xlab="",
+ylab="Mortality",
+axes=FALSE
+)
+
+lines(
+covid.2019.ru.i.dyn.tt$TIME[50:nrow(covid.2019.ru.d.dyn.tt)], 
+covid.2019.ru.d.dyn.tt$DEAD.CS[50:nrow(covid.2019.ru.d.dyn.tt)]/covid.2019.ru.i.dyn.tt$RUS.CS[50:nrow(covid.2019.ru.i.dyn.tt)], 
+
+col=2)
+
+legend("topright",
+lty=1,
+col=1:2,
+bty="n",
+legend=c(
+paste("Closed cases : ", round(100*covid.2019.ru.d.dyn.tt$DEAD.CS[nrow(covid.2019.ru.d.dyn.tt)]/(covid.2019.ru.r.dyn.tt$RECOVERED.CS[nrow(covid.2019.ru.r.dyn.tt)] + covid.2019.ru.d.dyn.tt$DEAD.CS[nrow(covid.2019.ru.d.dyn.tt)]), 2), "% for now", sep=""),
+paste("All cases : ", round(100*covid.2019.ru.d.dyn.tt$DEAD.CS[nrow(covid.2019.ru.d.dyn.tt)]/covid.2019.ru.i.dyn.tt$RUS.CS[nrow(covid.2019.ru.i.dyn.tt)], 2), "% for now", sep="")
+)
+)
+
+abline(h=seq(0,1,.01), lty=3, col=8)
+
+axis.POSIXct(1, 
+at=seq(min(covid.2019.breaks$TIME), max(covid.2019.breaks$TIME), by="week"), 
+format = "%Y-%m-%d", 
+las=2)
+axis(2)
+
+dev.off()
