@@ -840,18 +840,47 @@ axes=FALSE
 )
 
 lines(
+covid.2019.ru.d.dyn.tt$TIME[50:nrow(covid.2019.ru.d.dyn.tt)],
+covid.2019.ru.d.dyn.tt$DEAD[50:nrow(covid.2019.ru.d.dyn.tt)] /
+sqrt(
+covid.2019.ru.r.dyn.tt$RECOVERED[50:nrow(covid.2019.ru.r.dyn.tt)]
+*
+covid.2019.ru.i.dyn.tt$RUS[50:nrow(covid.2019.ru.i.dyn.tt)]
+),
+lty=3
+)
+
+lines(
 covid.2019.ru.i.dyn.tt$TIME[50:nrow(covid.2019.ru.d.dyn.tt)], 
 covid.2019.ru.d.dyn.tt$DEAD.CS[50:nrow(covid.2019.ru.d.dyn.tt)]/covid.2019.ru.i.dyn.tt$RUS.CS[50:nrow(covid.2019.ru.i.dyn.tt)], 
+col=2)
 
+lines(
+covid.2019.ru.i.dyn.tt$TIME[50:nrow(covid.2019.ru.d.dyn.tt)], 
+sqrt(
+(covid.2019.ru.d.dyn.tt$DEAD.CS[50:nrow(covid.2019.ru.d.dyn.tt)]/(covid.2019.ru.r.dyn.tt$RECOVERED.CS[50:nrow(covid.2019.ru.r.dyn.tt)] + covid.2019.ru.d.dyn.tt$DEAD.CS[50:nrow(covid.2019.ru.d.dyn.tt)])) *
+(covid.2019.ru.d.dyn.tt$DEAD.CS[50:nrow(covid.2019.ru.d.dyn.tt)]/covid.2019.ru.i.dyn.tt$RUS.CS[50:nrow(covid.2019.ru.i.dyn.tt)])
+), 
+lty=3,
 col=2)
 
 legend("topright",
-lty=1,
-col=1:2,
+lty=c(1,1,3,3),
+col=c(1,2,2,1),
 bty="n",
 legend=c(
-paste("Closed cases : ", round(100*covid.2019.ru.d.dyn.tt$DEAD.CS[nrow(covid.2019.ru.d.dyn.tt)]/(covid.2019.ru.r.dyn.tt$RECOVERED.CS[nrow(covid.2019.ru.r.dyn.tt)] + covid.2019.ru.d.dyn.tt$DEAD.CS[nrow(covid.2019.ru.d.dyn.tt)]), 2), "% for now", sep=""),
-paste("All cases : ", round(100*covid.2019.ru.d.dyn.tt$DEAD.CS[nrow(covid.2019.ru.d.dyn.tt)]/covid.2019.ru.i.dyn.tt$RUS.CS[nrow(covid.2019.ru.i.dyn.tt)], 2), "% for now", sep="")
+paste("(1) Closed cases : ", round(100*covid.2019.ru.d.dyn.tt$DEAD.CS[nrow(covid.2019.ru.d.dyn.tt)]/(covid.2019.ru.r.dyn.tt$RECOVERED.CS[nrow(covid.2019.ru.r.dyn.tt)] + covid.2019.ru.d.dyn.tt$DEAD.CS[nrow(covid.2019.ru.d.dyn.tt)])
+, 2), "% for now", sep=""),
+paste("(2) All cases : ", round(100*covid.2019.ru.d.dyn.tt$DEAD.CS[nrow(covid.2019.ru.d.dyn.tt)]/covid.2019.ru.i.dyn.tt$RUS.CS[nrow(covid.2019.ru.i.dyn.tt)]
+, 2), "% for now", sep=""),
+paste("Geometric mean of (1) and (2) : ",
+round(100 * sqrt(
+(covid.2019.ru.d.dyn.tt$DEAD.CS[nrow(covid.2019.ru.d.dyn.tt)]/(covid.2019.ru.r.dyn.tt$RECOVERED.CS[nrow(covid.2019.ru.r.dyn.tt)] + covid.2019.ru.d.dyn.tt$DEAD.CS[nrow(covid.2019.ru.d.dyn.tt)])) *
+(covid.2019.ru.d.dyn.tt$DEAD.CS[nrow(covid.2019.ru.d.dyn.tt)]/covid.2019.ru.i.dyn.tt$RUS.CS[nrow(covid.2019.ru.i.dyn.tt)])
+), 2), "% for now", sep=""),
+paste("Dead / geom. mean of new cases and recovered : ", round(
+100*(covid.2019.ru.d.dyn.tt$DEAD[nrow(covid.2019.ru.d.dyn.tt)] / sqrt(covid.2019.ru.r.dyn.tt$RECOVERED[nrow(covid.2019.ru.r.dyn.tt)] * covid.2019.ru.i.dyn.tt$RUS[nrow(covid.2019.ru.i.dyn.tt)]))
+, 2), "% for now", sep="")
 )
 )
 
