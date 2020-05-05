@@ -26,8 +26,8 @@ After that one can start running analytic and plotting R scripts. All of them ar
 
 The visualizations derived from these data are as follows. Fitting and prognostic scripts ceased to work properly towards the end of April, so the illustrations based on them are no longer updated.
 
-![alt text](plots/COVID.2019.cumulated.png "Cumulated curve of COVID-2019 cases for Russia")
-![alt text](plots/COVID.2019.cumulated.log10.png "Cumulated curve of COVID-2019 cases for Russia, y-logarithmic")
+<!--![alt text](plots/COVID.2019.cumulated.png "Cumulated curve of COVID-2019 cases for Russia")-->
+<!--![alt text](plots/COVID.2019.cumulated.log10.png "Cumulated curve of COVID-2019 cases for Russia, y-logarithmic")-->
 ![alt text](plots/COVID.2019.cumulated.TARD.png "Cumulated curve of COVID-2019 cases for Russia decomposed")
 ![alt text](plots/COVID.2019.cumulated.TARD.log10.png "Cumulated curve of COVID-2019 cases for Russia decomposed, y-logarithmic")
 ![alt text](plots/COVID.2019.cumulated.by_regions.png "Cumulated curve of COVID-2019 cases for Russia, by regions")

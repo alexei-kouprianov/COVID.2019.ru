@@ -10,25 +10,25 @@
 # Basic plots
 
 # Cumulated growth;
-png("../plots/COVID.2019.cumulated.png", height=750, width=1000, res=120, pointsize=10)
-par(mar=c(6,5,4,2)+.1)
-
-plot(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.i.dyn.tt$RUS.CS, type="l",
-ylim=c(0, max(covid.2019.ru.i.dyn.tt$RUS.CS)),
-xlab="", 
-ylab="Total COVID-2019 cases detected", 
-main="Russian Federation",
-axes=FALSE)
-
-points(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.i.dyn.tt$RUS.newcases, type="h", col=2, lwd=3)
-
-axis.POSIXct(1, 
-at=seq(min(covid.2019.breaks$TIME), max(covid.2019.breaks$TIME), by="week"), 
-format = "%Y-%m-%d", 
-las=2)
-axis(2)
-
-dev.off()
+# png("../plots/COVID.2019.cumulated.png", height=750, width=1000, res=120, pointsize=10)
+# par(mar=c(6,5,4,2)+.1)
+#
+# plot(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.i.dyn.tt$RUS.CS, type="l",
+# ylim=c(0, max(covid.2019.ru.i.dyn.tt$RUS.CS)),
+# xlab="", 
+# ylab="Total COVID-2019 cases detected", 
+# main="Russian Federation",
+# axes=FALSE)
+#
+# points(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.i.dyn.tt$RUS.newcases, type="h", col=2, lwd=3)
+#
+# axis.POSIXct(1, 
+# at=seq(min(covid.2019.breaks$TIME), max(covid.2019.breaks$TIME), by="week"), 
+# format = "%Y-%m-%d", 
+# las=2)
+# axis(2)
+#
+# dev.off()
 
 # Cumulated growth, by regions;
 
@@ -55,26 +55,26 @@ axis(2)
 dev.off()
 
 # Cumulated growth, log scale;
-png("../plots/COVID.2019.cumulated.log10.png", height=750, width=1000, res=120, pointsize=10)
-par(mar=c(6,5,4,2)+.1)
-
-plot(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$RUS.CS), type="l",
-ylim=c(0, max(log10(covid.2019.ru.i.dyn.tt$RUS.CS))),
-xlab="", 
-ylab="Total COVID-2019 cases detected (logarithmic scale)", 
-main="Russian Federation",
-axes=FALSE)
-
-points(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$RUS.newcases), type="h", col=2, lwd=3)
-
-axis.POSIXct(1, 
-at=seq(min(covid.2019.breaks$TIME), max(covid.2019.breaks$TIME), by="week"), 
-format = "%Y-%m-%d", 
-las=2)
-axis(2, at=log10(c(1,10,100,1000)), labels=c(1,10,100,1000))
-axis(2, at=log10(c(1:9, seq(10,100,10), seq(200,1000,100), seq(2000,10000,1000))), labels=FALSE)
-
-dev.off()
+# png("../plots/COVID.2019.cumulated.log10.png", height=750, width=1000, res=120, pointsize=10)
+# par(mar=c(6,5,4,2)+.1)
+#
+# plot(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$RUS.CS), type="l",
+# ylim=c(0, max(log10(covid.2019.ru.i.dyn.tt$RUS.CS))),
+# xlab="", 
+# ylab="Total COVID-2019 cases detected (logarithmic scale)", 
+# main="Russian Federation",
+# axes=FALSE)
+#
+# points(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$RUS.newcases), type="h", col=2, lwd=3)
+#
+# axis.POSIXct(1, 
+# at=seq(min(covid.2019.breaks$TIME), max(covid.2019.breaks$TIME), by="week"), 
+# format = "%Y-%m-%d", 
+# las=2)
+# axis(2, at=log10(c(1,10,100,1000)), labels=c(1,10,100,1000))
+# axis(2, at=log10(c(1:9, seq(10,100,10), seq(200,1000,100), seq(2000,10000,1000))), labels=FALSE)
+#
+# dev.off()
 
 # Cumulated growth, log scale, by regions;
 png("../plots/COVID.2019.cumulated.log.10.by_regions.png", height=750, width=1000, res=120, pointsize=10)
@@ -399,14 +399,18 @@ par(mar=c(6,5,4,2)+.1, lwd=2)
 
 plot(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.i.dyn.tt$RUS.CS,
 ylim=c(0,max(covid.2019.ru.i.dyn.tt$RUS.CS, na.rm=TRUE)),
-type="l", col=2, lty=3,
+type="l", col="darkred", #lty=3,
 main="Russian Federation",
 xlab="",
 ylab="COVID-2019 cases", 
 axes=FALSE)
 
+lines(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.i.dyn.tt$RUS.newcases, type="h", col="darkred")
+lines(covid.2019.ru.d.dyn.tt$TIME, covid.2019.ru.d.dyn.tt$DEAD.CS, col="white", lwd=5)
 lines(covid.2019.ru.d.dyn.tt$TIME, covid.2019.ru.d.dyn.tt$DEAD.CS)
+lines(covid.2019.ru.r.dyn.tt$TIME, covid.2019.ru.r.dyn.tt$RECOVERED.CS, col="white", lwd=5)
 lines(covid.2019.ru.r.dyn.tt$TIME, covid.2019.ru.r.dyn.tt$RECOVERED.CS, col=3)
+lines(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.i.dyn.tt$RUS.CS-(covid.2019.ru.r.dyn.tt$RECOVERED.CS + covid.2019.ru.d.dyn.tt$DEAD.CS), col="white", lwd=5)
 lines(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.i.dyn.tt$RUS.CS-(covid.2019.ru.r.dyn.tt$RECOVERED.CS + covid.2019.ru.d.dyn.tt$DEAD.CS), col=2)
 
 axis.POSIXct(1, 
@@ -416,9 +420,9 @@ las=2)
 axis(2)
 
 legend("topleft",
-lty=c(3,1,1,1),
-col=c(2,2,3,1),
-legend=c("Detected","Active","Recovered","Deceased"),
+lty=1,
+col=c("darkred","red","green","black"),
+legend=c("Detected (vertical bars = new)","Active","Recovered","Deceased"),
 bty="n")
 
 dev.off()
@@ -428,27 +432,31 @@ par(mar=c(6,5,4,2)+.1, lwd=2)
 
 plot(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$RUS.CS),
 ylim=c(0,log10(max(covid.2019.ru.i.dyn.tt$RUS.CS, na.rm=TRUE))),
-type="l", col=2, lty=3,
+type="l", col="darkred", #lty=3,
 main="Russian Federation",
 xlab="",
 ylab="COVID-2019 cases (logarithmic scale)", 
 axes=FALSE)
 
-lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$RUS.CS-(covid.2019.ru.r.dyn.tt$RECOVERED.CS + covid.2019.ru.d.dyn.tt$DEAD.CS)), col=2)
-lines(covid.2019.ru.r.dyn.tt$TIME, log10(covid.2019.ru.r.dyn.tt$RECOVERED.CS), col=3)
+lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$RUS.newcases), type="h", col="darkred")
+lines(covid.2019.ru.d.dyn.tt$TIME, log10(covid.2019.ru.d.dyn.tt$DEAD.CS), col="white", lwd=5)
 lines(covid.2019.ru.d.dyn.tt$TIME, log10(covid.2019.ru.d.dyn.tt$DEAD.CS))
+lines(covid.2019.ru.r.dyn.tt$TIME, log10(covid.2019.ru.r.dyn.tt$RECOVERED.CS), col="white", lwd=6)
+lines(covid.2019.ru.r.dyn.tt$TIME, log10(covid.2019.ru.r.dyn.tt$RECOVERED.CS), col=3)
+lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$RUS.CS-(covid.2019.ru.r.dyn.tt$RECOVERED.CS + covid.2019.ru.d.dyn.tt$DEAD.CS)), col="white", lwd=5)
+lines(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$RUS.CS-(covid.2019.ru.r.dyn.tt$RECOVERED.CS + covid.2019.ru.d.dyn.tt$DEAD.CS)), col=2)
 
 axis.POSIXct(1, 
 at=seq(min(covid.2019.breaks$TIME), max(covid.2019.breaks$TIME), by="week"), 
 format = "%Y-%m-%d", 
 las=2)
-axis(2, at=log10(c(1,10,100,1000,10000)), labels=c(1,10,100,1000,10000))
-axis(2, at=log10(c(1:9, seq(10,100,10), seq(200,1000,100), seq(2000,10000,1000), seq(20000,100000,10000))), labels=FALSE)
+axis(2, at=log10(1*10^(0:5)), labels=c(1,10,100,1000,"10K","100K"))
+axis(2, at=log10(c(1:9, seq(10,100,10), seq(200,1000,100), seq(2000,10000,1000), seq(20000,100000,10000), seq(200000,1000000,100000))), labels=FALSE)
 
 legend("topleft",
-lty=c(3,1,1,1),
-col=c(2,2,3,1),
-legend=c("Detected","Active","Recovered","Deceased"),
+lty=1,
+col=c("darkred","red","green","black"),
+legend=c("Detected (vertical bars = new)","Active","Recovered","Deceased"),
 bty="n")
 
 dev.off()
@@ -478,6 +486,9 @@ axes=FALSE
 for(j in 1:length(levels(covid.2019.ru$LOCUS))){
  lines(covid.2019.ru.dyn.tot[[j]]$TIME, log10(covid.2019.ru.dyn.tot[[j]]$CS.i), lwd=1.5, col=rgb(0,0,0,.15))
 }
+
+lines(covid.2019.ru.dyn.tot[[j]]$TIME, log10(covid.2019.ru.dyn.tot[[i]]$i), type="h", col="darkred")
+
 lines(covid.2019.ru.dyn.tot[[j]]$TIME, log10(covid.2019.ru.dyn.tot[[i]]$CS.i), col="white", lwd=3)
 lines(covid.2019.ru.dyn.tot[[j]]$TIME, log10(covid.2019.ru.dyn.tot[[i]]$CS.i), col="darkred", lwd=1)
 lines(covid.2019.ru.dyn.tot[[j]]$TIME, log10(covid.2019.ru.dyn.tot[[i]]$CS.i-
@@ -486,9 +497,9 @@ lines(covid.2019.ru.dyn.tot[[j]]$TIME, log10(covid.2019.ru.dyn.tot[[i]]$CS.i-
 lines(covid.2019.ru.dyn.tot[[j]]$TIME, log10(covid.2019.ru.dyn.tot[[i]]$CS.i-
 (covid.2019.ru.dyn.tot[[i]]$CS.r+covid.2019.ru.dyn.tot[[i]]$CS.d)
 ), col=2, lwd=2)
-lines(covid.2019.ru.dyn.tot[[j]]$TIME, log10(covid.2019.ru.dyn.tot[[i]]$CS.r), col="white", lwd=4)
+lines(covid.2019.ru.dyn.tot[[j]]$TIME, log10(covid.2019.ru.dyn.tot[[i]]$CS.r), col="white", lwd=5)
 lines(covid.2019.ru.dyn.tot[[j]]$TIME, log10(covid.2019.ru.dyn.tot[[i]]$CS.r), col="darkgreen", lwd=2)
-lines(covid.2019.ru.dyn.tot[[j]]$TIME, log10(covid.2019.ru.dyn.tot[[i]]$CS.d), col="white", lwd=4)
+lines(covid.2019.ru.dyn.tot[[j]]$TIME, log10(covid.2019.ru.dyn.tot[[i]]$CS.d), col="white", lwd=5)
 lines(covid.2019.ru.dyn.tot[[j]]$TIME, log10(covid.2019.ru.dyn.tot[[i]]$CS.d), col=1, lwd=2)
 
 abline(h=log10(50), lty=3, lwd=.75)
@@ -505,7 +516,7 @@ legend(
 lty=1,
 lwd=c(1,2,2,2),
 col=c("darkred","red","darkgreen","black"),
-legend=c("Total cases","Active cases","Recovered","Deceased"),
+legend=c("Total cases (vertical bars = new ones)","Active cases","Recovered","Deceased"),
 bty="n"
 )
 
