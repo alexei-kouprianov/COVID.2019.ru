@@ -24,7 +24,7 @@ After that one can start running analytic and plotting R scripts. All of them ar
 
 ## Illustrations
 
-The visualizations derived from these data are as follows. Fitting and prognostic scripts ceased to work properly towards the end of April, so the illustrations based on them are no longer updated.
+The visualizations derived from nation-wide data are as follows. For regional graphs see [a special subfolder](https://github.com/alexei-kouprianov/COVID.2019.ru/tree/master/plots/regions "Regional graphs")
 
 <!--![alt text](plots/COVID.2019.cumulated.png "Cumulated curve of COVID-2019 cases for Russia")-->
 <!--![alt text](plots/COVID.2019.cumulated.log10.png "Cumulated curve of COVID-2019 cases for Russia, y-logarithmic")-->
@@ -38,16 +38,16 @@ The visualizations derived from these data are as follows. Fitting and prognosti
 ![alt text](plots/COVID.2019.barplot.regions.log.10.png "COVID-2019 total cases for Russia by regions")
 ![alt text](plots/COVID.2019.barplot.regions.per_100K.png "COVID-2019 total cases per 100K inhabitants for Russia by regions")
 
-![alt text](plots/COVID.2019.hist.rt.png "COVID-2019 Rt 7 days rolling averages for regions of Russia")
+![alt text](plots/COVID.2019.hist.rdi.png "COVID-2019 Rt 7 days rolling averages for regions of Russia")
 ![alt text](plots/COVID.2019.hist.dt.png "COVID-2019 cases doubling time based on Rt 7 days rolling averages for regions of Russia")
 ![alt text](plots/COVID.2019.map.regions.png "COVID-2019 total cases for Russia, map")
 ![alt text](plots/COVID.2019.map.regions.per_100K.png "COVID-2019 total cases per 100K inhabitants for Russia, map")
 
 ![alt text](plots/COVID.2019.map.density.regions.png "COVID-2019 total cases for Russia, density map")
 ![alt text](plots/COVID.2019.map.density.regions.per_100K.png "COVID-2019 total cases per 100K inhabitants for Russia, density map")
-![alt text](plots/COVID.2019.map.density.regions.rt7dt.png "COVID-2019 cases doubling time based on Rt 7 days rolling averages for regions of Russia, density map")
+![alt text](plots/COVID.2019.map.density.regions.rdi7dt.png "COVID-2019 cases doubling time based on Rt 7 days rolling averages for regions of Russia, density map")
 
-![alt text](plots/COVID.2019.fitting.expGrowth_vs_LL.3.png "Fitting the data with exponent and log-logistic")
-![alt text](plots/COVID.2019.fitting.expGrowth_vs_LL.3.log10.png "Fitting the data with exponent and log-logistic, y-logarithmic")
-![alt text](plots/COVID.2019.fitting.rmc.png "Fitting / extrapolating the data with exponent and log-logistic")
-![alt text](plots/COVID.2019.fitting.rmc.log10.png "Fitting / extrapolating the data with exponent and log-logistic, y-logarithmic")
+<!--![alt text](plots/COVID.2019.fitting.expGrowth_vs_LL.3.png "Fitting the data with exponent and log-logistic")
+![alt text](plots/COVID.2019.fitting.expGrowth_vs_LL.3.log10.png "Fitting the data with exponent and log-logistic, y-logarithmic")-->
+![alt text](plots/COVID.2019.fitting.rmc.partial.log10.png "Fitting / extrapolating the data with exponent and log-logistic, y-logarithmic (entire Russia)")
+![alt text](plots/COVID.2019.fitting.rmc.partial.Mos.log10.png "Fitting / extrapolating the data with exponent and log-logistic, y-logarithmic (Moscow)")

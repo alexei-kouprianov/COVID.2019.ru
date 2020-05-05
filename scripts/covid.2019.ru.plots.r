@@ -260,7 +260,7 @@ dev.off()
 #
 # dev.off()
 
-png("../plots/COVID.2019.map.density.regions.rt7dt.png", height=750, width=1000, res=120, pointsize=10)
+png("../plots/COVID.2019.map.density.regions.rdi7dt.png", height=750, width=1000, res=120, pointsize=10)
 par(fg="white", bg=rgb(0,.1,.2,1))
 
 plot(ru.shape, xlim=c(20,180), col="white", border="white")
@@ -273,7 +273,7 @@ col=rgb(.05,.5,.1,(covid.2019.ru.i.reg.df.dm_sorted$CS.i.diff.7.2log/max(covid.2
 border=rgb(.05,.5,.1,(covid.2019.ru.i.reg.df.dm_sorted$CS.i.diff.7.2log/max(covid.2019.ru.i.reg.df.dm_sorted$CS.i.diff.7.2log))^(1/2)), 
 add=TRUE)
 
-mtext(paste("COVID-2019 cases doubling times based on 7 days mean Rt, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), 
+mtext(paste("COVID-2019 cases doubling times based on 7 days mean relative daily increment, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), 
 side=1, line=1) 
 mtext("Russian Federation", font=2, cex=1.2, side=3, line=0)
 
@@ -296,7 +296,7 @@ dev.off()
 # 1), 
 # add=TRUE)
 #
-# mtext(paste("COVID-2019 cases doubling times based on 7 days mean Rt, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), 
+# mtext(paste("COVID-2019 cases doubling times based on 7 days mean RDI, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), 
 # side=1, line=1) 
 # mtext("Russian Federation", font=2, cex=1.2, side=3, line=0)
 #
@@ -635,15 +635,15 @@ dev.off()
 } # if(nrow(covid.2019.ru.i.dyn.trunc[[i]] > 2)){};
 } # for(i in 1:length(levels(covid.2019.ru$LOCUS))){};
 
-# Rt dynamics
+# Relative daily increment dynamics
 
-dir.create("../plots/regions/rt.race/")
+dir.create("../plots/regions/rdi.race/")
 
 for(i in 1:length(levels(covid.2019.ru$LOCUS))){
 if(nrow(covid.2019.ru.i.dyn.trunc[[i]]) > 7){
 if(i != Moscow.pos){
 
-png(file=paste("../plots/regions/rt.race/COVID.2019.rt.race.log10.",gsub(" ", "_", levels(covid.2019.ru$LOCUS)[i]),".png", sep=""), height=750, width=750, res=120, pointsize=10)
+png(file=paste("../plots/regions/rdi.race/COVID.2019.rdi.race.log10.",gsub(" ", "_", levels(covid.2019.ru$LOCUS)[i]),".png", sep=""), height=750, width=750, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1, lwd=2)
 
 plot(1:nrow(covid.2019.ru.i.dyn.trunc[[Moscow.pos]]), 
@@ -652,7 +652,7 @@ type="l",
 ylim=c(1,1.7),
 main=paste("Russian Federation /",names(covid.2019.ru.i.dyn.trunc)[i]),
 xlab="Days since N=50 threshold",
-ylab="Rt, running average for 7 days (3 last days truncated)",
+ylab="Relative daily increment, running average for 7 days (3 last days truncated)",
 axes=FALSE
 )
 grid(lwd=1)
@@ -693,12 +693,12 @@ dev.off()
 } # if(nrow(covid.2019.ru.i.dyn.trunc[[i]] > 2)){};
 } # for(i in 1:length(levels(covid.2019.ru$LOCUS))){};
 
-dir.create("../plots/regions/rt/")
+dir.create("../plots/regions/rdi/")
 
 for(i in 1:length(levels(covid.2019.ru$LOCUS))){
 if(sum(covid.2019.ru.dyn.tot[[i]]$CS.i.diff.7, na.rm=TRUE) > 0){
 
-png(file=paste("../plots/regions/rt/COVID.2019.rt.log10.",gsub(" ", "_", levels(covid.2019.ru$LOCUS)[i]),".png", sep=""), height=750, width=750, res=120, pointsize=10)
+png(file=paste("../plots/regions/rdi/COVID.2019.rdi.log10.",gsub(" ", "_", levels(covid.2019.ru$LOCUS)[i]),".png", sep=""), height=750, width=750, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1)
 
 plot(
@@ -707,7 +707,7 @@ covid.2019.ru.dyn.tot[[Moscow.pos]]$CS.i.diff.7[40:nrow(covid.2019.ru.dyn.tot[[M
 type="l", ylim=c(1,1.7),
 main=paste("Russian Federation /",names(covid.2019.ru.i.dyn.trunc)[i]),
 xlab="Days since 2020-01-31",
-ylab="Rt, running average for 7 days (3 last days truncated)",
+ylab="Relative daily increment, running average for 7 days (3 last days truncated)",
 axes=FALSE
 )
 for(j in 1:length(levels(covid.2019.ru$LOCUS))){
@@ -770,19 +770,19 @@ dev.off()
 # #
 # # ffmpeg -r 2 -f image2 -s 1000x750 -i COVID.2019.map.regions.%03d.png -vcodec libx264 -crf 25 -pix_fmt yuv420p COVID.2019.ru.map.animated.mp4
 
-png("../plots/COVID.2019.hist.rt.png", height=750, width=1000, res=120, pointsize=10)
+png("../plots/COVID.2019.hist.rdi.png", height=750, width=1000, res=120, pointsize=10)
 
-rt.slice.noInf.max <- .99
+rdi.slice.noInf.max <- .99
 
-while(rt.slice.noInf.max < max(covid.2019.ru.i.rt.slice.noInf)){
-rt.slice.noInf.max <- rt.slice.noInf.max + .02
+while(rdi.slice.noInf.max < max(covid.2019.ru.i.rt.slice.noInf)){
+rdi.slice.noInf.max <- rdi.slice.noInf.max + .02
 }
 
-hist(covid.2019.ru.i.rt.slice.noInf, breaks=seq(.99,rt.slice.noInf.max,.02), col=8,
+hist(covid.2019.ru.i.rt.slice.noInf, breaks=seq(.99,rdi.slice.noInf.max,.02), col=8,
 main=paste("Russian Federation / ", daily.timestamp$V1),
 # main=paste("Russian Federation /", Sys.Date()),
-xlab="COVID-2019 Reproductive number (Rt) (rolling average for 7 days)",
-ylab="Number of regions with Rt this high"
+xlab="COVID-2019 Relative daily increment (rolling average for 7 days)",
+ylab="Number of regions with RDI this high"
 )
 abline(v=median(covid.2019.ru.i.rt.slice.noInf, na.rm=TRUE), col=3, lty=3, lwd=2)
 abline(v=mean(covid.2019.ru.i.rt.slice.noInf, na.rm=TRUE), col=2, lty=3, lwd=2)
@@ -795,8 +795,8 @@ lty=3,
 lwd=2,
 col=3:2,
 legend=c(
-paste("Median Rt =",round(median(covid.2019.ru.i.rt.slice.noInf, na.rm=TRUE),3)),
-paste("Mean Rt =",round(mean(covid.2019.ru.i.rt.slice.noInf, na.rm=TRUE),3))
+paste("Median RDI =",round(median(covid.2019.ru.i.rt.slice.noInf, na.rm=TRUE),3)),
+paste("Mean RDI =",round(mean(covid.2019.ru.i.rt.slice.noInf, na.rm=TRUE),3))
 ),
 bty="n"
 )
@@ -813,7 +813,7 @@ s = 1, v = 1, start = 0, end = 4.5/6),
 ,
 main=paste("Russian Federation / ", daily.timestamp$V1),
 # main=paste("Russian Federation /", Sys.Date()),
-xlab="COVID-2019 cases doubling time (days) based on Rt rolling average for 7 days",
+xlab="COVID-2019 cases doubling time (days) based on Relative Daily Increment rolling average for 7 days",
 ylab="Number of regions with doubling time this high"
 )
 
