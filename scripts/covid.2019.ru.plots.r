@@ -100,8 +100,8 @@ axis.POSIXct(1,
 at=seq(min(covid.2019.breaks$TIME), max(covid.2019.breaks$TIME), by="week"), 
 format = "%Y-%m-%d", 
 las=2)
-axis(2, at=log10(c(1,10,100,1000)), labels=c(1,10,100,1000))
-axis(2, at=log10(c(1:9, seq(10,100,10), seq(200,1000,100), seq(2000,10000,1000))), labels=FALSE)
+axis(2, at=log10(1*10^(0:5)), labels=c(1,10,100,1000,"10K","100K"))
+axis(2, at=log10(c(1:9, seq(10,100,10), seq(200,1000,100), seq(2000,10000,1000), seq(20000,100000,10000), seq(200000,1000000,100000))), labels=FALSE)
 
 legend("topleft", lt=1, col=c(2,4,3), legend=c("Moscow","St. Petersburg","The rest of Russia"), bty="n")
 

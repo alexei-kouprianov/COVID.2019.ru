@@ -31,7 +31,7 @@ knitr::kable(dt.best, caption="")
 
 * < https://github.com/alexei-kouprianov/COVID.2019.ru/tree/master/plots/regions >
 * < https://github.com/alexei-kouprianov/COVID.2019.ru/tree/master/plots/regions/race >
-* < https://github.com/alexei-kouprianov/COVID.2019.ru/tree/master/plots/regions/rt>
-* < https://github.com/alexei-kouprianov/COVID.2019.ru/tree/master/plots/regions/rt.race >
+* < https://github.com/alexei-kouprianov/COVID.2019.ru/tree/master/plots/regions/rdi>
+* < https://github.com/alexei-kouprianov/COVID.2019.ru/tree/master/plots/regions/rdi.race >
 
 **Скрипт и данные.** < https://github.com/alexei-kouprianov/COVID.2019.ru >
