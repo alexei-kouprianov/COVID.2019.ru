@@ -11,6 +11,7 @@
 library(maps)
 library(TeachingDemos)
 library(rgdal)
+library(rmarkdown)
 library(rjson)
 
 # library(png)
