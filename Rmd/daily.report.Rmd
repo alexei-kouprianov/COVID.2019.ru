@@ -11,7 +11,7 @@ output: html_document
 knitr::kable(incr.abs.t, caption="")
 ```
 
-**Худшие показатели периода удвоения**, рост в регионах настолько замедлился, что теперь худшие показатели составляют менее **шести (!)** дней, а еще вчера было менее трех (по среднему приросту за последние семь дней): 
+**Худшие показатели периода удвоения**. Рост в регионах настолько замедлился, что теперь для демонстрации худших показателей отобраны регионы с периодом удвоения менее **семи (!)** (по среднему приросту за последние семь дней): 
 
 ```{r results='asis', echo = FALSE}
 knitr::kable(dt.worst, caption="")
@@ -23,7 +23,7 @@ knitr::kable(dt.worst, caption="")
 knitr::kable(dt.best, caption="")
 ```
 
-В этой записи помимо обзорных графиков публикую две экстраполяции (для России и Москвы).
+**В этой записи помимо обзорных графиков публикую две экстраполяции (для России и Москвы).**
 
 **Техническое.** В виду многочисленности графиков по регионам, отсылаю за ними к папкам в репозитории. 
 
@@ -31,7 +31,7 @@ knitr::kable(dt.best, caption="")
 
 * < https://github.com/alexei-kouprianov/COVID.2019.ru/tree/master/plots/regions >
 * < https://github.com/alexei-kouprianov/COVID.2019.ru/tree/master/plots/regions/race >
-* < https://github.com/alexei-kouprianov/COVID.2019.ru/tree/master/plots/regions/rdi>
+* < https://github.com/alexei-kouprianov/COVID.2019.ru/tree/master/plots/regions/rdi >
 * < https://github.com/alexei-kouprianov/COVID.2019.ru/tree/master/plots/regions/rdi.race >
 
 **Скрипт и данные.** < https://github.com/alexei-kouprianov/COVID.2019.ru >
