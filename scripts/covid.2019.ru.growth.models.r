@@ -585,12 +585,26 @@ rmc.20200421_202005__.df <- NULL
 
 for(i in 2:nrow(covid.2019.ru.i.dyn.tt.20200421_202005__)){
 
+if(i != 7){
 rmc.20200421_202005__.df <- rbind.data.frame(rmc.20200421_202005__.df,
 c(
 drm(
 covid.2019.ru.i.dyn.tt.20200421_202005__.ts[[i]]$RUS.CS ~ covid.2019.ru.i.dyn.tt.20200421_202005__.ts[[i]]$DAYS, 
 fct = DRC.expoGrowth()
-)$coefficients#,
+)$coefficients, #c(NA,NA,NA)
+drm(
+covid.2019.ru.i.dyn.tt.20200421_202005__.ts[[i]]$RUS.CS ~ covid.2019.ru.i.dyn.tt.20200421_202005__.ts[[i]]$DAYS, 
+fct = LL.3()
+)$fit$par
+)
+)
+} else if(i == 7){
+rmc.20200421_202005__.df <- rbind.data.frame(rmc.20200421_202005__.df,
+c(
+drm(
+covid.2019.ru.i.dyn.tt.20200421_202005__.ts[[i]]$RUS.CS ~ covid.2019.ru.i.dyn.tt.20200421_202005__.ts[[i]]$DAYS, 
+fct = DRC.expoGrowth()
+)$coefficients, c(NA,NA,NA)
 # drm(
 # covid.2019.ru.i.dyn.tt.20200421_202005__.ts[[i]]$RUS.CS ~ covid.2019.ru.i.dyn.tt.20200421_202005__.ts[[i]]$DAYS, 
 # fct = LL.3()
@@ -598,10 +612,11 @@ fct = DRC.expoGrowth()
 )
 )
 }
+}
 
-# colnames(rmc.20200421_202005__.df) <- c("eg.1","eg.2","ll.3.b","ll.3.d","ll.3.e")
+colnames(rmc.20200421_202005__.df) <- c("eg.1","eg.2","ll.3.b","ll.3.d","ll.3.e")
 
-colnames(rmc.20200421_202005__.df) <- c("eg.1","eg.2")
+# colnames(rmc.20200421_202005__.df) <- c("eg.1","eg.2")
 
 # RMC.20200421_202005__ for Moscow
 
@@ -687,13 +702,13 @@ curve(log10(rmc.20200404_20200420.df$eg.1[i]*exp((x)*rmc.20200404_20200420.df$eg
 # abline(v=covid.2019.ru.full.ll.3$fit$par[3], col=4, lwd=1.5, lty=2)
 
 for(i in 1:nrow(rmc.20200421_202005__.df)){
-# curve(log10(rmc.20200421_202005__.df$ll.3.d[i]/(1+exp(rmc.20200421_202005__.df$ll.3.b[i]*(log((x)/rmc.20200421_202005__.df$ll.3.e[i]))))), col=rgb(0,0,1,.3), add=TRUE)
-# abline(v=rmc.20200421_202005__.df$ll.3.e[i], col=rgb(0,0,1,.2), lwd=1, lty=5)
+curve(log10(rmc.20200421_202005__.df$ll.3.d[i]/(1+exp(rmc.20200421_202005__.df$ll.3.b[i]*(log((x)/rmc.20200421_202005__.df$ll.3.e[i]))))), col=rgb(0,0,1,.3), add=TRUE)
+abline(v=rmc.20200421_202005__.df$ll.3.e[i], col=rgb(0,0,1,.2), lwd=1, lty=5)
 curve(log10(rmc.20200421_202005__.df$eg.1[i]*exp((x)*rmc.20200421_202005__.df$eg.2[i])), col=rgb(1,0,0,.3), add=TRUE)
 }
 
-# curve(log10(rmc.20200421_202005__.df$ll.3.d[i]/(1+exp(rmc.20200421_202005__.df$ll.3.b[i]*(log((x)/rmc.20200421_202005__.df$ll.3.e[i]))))), col=rgb(0,0,1,1), lwd=1.5, lty=5, add=TRUE)
-# abline(v=rmc.20200421_202005__.df$ll.3.e[i], col=rgb(0,0,1,1), lwd=1.5, lty=5)
+curve(log10(rmc.20200421_202005__.df$ll.3.d[i]/(1+exp(rmc.20200421_202005__.df$ll.3.b[i]*(log((x)/rmc.20200421_202005__.df$ll.3.e[i]))))), col=rgb(0,0,1,1), lwd=1.5, lty=5, add=TRUE)
+abline(v=rmc.20200421_202005__.df$ll.3.e[i], col=rgb(0,0,1,1), lwd=1.5, lty=5)
 curve(log10(rmc.20200421_202005__.df$eg.1[i]*exp((x)*rmc.20200421_202005__.df$eg.2[i])), col=rgb(1,0,0,1), lwd=1.5, lty=5, add=TRUE)
 
 points(log10(covid.2019.ru.i.dyn.tt$RUS.CS) ~ covid.2019.ru.i.dyn.tt$DAYS, 
