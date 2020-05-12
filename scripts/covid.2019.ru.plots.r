@@ -525,6 +525,60 @@ dev.off()
 
 }
 
+dir.create("../plots/regions/increments/")
+
+dir.create("../plots/regions/increments/i/")
+
+for(i in 1:length(levels(covid.2019.ru$LOCUS))){
+
+png(file=paste("../plots/regions/increments/i/COVID.2019.momentary.",gsub(" ", "_", levels(covid.2019.ru$LOCUS)[i]),".i.png", sep=""), height=750, width=750, res=120, pointsize=10)
+par(mar=c(6,5,4,2)+.1, lwd=2)
+
+plot(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.dyn.tot[[i]]$i, type="h", col="darkred",
+main=paste("Russian Federation / ",
+levels(covid.2019.ru$LOCUS)[i]," (",
+sum(covid.2019.ru.dyn.tot[[i]]$i),")", sep=""),
+xlab="",
+ylab="COVID-2019 new cases detected",
+axes=FALSE
+)
+
+axis.POSIXct(1, 
+at=seq(min(covid.2019.breaks$TIME), max(covid.2019.breaks$TIME), by="week"), 
+format = "%Y-%m-%d", 
+las=2)
+axis(2)
+
+dev.off()
+}
+
+dir.create("../plots/regions/increments/d/")
+
+for(i in 1:length(levels(covid.2019.ru$LOCUS))){
+if(sum(covid.2019.ru.dyn.tot[[i]]$d) > 20){ 
+
+png(file=paste("../plots/regions/increments/d/COVID.2019.momentary.",gsub(" ", "_", levels(covid.2019.ru$LOCUS)[i]),".d.png", sep=""), height=750, width=750, res=120, pointsize=10)
+par(mar=c(6,5,4,2)+.1, lwd=2)
+
+plot(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.dyn.tot[[i]]$d, type="h", col="black",
+main=paste("Russian Federation / ",
+levels(covid.2019.ru$LOCUS)[i]," (",
+sum(covid.2019.ru.dyn.tot[[i]]$d),")", sep=""),
+xlab="",
+ylab="COVID-2019 new deaths reported",
+axes=FALSE
+)
+
+axis.POSIXct(1, 
+at=seq(min(covid.2019.breaks$TIME), max(covid.2019.breaks$TIME), by="week"), 
+format = "%Y-%m-%d", 
+las=2)
+axis(2)
+
+dev.off()
+} # if()
+} # for()
+
 dir.create("../plots/regions/race/")
 
 for(i in 1:length(levels(covid.2019.ru$LOCUS))){
