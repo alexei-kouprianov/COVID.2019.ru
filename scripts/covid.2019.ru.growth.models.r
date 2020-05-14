@@ -908,9 +908,9 @@ axes=FALSE
 )
 
 for(i in 1:nrow(rmc.SPb.20200131_20200313.df)){
-curve(log10(rmc.20200131_20200306.SPb.df$ll.3.d[i]/(1+exp(rmc.20200131_20200306.SPb.df$ll.3.b[i]*(log((x)/rmc.20200131_20200306.SPb.df$ll.3.e[i]))))), col=rgb(0,0,1,.3), add=TRUE)
-abline(v=rmc.20200131_20200306.SPb.df$ll.3.e[i], col=rgb(0,0,1,.2), lwd=1, lty=5)
-curve(log10(rmc.20200131_20200306.SPb.df$eg.1[i]*exp((x)*rmc.20200131_20200306.SPb.df$eg.2[i])), col=rgb(1,0,0,.3), add=TRUE)
+curve(log10(rmc.SPb.20200131_20200313.df$ll.3.d[i]/(1+exp(rmc.SPb.20200131_20200313.df$ll.3.b[i]*(log((x)/rmc.SPb.20200131_20200313.df$ll.3.e[i]))))), col=rgb(0,0,1,.3), add=TRUE)
+abline(v=rmc.SPb.20200131_20200313.df$ll.3.e[i], col=rgb(0,0,1,.2), lwd=1, lty=5)
+curve(log10(rmc.SPb.20200131_20200313.df$eg.1[i]*exp((x)*rmc.SPb.20200131_20200313.df$eg.2[i])), col=rgb(1,0,0,.3), add=TRUE)
 }
 
 for(i in 1:nrow(rmc.SPb.20200314_20200331.df)){

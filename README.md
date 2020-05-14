@@ -4,7 +4,7 @@ This repo was created to keep records of the COVID-2019 epidemics in Russia. The
 
 All images originally published in this repository are licensed under cc-by-4.0
 
-Fitting and prognostic scripts ceased to work properly towards the end of April, so they are no longer updated.
+Fitting and prognostic scripts ceased to work properly towards the end of April 2020, now they are fixed and the images are kept being updated.
 
 ## Data extraction procedures
 
@@ -51,3 +51,4 @@ The visualizations derived from nation-wide data are as follows. For regional gr
 ![alt text](plots/COVID.2019.fitting.expGrowth_vs_LL.3.log10.png "Fitting the data with exponent and log-logistic, y-logarithmic")-->
 ![alt text](plots/COVID.2019.fitting.rmc.partial.log10.png "Fitting / extrapolating the data with exponent and log-logistic, y-logarithmic (entire Russia)")
 ![alt text](plots/COVID.2019.fitting.rmc.partial.Mos.log10.png "Fitting / extrapolating the data with exponent and log-logistic, y-logarithmic (Moscow)")
+![alt text](plots/COVID.2019.fitting.rmc.partial.SPb.log10.png "Fitting / extrapolating the data with exponent and log-logistic, y-logarithmic (St. Petersburg)")

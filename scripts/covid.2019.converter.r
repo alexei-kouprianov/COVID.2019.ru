@@ -1,4 +1,3 @@
-# setwd("/home/tinea/Documents/H_et_S/Projects/github/COVID.2019.ru/scripts/")
 library(rjson)
 
 daily.data.raw <- fromJSON(file="../downloads/stopcoronavirus.storage.moment.20200429.json")
