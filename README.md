@@ -49,6 +49,6 @@ The visualizations derived from nation-wide data are as follows. For regional gr
 
 <!--![alt text](plots/COVID.2019.fitting.expGrowth_vs_LL.3.png "Fitting the data with exponent and log-logistic")
 ![alt text](plots/COVID.2019.fitting.expGrowth_vs_LL.3.log10.png "Fitting the data with exponent and log-logistic, y-logarithmic")-->
-<!--![alt text](plots/COVID.2019.fitting.rmc.partial.log10.png "Fitting / extrapolating the data with exponent and log-logistic, y-logarithmic (entire Russia)")
-![alt text](plots/COVID.2019.fitting.rmc.partial.Mos.log10.png "Fitting / extrapolating the data with exponent and log-logistic, y-logarithmic (Moscow)")-->
+![alt text](plots/COVID.2019.fitting.rmc.partial.log10.png "Fitting / extrapolating the data with exponent and log-logistic, y-logarithmic (entire Russia)")
+![alt text](plots/COVID.2019.fitting.rmc.partial.Mos.log10.png "Fitting / extrapolating the data with exponent and log-logistic, y-logarithmic (Moscow)")
 ![alt text](plots/COVID.2019.fitting.rmc.partial.SPb.log10.png "Fitting / extrapolating the data with exponent and log-logistic, y-logarithmic (St. Petersburg)")
