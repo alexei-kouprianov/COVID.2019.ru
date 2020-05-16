@@ -397,7 +397,7 @@ billionaires.p <- billionaires[c(1:5,7:12,14:15)]
 
 incr.abs.t <- subset(covid.2019.ru.i, 
 covid.2019.ru.i$TIMESTAMP == covid.2019.ru.i$TIMESTAMP[nrow(covid.2019.ru.i)] & 
-covid.2019.ru.i$NUMBER >= 80 & 
+covid.2019.ru.i$NUMBER >= 90 & 
 covid.2019.ru.i$LOCUS.0 != "Moscow")[,c(5,6)]
 
 dt.worst <- data.frame(
@@ -409,9 +409,9 @@ colnames(dt.worst) <- c("LOCUS","K100","Dt")
 dt.worst <- dt.worst[order(dt.worst$Dt),]
 
 dt.best <- data.frame(
-subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log >= 15)$LOCUS.dm,
-round(subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log >= 15)$PER.100K, 2),
-round(subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log >= 15)$CS.i.diff.7.2log, 2)
+subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log >= 18)$LOCUS.dm,
+round(subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log >= 18)$PER.100K, 2),
+round(subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log >= 18)$CS.i.diff.7.2log, 2)
 )
 colnames(dt.best) <- c("LOCUS","K100","Dt")
 dt.best <- dt.best[order(-dt.best$Dt),]
