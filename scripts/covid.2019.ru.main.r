@@ -24,4 +24,4 @@ source("covid.2019.ru.growth.models.r")
 # summary(covid.2019.ru.full.RUS.Provinces.ll.3)
 # subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log < 4)[,c(8,9,11)]
 # subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log > 14)[,c(8,9,11)]
-
+# rmc.SPb.20200418_202005__.df
