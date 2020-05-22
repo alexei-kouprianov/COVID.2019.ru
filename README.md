@@ -2,6 +2,10 @@
 
 This repo was created to keep records of the COVID-2019 epidemics in Russia. The dataset is based on the official reports of confimed cases. This means that the data lag behind the spread of the virus. See also a magnificent project by [Johns Hopkins Univ.](https://github.com/CSSEGISandData/COVID-19)
 
+Other resources on Russia:
+
+* [MediaZona at GitHub](https://github.com/mediazona/data-corona-Russia)
+
 All images originally published in this repository are licensed under cc-by-4.0
 
 Fitting and prognostic scripts ceased to work properly towards the end of April 2020, now they are fixed and the images are kept being updated.
