@@ -10,6 +10,7 @@ source("covid.2019.ru.data_transformations.r")
 render("../Rmd/daily.report.Rmd")
 source("covid.2019.ru.plots.r")
 source("covid.2019.ru.growth.models.r")
+source("covid.2019.world.JHU.r")
 
 ################################################################
 # Previewing some results (optional)

@@ -242,7 +242,7 @@ names(w.recovered.ls) <- gsub(" ", "_", levels(w.recovered$Country.Region))
 # Creating directories for countries plots;
 
 dir.create("../plots/world/")
-dir.create("../plots/world/natural/")
+dir.create("../plots/world/linear/")
 dir.create("../plots/world/ylog10/")
 
 # Excluding Australia, Canada, China, Denmark, France, Netherlands, United Kingdom (they are represented with regions and territories as data.frames);
@@ -253,9 +253,9 @@ countries <- c(1:8,10:32,34:36,38:47,49:62,64:122,124:177,179:length(levels(w.co
 
 for(j in countries){
 
-# Y-natural plots;
+# Y-linear plots;
 
-png(paste("../plots/world/natural/COVID-19.TARD.", names(w.confirmed.ls)[j], ".png", sep=""), height=750, width=1000, res=120, pointsize=10)
+png(paste("../plots/world/linear/COVID-19.TARD.", names(w.confirmed.ls)[j], ".png", sep=""), height=750, width=1000, res=120, pointsize=10)
 
 plot(w.confirmed.ls[[j]], 
 type="l", col="darkred", lwd=2, axes=FALSE,
@@ -284,6 +284,13 @@ lines(w.confirmed.ls[[j]]-(w.recovered.ls[[j]]+w.deaths.ls[[j]]), col=2, lwd=2)
 
 axis(1)
 axis(2)
+
+legend("topleft",
+lty=1,
+lwd=2,
+col=c("darkred","red","green","black"),
+legend=c("Confirmed (vertical bars = new)","Active","Recovered","Deaths"),
+bty="n")
 
 dev.off()
 
@@ -320,6 +327,13 @@ lines(log10(w.confirmed.ls[[j]]-(w.recovered.ls[[j]]+w.deaths.ls[[j]])), col=2, 
 axis(1)
 axis(2, at=log10(1*10^(0:6)), labels=c(1,10,100,"1K","10K","100K","1M"))
 axis(2, at=log10(c(1:9, seq(10,100,10), seq(200,1000,100), seq(2000,10000,1000), seq(20000,100000,10000), seq(200000,1000000,100000), seq(2000000,10000000,1000000))), labels=FALSE)
+
+legend("topleft",
+lty=1,
+lwd=2,
+col=c("darkred","red","green","black"),
+legend=c("Confirmed (vertical bars = new)","Active","Recovered","Deaths"),
+bty="n")
 
 dev.off()
 
