@@ -607,15 +607,19 @@ curve(log10(50*2^((x-1)/4)), col=4, lty=3, lwd=.5, add=TRUE)
 curve(log10(50*2^((x-1)/5)), col=4, lty=3, lwd=.5, add=TRUE)
 curve(log10(50*2^((x-1)/7)), col=4, lty=3, lwd=.5, add=TRUE)
 curve(log10(50*2^((x-1)/10)), col=4, lty=3, lwd=.5, add=TRUE)
+curve(log10(50*2^((x-1)/14)), col=4, lty=3, lwd=.5, add=TRUE)
+curve(log10(50*2^((x-1)/28)), col=4, lty=3, lwd=.5, add=TRUE)
 
 x.right <- nrow(covid.2019.ru.i.dyn.trunc[[Moscow.pos]])-1
 
-text(17, log10(50*2^((17-1)/2))+.01, col=4, labels="2 days", cex=.75, srt=60, pos=2)
-text(26, log10(50*2^((26-1)/3))+.01, col=4, labels="3 days", cex=.75, srt=50, pos=2)
-text(x.right, log10(50*2^((x.right-1)/4))+.01, col=4, labels="4 days", cex=.75, srt=43, pos=2)
-text(x.right, log10(50*2^((x.right-1)/5))+.01, col=4, labels="5 days", cex=.75, srt=33, pos=2)
-text(x.right, log10(50*2^((x.right-1)/7))+.01, col=4, labels="7 days", cex=.75, srt=25, pos=2)
-text(x.right, log10(50*2^((x.right-1)/10))+.01, col=4, labels="10 days", cex=.75, srt=19, pos=2)
+text(20, log10(50*2^((20-1)/2))+.01, col=4, labels="2 days", cex=.75, srt=73, pos=2)
+text(30, log10(50*2^((30-1)/3))+.01, col=4, labels="3 days", cex=.75, srt=66, pos=2)
+text(45, log10(45*2^((45-1)/4))+.01, col=4, labels="4 days", cex=.75, srt=54, pos=2)
+text(60, log10(60*2^((60-1)/5))+.01, col=4, labels="5 days", cex=.75, srt=48, pos=2)
+text(x.right, log10(50*2^((x.right-1)/7))+.01, col=4, labels="7 days", cex=.75, srt=34, pos=2)
+text(x.right, log10(50*2^((x.right-1)/10))+.01, col=4, labels="10 days", cex=.75, srt=26, pos=2)
+text(x.right, log10(50*2^((x.right-1)/14))+.01, col=4, labels="14 days", cex=.75, srt=24, pos=2)
+text(x.right, log10(50*2^((x.right-1)/28))+.01, col=4, labels="28 days", cex=.75, srt=11, pos=2)
 
 shadowtext(
 x=length(covid.2019.ru.i.dyn.trunc[[Moscow.pos]]$CS.i),
@@ -673,8 +677,8 @@ pos=4, cex=.75
 axis(1)
 axis(1, at=1:length(covid.2019.ru.i.dyn.trunc[[Moscow.pos]]$CS.i), labels=FALSE, tcl=-.25)
 
-axis(2, at=log10(c(100,1000,10000)), labels=c(100,1000,10000))
-axis(2, at=log10(c(seq(50,100,10), seq(200,1000,100), seq(2000,10000,1000), seq(20000,100000,10000))), labels=FALSE)
+axis(2, at=log10(c(100,1000,10000,100000)), labels=c(100,"1K","10K","100K"))
+axis(2, at=log10(c(seq(50,100,10), seq(200,1000,100), seq(2000,10000,1000), seq(20000,100000,10000), seq(200000,1000000,100000))), labels=FALSE)
 
 legend(
 "topleft",
