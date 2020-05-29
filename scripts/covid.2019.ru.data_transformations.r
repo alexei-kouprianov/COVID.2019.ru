@@ -401,9 +401,9 @@ covid.2019.ru.i$NUMBER >= 100 &
 covid.2019.ru.i$LOCUS.0 != "Moscow")[,c(5,6)]
 
 dt.worst <- data.frame(
-subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log < 7)$LOCUS.dm,
-round(subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log < 7)$PER.100K, 2),
-round(subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log < 7)$CS.i.diff.7.2log, 2)
+subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log < 10)$LOCUS.dm,
+round(subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log < 10)$PER.100K, 2),
+round(subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log < 10)$CS.i.diff.7.2log, 2)
 )
 colnames(dt.worst) <- c("LOCUS","K100","Dt")
 dt.worst <- dt.worst[order(dt.worst$Dt),]
