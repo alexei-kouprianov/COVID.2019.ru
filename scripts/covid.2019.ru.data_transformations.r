@@ -415,3 +415,5 @@ round(subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log >= 
 )
 colnames(dt.best) <- c("LOCUS","K100","Dt")
 dt.best <- dt.best[order(-dt.best$Dt),]
+
+rm(covid.2019.ru.da)
