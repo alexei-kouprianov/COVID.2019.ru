@@ -877,7 +877,7 @@ dev.off()
 
 # Density maps
 
-# ru.shape <- readOGR("../misc/ESRI.shapefile")
+ru.shape <- readOGR("../misc/ESRI.shapefile")
 
 png("../plots/COVID.2019.map.density.regions.per_100K.png", height=750, width=1000, res=120, pointsize=10)
 par(fg="white", bg=rgb(0,.1,.2,1))
@@ -966,4 +966,4 @@ dev.off()
 #
 # dev.off()
 
-# rm(ru.shape)
+rm(ru.shape)

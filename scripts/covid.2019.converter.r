@@ -2,6 +2,8 @@ library(rjson)
 
 daily.data.raw <- fromJSON(file="../downloads/stopcoronavirus.storage.moment.20200429.json")
 daily.timestamp <- read.table("../downloads/stopcoronavirus.timestamp.moment.20200429.txt")
+loci <- read.table("../misc/loci.txt", h=TRUE, sep="\t")
+covid.2019.ru <- read.table("../data/momentary.txt", h=TRUE, sep="\t")
 
 title <- NULL
 code <- NULL
@@ -69,8 +71,23 @@ c(daily.data.raw.df.s$sick_incr, daily.data.raw.df.s$healed_incr, daily.data.raw
 
 colnames(increment.df) <- c("TIMESTAMP", "STATUS", "REGION", "NUMBER")
 
-increment.df.0 <- subset(increment.df, increment.df$NUMBER > 0)
+increment.df.0 <- increment.df[order(increment.df$REGION, increment.df$STATUS),]
+increment.df.0 <- cbind.data.frame(increment.df.0, loci)
+increment.df.0 <- increment.df.0[,c(1,2,5,6,3,4)]
+increment.df.0 <- subset(increment.df.0, increment.df.0$NUMBER > 0)
+increment.df.0 <- increment.df.0[order(increment.df.0$STATUS, -increment.df.0$NUMBER),]
 
+colnames(increment.df.0) <- c("TIMESTAMP", "EVENT", "LOCUS.0", "LOCUS", "LOCUS.ORIG", "NUMBER")
+
+increment.df.0$UID <- NA
+increment.df.0$ORIGIN <- NA
+increment.df.0$SRC <- "https://стопкоронавирус.рф/ robot-trimmed and post-processed"
+increment.df.0$COMMENT <- NA
+increment.df.0$DB.OPERATOR <- "Alexei Kouprianov"
+
+covid.2019.ru <- rbind.data.frame(covid.2019.ru, increment.df.0)
+
+write.table(covid.2019.ru, "../data/momentary.txt", row.names=FALSE, sep="\t")
 write.table(increment.df, "../downloads/increment.txt", row.names=FALSE, sep="\t")
 write.table(increment.df.0, "../downloads/increment.0.txt", row.names=FALSE, sep="\t")
 

@@ -27,7 +27,10 @@ covid.2019.ru.da <- read.table("../data/momentary.da.txt", h=TRUE, sep="\t")
 covid.2019.breaks <- read.table("../misc/breaks.txt", h=TRUE, sep="\t")
 covid.2019.coord <- read.table("../misc/coord.txt", h=TRUE, sep="\t")
 covid.2019.population <- read.table("../misc/population.txt", h=TRUE, sep="\t")
+
 ru.shape <- readOGR("../misc/ESRI.shapefile")
+ru.shape.LOCUS <- ru.shape$LOCUS
+rm(ru.shape)
 
 # cc.logo <- readPNG("../misc/240px-Cc.logo.circle.svg.png")
 # cc_by.logo <- readPNG("../misc/Cc-by_new.svg.png")

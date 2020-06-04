@@ -16,9 +16,18 @@ While working on this project I had to change data gathering procedures several 
 
 As for now, the procedure of data extraction works as follows:
 
+Go to the COVID.2019.ru/scripts/ folder and run from the command line:
+
+    perl stopcoronavirus.extractor.20200429.pl
+    Rscript covid.2019.converter.r 
+    perl covid.2019.disaggregator.pl
+    Rscript covid.2019.ru.main.r 
+
+An outdated procedure (for scripts published before 2020-06-04):
+
 * Run `scripts/stopcoronavirus.extractor.20200429.pl` (results in `downloads/stopcoronavirus.storage.cumulative.20200429.txt`, `downloads/stopcoronavirus.storage.moment.20200429.json` and `downloads/stopcoronavirus.timestamp.moment.20200429.txt`
 * Run `covid.2019.converter.r` (results in `downloads/increment.txt` and `downloads/increment.0.txt`)
-* Pick `downloads/increment.txt` and feed it into an electronic table (to ajust for the English language region codes).
+* Pick `downloads/increment.txt` and feed it into an electronic table (to adjust for the English language region codes).
 * Copy the resulting table to `data/momentary.txt`
 * Run `scripts/covid.2019.disaggregator.pl` (results in `data/momentary.da.txt`).
 

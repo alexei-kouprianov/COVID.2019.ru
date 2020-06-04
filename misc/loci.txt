@@ -1,0 +1,256 @@
+LOCUS.0	LOCUS
+Altay krai	Altay krai
+Altay krai	Altay krai
+Altay krai	Altay krai
+Amur region	Amur region
+Amur region	Amur region
+Amur region	Amur region
+Arkhangelsk	Arkhangelsk
+Arkhangelsk	Arkhangelsk
+Arkhangelsk	Arkhangelsk
+Astrakhan	Astrakhan
+Astrakhan	Astrakhan
+Astrakhan	Astrakhan
+Belgorod	Belgorod
+Belgorod	Belgorod
+Belgorod	Belgorod
+Briansk	Briansk
+Briansk	Briansk
+Briansk	Briansk
+Vladimir	Vladimir
+Vladimir	Vladimir
+Vladimir	Vladimir
+Volgograd	Volgograd
+Volgograd	Volgograd
+Volgograd	Volgograd
+Vologda	Vologda
+Vologda	Vologda
+Vologda	Vologda
+Voronezh	Voronezh
+Voronezh	Voronezh
+Voronezh	Voronezh
+Birobidzhan	Birobidzhan
+Birobidzhan	Birobidzhan
+Birobidzhan	Birobidzhan
+Chita	Chita
+Chita	Chita
+Chita	Chita
+Ivanovo	Ivanovo
+Ivanovo	Ivanovo
+Ivanovo	Ivanovo
+Irkutsk	Irkutsk
+Irkutsk	Irkutsk
+Irkutsk	Irkutsk
+Nalchik	Nalchik
+Nalchik	Nalchik
+Nalchik	Nalchik
+Kaliningrad	Kaliningrad
+Kaliningrad	Kaliningrad
+Kaliningrad	Kaliningrad
+Kaluga	Kaluga
+Kaluga	Kaluga
+Kaluga	Kaluga
+Kamchatka	Kamchatka
+Kamchatka	Kamchatka
+Kamchatka	Kamchatka
+Karachay-Cherkessia	Karachay-Cherkessia
+Karachay-Cherkessia	Karachay-Cherkessia
+Karachay-Cherkessia	Karachay-Cherkessia
+Kemerovo	Kemerovo
+Kemerovo	Kemerovo
+Kemerovo	Kemerovo
+Kirov	Kirov
+Kirov	Kirov
+Kirov	Kirov
+Kostroma	Kostroma
+Kostroma	Kostroma
+Kostroma	Kostroma
+Krasnodar	Krasnodar
+Krasnodar	Krasnodar
+Krasnodar	Krasnodar
+Krasnoyarsk	Krasnoyarsk
+Krasnoyarsk	Krasnoyarsk
+Krasnoyarsk	Krasnoyarsk
+Kurgan	Kurgan
+Kurgan	Kurgan
+Kurgan	Kurgan
+Kursk	Kursk
+Kursk	Kursk
+Kursk	Kursk
+St. Petersburg	Leningrad region
+St. Petersburg	Leningrad region
+St. Petersburg	Leningrad region
+Lipetsk	Lipetsk
+Lipetsk	Lipetsk
+Lipetsk	Lipetsk
+Magadan	Magadan
+Magadan	Magadan
+Magadan	Magadan
+Moscow	Moscow
+Moscow	Moscow
+Moscow	Moscow
+Moscow	Moscow region
+Moscow	Moscow region
+Moscow	Moscow region
+Murmansk	Murmansk
+Murmansk	Murmansk
+Murmansk	Murmansk
+Nenets AO	Nenets AO
+Nenets AO	Nenets AO
+Nenets AO	Nenets AO
+Nizhnii Novgorod	Nizhnii Novgorod
+Nizhnii Novgorod	Nizhnii Novgorod
+Nizhnii Novgorod	Nizhnii Novgorod
+Novgorod	Novgorod
+Novgorod	Novgorod
+Novgorod	Novgorod
+Novosibirsk	Novosibirsk
+Novosibirsk	Novosibirsk
+Novosibirsk	Novosibirsk
+Omsk	Omsk
+Omsk	Omsk
+Omsk	Omsk
+Orenburg	Orenburg
+Orenburg	Orenburg
+Orenburg	Orenburg
+Orel	Orel
+Orel	Orel
+Orel	Orel
+Penza	Penza
+Penza	Penza
+Penza	Penza
+Perm krai	Perm krai
+Perm krai	Perm krai
+Perm krai	Perm krai
+Vladivostok	Vladivostok
+Vladivostok	Vladivostok
+Vladivostok	Vladivostok
+Pskov	Pskov
+Pskov	Pskov
+Pskov	Pskov
+Adygea	Adygea
+Adygea	Adygea
+Adygea	Adygea
+Altay rep.	Altay rep.
+Altay rep.	Altay rep.
+Altay rep.	Altay rep.
+Bashkortostan	Bashkortostan
+Bashkortostan	Bashkortostan
+Bashkortostan	Bashkortostan
+Buryatia	Buryatia
+Buryatia	Buryatia
+Buryatia	Buryatia
+Dagestan	Dagestan
+Dagestan	Dagestan
+Dagestan	Dagestan
+Ingushetia	Ingushetia
+Ingushetia	Ingushetia
+Ingushetia	Ingushetia
+Kalmykia	Kalmykia
+Kalmykia	Kalmykia
+Kalmykia	Kalmykia
+Karelia	Karelia
+Karelia	Karelia
+Karelia	Karelia
+Komi	Komi
+Komi	Komi
+Komi	Komi
+Crimea [annex.]	Crimea [annex.]
+Crimea [annex.]	Crimea [annex.]
+Crimea [annex.]	Crimea [annex.]
+Mari El	Mari El
+Mari El	Mari El
+Mari El	Mari El
+Mordovia	Mordovia
+Mordovia	Mordovia
+Mordovia	Mordovia
+Yakutsk	Yakutsk
+Yakutsk	Yakutsk
+Yakutsk	Yakutsk
+N. Ossetia-Alania	N. Ossetia-Alania
+N. Ossetia-Alania	N. Ossetia-Alania
+N. Ossetia-Alania	N. Ossetia-Alania
+Kazan	Kazan
+Kazan	Kazan
+Kazan	Kazan
+Tyva	Tyva
+Tyva	Tyva
+Tyva	Tyva
+Khakassia	Khakassia
+Khakassia	Khakassia
+Khakassia	Khakassia
+Chuvashia	Chuvashia
+Chuvashia	Chuvashia
+Chuvashia	Chuvashia
+Rostov-on-Don	Rostov-on-Don
+Rostov-on-Don	Rostov-on-Don
+Rostov-on-Don	Rostov-on-Don
+Ryazan	Ryazan
+Ryazan	Ryazan
+Ryazan	Ryazan
+Samara	Samara
+Samara	Samara
+Samara	Samara
+St. Petersburg	St. Petersburg
+St. Petersburg	St. Petersburg
+St. Petersburg	St. Petersburg
+Saratov	Saratov
+Saratov	Saratov
+Saratov	Saratov
+Sakhalin	Sakhalin
+Sakhalin	Sakhalin
+Sakhalin	Sakhalin
+Ekaterinburg	Ekaterinburg
+Ekaterinburg	Ekaterinburg
+Ekaterinburg	Ekaterinburg
+Sevastopol	Sevastopol
+Sevastopol	Sevastopol
+Sevastopol	Sevastopol
+Smolensk	Smolensk
+Smolensk	Smolensk
+Smolensk	Smolensk
+Stavropol	Stavropol
+Stavropol	Stavropol
+Stavropol	Stavropol
+Tambov	Tambov
+Tambov	Tambov
+Tambov	Tambov
+Tver	Tver
+Tver	Tver
+Tver	Tver
+Tomsk	Tomsk
+Tomsk	Tomsk
+Tomsk	Tomsk
+Tula	Tula
+Tula	Tula
+Tula	Tula
+Tiumen	Tiumen
+Tiumen	Tiumen
+Tiumen	Tiumen
+Udmurtia	Udmurtia
+Udmurtia	Udmurtia
+Udmurtia	Udmurtia
+Ulianovsk	Ulianovsk
+Ulianovsk	Ulianovsk
+Ulianovsk	Ulianovsk
+Khabarovsk	Khabarovsk
+Khabarovsk	Khabarovsk
+Khabarovsk	Khabarovsk
+Khanty-Mansiisk	Khanty-Mansiisk
+Khanty-Mansiisk	Khanty-Mansiisk
+Khanty-Mansiisk	Khanty-Mansiisk
+Cheliabinsk	Cheliabinsk
+Cheliabinsk	Cheliabinsk
+Cheliabinsk	Cheliabinsk
+Chechen rep.	Chechen rep.
+Chechen rep.	Chechen rep.
+Chechen rep.	Chechen rep.
+Chukotka	Chukotka
+Chukotka	Chukotka
+Chukotka	Chukotka
+Yamalo-Nenets AO	Yamalo-Nenets AO
+Yamalo-Nenets AO	Yamalo-Nenets AO
+Yamalo-Nenets AO	Yamalo-Nenets AO
+Yaroslavl	Yaroslavl
+Yaroslavl	Yaroslavl
+Yaroslavl	Yaroslavl

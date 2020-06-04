@@ -1,206 +1,202 @@
-"TIMESTAMP"	"STATUS"	"REGION"	"NUMBER"
-"2020-06-03 10:35:00"	"detected"	"Алтайский край"	81
-"2020-06-03 10:35:00"	"detected"	"Амурская область"	20
-"2020-06-03 10:35:00"	"detected"	"Архангельская область"	239
-"2020-06-03 10:35:00"	"detected"	"Астраханская область"	67
-"2020-06-03 10:35:00"	"detected"	"Белгородская область"	77
-"2020-06-03 10:35:00"	"detected"	"Брянская область"	97
-"2020-06-03 10:35:00"	"detected"	"Владимирская область"	56
-"2020-06-03 10:35:00"	"detected"	"Волгоградская область"	98
-"2020-06-03 10:35:00"	"detected"	"Вологодская область"	19
-"2020-06-03 10:35:00"	"detected"	"Воронежская область"	127
-"2020-06-03 10:35:00"	"detected"	"Еврейская автономная область"	3
-"2020-06-03 10:35:00"	"detected"	"Забайкальский край"	53
-"2020-06-03 10:35:00"	"detected"	"Ивановская область"	65
-"2020-06-03 10:35:00"	"detected"	"Иркутская область"	120
-"2020-06-03 10:35:00"	"detected"	"Кабардино-Балкарская Республика"	74
-"2020-06-03 10:35:00"	"detected"	"Калининградская область"	35
-"2020-06-03 10:35:00"	"detected"	"Калужская область"	87
-"2020-06-03 10:35:00"	"detected"	"Камчатский край"	33
-"2020-06-03 10:35:00"	"detected"	"Карачаево-Черкесская Республика"	72
-"2020-06-03 10:35:00"	"detected"	"Кемеровская область"	27
-"2020-06-03 10:35:00"	"detected"	"Кировская область"	76
-"2020-06-03 10:35:00"	"detected"	"Костромская область"	21
-"2020-06-03 10:35:00"	"detected"	"Краснодарский край"	81
-"2020-06-03 10:35:00"	"detected"	"Красноярский край"	124
-"2020-06-03 10:35:00"	"detected"	"Курганская область"	3
-"2020-06-03 10:35:00"	"detected"	"Курская область"	76
-"2020-06-03 10:35:00"	"detected"	"Ленинградская область"	54
-"2020-06-03 10:35:00"	"detected"	"Липецкая область"	65
-"2020-06-03 10:35:00"	"detected"	"Магаданская область"	12
-"2020-06-03 10:35:00"	"detected"	"Москва"	1842
-"2020-06-03 10:35:00"	"detected"	"Московская область"	736
-"2020-06-03 10:35:00"	"detected"	"Мурманская область"	46
-"2020-06-03 10:35:00"	"detected"	"Нижегородская область"	347
-"2020-06-03 10:35:00"	"detected"	"Новгородская область"	63
-"2020-06-03 10:35:00"	"detected"	"Новосибирская область"	102
-"2020-06-03 10:35:00"	"detected"	"Омская область"	45
-"2020-06-03 10:35:00"	"detected"	"Оренбургская область"	53
-"2020-06-03 10:35:00"	"detected"	"Орловская область"	71
-"2020-06-03 10:35:00"	"detected"	"Пензенская область"	83
-"2020-06-03 10:35:00"	"detected"	"Пермский край"	72
-"2020-06-03 10:35:00"	"detected"	"Приморский край"	52
-"2020-06-03 10:35:00"	"detected"	"Псковская область"	44
-"2020-06-03 10:35:00"	"detected"	"Республика Адыгея"	14
-"2020-06-03 10:35:00"	"detected"	"Республика Алтай"	5
-"2020-06-03 10:35:00"	"detected"	"Республика Башкортостан"	92
-"2020-06-03 10:35:00"	"detected"	"Республика Бурятия"	24
-"2020-06-03 10:35:00"	"detected"	"Республика Дагестан"	113
-"2020-06-03 10:35:00"	"detected"	"Республика Ингушетия"	33
-"2020-06-03 10:35:00"	"detected"	"Республика Калмыкия"	23
-"2020-06-03 10:35:00"	"detected"	"Республика Карелия"	43
-"2020-06-03 10:35:00"	"detected"	"Республика Коми"	33
-"2020-06-03 10:35:00"	"detected"	"Республика Крым"	5
-"2020-06-03 10:35:00"	"detected"	"Республика Марий Эл"	40
-"2020-06-03 10:35:00"	"detected"	"Республика Мордовия"	42
-"2020-06-03 10:35:00"	"detected"	"Республика Саха (Якутия)"	98
-"2020-06-03 10:35:00"	"detected"	"Республика Северная Осетия — Алания"	49
-"2020-06-03 10:35:00"	"detected"	"Республика Татарстан"	54
-"2020-06-03 10:35:00"	"detected"	"Республика Тыва"	60
-"2020-06-03 10:35:00"	"detected"	"Республика Хакасия"	32
-"2020-06-03 10:35:00"	"detected"	"Республика Чувашия"	87
-"2020-06-03 10:35:00"	"detected"	"Ростовская область"	178
-"2020-06-03 10:35:00"	"detected"	"Рязанская область"	75
-"2020-06-03 10:35:00"	"detected"	"Самарская область"	46
-"2020-06-03 10:35:00"	"detected"	"Санкт-Петербург"	380
-"2020-06-03 10:35:00"	"detected"	"Саратовская область"	94
-"2020-06-03 10:35:00"	"detected"	"Сахалинская область"	10
-"2020-06-03 10:35:00"	"detected"	"Свердловская область"	357
-"2020-06-03 10:35:00"	"detected"	"Севастополь"	2
-"2020-06-03 10:35:00"	"detected"	"Смоленская область"	127
-"2020-06-03 10:35:00"	"detected"	"Ставропольский край"	80
-"2020-06-03 10:35:00"	"detected"	"Тамбовская область"	65
-"2020-06-03 10:35:00"	"detected"	"Тверская область"	36
-"2020-06-03 10:35:00"	"detected"	"Томская область"	26
-"2020-06-03 10:35:00"	"detected"	"Тульская область"	109
-"2020-06-03 10:35:00"	"detected"	"Тюменская область"	47
-"2020-06-03 10:35:00"	"detected"	"Удмуртская Республика"	53
-"2020-06-03 10:35:00"	"detected"	"Ульяновская область"	98
-"2020-06-03 10:35:00"	"detected"	"Хабаровский край"	64
-"2020-06-03 10:35:00"	"detected"	"Ханты-Мансийский АО"	111
-"2020-06-03 10:35:00"	"detected"	"Челябинская область "	108
-"2020-06-03 10:35:00"	"detected"	"Чеченская Республика"	14
-"2020-06-03 10:35:00"	"detected"	"Чукотский автономный округ"	6
-"2020-06-03 10:35:00"	"detected"	"Ямало-Ненецкий автономный округ"	13
-"2020-06-03 10:35:00"	"detected"	"Ярославская область"	72
-"2020-06-03 10:35:00"	"recovered"	"Алтайский край"	33
-"2020-06-03 10:35:00"	"recovered"	"Амурская область"	10
-"2020-06-03 10:35:00"	"recovered"	"Архангельская область"	39
-"2020-06-03 10:35:00"	"recovered"	"Астраханская область"	38
-"2020-06-03 10:35:00"	"recovered"	"Белгородская область"	83
-"2020-06-03 10:35:00"	"recovered"	"Брянская область"	100
-"2020-06-03 10:35:00"	"recovered"	"Владимирская область"	102
-"2020-06-03 10:35:00"	"recovered"	"Волгоградская область"	68
-"2020-06-03 10:35:00"	"recovered"	"Вологодская область"	59
-"2020-06-03 10:35:00"	"recovered"	"Воронежская область"	68
-"2020-06-03 10:35:00"	"recovered"	"Еврейская автономная область"	18
-"2020-06-03 10:35:00"	"recovered"	"Забайкальский край"	57
-"2020-06-03 10:35:00"	"recovered"	"Ивановская область"	64
-"2020-06-03 10:35:00"	"recovered"	"Иркутская область"	53
-"2020-06-03 10:35:00"	"recovered"	"Кабардино-Балкарская Республика"	90
-"2020-06-03 10:35:00"	"recovered"	"Калининградская область"	28
-"2020-06-03 10:35:00"	"recovered"	"Калужская область"	118
-"2020-06-03 10:35:00"	"recovered"	"Камчатский край"	17
-"2020-06-03 10:35:00"	"recovered"	"Карачаево-Черкесская Республика"	8
-"2020-06-03 10:35:00"	"recovered"	"Кемеровская область"	2
-"2020-06-03 10:35:00"	"recovered"	"Кировская область"	32
-"2020-06-03 10:35:00"	"recovered"	"Костромская область"	5
-"2020-06-03 10:35:00"	"recovered"	"Краснодарский край"	75
-"2020-06-03 10:35:00"	"recovered"	"Красноярский край"	41
-"2020-06-03 10:35:00"	"recovered"	"Курганская область"	10
-"2020-06-03 10:35:00"	"recovered"	"Курская область"	61
-"2020-06-03 10:35:00"	"recovered"	"Ленинградская область"	77
-"2020-06-03 10:35:00"	"recovered"	"Липецкая область"	47
-"2020-06-03 10:35:00"	"recovered"	"Магаданская область"	2
-"2020-06-03 10:35:00"	"recovered"	"Москва"	3385
-"2020-06-03 10:35:00"	"recovered"	"Московская область"	502
-"2020-06-03 10:35:00"	"recovered"	"Мурманская область"	183
-"2020-06-03 10:35:00"	"recovered"	"Нижегородская область"	272
-"2020-06-03 10:35:00"	"recovered"	"Новгородская область"	25
-"2020-06-03 10:35:00"	"recovered"	"Новосибирская область"	21
-"2020-06-03 10:35:00"	"recovered"	"Омская область"	51
-"2020-06-03 10:35:00"	"recovered"	"Оренбургская область"	45
-"2020-06-03 10:35:00"	"recovered"	"Орловская область"	43
-"2020-06-03 10:35:00"	"recovered"	"Пензенская область"	82
-"2020-06-03 10:35:00"	"recovered"	"Пермский край"	74
-"2020-06-03 10:35:00"	"recovered"	"Приморский край"	63
-"2020-06-03 10:35:00"	"recovered"	"Псковская область"	9
-"2020-06-03 10:35:00"	"recovered"	"Республика Адыгея"	52
-"2020-06-03 10:35:00"	"recovered"	"Республика Алтай"	4
-"2020-06-03 10:35:00"	"recovered"	"Республика Башкортостан"	54
-"2020-06-03 10:35:00"	"recovered"	"Республика Бурятия"	43
-"2020-06-03 10:35:00"	"recovered"	"Республика Дагестан"	20
-"2020-06-03 10:35:00"	"recovered"	"Республика Ингушетия"	60
-"2020-06-03 10:35:00"	"recovered"	"Республика Калмыкия"	38
-"2020-06-03 10:35:00"	"recovered"	"Республика Карелия"	6
-"2020-06-03 10:35:00"	"recovered"	"Республика Коми"	53
-"2020-06-03 10:35:00"	"recovered"	"Республика Крым"	12
-"2020-06-03 10:35:00"	"recovered"	"Республика Марий Эл"	68
-"2020-06-03 10:35:00"	"recovered"	"Республика Мордовия"	56
-"2020-06-03 10:35:00"	"recovered"	"Республика Саха (Якутия)"	72
-"2020-06-03 10:35:00"	"recovered"	"Республика Северная Осетия — Алания"	161
-"2020-06-03 10:35:00"	"recovered"	"Республика Татарстан"	177
-"2020-06-03 10:35:00"	"recovered"	"Республика Тыва"	53
-"2020-06-03 10:35:00"	"recovered"	"Республика Хакасия"	24
-"2020-06-03 10:35:00"	"recovered"	"Республика Чувашия"	50
-"2020-06-03 10:35:00"	"recovered"	"Ростовская область"	116
-"2020-06-03 10:35:00"	"recovered"	"Рязанская область"	94
-"2020-06-03 10:35:00"	"recovered"	"Самарская область"	66
-"2020-06-03 10:35:00"	"recovered"	"Санкт-Петербург"	323
-"2020-06-03 10:35:00"	"recovered"	"Саратовская область"	82
-"2020-06-03 10:35:00"	"recovered"	"Сахалинская область"	8
-"2020-06-03 10:35:00"	"recovered"	"Свердловская область"	170
-"2020-06-03 10:35:00"	"recovered"	"Севастополь"	3
-"2020-06-03 10:35:00"	"recovered"	"Смоленская область"	59
-"2020-06-03 10:35:00"	"recovered"	"Ставропольский край"	91
-"2020-06-03 10:35:00"	"recovered"	"Тамбовская область"	51
-"2020-06-03 10:35:00"	"recovered"	"Тверская область"	82
-"2020-06-03 10:35:00"	"recovered"	"Томская область"	19
-"2020-06-03 10:35:00"	"recovered"	"Тульская область"	116
-"2020-06-03 10:35:00"	"recovered"	"Тюменская область"	53
-"2020-06-03 10:35:00"	"recovered"	"Удмуртская Республика"	13
-"2020-06-03 10:35:00"	"recovered"	"Ульяновская область"	89
-"2020-06-03 10:35:00"	"recovered"	"Хабаровский край"	86
-"2020-06-03 10:35:00"	"recovered"	"Ханты-Мансийский АО"	66
-"2020-06-03 10:35:00"	"recovered"	"Челябинская область "	58
-"2020-06-03 10:35:00"	"recovered"	"Чеченская Республика"	47
-"2020-06-03 10:35:00"	"recovered"	"Чукотский автономный округ"	3
-"2020-06-03 10:35:00"	"recovered"	"Ямало-Ненецкий автономный округ"	44
-"2020-06-03 10:35:00"	"recovered"	"Ярославская область"	70
-"2020-06-03 10:35:00"	"deceased"	"Белгородская область"	2
-"2020-06-03 10:35:00"	"deceased"	"Владимирская область"	3
-"2020-06-03 10:35:00"	"deceased"	"Вологодская область"	4
-"2020-06-03 10:35:00"	"deceased"	"Еврейская автономная область"	1
-"2020-06-03 10:35:00"	"deceased"	"Забайкальский край"	1
-"2020-06-03 10:35:00"	"deceased"	"Иркутская область"	1
-"2020-06-03 10:35:00"	"deceased"	"Кабардино-Балкарская Республика"	2
-"2020-06-03 10:35:00"	"deceased"	"Калужская область"	2
-"2020-06-03 10:35:00"	"deceased"	"Краснодарский край"	2
-"2020-06-03 10:35:00"	"deceased"	"Красноярский край"	3
-"2020-06-03 10:35:00"	"deceased"	"Липецкая область"	1
-"2020-06-03 10:35:00"	"deceased"	"Москва"	61
-"2020-06-03 10:35:00"	"deceased"	"Московская область"	20
-"2020-06-03 10:35:00"	"deceased"	"Нижегородская область"	5
-"2020-06-03 10:35:00"	"deceased"	"Оренбургская область"	1
-"2020-06-03 10:35:00"	"deceased"	"Орловская область"	1
-"2020-06-03 10:35:00"	"deceased"	"Пензенская область"	2
-"2020-06-03 10:35:00"	"deceased"	"Республика Дагестан"	16
-"2020-06-03 10:35:00"	"deceased"	"Республика Ингушетия"	6
-"2020-06-03 10:35:00"	"deceased"	"Республика Калмыкия"	1
-"2020-06-03 10:35:00"	"deceased"	"Республика Карелия"	1
-"2020-06-03 10:35:00"	"deceased"	"Республика Коми"	1
-"2020-06-03 10:35:00"	"deceased"	"Республика Крым"	1
-"2020-06-03 10:35:00"	"deceased"	"Республика Мордовия"	1
-"2020-06-03 10:35:00"	"deceased"	"Республика Саха (Якутия)"	1
-"2020-06-03 10:35:00"	"deceased"	"Республика Северная Осетия — Алания"	1
-"2020-06-03 10:35:00"	"deceased"	"Самарская область"	1
-"2020-06-03 10:35:00"	"deceased"	"Санкт-Петербург"	17
-"2020-06-03 10:35:00"	"deceased"	"Свердловская область"	2
-"2020-06-03 10:35:00"	"deceased"	"Ставропольский край"	3
-"2020-06-03 10:35:00"	"deceased"	"Тверская область"	5
-"2020-06-03 10:35:00"	"deceased"	"Тульская область"	3
-"2020-06-03 10:35:00"	"deceased"	"Ульяновская область"	2
-"2020-06-03 10:35:00"	"deceased"	"Хабаровский край"	1
-"2020-06-03 10:35:00"	"deceased"	"Челябинская область "	1
-"2020-06-03 10:35:00"	"deceased"	"Чеченская Республика"	1
-"2020-06-03 10:35:00"	"deceased"	"Ямало-Ненецкий автономный округ"	1
+"TIMESTAMP"	"EVENT"	"LOCUS.0"	"LOCUS"	"LOCUS.ORIG"	"NUMBER"	"UID"	"ORIGIN"	"SRC"	"COMMENT"	"DB.OPERATOR"
+"2020-06-04 10:35:00"	"deceased"	"Moscow"	"Moscow"	"Москва"	64	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"St. Petersburg"	"St. Petersburg"	"Санкт-Петербург"	24	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Moscow"	"Moscow region"	"Московская область"	19	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Nizhnii Novgorod"	"Nizhnii Novgorod"	"Нижегородская область"	6	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Perm krai"	"Perm krai"	"Пермский край"	4	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Tver"	"Tver"	"Тверская область"	4	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Krasnoyarsk"	"Krasnoyarsk"	"Красноярский край"	3	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Rostov-on-Don"	"Rostov-on-Don"	"Ростовская область"	3	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Stavropol"	"Stavropol"	"Ставропольский край"	3	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Chita"	"Chita"	"Забайкальский край"	2	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Ivanovo"	"Ivanovo"	"Ивановская область"	2	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Nalchik"	"Nalchik"	"Кабардино-Балкарская Республика"	2	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Karachay-Cherkessia"	"Karachay-Cherkessia"	"Карачаево-Черкесская Республика"	2	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Krasnodar"	"Krasnodar"	"Краснодарский край"	2	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Kursk"	"Kursk"	"Курская область"	2	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Novosibirsk"	"Novosibirsk"	"Новосибирская область"	2	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Penza"	"Penza"	"Пензенская область"	2	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Vladivostok"	"Vladivostok"	"Приморский край"	2	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Ingushetia"	"Ingushetia"	"Республика Ингушетия"	2	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Yakutsk"	"Yakutsk"	"Республика Саха (Якутия)"	2	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Ekaterinburg"	"Ekaterinburg"	"Свердловская область"	2	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Tula"	"Tula"	"Тульская область"	2	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Arkhangelsk"	"Arkhangelsk"	"Архангельская область"	1	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Volgograd"	"Volgograd"	"Волгоградская область"	1	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Irkutsk"	"Irkutsk"	"Иркутская область"	1	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Lipetsk"	"Lipetsk"	"Липецкая область"	1	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Orel"	"Orel"	"Орловская область"	1	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Crimea [annex.]"	"Crimea [annex.]"	"Республика Крым"	1	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Chuvashia"	"Chuvashia"	"Республика Чувашия"	1	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Ryazan"	"Ryazan"	"Рязанская область"	1	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Saratov"	"Saratov"	"Саратовская область"	1	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Tiumen"	"Tiumen"	"Тюменская область"	1	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Khabarovsk"	"Khabarovsk"	"Хабаровский край"	1	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Cheliabinsk"	"Cheliabinsk"	"Челябинская область "	1	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"deceased"	"Yaroslavl"	"Yaroslavl"	"Ярославская область"	1	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Moscow"	"Moscow"	"Москва"	1998	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Moscow"	"Moscow region"	"Московская область"	767	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"St. Petersburg"	"St. Petersburg"	"Санкт-Петербург"	375	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Nizhnii Novgorod"	"Nizhnii Novgorod"	"Нижегородская область"	319	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Ekaterinburg"	"Ekaterinburg"	"Свердловская область"	298	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Rostov-on-Don"	"Rostov-on-Don"	"Ростовская область"	184	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Smolensk"	"Smolensk"	"Смоленская область"	142	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Krasnoyarsk"	"Krasnoyarsk"	"Красноярский край"	141	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Khanty-Mansiisk"	"Khanty-Mansiisk"	"Ханты-Мансийский АО"	140	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Irkutsk"	"Irkutsk"	"Иркутская область"	138	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Arkhangelsk"	"Arkhangelsk"	"Архангельская область"	133	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Dagestan"	"Dagestan"	"Республика Дагестан"	122	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Ivanovo"	"Ivanovo"	"Ивановская область"	117	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Cheliabinsk"	"Cheliabinsk"	"Челябинская область "	113	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Pskov"	"Pskov"	"Псковская область"	112	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Tula"	"Tula"	"Тульская область"	110	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Volgograd"	"Volgograd"	"Волгоградская область"	109	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Bashkortostan"	"Bashkortostan"	"Республика Башкортостан"	107	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Voronezh"	"Voronezh"	"Воронежская область"	105	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Novosibirsk"	"Novosibirsk"	"Новосибирская область"	104	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Ulianovsk"	"Ulianovsk"	"Ульяновская область"	100	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Briansk"	"Briansk"	"Брянская область"	96	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Yakutsk"	"Yakutsk"	"Республика Саха (Якутия)"	94	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Saratov"	"Saratov"	"Саратовская область"	94	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Astrakhan"	"Astrakhan"	"Астраханская область"	93	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Kaluga"	"Kaluga"	"Калужская область"	91	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Stavropol"	"Stavropol"	"Ставропольский край"	86	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Orel"	"Orel"	"Орловская область"	85	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Penza"	"Penza"	"Пензенская область"	84	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Chuvashia"	"Chuvashia"	"Республика Чувашия"	83	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Krasnodar"	"Krasnodar"	"Краснодарский край"	80	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Karachay-Cherkessia"	"Karachay-Cherkessia"	"Карачаево-Черкесская Республика"	78	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Belgorod"	"Belgorod"	"Белгородская область"	76	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Tyva"	"Tyva"	"Республика Тыва"	76	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Nalchik"	"Nalchik"	"Кабардино-Балкарская Республика"	74	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Yaroslavl"	"Yaroslavl"	"Ярославская область"	74	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Kursk"	"Kursk"	"Курская область"	73	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Ryazan"	"Ryazan"	"Рязанская область"	73	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Tver"	"Tver"	"Тверская область"	73	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Altay krai"	"Altay krai"	"Алтайский край"	69	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Tambov"	"Tambov"	"Тамбовская область"	67	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Kirov"	"Kirov"	"Кировская область"	63	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Samara"	"Samara"	"Самарская область"	63	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Lipetsk"	"Lipetsk"	"Липецкая область"	62	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Khabarovsk"	"Khabarovsk"	"Хабаровский край"	60	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Omsk"	"Omsk"	"Омская область"	58	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Orenburg"	"Orenburg"	"Оренбургская область"	56	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Vladivostok"	"Vladivostok"	"Приморский край"	56	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Vladimir"	"Vladimir"	"Владимирская область"	55	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Yamalo-Nenets AO"	"Yamalo-Nenets AO"	"Ямало-Ненецкий автономный округ"	55	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Novgorod"	"Novgorod"	"Новгородская область"	53	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"St. Petersburg"	"Leningrad region"	"Ленинградская область"	52	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Udmurtia"	"Udmurtia"	"Удмуртская Республика"	52	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Perm krai"	"Perm krai"	"Пермский край"	51	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Kazan"	"Kazan"	"Республика Татарстан"	51	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Tiumen"	"Tiumen"	"Тюменская область"	49	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"N. Ossetia-Alania"	"N. Ossetia-Alania"	"Республика Северная Осетия — Алания"	47	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Buryatia"	"Buryatia"	"Республика Бурятия"	46	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Chita"	"Chita"	"Забайкальский край"	39	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Mari El"	"Mari El"	"Республика Марий Эл"	39	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Mordovia"	"Mordovia"	"Республика Мордовия"	39	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Kamchatka"	"Kamchatka"	"Камчатский край"	35	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Murmansk"	"Murmansk"	"Мурманская область"	33	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Adygea"	"Adygea"	"Республика Адыгея"	33	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Tomsk"	"Tomsk"	"Томская область"	32	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Ingushetia"	"Ingushetia"	"Республика Ингушетия"	31	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Komi"	"Komi"	"Республика Коми"	29	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Khakassia"	"Khakassia"	"Республика Хакасия"	25	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Karelia"	"Karelia"	"Республика Карелия"	24	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Kaliningrad"	"Kaliningrad"	"Калининградская область"	23	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Amur region"	"Amur region"	"Амурская область"	22	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Kemerovo"	"Kemerovo"	"Кемеровская область"	22	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Vologda"	"Vologda"	"Вологодская область"	20	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Kalmykia"	"Kalmykia"	"Республика Калмыкия"	19	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Kostroma"	"Kostroma"	"Костромская область"	17	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Altay rep."	"Altay rep."	"Республика Алтай"	16	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Chechen rep."	"Chechen rep."	"Чеченская Республика"	13	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Magadan"	"Magadan"	"Магаданская область"	11	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Crimea [annex.]"	"Crimea [annex.]"	"Республика Крым"	7	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Birobidzhan"	"Birobidzhan"	"Еврейская автономная область"	6	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Kurgan"	"Kurgan"	"Курганская область"	4	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Sakhalin"	"Sakhalin"	"Сахалинская область"	4	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Chukotka"	"Chukotka"	"Чукотский автономный округ"	4	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Nenets AO"	"Nenets AO"	"Ненецкий автономный округ"	1	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"detected"	"Sevastopol"	"Sevastopol"	"Севастополь"	1	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Moscow"	"Moscow"	"Москва"	3061	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Moscow"	"Moscow region"	"Московская область"	566	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"St. Petersburg"	"St. Petersburg"	"Санкт-Петербург"	364	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"N. Ossetia-Alania"	"N. Ossetia-Alania"	"Республика Северная Осетия — Алания"	305	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Ingushetia"	"Ingushetia"	"Республика Ингушетия"	227	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Nizhnii Novgorod"	"Nizhnii Novgorod"	"Нижегородская область"	199	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Ekaterinburg"	"Ekaterinburg"	"Свердловская область"	147	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Kazan"	"Kazan"	"Республика Татарстан"	139	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Tambov"	"Tambov"	"Тамбовская область"	133	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Omsk"	"Omsk"	"Омская область"	129	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Tula"	"Tula"	"Тульская область"	127	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Briansk"	"Briansk"	"Брянская область"	101	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Yamalo-Nenets AO"	"Yamalo-Nenets AO"	"Ямало-Ненецкий автономный округ"	100	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Rostov-on-Don"	"Rostov-on-Don"	"Ростовская область"	99	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Nalchik"	"Nalchik"	"Кабардино-Балкарская Республика"	95	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Krasnodar"	"Krasnodar"	"Краснодарский край"	89	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Orel"	"Orel"	"Орловская область"	89	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Cheliabinsk"	"Cheliabinsk"	"Челябинская область "	85	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Penza"	"Penza"	"Пензенская область"	84	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Kursk"	"Kursk"	"Курская область"	83	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Kaluga"	"Kaluga"	"Калужская область"	80	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Chechen rep."	"Chechen rep."	"Чеченская Республика"	79	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"St. Petersburg"	"Leningrad region"	"Ленинградская область"	78	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Chita"	"Chita"	"Забайкальский край"	75	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Samara"	"Samara"	"Самарская область"	74	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Saratov"	"Saratov"	"Саратовская область"	73	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Volgograd"	"Volgograd"	"Волгоградская область"	70	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Belgorod"	"Belgorod"	"Белгородская область"	69	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Mari El"	"Mari El"	"Республика Марий Эл"	69	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Astrakhan"	"Astrakhan"	"Астраханская область"	68	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Vladivostok"	"Vladivostok"	"Приморский край"	67	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Tver"	"Tver"	"Тверская область"	65	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Kirov"	"Kirov"	"Кировская область"	63	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Krasnoyarsk"	"Krasnoyarsk"	"Красноярский край"	63	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Mordovia"	"Mordovia"	"Республика Мордовия"	62	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Chuvashia"	"Chuvashia"	"Республика Чувашия"	62	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Ryazan"	"Ryazan"	"Рязанская область"	60	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Smolensk"	"Smolensk"	"Смоленская область"	60	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Buryatia"	"Buryatia"	"Республика Бурятия"	58	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Bashkortostan"	"Bashkortostan"	"Республика Башкортостан"	57	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Yakutsk"	"Yakutsk"	"Республика Саха (Якутия)"	56	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Yaroslavl"	"Yaroslavl"	"Ярославская область"	55	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Stavropol"	"Stavropol"	"Ставропольский край"	53	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Irkutsk"	"Irkutsk"	"Иркутская область"	48	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Vladimir"	"Vladimir"	"Владимирская область"	47	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Lipetsk"	"Lipetsk"	"Липецкая область"	46	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Khakassia"	"Khakassia"	"Республика Хакасия"	46	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Perm krai"	"Perm krai"	"Пермский край"	45	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Khanty-Mansiisk"	"Khanty-Mansiisk"	"Ханты-Мансийский АО"	43	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Khabarovsk"	"Khabarovsk"	"Хабаровский край"	42	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Tiumen"	"Tiumen"	"Тюменская область"	40	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Arkhangelsk"	"Arkhangelsk"	"Архангельская область"	39	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Ivanovo"	"Ivanovo"	"Ивановская область"	35	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Orenburg"	"Orenburg"	"Оренбургская область"	35	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Pskov"	"Pskov"	"Псковская область"	35	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Altay krai"	"Altay krai"	"Алтайский край"	33	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Ulianovsk"	"Ulianovsk"	"Ульяновская область"	29	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Voronezh"	"Voronezh"	"Воронежская область"	28	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Vologda"	"Vologda"	"Вологодская область"	27	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Novosibirsk"	"Novosibirsk"	"Новосибирская область"	27	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Murmansk"	"Murmansk"	"Мурманская область"	26	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Crimea [annex.]"	"Crimea [annex.]"	"Республика Крым"	26	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Adygea"	"Adygea"	"Республика Адыгея"	22	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Tomsk"	"Tomsk"	"Томская область"	22	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Karachay-Cherkessia"	"Karachay-Cherkessia"	"Карачаево-Черкесская Республика"	21	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Kalmykia"	"Kalmykia"	"Республика Калмыкия"	21	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Kaliningrad"	"Kaliningrad"	"Калининградская область"	20	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Dagestan"	"Dagestan"	"Республика Дагестан"	20	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Amur region"	"Amur region"	"Амурская область"	18	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Udmurtia"	"Udmurtia"	"Удмуртская Республика"	17	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Komi"	"Komi"	"Республика Коми"	15	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Birobidzhan"	"Birobidzhan"	"Еврейская автономная область"	11	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Kostroma"	"Kostroma"	"Костромская область"	10	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Novgorod"	"Novgorod"	"Новгородская область"	10	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Karelia"	"Karelia"	"Республика Карелия"	8	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Kurgan"	"Kurgan"	"Курганская область"	4	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Altay rep."	"Altay rep."	"Республика Алтай"	4	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Kamchatka"	"Kamchatka"	"Камчатский край"	3	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Magadan"	"Magadan"	"Магаданская область"	2	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Sevastopol"	"Sevastopol"	"Севастополь"	2	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
+"2020-06-04 10:35:00"	"recovered"	"Chukotka"	"Chukotka"	"Чукотский автономный округ"	1	NA	NA	"https://стопкоронавирус.рф/ robot-trimmed and post-processed"	NA	"Alexei Kouprianov"
