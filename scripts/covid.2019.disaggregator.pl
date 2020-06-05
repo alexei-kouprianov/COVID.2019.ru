@@ -3,9 +3,12 @@ use warnings;
 use LWP::Simple;
 use utf8;
 use strict;
+use IO::Compress::Gzip qw(gzip $GzipError) ;
 
 my $repeat = "";
 my $string = "";
+my $inputfile = '../data/momentary.da.txt';
+my $outputfile = '../data/momentary.da.txt.gz';
 
 if(-e '../data/momentary.da.txt'){
 	unlink('../data/momentary.da.txt');
@@ -28,3 +31,6 @@ open(DISAGGR, '>>../data/momentary.da.txt') or die $!;
 	}
 close(DISAGGR);
 close(AGGR);
+
+my $status = gzip $inputfile => $outputfile
+        or die "gzip failed: $GzipError\n";

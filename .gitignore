@@ -1,5 +1,6 @@
 COVID.2019.ru.ods
 .~lock.COVID.2019.ru.ods#
+data/momentary.da.txt
 plots/map.animated
 plots/fit.animated
 plots/regions/increments/
