@@ -1,3 +1,8 @@
+# This script assembles a dataset for Cheliabinsk disaggregated data;
+# Requires wgetting Cheliabinsk data and cheliabinsk.extractor.pl for input files;
+
+# Loading data;
+
 AGE <- read.table("../downloads/cheliabinsk.AGE.txt", sep="\t", blank.lines.skip = FALSE)
 CONDITION <- read.table("../downloads/cheliabinsk.CONDITION.txt", sep="\t", blank.lines.skip = FALSE)
 COUNT <- read.table("../downloads/cheliabinsk.COUNT.txt", sep="\t", blank.lines.skip = FALSE)
@@ -5,6 +10,8 @@ COUNT1 <- read.table("../downloads/cheliabinsk.COUNT1.txt", sep="\t", blank.line
 NAME <- read.table("../downloads/cheliabinsk.NAME.txt", sep="\t", blank.lines.skip = FALSE)
 RECOVERED <- read.table("../downloads/cheliabinsk.RECOVERED.txt", sep="\t", blank.lines.skip = FALSE)
 SOURCE <- read.table("../downloads/cheliabinsk.SOURCE.txt", sep="\t", blank.lines.skip = FALSE)
+
+# Substituting and setting levels;
 
 CONDITION$V1 <- gsub("^ ", "", CONDITION$V1)
 CONDITION$V1 <- gsub("^К", "к", CONDITION$V1)
@@ -40,6 +47,8 @@ SOURCE$V1 <- gsub("Респ", "респ", SOURCE$V1)
 SOURCE$V1 <- gsub("тен", "тный", SOURCE$V1)
 SOURCE$V1 <- gsub("^Уто", "уто", SOURCE$V1)
 
+# Building a dataframe;
+
 ch <- cbind.data.frame(NAME, 
 AGE, 
 CONDITION, 
@@ -55,5 +64,7 @@ colnames(ch) <- c(
 "CONDITION", 
 "SOURCE", 
 "RECOVERED")
+
+# Saving backup data frame;
 
 write.table(ch, "../data/cheliabinsk.current.txt", sep="\t", row.names=FALSE)
