@@ -2,6 +2,10 @@
 
 This repo was created to keep records of the COVID-2019 epidemics in Russia. The dataset is based on the official reports of confimed cases. This means that the data lag behind the spread of the virus. See also a magnificent project by [Johns Hopkins Univ.](https://github.com/CSSEGISandData/COVID-19)
 
+Collection of World resources:
+
+* [covid19-r at GitHub](https://github.com/mine-cetinkaya-rundel/covid19-r)
+
 Other resources on Russia:
 
 * [MediaZona at GitHub](https://github.com/mediazona/data-corona-Russia)
