@@ -3,6 +3,8 @@
 
 # Loading data;
 
+ch.EMISS <- read.table("../data/cheliabinsk.EMISS.2020.txt", sep="\t")
+
 AGE <- read.table("../downloads/cheliabinsk.AGE.txt", sep="\t", blank.lines.skip = FALSE)
 CONDITION <- read.table("../downloads/cheliabinsk.CONDITION.txt", sep="\t", blank.lines.skip = FALSE)
 COUNT <- read.table("../downloads/cheliabinsk.COUNT.txt", sep="\t", blank.lines.skip = FALSE)
@@ -13,12 +15,8 @@ SOURCE <- read.table("../downloads/cheliabinsk.SOURCE.txt", sep="\t", blank.line
 
 # Substituting and setting levels;
 
+CONDITION$V1 <- tolower(CONDITION$V1)
 CONDITION$V1 <- gsub("^ ", "", CONDITION$V1)
-CONDITION$V1 <- gsub("^К", "к", CONDITION$V1)
-CONDITION$V1 <- gsub("^Л", "л", CONDITION$V1)
-CONDITION$V1 <- gsub("^С", "с", CONDITION$V1)
-CONDITION$V1 <- gsub("^Т", "т", CONDITION$V1)
-CONDITION$V1 <- gsub("^У", "у", CONDITION$V1)
 CONDITION$V1 <- gsub(",", "", CONDITION$V1)
 CONDITION$V1 <- factor(CONDITION$V1, levels=c(
 "клиники нет", 
@@ -31,9 +29,7 @@ CONDITION$V1 <- factor(CONDITION$V1, levels=c(
 "выбыл", 
 "уточняется"))
 
-RECOVERED$V1 <- gsub("^В", "в", RECOVERED$V1)
-RECOVERED$V1 <- gsub("^П", "п", RECOVERED$V1)
-RECOVERED$V1 <- gsub("^У", "у", RECOVERED$V1)
+RECOVERED$V1 <- tolower(RECOVERED$V1)
 RECOVERED$V1 <- factor(RECOVERED$V1, levels=c(
 "выписан", "продолжает лечение", "умер", "выбыл", "уточняется"
 ))
@@ -75,6 +71,7 @@ colnames(ch) <- c(
 # Saving backup data frame;
 
 write.table(ch, "../data/cheliabinsk.current.txt", sep="\t", row.names=FALSE)
+# write.table(ch, "../data/cheliabinsk.20200606.txt", sep="\t", row.names=FALSE)
 
 # Subsetting;
 
@@ -107,11 +104,11 @@ dev.off()
 png("../plots/regions/special/Cheliabinsk/hist.Cheliabinsk.age_pyramid.png", height=750, width=1000, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1)
 
-hist(AGE$V1, breaks=-.5:120.5, border=8, col=8,
+hist.AGE <- hist(AGE$V1, breaks=-.5:(max(AGE$V1, na.rm=TRUE)+.5), border=8, col=8,
 xlab="Возраст, лет",
 main=paste("Челябинск, COVID+, возрастная пирамида на", Sys.Date()))
-hist(ch.recovered$AGE, breaks=-.5:120.5, border="darkgreen", col="darkgreen", add=TRUE)
-hist(ch.deaths$AGE, breaks=-.5:120.5, border=2, col=2, add=TRUE)
+hist(ch.recovered$AGE, breaks=-.5:(max(AGE$V1, na.rm=TRUE)+.5), border="darkgreen", col="darkgreen", add=TRUE)
+hist.deaths.AGE <- hist(ch.deaths$AGE, breaks=-.5:(max(AGE$V1, na.rm=TRUE)+.5), border=2, col=2, add=TRUE)
 legend("topright", pch=15, col=c("grey","darkgreen","red"), legend=c("всего","выписаны","умерли"), bty="n")
 
 dev.off()
@@ -122,5 +119,30 @@ par(mar=c(8,5,4,2)+.1)
 plot.ch.active.CONDITION <- plot(ch.active$CONDITION, las=2, ylim=c(0,(max(table(ch.active$CONDITION))+100)),
 main=paste("Челябинск, COVID+, состояния больных, \nпродолжающих лечение на", Sys.Date()))
 text(plot.ch.active.CONDITION, table(ch.active$CONDITION), labels=table(ch.active$CONDITION), pos=3)
+
+dev.off()
+
+png("../plots/regions/special/Cheliabinsk/linechart.Cheliabinsk.mortality_by_age.png", height=750, width=1000, res=120, pointsize=10)
+par(mar=c(6,5,4,2)+.1)
+
+ch.h.tot <- subset(hist.AGE$counts, hist.deaths.AGE$counts > 0)
+ch.h.d <- subset(hist.deaths.AGE$counts, hist.deaths.AGE$counts > 0)
+ch.h.counts <- subset(hist.AGE$mids, hist.deaths.AGE$counts > 0)
+
+plot(hist.AGE$mids, hist.deaths.AGE$counts/hist.AGE$counts, 
+type="o", pch=20,
+xlab="Возраст, лет",
+ylab="Доля умерших",
+main=paste("Челябинск, COVID+, смертность по возрастам на", Sys.Date()),
+frame=FALSE
+)
+
+polygon(
+x = c(ch.h.counts, ch.h.counts[length(ch.h.counts):1]),
+y = c(ch.h.d/ch.h.tot-1.96*sqrt((ch.h.d/ch.h.tot)*((1-ch.h.d/ch.h.tot)/ch.h.tot)),
+(ch.h.d/ch.h.tot+1.96*sqrt((ch.h.d/ch.h.tot)*((1-ch.h.d/ch.h.tot)/ch.h.tot)))[length(ch.h.counts):1]
+),
+col=rgb(0,0,0,.1), border=rgb(0,0,0,.25)
+)
 
 dev.off()
