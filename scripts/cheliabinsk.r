@@ -4,6 +4,7 @@
 # Loading data;
 
 ch.EMISS <- read.table("../data/cheliabinsk.EMISS.2020.txt", sep="\t")
+ch.EMISS <- ch.EMISS[order(ch.EMISS$V1),]
 
 AGE <- read.table("../downloads/cheliabinsk.AGE.txt", sep="\t", blank.lines.skip = FALSE)
 CONDITION <- read.table("../downloads/cheliabinsk.CONDITION.txt", sep="\t", blank.lines.skip = FALSE)
@@ -144,5 +145,94 @@ y = c(ch.h.d/ch.h.tot-1.96*sqrt((ch.h.d/ch.h.tot)*((1-ch.h.d/ch.h.tot)/ch.h.tot)
 ),
 col=rgb(0,0,0,.1), border=rgb(0,0,0,.25)
 )
+
+dev.off()
+
+# Building EMISS data histogram:
+
+hist.EMISS <- hist.AGE
+
+hist.EMISS$breaks <- -.5:100.5
+hist.EMISS$counts <- ch.EMISS$V2
+hist.EMISS$density <- ch.EMISS$V2/sum(ch.EMISS$V2)
+hist.EMISS$mids <- 0:100
+hist.EMISS$xname <- "EMISS age structure for 2020-01-01"
+hist.EMISS$equidist <- TRUE
+
+# hist.EMISS.500 <- hist.AGE
+#
+# hist.EMISS.500$breaks <- -.5:100.5
+# hist.EMISS.500$counts <- ch.EMISS$V2/500
+# hist.EMISS.500$density <- (ch.EMISS$V2/500)/(sum(ch.EMISS$V2/500))
+# hist.EMISS.500$mids <- 0:100
+# hist.EMISS.500$xname <- "EMISS age structure for 2020-01-01"
+# hist.EMISS.500$equidist <- TRUE
+#
+# hist.EMISS.250 <- hist.AGE
+#
+# hist.EMISS.250$breaks <- -.5:100.5
+# hist.EMISS.250$counts <- ch.EMISS$V2/250
+# hist.EMISS.250$density <- (ch.EMISS$V2/250)/(sum(ch.EMISS$V2/250))
+# hist.EMISS.250$mids <- 0:100
+# hist.EMISS.250$xname <- "EMISS age structure for 2020-01-01"
+# hist.EMISS.250$equidist <- TRUE
+
+png("../plots/regions/special/Cheliabinsk/linechart.Cheliabinsk.EMISS.morbidity_by_age.png", height=750, width=1000, res=120, pointsize=10)
+par(mar=c(6,5,4,2)+.1)
+
+# ch.h.tot <- subset(hist.EMISS$counts[1:97], hist.deaths.AGE$counts > 0)
+# ch.h.d <- subset(hist.deaths.EMISS$counts[1:97], hist.deaths.AGE$counts > 0)
+# ch.h.counts <- subset(hist.EMISS$mids[1:97], hist.deaths.AGE$counts > 0)
+
+plot(hist.EMISS$mids[1:length(hist.AGE$counts)], hist.AGE$counts/hist.EMISS$counts[1:length(hist.AGE$counts)], 
+type="n", pch=20, xlim=c(0,100),
+xlab="Возраст, лет",
+ylab="Доля заболевших",
+main=paste("Челябинск, COVID-19, заболеваемость по возрастам на", Sys.Date()),
+frame=FALSE
+)
+
+grid()
+
+points(hist.EMISS$mids[1:length(hist.AGE$counts)], hist.AGE$counts/hist.EMISS$counts[1:length(hist.AGE$counts)], 
+type="o", pch=20)
+
+# polygon(
+# x = c(ch.h.counts, ch.h.counts[length(ch.h.counts):1]),
+# y = c(ch.h.d/ch.h.tot-1.96*sqrt((ch.h.d/ch.h.tot)*((1-ch.h.d/ch.h.tot)/ch.h.tot)),
+# (ch.h.d/ch.h.tot+1.96*sqrt((ch.h.d/ch.h.tot)*((1-ch.h.d/ch.h.tot)/ch.h.tot)))[length(ch.h.counts):1]
+# ),
+# col=rgb(0,0,0,.1), border=rgb(0,0,0,.25)
+# )
+
+dev.off()
+
+png("../plots/regions/special/Cheliabinsk/linechart.Cheliabinsk.EMISS.mortality_by_age.png", height=750, width=1000, res=120, pointsize=10)
+par(mar=c(6,5,4,2)+.1)
+
+# ch.h.tot <- subset(hist.EMISS$counts[1:97], hist.deaths.AGE$counts > 0)
+# ch.h.d <- subset(hist.deaths.EMISS$counts[1:97], hist.deaths.AGE$counts > 0)
+# ch.h.counts <- subset(hist.EMISS$mids[1:97], hist.deaths.AGE$counts > 0)
+
+plot(hist.EMISS$mids[1:length(hist.AGE$counts)], hist.AGE$counts/hist.EMISS$counts[1:length(hist.AGE$counts)], 
+type="n", pch=20, xlim=c(0,100),
+xlab="Возраст, лет",
+ylab="Доля заболевших",
+main=paste("Челябинск, COVID-19, заболеваемость по возрастам на", Sys.Date()),
+frame=FALSE
+)
+
+grid()
+
+points(hist.EMISS$mids[1:length(hist.AGE$counts)], hist.AGE$counts/hist.EMISS$counts[1:length(hist.AGE$counts)], 
+type="o", pch=20)
+
+# polygon(
+# x = c(ch.h.counts, ch.h.counts[length(ch.h.counts):1]),
+# y = c(ch.h.d/ch.h.tot-1.96*sqrt((ch.h.d/ch.h.tot)*((1-ch.h.d/ch.h.tot)/ch.h.tot)),
+# (ch.h.d/ch.h.tot+1.96*sqrt((ch.h.d/ch.h.tot)*((1-ch.h.d/ch.h.tot)/ch.h.tot)))[length(ch.h.counts):1]
+# ),
+# col=rgb(0,0,0,.1), border=rgb(0,0,0,.25)
+# )
 
 dev.off()

@@ -39,6 +39,12 @@ After that one can start running analytic and plotting R scripts. All of them ar
 
 * `scripts/covid.2019.ru.main.r`
 
+## Disaggregated data for Cheliabinsk
+
+The disaggregated data for Cheliabinsk can be downloaded with `wget` (command-line string is given below), then processed with `cheliabinsk.extractor.pl` and `cheliabinsk.r`.
+
+    wget -S 'https://коронавирус74.рф/districts/' --no-check-certificate -O  cheliabinsk.raw.txt
+
 ## Illustrations
 
 The visualizations derived from nation-wide data are as follows. For regional graphs see [a special subfolder](https://github.com/alexei-kouprianov/COVID.2019.ru/tree/master/plots/regions "Regional graphs")
