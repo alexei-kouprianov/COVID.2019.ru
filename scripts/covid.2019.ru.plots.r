@@ -436,6 +436,64 @@ dev.off()
 
 }
 
+dir.create("../plots/regions/linear/")
+
+for(i in 1:length(levels(covid.2019.ru$LOCUS))){
+
+png(file=paste("../plots/regions/linear/COVID.2019.cumulated.linear.",gsub(" ", "_", levels(covid.2019.ru$LOCUS)[i]),".png", sep=""), height=750, width=750, res=120, pointsize=10)
+par(mar=c(6,5,4,2)+.1, lwd=2)
+
+plot(covid.2019.ru.dyn.tot[[i]]$TIME, covid.2019.ru.dyn.tot[[i]]$CS.i, 
+type="n", 
+# ylim=c(0,(max(covid.2019.ru.i.dyn.tt$RUS.CS))),
+main=paste("Russian Federation /",levels(covid.2019.ru$LOCUS)[i]),
+xlab="",
+ylab="COVID-2019 cases detected (linear scale)",
+axes=FALSE
+)
+
+for(j in 1:length(levels(covid.2019.ru$LOCUS))){
+ lines(covid.2019.ru.dyn.tot[[j]]$TIME, covid.2019.ru.dyn.tot[[j]]$CS.i, lwd=1.5, col=rgb(0,0,0,.15))
+}
+
+lines(covid.2019.ru.dyn.tot[[j]]$TIME, covid.2019.ru.dyn.tot[[i]]$i, type="h", col="darkred")
+
+lines(covid.2019.ru.dyn.tot[[j]]$TIME, covid.2019.ru.dyn.tot[[i]]$CS.i, col="white", lwd=5)
+lines(covid.2019.ru.dyn.tot[[j]]$TIME, covid.2019.ru.dyn.tot[[i]]$CS.i, col="darkred", lwd=2)
+lines(covid.2019.ru.dyn.tot[[j]]$TIME, (covid.2019.ru.dyn.tot[[i]]$CS.i-
+(covid.2019.ru.dyn.tot[[i]]$CS.r+covid.2019.ru.dyn.tot[[i]]$CS.d)
+), col="white", lwd=4)
+lines(covid.2019.ru.dyn.tot[[j]]$TIME, (covid.2019.ru.dyn.tot[[i]]$CS.i-
+(covid.2019.ru.dyn.tot[[i]]$CS.r+covid.2019.ru.dyn.tot[[i]]$CS.d)
+), col=2, lwd=2)
+lines(covid.2019.ru.dyn.tot[[j]]$TIME, covid.2019.ru.dyn.tot[[i]]$CS.r, col="white", lwd=5)
+lines(covid.2019.ru.dyn.tot[[j]]$TIME, covid.2019.ru.dyn.tot[[i]]$CS.r, col="darkgreen", lwd=2)
+lines(covid.2019.ru.dyn.tot[[j]]$TIME, covid.2019.ru.dyn.tot[[i]]$CS.d, col="white", lwd=5)
+lines(covid.2019.ru.dyn.tot[[j]]$TIME, covid.2019.ru.dyn.tot[[i]]$CS.d, col=1, lwd=2)
+
+abline(h=log10(50), lty=3, lwd=.75)
+
+axis.POSIXct(1, 
+at=seq(min(covid.2019.breaks$TIME), max(covid.2019.breaks$TIME), by="week"), 
+format = "%Y-%m-%d", 
+las=2)
+
+axis(2)
+
+legend(
+"topleft",
+lty=1,
+lwd=2,
+col=c("darkred","red","darkgreen","black"),
+legend=c("Total cases (vertical bars = new ones)","Active cases","Recovered","Deceased"),
+bty="n"
+)
+
+dev.off()
+
+}
+
+
 dir.create("../plots/regions/increments/")
 
 dir.create("../plots/regions/increments/i/")

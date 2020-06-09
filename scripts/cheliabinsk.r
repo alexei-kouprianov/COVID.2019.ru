@@ -69,6 +69,16 @@ colnames(ch) <- c(
 "SOURCE", 
 "RECOVERED")
 
+ch.mun.ls <- NULL
+ch.mun.ls <- as.list(ch.mun.ls)
+ch.m <- NULL
+
+for(i in 1:length(levels(ch$NAME))){
+ch.mun.ls[[i]] <- subset(ch, ch$NAME == levels(ch$NAME)[i])
+ch.mun.ls[[i]] <- ch.mun.ls[[i]][1:ch.mun.ls[[i]]$COUNT.ORIG[1],]
+ch.m <- rbind.data.frame(ch.m, ch.mun.ls[[i]])
+}
+
 # Saving backup data frame;
 
 write.table(ch, "../data/cheliabinsk.current.txt", sep="\t", row.names=FALSE)
