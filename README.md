@@ -43,11 +43,11 @@ After that one can start running analytic and plotting R scripts. All of them ar
 
 The disaggregated data for Cheliabinsk can be downloaded with `wget` (command-line string is given below), then processed with `cheliabinsk.extractor.pl` and `cheliabinsk.r`.
 
-    wget -S 'https://коронавирус74.рф/districts/' --no-check-certificate -O  cheliabinsk.raw.txt
+    wget -S 'https://коронавирус74.рф/districts/' --no-check-certificate -O cheliabinsk.raw.txt
 
 ## Illustrations
 
-The visualizations derived from nation-wide data are as follows. For regional graphs see [a special subfolder](https://github.com/alexei-kouprianov/COVID.2019.ru/tree/master/plots/regions "Regional graphs")
+The visualizations derived from nation-wide data are as follows. For regional graphs see [a special subfolder](https://github.com/alexei-kouprianov/COVID.2019.ru/tree/master/plots/regions "Regional graphs"). An example of regional graphs (St. Petersburg, Russia) is given below in this readme file.
 
 <!--![alt text](plots/COVID.2019.cumulated.png "Cumulated curve of COVID-2019 cases for Russia")-->
 <!--![alt text](plots/COVID.2019.cumulated.log10.png "Cumulated curve of COVID-2019 cases for Russia, y-logarithmic")-->
@@ -72,6 +72,18 @@ The visualizations derived from nation-wide data are as follows. For regional gr
 
 <!--![alt text](plots/COVID.2019.fitting.expGrowth_vs_LL.3.png "Fitting the data with exponent and log-logistic")
 ![alt text](plots/COVID.2019.fitting.expGrowth_vs_LL.3.log10.png "Fitting the data with exponent and log-logistic, y-logarithmic")-->
-![alt text](plots/COVID.2019.fitting.rmc.partial.log10.png "Fitting / extrapolating the data with exponent and log-logistic, y-logarithmic (entire Russia)")
-![alt text](plots/COVID.2019.fitting.rmc.partial.Mos.log10.png "Fitting / extrapolating the data with exponent and log-logistic, y-logarithmic (Moscow)")
-![alt text](plots/COVID.2019.fitting.rmc.partial.SPb.log10.png "Fitting / extrapolating the data with exponent and log-logistic, y-logarithmic (St. Petersburg)")
+![alt text](plots/COVID.2019.fitting.rmc.partial.01.log10.png "Fitting / extrapolating the data with exponent and log-logistic, y-logarithmic (entire Russia)")
+![alt text](plots/COVID.2019.fitting.rmc.partial.02.RUS.Prov.log10.png "Fitting / extrapolating the data with exponent and log-logistic, y-logarithmic (Russia without Moscow and St. Petersburg)")
+![alt text](plots/COVID.2019.fitting.rmc.partial.03.Mos.log10.png "Fitting / extrapolating the data with exponent and log-logistic, y-logarithmic (Moscow)")
+![alt text](plots/COVID.2019.fitting.rmc.partial.04.SPb.log10.png "Fitting / extrapolating the data with exponent and log-logistic, y-logarithmic (St. Petersburg)")
+
+## Regional passport
+
+St. Petersburg is taken as an example, but all regions are available.
+
+![alt text](plots/regions/linear/COVID.2019.cumulated.linear.St._Petersburg.png "Cumulated curve of COVID-2019 cases for St. Perersburg, y-linear")
+![alt text](plots/regions/COVID.2019.cumulated.log10.St._Petersburg.png "Cumulated curve of COVID-2019 cases for St. Perersburg, y-logarithmic")
+![alt text](plots/regions/increments/i/COVID.2019.momentary.St._Petersburg.i.png "Daily increments for detected COVID-2019 cases for St. Perersburg, y-linear")
+![alt text](plots/regions/increments/d/COVID.2019.momentary.St._Petersburg.d.png "Daily increments for COVID-2019 deaths for St. Perersburg, y-linear")
+![alt text](plots/regions/race/COVID.2019.race.log10.St._Petersburg.png "Cumulated curves of COVID-2019 cases for St. Perersburg, y-logarithmic, since the day the city crossed 50 cases threshold")
+![alt text](plots/regions/rdi/COVID.2019.rdi.log10.St._Petersburg.png "Relative daily increments for COVID-2019 confirmed cases for St. Perersburg")
