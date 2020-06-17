@@ -803,10 +803,10 @@ png("../plots/COVID.2019.hist.rdi.png", height=750, width=1000, res=120, pointsi
 rdi.slice.noInf.max <- .99
 
 while(rdi.slice.noInf.max < max(covid.2019.ru.i.rt.slice.noInf)){
-rdi.slice.noInf.max <- rdi.slice.noInf.max + .02
+rdi.slice.noInf.max <- rdi.slice.noInf.max + .005
 }
 
-hist(covid.2019.ru.i.rt.slice.noInf, breaks=seq(.99,rdi.slice.noInf.max,.02), col=8,
+hist(covid.2019.ru.i.rt.slice.noInf, breaks=seq(.99,rdi.slice.noInf.max,.005), col=8,
 main=paste("Russian Federation / ", daily.timestamp$V1),
 # main=paste("Russian Federation /", Sys.Date()),
 xlab="COVID-2019 Relative daily increment (rolling average for 7 days)",

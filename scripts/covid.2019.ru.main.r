@@ -26,3 +26,5 @@ source("covid.2019.world.JHU.r")
 # subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log < 4)[,c(8,9,11)]
 # subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log > 14)[,c(8,9,11)]
 # rmc.SPb.20200418_202005__.df
+# rmc.20200421_202005__.RUS.Prov.df
+# rmc.20200421_202005__.Mos.df
