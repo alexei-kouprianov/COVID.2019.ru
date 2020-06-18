@@ -274,6 +274,8 @@ for(j in 1:length(levels(covid.2019.ru$LOCUS))){
 CS.i.diff.7 <- NULL 
 CS.r.diff.7 <- NULL 
 CS.d.diff.7 <- NULL 
+i.7 <- NULL
+R.RPN <- NULL
 
 for(j in 1:(length(levels(covid.2019.ru$LOCUS)))){
   CS.i.diff.7 <- c(NA,NA,NA) 
@@ -296,6 +298,21 @@ for(j in 1:(length(levels(covid.2019.ru$LOCUS)))){
   }
   CS.d.diff.7 <- c(CS.d.diff.7, NA, NA, NA)
   covid.2019.ru.dyn.tot[[j]]$CS.d.diff.7 <- CS.d.diff.7
+
+  i.7 <- c(NA,NA,NA) 
+ for(k in 4:(nrow(covid.2019.ru.dyn.tot[[j]])-3)){
+  i.7 <- c(i.7, mean(covid.2019.ru.dyn.tot[[j]]$i[(k-3):(k+3)], na.rm=TRUE))
+  }
+  i.7 <- c(i.7, NA, NA, NA)
+  covid.2019.ru.dyn.tot[[j]]$i.7 <- i.7
+
+  R.RPN <- rep(NA,8) 
+ for(k in 9:(nrow(covid.2019.ru.dyn.tot[[j]]))){
+  R.RPN <- c(R.RPN, sum(covid.2019.ru.dyn.tot[[j]]$i[(k):(k-4)], na.rm=TRUE)/sum(covid.2019.ru.dyn.tot[[j]]$i[(k-5):(k-8)], na.rm=TRUE))
+  }
+  R.RPN <- c(R.RPN)
+  covid.2019.ru.dyn.tot[[j]]$R.RPN <- R.RPN
+
 }
 
 # List of truncated data.frames;

@@ -521,6 +521,78 @@ axis(2)
 dev.off()
 }
 
+dir.create("../plots/regions/increments/i.7/")
+
+for(i in 1:length(levels(covid.2019.ru$LOCUS))){
+
+png(file=paste("../plots/regions/increments/i.7/COVID.2019.momentary.7.",gsub(" ", "_", levels(covid.2019.ru$LOCUS)[i]),".i.png", sep=""), height=750, width=750, res=120, pointsize=10)
+par(mar=c(6,5,4,2)+.1, lwd=2)
+
+plot(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.dyn.tot[[i]]$i, type="h", col="darkred",
+main=paste("Russian Federation / ",
+levels(covid.2019.ru$LOCUS)[i]," (",
+sum(covid.2019.ru.dyn.tot[[i]]$i),")", sep=""),
+xlab="",
+ylab="COVID-2019 new cases detected, 7-day rolling mean",
+axes=FALSE
+)
+
+lines(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.dyn.tot[[i]]$i.7, type="l", col="white", lwd=6)
+lines(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.dyn.tot[[i]]$i.7, type="l", col="red", lwd=3)
+
+legend("topleft",
+lty=1,
+col=c("darkred","red"),
+legend=c("Daily increment", "7-days rolling mean"),
+bty="n"
+)
+
+axis.POSIXct(1, 
+at=seq(min(covid.2019.breaks$TIME), max(covid.2019.breaks$TIME), by="week"), 
+format = "%Y-%m-%d", 
+las=2)
+axis(2)
+
+dev.off()
+}
+
+dir.create("../plots/regions/increments/R.RPN/")
+
+for(i in 1:length(levels(covid.2019.ru$LOCUS))){
+
+png(file=paste("../plots/regions/increments/R.RPN/COVID.2019.",gsub(" ", "_", levels(covid.2019.ru$LOCUS)[i]),".R.RPN.png", sep=""), height=750, width=750, res=120, pointsize=10)
+par(mar=c(6,5,4,2)+.1, lwd=2)
+
+plot(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.dyn.tot[[i]]$R.RPN, type="n",
+ylim=c(0,10),
+main=paste("Russian Federation / ",
+levels(covid.2019.ru$LOCUS)[i]," (",
+sum(covid.2019.ru.dyn.tot[[i]]$i),")", sep=""),
+xlab="",
+ylab="Rospotrebnazor's R: daily increments for days [N,N-4]/[N-5,N-8]",
+axes=FALSE
+)
+
+for(j in 1:length(levels(covid.2019.ru$LOCUS))){
+ lines(covid.2019.ru.dyn.tot[[j]]$TIME, covid.2019.ru.dyn.tot[[j]]$R.RPN, lwd=1.5, col=rgb(0,0,0,.15))
+}
+
+lines(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.dyn.tot[[i]]$R.RPN, type="l", col="white", lwd=6)
+lines(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.dyn.tot[[i]]$R.RPN, type="l", col="red", lwd=3)
+
+abline(h=1, lty=3, col=1)
+
+axis.POSIXct(1, 
+at=seq(min(covid.2019.breaks$TIME), max(covid.2019.breaks$TIME), by="week"), 
+format = "%Y-%m-%d", 
+las=2)
+axis(2)
+
+dev.off()
+}
+
+
+
 dir.create("../plots/regions/increments/d/")
 
 for(i in 1:length(levels(covid.2019.ru$LOCUS))){

@@ -4,6 +4,7 @@ data/momentary.da.txt
 plots/map.animated
 plots/fit.animated
 plots/regions/increments/
+plots/regions/rdi.race/
 plots/world/
 scripts/.Rhistory
 scripts/.Rdata
