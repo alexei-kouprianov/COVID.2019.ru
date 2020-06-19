@@ -254,6 +254,8 @@ for(j in 1:length(levels(covid.2019.ru$LOCUS))){
 names(covid.2019.ru.dyn.tot) <- levels(covid.2019.ru$LOCUS)
 
 for(j in 1:length(levels(covid.2019.ru$LOCUS))){
+ covid.2019.ru.dyn.tot[[j]]$CS.a <- covid.2019.ru.dyn.tot[[j]]$CS.i - (covid.2019.ru.dyn.tot[[j]]$CS.r + covid.2019.ru.dyn.tot[[j]]$CS.d)
+
  covid.2019.ru.dyn.tot[[j]]$CS.i <- cumsum(covid.2019.ru.dyn.tot[[j]]$i)
  covid.2019.ru.dyn.tot[[j]]$CS.i.diff <- c(NA, 
   covid.2019.ru.dyn.tot[[j]]$CS.i[2:length(covid.2019.ru.dyn.tot[[j]]$CS.i)]/
@@ -269,6 +271,10 @@ for(j in 1:length(levels(covid.2019.ru$LOCUS))){
   covid.2019.ru.dyn.tot[[j]]$CS.d[2:length(covid.2019.ru.dyn.tot[[j]]$CS.d)]/
   covid.2019.ru.dyn.tot[[j]]$CS.d[1:(length(covid.2019.ru.dyn.tot[[j]]$CS.d)-1)]
   )
+}
+
+for(j in 1:length(levels(covid.2019.ru$LOCUS))){
+ covid.2019.ru.dyn.tot[[j]]$CS.a.POP <- covid.2019.ru.dyn.tot[[j]]$CS.a / (covid.2019.population$POPULATION[j]/100000)
 }
 
 CS.i.diff.7 <- NULL 
@@ -308,7 +314,7 @@ for(j in 1:(length(levels(covid.2019.ru$LOCUS)))){
 
   R.RPN <- rep(NA,8) 
  for(k in 9:(nrow(covid.2019.ru.dyn.tot[[j]]))){
-  R.RPN <- c(R.RPN, sum(covid.2019.ru.dyn.tot[[j]]$i[(k):(k-4)], na.rm=TRUE)/sum(covid.2019.ru.dyn.tot[[j]]$i[(k-5):(k-8)], na.rm=TRUE))
+  R.RPN <- c(R.RPN, sum(covid.2019.ru.dyn.tot[[j]]$i[(k):(k-3)], na.rm=TRUE)/sum(covid.2019.ru.dyn.tot[[j]]$i[(k-4):(k-7)], na.rm=TRUE))
   }
   R.RPN <- c(R.RPN)
   covid.2019.ru.dyn.tot[[j]]$R.RPN <- R.RPN

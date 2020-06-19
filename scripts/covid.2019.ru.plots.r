@@ -569,7 +569,7 @@ main=paste("Russian Federation / ",
 levels(covid.2019.ru$LOCUS)[i]," (",
 sum(covid.2019.ru.dyn.tot[[i]]$i),")", sep=""),
 xlab="",
-ylab="Rospotrebnazor's R: daily increments for days [N,N-4]/[N-5,N-8]",
+ylab="Rospotrebnazor's R: daily increments for days [N,N-3]/[N-4,N-7]",
 axes=FALSE
 )
 
