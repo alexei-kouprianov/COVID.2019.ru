@@ -8,7 +8,7 @@ To cite this repository in publications use:
 A BibTeX entry for LaTeX users is:
 
     @Manual{,
-        title = {COVID.2019.ru. Coronavirus emidemics in Russia: data and scripts},
+        title = {COVID.2019.ru. Coronavirus epidemics in Russia: data and scripts},
         author = {Kouprianov, Alexei},
         year = {2020},
         note = {data, R, and perl code},
