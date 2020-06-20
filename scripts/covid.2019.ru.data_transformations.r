@@ -254,23 +254,26 @@ for(j in 1:length(levels(covid.2019.ru$LOCUS))){
 names(covid.2019.ru.dyn.tot) <- levels(covid.2019.ru$LOCUS)
 
 for(j in 1:length(levels(covid.2019.ru$LOCUS))){
- covid.2019.ru.dyn.tot[[j]]$CS.a <- covid.2019.ru.dyn.tot[[j]]$CS.i - (covid.2019.ru.dyn.tot[[j]]$CS.r + covid.2019.ru.dyn.tot[[j]]$CS.d)
 
  covid.2019.ru.dyn.tot[[j]]$CS.i <- cumsum(covid.2019.ru.dyn.tot[[j]]$i)
  covid.2019.ru.dyn.tot[[j]]$CS.i.diff <- c(NA, 
   covid.2019.ru.dyn.tot[[j]]$CS.i[2:length(covid.2019.ru.dyn.tot[[j]]$CS.i)]/
   covid.2019.ru.dyn.tot[[j]]$CS.i[1:(length(covid.2019.ru.dyn.tot[[j]]$CS.i)-1)]
   )
+
  covid.2019.ru.dyn.tot[[j]]$CS.r <- cumsum(covid.2019.ru.dyn.tot[[j]]$r)
  covid.2019.ru.dyn.tot[[j]]$CS.r.diff <- c(NA, 
   covid.2019.ru.dyn.tot[[j]]$CS.r[2:length(covid.2019.ru.dyn.tot[[j]]$CS.r)]/
   covid.2019.ru.dyn.tot[[j]]$CS.r[1:(length(covid.2019.ru.dyn.tot[[j]]$CS.r)-1)]
   )
+
  covid.2019.ru.dyn.tot[[j]]$CS.d <- cumsum(covid.2019.ru.dyn.tot[[j]]$d)
  covid.2019.ru.dyn.tot[[j]]$CS.d.diff <- c(NA, 
   covid.2019.ru.dyn.tot[[j]]$CS.d[2:length(covid.2019.ru.dyn.tot[[j]]$CS.d)]/
   covid.2019.ru.dyn.tot[[j]]$CS.d[1:(length(covid.2019.ru.dyn.tot[[j]]$CS.d)-1)]
   )
+
+ covid.2019.ru.dyn.tot[[j]]$CS.a <- covid.2019.ru.dyn.tot[[j]]$CS.i - (covid.2019.ru.dyn.tot[[j]]$CS.r + covid.2019.ru.dyn.tot[[j]]$CS.d)
 }
 
 for(j in 1:length(levels(covid.2019.ru$LOCUS))){

@@ -32,17 +32,17 @@
 
 # Cumulated growth, by regions;
 
-png("../plots/COVID.2019.cumulated.by_regions.png", height=750, width=1000, res=120, pointsize=10)
+png("../plots/04.COVID.2019.cumulated.by_regions.png", height=750, width=1000, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1)
 
-plot(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.i.dyn.tt$Mos.CS, 
-type="l", col=2, xlab="", 
+plot(covid.2019.ru.i.dyn.tt$TIME, (covid.2019.ru.i.dyn.tt$RUS.CS - (covid.2019.ru.i.dyn.tt$Mos.CS + covid.2019.ru.i.dyn.tt$SPb.CS)), 
+type="l",col=3, xlab="", 
 ylab="Total COVID-2019 cases detected", 
 main="Russian Federation",
 axes=FALSE)
 
 points(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.i.dyn.tt$SPb.CS, type="l",col=4)
-points(covid.2019.ru.i.dyn.tt$TIME, (covid.2019.ru.i.dyn.tt$RUS.CS - (covid.2019.ru.i.dyn.tt$Mos.CS + covid.2019.ru.i.dyn.tt$SPb.CS)), type="l",col=3)
+points(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.i.dyn.tt$Mos.CS, type="l", col=2)
 
 legend("topleft", lt=1, col=c(2,4,3), legend=c("Moscow","St. Petersburg","The rest of Russia"), bty="n")
 
@@ -77,7 +77,7 @@ dev.off()
 # dev.off()
 
 # Cumulated growth, log scale, by regions;
-png("../plots/COVID.2019.cumulated.log.10.by_regions.png", height=750, width=1000, res=120, pointsize=10)
+png("../plots/05.COVID.2019.cumulated.log.10.by_regions.png", height=750, width=1000, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1)
 
 plot(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$Mos.CS), 
@@ -108,7 +108,7 @@ legend("topleft", lt=1, col=c(2,4,3), legend=c("Moscow","St. Petersburg","The re
 dev.off()
 
 # Regions barplot;
-png("../plots/COVID.2019.barplot.regions.png", height=750, width=1000, res=120, pointsize=10)
+png("../plots/15.COVID.2019.barplot.regions.png", height=750, width=1000, res=120, pointsize=10)
 par(mar=c(10,5,4,2)+.1, cex.axis=.5)
 
 barplot(covid.2019.ru.i.reg.ordered.df$NUMBER, 
@@ -121,7 +121,7 @@ las=2)
 dev.off()
 
 # Regions barplot logarithmic;
-png("../plots/COVID.2019.barplot.regions.log.10.png", height=750, width=1000, res=120, pointsize=10)
+png("../plots/16.COVID.2019.barplot.regions.log.10.png", height=750, width=1000, res=120, pointsize=10)
 par(mar=c(10,5,4,2)+.1, cex.axis=.5)
 
 barplot(log10(covid.2019.ru.i.reg.ordered.df$NUMBER), 
@@ -137,7 +137,7 @@ axis(2, at=log10(c(1:9, seq(10,100,10), seq(200,1000,100), seq(2000,10000,1000),
 dev.off()
 
 # Regions barplot cases per 100K;
-png("../plots/COVID.2019.barplot.regions.per_100K.png", height=750, width=1000, res=120, pointsize=10)
+png("../plots/17.COVID.2019.barplot.regions.per_100K.png", height=750, width=1000, res=120, pointsize=10)
 par(mar=c(10,5,4,2)+.1, cex.axis=.5)
 
 barplot(covid.2019.ru.i.reg.ordered.PER.100K.df$PER.100K, 
@@ -150,7 +150,7 @@ las=2)
 dev.off()
 
 # Map total cases;
-png("../plots/COVID.2019.map.regions.png", height=750, width=1000, res=120, pointsize=10)
+png("../plots/10.COVID.2019.map.regions.png", height=750, width=1000, res=120, pointsize=10)
 
 map(region="Russia", fill=TRUE, col=8) 
 mtext(paste("Total COVID-2019 cases, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), 
@@ -178,7 +178,7 @@ for(i in 1:nrow(covid.2019.ru.i.reg.0.df)){
 dev.off()
 
 # Map total cases per 100K;
-png("../plots/COVID.2019.map.regions.per_100K.png", height=750, width=1000, res=120, pointsize=10)
+png("../plots/11.COVID.2019.map.regions.per_100K.png", height=750, width=1000, res=120, pointsize=10)
 
 map(region="Russia", fill=TRUE, col=8) 
 mtext(paste("Total COVID-2019 cases per 100K, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), 
@@ -216,7 +216,7 @@ dev.off()
 
 # Cumulated for 1M regional centres, log10 scale, cut at day 36;
 
-png("../plots/COVID.2019.cumulated.log10.1M.png", height=750, width=1000, res=120, pointsize=10)
+png("../plots/06.COVID.2019.cumulated.log10.1M.png", height=750, width=1000, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1, lwd=2)
 
 nrow.tt <- nrow(covid.2019.ru.dyn.tot[[1]])
@@ -276,7 +276,7 @@ axis(2, at=log10(c(1:9, seq(10,100,10), seq(200,1000,100), seq(2000,10000,1000))
 
 dev.off()
 
-png("../plots/COVID.2019.growth_ratio.png", height=750, width=1000, res=120, pointsize=10)
+png("../plots/07.COVID.2019.growth_ratio.png", height=750, width=1000, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1, lwd=2)
 
 plot(covid.2019.ru.i.dyn.tt$TIME[33:(nrow(covid.2019.ru.i.dyn.tt))], 
@@ -306,7 +306,7 @@ axis(2)
 
 dev.off()
 
-png("../plots/COVID.2019.cumulated.TARD.png", height=750, width=1000, res=120, pointsize=10)
+png("../plots/01.COVID.2019.cumulated.TARD.png", height=750, width=1000, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1, lwd=2)
 
 plot(covid.2019.ru.i.dyn.tt$TIME, covid.2019.ru.i.dyn.tt$RUS.CS,
@@ -339,7 +339,7 @@ bty="n")
 
 dev.off()
 
-png("../plots/COVID.2019.cumulated.TARD.log10.png", height=750, width=1000, res=120, pointsize=10)
+png("../plots/02.COVID.2019.cumulated.TARD.log10.png", height=750, width=1000, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1, lwd=2)
 
 plot(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$RUS.CS),
@@ -870,7 +870,7 @@ dev.off()
 # #
 # # ffmpeg -r 2 -f image2 -s 1000x750 -i COVID.2019.map.regions.%03d.png -vcodec libx264 -crf 25 -pix_fmt yuv420p COVID.2019.ru.map.animated.mp4
 
-png("../plots/COVID.2019.hist.rdi.png", height=750, width=1000, res=120, pointsize=10)
+png("../plots/08.COVID.2019.hist.rdi.png", height=750, width=1000, res=120, pointsize=10)
 
 rdi.slice.noInf.max <- .99
 
@@ -903,7 +903,7 @@ bty="n"
 
 dev.off()
 
-png("../plots/COVID.2019.hist.dt.png", height=750, width=1000, res=120, pointsize=10)
+png("../plots/09.COVID.2019.hist.dt.png", height=750, width=1000, res=120, pointsize=10)
 
 hist(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, 
 breaks=(ceiling(min(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, na.rm=TRUE)-.5)-.5):
@@ -936,7 +936,7 @@ bty="n"
 
 dev.off()
 
-png("../plots/COVID.2019.mortality.dyn.png", height=750, width=1000, res=120, pointsize=10)
+png("../plots/03.COVID.2019.mortality.dyn.png", height=750, width=1000, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1)
 
 plot(
@@ -1009,7 +1009,7 @@ dev.off()
 
 ru.shape <- readOGR("../misc/ESRI.shapefile")
 
-png("../plots/COVID.2019.map.density.regions.per_100K.png", height=750, width=1000, res=120, pointsize=10)
+png("../plots/13.COVID.2019.map.density.regions.per_100K.png", height=750, width=1000, res=120, pointsize=10)
 par(fg="white", bg=rgb(0,.1,.2,1))
 
 plot(ru.shape, xlim=c(20,180), col="white", border="white")
@@ -1024,7 +1024,7 @@ mtext("Russian Federation", font=2, cex=1.2, side=3, line=0)
 
 dev.off()
 
-png("../plots/COVID.2019.map.density.regions.png", height=750, width=1000, res=120, pointsize=10)
+png("../plots/12.COVID.2019.map.density.regions.png", height=750, width=1000, res=120, pointsize=10)
 par(fg="white", bg=rgb(0,.1,.2,1))
 
 plot(ru.shape, xlim=c(20,180), col="white", border="white")
@@ -1054,7 +1054,7 @@ dev.off()
 #
 # dev.off()
 
-png("../plots/COVID.2019.map.density.regions.rdi7dt.png", height=750, width=1000, res=120, pointsize=10)
+png("../plots/14.COVID.2019.map.density.regions.rdi7dt.png", height=750, width=1000, res=120, pointsize=10)
 par(fg="white", bg=rgb(0,.1,.2,1))
 
 plot(ru.shape, xlim=c(20,180), col="white", border="white")
