@@ -1,5 +1,21 @@
 # Readme for COVID-2019.ru
 
+To cite this repository in publications use:
+
+    Kouprianov, A. (2020). COVID.2019.ru. Coronavirus emidemics in Russia: data and scripts. 
+    URL https://github.com/alexei-kouprianov/COVID.2019.ru
+
+A BibTeX entry for LaTeX users is:
+
+    @Manual{,
+        title = {COVID.2019.ru. Coronavirus emidemics in Russia: data and scripts},
+        author = {Kouprianov, Alexei},
+        year = {2020},
+        note = {data, R, and perl code},
+        url = {https://github.com/alexei-kouprianov/COVID.2019.ru},
+    }
+
+
 This repo was created to keep records of the COVID-2019 epidemics in Russia. The dataset is based on the official reports of confimed cases. This means that the data lag behind the spread of the virus. See also a magnificent project by [Johns Hopkins Univ.](https://github.com/CSSEGISandData/COVID-19)
 
 Collection of World resources:
@@ -49,26 +65,33 @@ The disaggregated data for Cheliabinsk can be downloaded with `wget` (command-li
 
 The visualizations derived from nation-wide data are as follows. For regional graphs see [a special subfolder](https://github.com/alexei-kouprianov/COVID.2019.ru/tree/master/plots/regions "Regional graphs"). An example of regional graphs (St. Petersburg, Russia) is given below in this readme file.
 
+/plots/
+/plots/
+
 <!--![alt text](plots/COVID.2019.cumulated.png "Cumulated curve of COVID-2019 cases for Russia")-->
 <!--![alt text](plots/COVID.2019.cumulated.log10.png "Cumulated curve of COVID-2019 cases for Russia, y-logarithmic")-->
-![alt text](plots/COVID.2019.cumulated.TARD.png "Cumulated curve of COVID-2019 cases for Russia decomposed")
-![alt text](plots/COVID.2019.cumulated.TARD.log10.png "Cumulated curve of COVID-2019 cases for Russia decomposed, y-logarithmic")
-![alt text](plots/COVID.2019.cumulated.by_regions.png "Cumulated curve of COVID-2019 cases for Russia, by regions")
-![alt text](plots/COVID.2019.cumulated.log.10.by_regions.png "Cumulated curve of COVID-2019 cases for Russia, y-logarithmic, by regions")
-![alt text](plots/COVID.2019.cumulated.log10.1M.png "Cumulated curve of COVID-2019 cases for Russia, y-logarithmic, by regions for regions with capital city population over 1000K")
+![alt text](plots/01.COVID.2019.cumulated.TARD.png "Cumulated curve of COVID-2019 cases for Russia decomposed")
+![alt text](plots/02.COVID.2019.cumulated.TARD.log10.png "Cumulated curve of COVID-2019 cases for Russia decomposed, y-logarithmic")
 
-![alt text](plots/COVID.2019.barplot.regions.png "COVID-2019 total cases for Russia by regions")
-![alt text](plots/COVID.2019.barplot.regions.log.10.png "COVID-2019 total cases for Russia by regions")
-![alt text](plots/COVID.2019.barplot.regions.per_100K.png "COVID-2019 total cases per 100K inhabitants for Russia by regions")
+![alt text](plots/03.COVID.2019.mortality.dyn.png "Calculated mortality dynamics")
 
-![alt text](plots/COVID.2019.hist.rdi.png "COVID-2019 Rt 7 days rolling averages for regions of Russia")
-![alt text](plots/COVID.2019.hist.dt.png "COVID-2019 cases doubling time based on Rt 7 days rolling averages for regions of Russia")
-![alt text](plots/COVID.2019.map.regions.png "COVID-2019 total cases for Russia, map")
-![alt text](plots/COVID.2019.map.regions.per_100K.png "COVID-2019 total cases per 100K inhabitants for Russia, map")
+![alt text](plots/04.COVID.2019.cumulated.by_regions.png "Cumulated curve of COVID-2019 cases for Russia, by regions")
+![alt text](plots/05.COVID.2019.cumulated.log.10.by_regions.png "Cumulated curve of COVID-2019 cases for Russia, y-logarithmic, by regions")
+![alt text](plots/07.COVID.2019.growth_ratio.png "Growth ratios of COVID-2019 cases for Russia decomposed")
+![alt text](plots/06.COVID.2019.cumulated.log10.1M.png "Cumulated curve of COVID-2019 cases for Russia, y-logarithmic, by regions for regions with capital city population over 1000K")
 
-![alt text](plots/COVID.2019.map.density.regions.png "COVID-2019 total cases for Russia, density map")
-![alt text](plots/COVID.2019.map.density.regions.per_100K.png "COVID-2019 total cases per 100K inhabitants for Russia, density map")
-![alt text](plots/COVID.2019.map.density.regions.rdi7dt.png "COVID-2019 cases doubling time based on Rt 7 days rolling averages for regions of Russia, density map")
+![alt text](plots/15.COVID.2019.barplot.regions.png "COVID-2019 total cases for Russia by regions")
+![alt text](plots/16.COVID.2019.barplot.regions.log.10.png "COVID-2019 total cases for Russia by regions")
+![alt text](plots/17.COVID.2019.barplot.regions.per_100K.png "COVID-2019 total cases per 100K inhabitants for Russia by regions")
+
+![alt text](plots/08.COVID.2019.hist.rdi.png "COVID-2019 Rt 7 days rolling averages for regions of Russia")
+![alt text](plots/09.COVID.2019.hist.dt.png "COVID-2019 cases doubling time based on Rt 7 days rolling averages for regions of Russia")
+![alt text](plots/10.COVID.2019.map.regions.png "COVID-2019 total cases for Russia, map")
+![alt text](plots/11.COVID.2019.map.regions.per_100K.png "COVID-2019 total cases per 100K inhabitants for Russia, map")
+
+![alt text](plots/12.COVID.2019.map.density.regions.png "COVID-2019 total cases for Russia, density map")
+![alt text](plots/13.COVID.2019.map.density.regions.per_100K.png "COVID-2019 total cases per 100K inhabitants for Russia, density map")
+![alt text](plots/14.COVID.2019.map.density.regions.rdi7dt.png "COVID-2019 cases doubling time based on Rt 7 days rolling averages for regions of Russia, density map")
 
 <!--![alt text](plots/COVID.2019.fitting.expGrowth_vs_LL.3.png "Fitting the data with exponent and log-logistic")
 ![alt text](plots/COVID.2019.fitting.expGrowth_vs_LL.3.log10.png "Fitting the data with exponent and log-logistic, y-logarithmic")-->
