@@ -256,6 +256,7 @@ names(covid.2019.ru.dyn.tot) <- levels(covid.2019.ru$LOCUS)
 for(j in 1:length(levels(covid.2019.ru$LOCUS))){
 
  covid.2019.ru.dyn.tot[[j]]$CS.i <- cumsum(covid.2019.ru.dyn.tot[[j]]$i)
+
  covid.2019.ru.dyn.tot[[j]]$CS.i.diff <- c(NA, 
   covid.2019.ru.dyn.tot[[j]]$CS.i[2:length(covid.2019.ru.dyn.tot[[j]]$CS.i)]/
   covid.2019.ru.dyn.tot[[j]]$CS.i[1:(length(covid.2019.ru.dyn.tot[[j]]$CS.i)-1)]
@@ -374,6 +375,8 @@ for(i in 1:length(levels(covid.2019.ru$LOCUS))){
  covid.2019.ru.i.rt.slice.2log <- c(covid.2019.ru.i.rt.slice.2log, NA)
  }
 }
+
+#######
 
 covid.2019.ru.i.rt.slice.noInf <- subset(covid.2019.ru.i.rt.slice, covid.2019.ru.i.rt.slice < Inf)
 covid.2019.ru.i.rt.slice.norm <- covid.2019.ru.i.rt.slice/max(covid.2019.ru.i.rt.slice.noInf)
