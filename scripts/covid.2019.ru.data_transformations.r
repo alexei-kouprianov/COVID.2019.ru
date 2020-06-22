@@ -102,7 +102,7 @@ covid.2019.ru.i.reg.df <- cbind.data.frame(covid.2019.ru.i.reg.df, covid.2019.po
 covid.2019.ru.i.reg.df.LOCUS.ch <- as.character(covid.2019.ru.i.reg.df$LOCUS)
 covid.2019.ru.i.reg.df$LOCUS.dm <- factor(covid.2019.ru.i.reg.df.LOCUS.ch, levels=ru.shape.LOCUS)
 
-covid.2019.ru.i.reg.df$PER.100K <- covid.2019.ru.i.reg.df$NUMBER/(covid.2019.ru.i.reg.df$POPULATION/100000)
+covid.2019.ru.i.reg.df$PER.100K <- covid.2019.ru.i.reg.df$NUMBER/(covid.2019.ru.i.reg.df$POPULATION.20200101/100000)
 
 # Mapping regions data frame (part 1);
 covid.2019.ru.i.reg.0.df <- NULL
@@ -278,7 +278,7 @@ for(j in 1:length(levels(covid.2019.ru$LOCUS))){
 }
 
 for(j in 1:length(levels(covid.2019.ru$LOCUS))){
- covid.2019.ru.dyn.tot[[j]]$CS.a.POP <- covid.2019.ru.dyn.tot[[j]]$CS.a / (covid.2019.population$POPULATION[j]/100000)
+ covid.2019.ru.dyn.tot[[j]]$CS.a.POP <- covid.2019.ru.dyn.tot[[j]]$CS.a / (covid.2019.population$POPULATION.20200101[j]/100000)
 }
 
 CS.i.diff.7 <- NULL 
@@ -376,6 +376,13 @@ for(i in 1:length(levels(covid.2019.ru$LOCUS))){
  }
 }
 
+covid.2019.ru.CS.a.POP.slice <- NULL
+
+for(i in 1:length(levels(covid.2019.ru$LOCUS))){
+covid.2019.ru.CS.a.POP.slice <- c(covid.2019.ru.CS.a.POP.slice,
+covid.2019.ru.dyn.tot[[i]]$CS.a.POP[nrow(covid.2019.ru.dyn.tot[[i]])-3])
+}
+
 #######
 
 covid.2019.ru.i.rt.slice.noInf <- subset(covid.2019.ru.i.rt.slice, covid.2019.ru.i.rt.slice < Inf)
@@ -387,15 +394,17 @@ covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log <- covid.2019.ru.i.rt.slice.2log[c(1:(
 
 covid.2019.ru.i.reg.0.df <- covid.2019.ru.i.reg.0.df[order(-covid.2019.ru.i.reg.0.df$NUMBER),]
 
-covid.2019.ru.i.reg.0.df$PER.100K <- covid.2019.ru.i.reg.0.df$NUMBER/(covid.2019.ru.i.reg.0.df$POPULATION/100000)
+covid.2019.ru.i.reg.0.df$PER.100K <- covid.2019.ru.i.reg.0.df$NUMBER/(covid.2019.ru.i.reg.0.df$POPULATION.20200101/100000)
 
 # Density mapping regions data frame;
 
 covid.2019.ru.i.reg.df$CS.i.diff.7 <- covid.2019.ru.i.rt.slice
 covid.2019.ru.i.reg.df$CS.i.diff.7.2log <- covid.2019.ru.i.rt.slice.2log
+covid.2019.ru.i.reg.df$CS.a.POP <- covid.2019.ru.CS.a.POP.slice
 
 covid.2019.ru.i.reg.ordered.df <- covid.2019.ru.i.reg.df[order(-covid.2019.ru.i.reg.df$NUMBER),]
 covid.2019.ru.i.reg.ordered.PER.100K.df <- covid.2019.ru.i.reg.df[order(-covid.2019.ru.i.reg.df$PER.100K),]
+covid.2019.ru.i.reg.ordered.CS.a.POP <- covid.2019.ru.i.reg.df[order(-covid.2019.ru.i.reg.df$CS.a.POP),]
 covid.2019.ru.i.reg.df.dm_sorted <- covid.2019.ru.i.reg.df[order(covid.2019.ru.i.reg.df$LOCUS.dm),]
 
 # Extracting billionaires from covid.2019.ru.dyn.tot; 
@@ -432,7 +441,7 @@ covid.2019.ru.i$NUMBER >= 100 &
 covid.2019.ru.i$LOCUS.0 != "Moscow")[,c(5,6)]
 
 dt.worst <- data.frame(
-subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log < 15)$LOCUS.dm,
+subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log < 15)$REGION.RUS,
 round(subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log < 15)$PER.100K, 2),
 round(subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log < 15)$CS.i.diff.7.2log, 2)
 )
@@ -440,7 +449,7 @@ colnames(dt.worst) <- c("LOCUS","K100","Dt")
 dt.worst <- dt.worst[order(dt.worst$Dt),]
 
 dt.best <- data.frame(
-subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log >= 35)$LOCUS.dm,
+subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log >= 35)$REGION.RUS,
 round(subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log >= 35)$PER.100K, 2),
 round(subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log >= 35)$CS.i.diff.7.2log, 2)
 )
