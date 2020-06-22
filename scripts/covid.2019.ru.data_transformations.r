@@ -380,7 +380,15 @@ covid.2019.ru.CS.a.POP.slice <- NULL
 
 for(i in 1:length(levels(covid.2019.ru$LOCUS))){
 covid.2019.ru.CS.a.POP.slice <- c(covid.2019.ru.CS.a.POP.slice,
-covid.2019.ru.dyn.tot[[i]]$CS.a.POP[nrow(covid.2019.ru.dyn.tot[[i]])-3])
+covid.2019.ru.dyn.tot[[i]]$CS.a.POP[nrow(covid.2019.ru.dyn.tot[[i]])])
+}
+
+covid.2019.ru.last.7.i.POP.slice <- NULL
+
+for(i in 1:length(levels(covid.2019.ru$LOCUS))){
+covid.2019.ru.last.7.i.POP.slice <- c(covid.2019.ru.last.7.i.POP.slice,
+sum(tail(covid.2019.ru.dyn.tot[[i]]$i, 7))
+)
 }
 
 #######
@@ -401,10 +409,12 @@ covid.2019.ru.i.reg.0.df$PER.100K <- covid.2019.ru.i.reg.0.df$NUMBER/(covid.2019
 covid.2019.ru.i.reg.df$CS.i.diff.7 <- covid.2019.ru.i.rt.slice
 covid.2019.ru.i.reg.df$CS.i.diff.7.2log <- covid.2019.ru.i.rt.slice.2log
 covid.2019.ru.i.reg.df$CS.a.POP <- covid.2019.ru.CS.a.POP.slice
+covid.2019.ru.i.reg.df$last.7.i.POP <- covid.2019.ru.last.7.i.POP.slice
 
 covid.2019.ru.i.reg.ordered.df <- covid.2019.ru.i.reg.df[order(-covid.2019.ru.i.reg.df$NUMBER),]
 covid.2019.ru.i.reg.ordered.PER.100K.df <- covid.2019.ru.i.reg.df[order(-covid.2019.ru.i.reg.df$PER.100K),]
 covid.2019.ru.i.reg.ordered.CS.a.POP <- covid.2019.ru.i.reg.df[order(-covid.2019.ru.i.reg.df$CS.a.POP),]
+covid.2019.ru.i.reg.ordered.last.7.i.POP <- covid.2019.ru.i.reg.df[order(-covid.2019.ru.i.reg.df$last.7.i.POP),]
 covid.2019.ru.i.reg.df.dm_sorted <- covid.2019.ru.i.reg.df[order(covid.2019.ru.i.reg.df$LOCUS.dm),]
 
 # Extracting billionaires from covid.2019.ru.dyn.tot; 

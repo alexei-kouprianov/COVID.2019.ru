@@ -162,6 +162,19 @@ las=2)
 
 dev.off()
 
+# Regions barplot cases detected for the past 7 days per 100K;
+png("../plots/19.COVID.2019.barplot.regions.per_100K.detected_for_the_past_7d.png", height=750, width=1000, res=120, pointsize=10)
+par(mar=c(6,3.5,4,0)+.1, mgp=c(1.7,.5,0), cex.axis=.6)
+
+barplot(height=covid.2019.ru.i.reg.ordered.last.7.i.POP$last.7.i.POP,
+names.arg=covid.2019.ru.i.reg.ordered.last.7.i.POP$LOCUS, 
+xlab="", 
+ylab=paste("Sum of last week detected COVID-2019 cases per 100K, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), 
+main="Russian Federation",
+las=2)
+
+dev.off()
+
 # Map total cases;
 png("../plots/10.COVID.2019.map.regions.png", height=750, width=1000, res=120, pointsize=10)
 
