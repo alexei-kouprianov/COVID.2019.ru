@@ -409,7 +409,7 @@ covid.2019.ru.i.reg.0.df$PER.100K <- covid.2019.ru.i.reg.0.df$NUMBER/(covid.2019
 covid.2019.ru.i.reg.df$CS.i.diff.7 <- covid.2019.ru.i.rt.slice
 covid.2019.ru.i.reg.df$CS.i.diff.7.2log <- covid.2019.ru.i.rt.slice.2log
 covid.2019.ru.i.reg.df$CS.a.POP <- covid.2019.ru.CS.a.POP.slice
-covid.2019.ru.i.reg.df$last.7.i.POP <- covid.2019.ru.last.7.i.POP.slice
+covid.2019.ru.i.reg.df$last.7.i.POP <- covid.2019.ru.last.7.i.POP.slice/(covid.2019.ru.i.reg.df$POPULATION.20200101/100000)
 
 covid.2019.ru.i.reg.ordered.df <- covid.2019.ru.i.reg.df[order(-covid.2019.ru.i.reg.df$NUMBER),]
 covid.2019.ru.i.reg.ordered.PER.100K.df <- covid.2019.ru.i.reg.df[order(-covid.2019.ru.i.reg.df$PER.100K),]
