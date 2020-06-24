@@ -2,7 +2,7 @@
 
 To cite this repository in publications use:
 
-    Kouprianov, A. (2020). COVID.2019.ru. Coronavirus emidemics in Russia: data and scripts. 
+    Kouprianov, A. (2020). COVID.2019.ru. Coronavirus epidemics in Russia: data and scripts. 
     URL https://github.com/alexei-kouprianov/COVID.2019.ru
 
 A BibTeX entry for LaTeX users is:
