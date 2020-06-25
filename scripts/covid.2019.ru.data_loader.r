@@ -1,21 +1,8 @@
 ################################################################
 # Nested under:
-# covid.2019.ru.main.r
-#
-# # If needed, install:
-# install.packages("maps")
+# covid.2019.ru.main.r, requires covid.2019.ru.libraries.r
 
 ################################################################
-# Loading libraries, setting locale for time
-
-library(maps)
-library(TeachingDemos)
-library(rgdal)
-library(rmarkdown)
-library(rjson)
-
-# library(png)
-Sys.setlocale("LC_TIME", "en_US.UTF-8")
 
 ################################################################
 # Reading data
