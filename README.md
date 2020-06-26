@@ -26,7 +26,7 @@ Other resources on Russia:
 
 * [MediaZona at GitHub](https://github.com/mediazona/data-corona-Russia)
 
-All images originally published in this repository are licensed under cc-by-4.0
+All images originally published in this repository or resulting from the scripts but not routinely uploaded to GitHub are licensed under cc-by-4.0
 
 Fitting and prognostic scripts ceased to work properly towards the end of April 2020, now they are fixed and the images are kept being updated.
 
