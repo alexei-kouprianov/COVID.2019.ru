@@ -962,7 +962,7 @@ bty="n"
 
 dev.off()
 
-png("../plots/03.COVID.2019.mortality.dyn.png", height=750, width=1000, res=120, pointsize=10)
+png("../plots/03.COVID.2019.CaseFatalityRatio.dyn.png", height=750, width=1000, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1)
 
 plot(
@@ -970,9 +970,9 @@ covid.2019.ru.i.dyn.tt$TIME[50:nrow(covid.2019.ru.d.dyn.tt)],
 covid.2019.ru.d.dyn.tt$DEAD.CS[50:nrow(covid.2019.ru.d.dyn.tt)]/(covid.2019.ru.r.dyn.tt$RECOVERED.CS[50:nrow(covid.2019.ru.r.dyn.tt)] + covid.2019.ru.d.dyn.tt$DEAD.CS[50:nrow(covid.2019.ru.d.dyn.tt)]), 
 type="l", 
 ylim=c(0, max(covid.2019.ru.d.dyn.tt$DEAD.CS[50:nrow(covid.2019.ru.d.dyn.tt)]/(covid.2019.ru.r.dyn.tt$RECOVERED.CS[50:nrow(covid.2019.ru.r.dyn.tt)] + covid.2019.ru.d.dyn.tt$DEAD.CS[50:nrow(covid.2019.ru.d.dyn.tt)]))),
-main=paste("Russian Federation, mortality / ", covid.2019.ru.i.dyn.tt$TIME[nrow(covid.2019.ru.d.dyn.tt)]),
+main=paste("Russian Federation, Case Fatality Ratio / ", covid.2019.ru.i.dyn.tt$TIME[nrow(covid.2019.ru.d.dyn.tt)]),
 xlab="",
-ylab="Mortality",
+ylab="Case Fatality Ratio",
 axes=FALSE
 )
 
