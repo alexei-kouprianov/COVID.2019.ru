@@ -582,6 +582,41 @@ axis(2)
 dev.off()
 }
 
+
+dir.create("../plots/regions/increments/i.7.var/")
+
+for(i in 1:length(levels(covid.2019.ru$LOCUS))){
+
+png(file=paste("../plots/regions/increments/i.7.var/COVID.2019.momentary.7.var",gsub(" ", "_", levels(covid.2019.ru$LOCUS)[i]),".i.png", sep=""), height=750, width=750, res=120, pointsize=10)
+par(mar=c(6,5,4,2)+.1, lwd=2)
+
+plot(covid.2019.ru.dyn.tot[[i]]$TIME, covid.2019.ru.dyn.tot[[i]]$i.7.var, 
+type="n",
+main=paste("Russian Federation / ",
+levels(covid.2019.ru$LOCUS)[i]," (",
+sum(covid.2019.ru.dyn.tot[[i]]$i),")", sep=""),
+ylim=c(0,5),
+xlab="",
+ylab="COVID-2019 new cases detected, residuals vs. 7-day rolling mean",
+axes=FALSE
+)
+
+for(j in 1:length(levels(covid.2019.ru$LOCUS))){
+lines(covid.2019.ru.dyn.tot[[j]]$TIME, covid.2019.ru.dyn.tot[[j]]$i.7.var, type="l", col=rgb(0,0,0,.05))
+}
+
+lines(covid.2019.ru.dyn.tot[[i]]$TIME, covid.2019.ru.dyn.tot[[i]]$i.7.var, type="l", col="white", lwd=5)
+lines(covid.2019.ru.dyn.tot[[i]]$TIME, covid.2019.ru.dyn.tot[[i]]$i.7.var, type="l", col="darkred", lwd=2)
+
+axis.POSIXct(1, 
+at=seq(min(covid.2019.breaks$TIME), max(covid.2019.breaks$TIME), by="week"), 
+format = "%Y-%m-%d", 
+las=2)
+axis(2)
+
+dev.off()
+}
+
 dir.create("../plots/regions/increments/R.RPN/")
 
 for(i in 1:length(levels(covid.2019.ru$LOCUS))){

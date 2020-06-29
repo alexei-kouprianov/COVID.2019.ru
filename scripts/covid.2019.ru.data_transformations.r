@@ -323,6 +323,8 @@ for(j in 1:(length(levels(covid.2019.ru$LOCUS)))){
   R.RPN <- c(R.RPN)
   covid.2019.ru.dyn.tot[[j]]$R.RPN <- R.RPN
 
+ covid.2019.ru.dyn.tot[[j]]$i.7.var <- abs(covid.2019.ru.dyn.tot[[j]]$i - covid.2019.ru.dyn.tot[[j]]$i.7)/covid.2019.ru.dyn.tot[[j]]$i.7
+
 }
 
 # List of truncated data.frames;
