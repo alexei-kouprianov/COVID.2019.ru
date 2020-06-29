@@ -3,7 +3,8 @@ COVID.2019.ru.ods
 data/momentary.da.txt
 plots/map.animated
 plots/fit.animated
-plots/regions/increments/
+plots/regions/increments/i.7
+plots/regions/increments/R.RPN
 plots/regions/rdi.race/
 plots/world/
 scripts/.Rhistory
