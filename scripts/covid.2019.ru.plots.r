@@ -1115,7 +1115,7 @@ dev.off()
 #
 # dev.off()
 
-png("../plots/14.COVID.2019.map.density.regions.rdi7dt.png", height=750, width=1000, res=120, pointsize=10)
+png("../plots/14.1.COVID.2019.map.density.regions.rdi7dt.png", height=750, width=1000, res=120, pointsize=10)
 par(fg="white", bg=rgb(0,.1,.2,1))
 
 plot(ru.shape, xlim=c(20,180), col="white", border="white")
@@ -1133,6 +1133,28 @@ side=1, line=1)
 mtext("Russian Federation", font=2, cex=1.2, side=3, line=0)
 
 dev.off()
+
+png("../plots/14.2.COVID.2019.map.density.regions.i.7.var.png", height=750, width=1000, res=120, pointsize=10)
+par(fg="white", bg=rgb(0,.1,.2,1))
+
+plot(ru.shape, xlim=c(20,180), col="white", border="white")
+plot(ru.shape, xlim=c(20,180), 
+col=rgb(.3,0,0,(1-
+covid.2019.ru.i.reg.df.dm_sorted$i.7.var.mean.3/max(covid.2019.ru.i.reg.df.dm_sorted$i.7.var.mean.3)
+)^8
+), 
+border=rgb(.3,0,0,((1-
+covid.2019.ru.i.reg.df.dm_sorted$i.7.var.mean.3/max(covid.2019.ru.i.reg.df.dm_sorted$i.7.var.mean.3)
+)^8)/4
+), 
+add=TRUE)
+
+mtext(paste("COVID-2019 cases likely smoothed, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), 
+side=1, line=1) 
+mtext("Russian Federation", font=2, cex=1.2, side=3, line=0)
+
+dev.off()
+
 
 # png("../plots/COVID.2019.map.density.regions.rt7dt.01.png", height=750, width=1000, res=120, pointsize=10)
 # par(fg="white", bg=rgb(0,.1,.2,1))

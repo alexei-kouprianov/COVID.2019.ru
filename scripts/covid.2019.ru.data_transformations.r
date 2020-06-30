@@ -393,6 +393,14 @@ sum(tail(covid.2019.ru.dyn.tot[[i]]$i, 7))
 )
 }
 
+covid.2019.ru.last.i.7.var.slice <- NULL
+
+for(i in 1:length(levels(covid.2019.ru$LOCUS))){
+covid.2019.ru.last.i.7.var.slice <- c(covid.2019.ru.last.i.7.var.slice,
+mean(tail(covid.2019.ru.dyn.tot[[i]]$i.7.var), na.rm=TRUE)
+)
+}
+
 #######
 
 covid.2019.ru.i.rt.slice.noInf <- subset(covid.2019.ru.i.rt.slice, covid.2019.ru.i.rt.slice < Inf)
@@ -412,6 +420,7 @@ covid.2019.ru.i.reg.df$CS.i.diff.7 <- covid.2019.ru.i.rt.slice
 covid.2019.ru.i.reg.df$CS.i.diff.7.2log <- covid.2019.ru.i.rt.slice.2log
 covid.2019.ru.i.reg.df$CS.a.POP <- covid.2019.ru.CS.a.POP.slice
 covid.2019.ru.i.reg.df$last.7.i.POP <- covid.2019.ru.last.7.i.POP.slice/(covid.2019.ru.i.reg.df$POPULATION.20200101/100000)
+covid.2019.ru.i.reg.df$i.7.var.mean.3 <- covid.2019.ru.last.i.7.var.slice
 
 covid.2019.ru.i.reg.ordered.df <- covid.2019.ru.i.reg.df[order(-covid.2019.ru.i.reg.df$NUMBER),]
 covid.2019.ru.i.reg.ordered.PER.100K.df <- covid.2019.ru.i.reg.df[order(-covid.2019.ru.i.reg.df$PER.100K),]
