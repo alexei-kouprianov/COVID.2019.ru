@@ -94,6 +94,7 @@ covid.2019.ru.i.reg.df <- rbind.data.frame(covid.2019.ru.i.reg.df,
 cbind.data.frame(covid.2019.ru.i.reg[[i]]$LOCUS[1],
 sum(covid.2019.ru.i.reg[[i]]$NUMBER))
 )
+gc()
 }
 
 colnames(covid.2019.ru.i.reg.df) <- c("LOCUS.1","NUMBER")
@@ -112,6 +113,7 @@ covid.2019.ru.i.reg.0.df <- rbind.data.frame(covid.2019.ru.i.reg.0.df,
 cbind.data.frame(covid.2019.ru.i.reg.0[[i]]$LOCUS.0[1],
 sum(covid.2019.ru.i.reg.0[[i]]$NUMBER))
 )
+gc()
 }
 
 colnames(covid.2019.ru.i.reg.0.df) <- c("LOCUS.1","NUMBER")
@@ -339,6 +341,7 @@ for(j in 1:length(levels(covid.2019.ru$LOCUS))){
   covid.2019.ru.i.dyn.trunc[[j]] <- rbind.data.frame(rep(NA, ncol(covid.2019.ru.dyn.tot[[j]])))
   colnames(covid.2019.ru.i.dyn.trunc[[j]]) <- colnames(covid.2019.ru.dyn.tot[[j]])
  }
+ gc()
 }
 
 names(covid.2019.ru.i.dyn.trunc) <- names(covid.2019.ru.dyn.tot)
