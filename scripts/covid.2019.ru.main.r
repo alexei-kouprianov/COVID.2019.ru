@@ -8,7 +8,7 @@ source("covid.2019.ru.data_loader.r")
 # Running analytic and plotting scripts
 
 source("covid.2019.ru.data_transformations.r")
-render("../Rmd/daily.report.Rmd", run_pandoc=FALSE, clean=FALSE)
+# render("../Rmd/daily.report.Rmd", run_pandoc=FALSE, clean=FALSE)
 # don't forget running 
 # $ pandoc daily.report.utf8.md -o daily.report.utf8.html
 # from ../Rmd folder;
@@ -32,3 +32,6 @@ source("covid.2019.world.JHU.r")
 # rmc.SPb.20200418_202005__.df
 # rmc.20200421_202005__.RUS.Prov.df
 # rmc.20200421_202005__.Mos.df
+# incr.abs.t
+# dt.worst
+# dt.best
