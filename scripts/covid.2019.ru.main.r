@@ -32,6 +32,6 @@ source("covid.2019.world.JHU.r")
 # rmc.SPb.20200418_202005__.df
 # rmc.20200421_202005__.RUS.Prov.df
 # rmc.20200421_202005__.Mos.df
-# incr.abs.t
-# dt.worst
-# dt.best
+incr.abs.t
+dt.worst
+dt.best

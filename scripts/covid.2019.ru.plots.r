@@ -108,70 +108,86 @@ legend("topleft", lt=1, col=c(2,4,3), legend=c("Moscow","St. Petersburg","The re
 dev.off()
 
 # Regions barplot;
-png("../plots/15.COVID.2019.barplot.regions.png", height=750, width=1000, res=120, pointsize=10)
-par(mar=c(6,3.5,4,0)+.1, mgp=c(1.7,.5,0), cex.axis=.6)
+png("../plots/15.COVID.2019.barplot.regions.png", height=1200, width=750, res=120, pointsize=10)
+par(mar=c(3.5,6,4,1)+.1, mgp=c(1.7,.5,-.5), cex.axis=.6)
 
 barplot(covid.2019.ru.i.reg.ordered.df$NUMBER, 
 names.arg=covid.2019.ru.i.reg.ordered.df$LOCUS, 
-xlab="", 
-ylab=paste("Total COVID-2019 cases, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), 
+horiz=TRUE,
+ylab="", 
+xlab=paste("Total COVID-2019 cases, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), 
 main="Russian Federation",
-las=2)
+las=1)
+
+axis(3)
 
 dev.off()
 
 # Regions barplot logarithmic;
-png("../plots/16.COVID.2019.barplot.regions.log.10.png", height=750, width=1000, res=120, pointsize=10)
-par(mar=c(6,3.5,4,0)+.1, mgp=c(1.7,.5,0), cex.axis=.6)
+png("../plots/16.COVID.2019.barplot.regions.log.10.png", height=1200, width=750, res=120, pointsize=10)
+par(mar=c(3.5,6,4,1)+.1, mgp=c(1.7,.5,-.5), cex.axis=.6)
 
 barplot(log10(covid.2019.ru.i.reg.ordered.df$NUMBER), 
 names.arg=covid.2019.ru.i.reg.ordered.df$LOCUS, 
-xlab="", 
-ylab=paste("Total COVID-2019 cases, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)],"(logarithmic scale)"), 
+horiz=TRUE,
+ylab="", 
+xlab=paste("Total COVID-2019 cases, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)],"(logarithmic scale)"), 
 main="Russian Federation",
-las=2, axes=FALSE)
+las=1, axes=FALSE)
 
-axis(2, at=log10(c(1,10,100,1000,10000,100000)), labels=c(1,10,100,1000,10000,100000))
-axis(2, at=log10(c(1:9, seq(10,100,10), seq(200,1000,100), seq(2000,10000,1000), seq(20000,100000,10000), seq(200000,1000000,100000))), labels=FALSE)
+axis(1, at=log10(c(1,10,100,1000,10000,100000,1000000)), labels=c(1,10,100,"1K","10K","100K","1M"))
+axis(1, at=log10(c(1:9, seq(10,100,10), seq(200,1000,100), seq(2000,10000,1000), seq(20000,100000,10000), seq(200000,1000000,100000), seq(2000000,10000000,1000000))), labels=FALSE)
+
+axis(3, at=log10(c(1,10,100,1000,10000,100000,1000000)), labels=c(1,10,100,"1K","10K","100K","1M"))
+axis(3, at=log10(c(1:9, seq(10,100,10), seq(200,1000,100), seq(2000,10000,1000), seq(20000,100000,10000), seq(200000,1000000,100000), seq(2000000,10000000,1000000))), labels=FALSE)
 
 dev.off()
 
 # Regions barplot cases per 100K;
-png("../plots/17.COVID.2019.barplot.regions.per_100K.png", height=750, width=1000, res=120, pointsize=10)
-par(mar=c(6,3.5,4,0)+.1, mgp=c(1.7,.5,0), cex.axis=.6)
+png("../plots/17.COVID.2019.barplot.regions.per_100K.png", height=1200, width=750, res=120, pointsize=10)
+par(mar=c(3.5,6,4,1)+.1, mgp=c(1.7,.5,-.5), cex.axis=.6)
 
 barplot(covid.2019.ru.i.reg.ordered.PER.100K.df$PER.100K, 
 names.arg=covid.2019.ru.i.reg.ordered.PER.100K.df$LOCUS, 
-xlab="", 
-ylab=paste("Total COVID-2019 cases per 100K, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), 
+horiz=TRUE,
+ylab="", 
+xlab=paste("Total COVID-2019 cases per 100K, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), 
 main="Russian Federation",
-las=2)
+las=1)
+
+axis(3)
 
 dev.off()
 
 # Regions barplot active cases per 100K;
-png("../plots/18.COVID.2019.barplot.regions.per_100K.active.png", height=750, width=1000, res=120, pointsize=10)
-par(mar=c(6,3.5,4,0)+.1, mgp=c(1.7,.5,0), cex.axis=.6)
+png("../plots/18.COVID.2019.barplot.regions.per_100K.active.png", height=1200, width=750, res=120, pointsize=10)
+par(mar=c(3.5,6,4,1)+.1, mgp=c(1.7,.5,-.5), cex.axis=.6)
 
 barplot(height=covid.2019.ru.i.reg.ordered.CS.a.POP$CS.a.POP, 
 names.arg=covid.2019.ru.i.reg.ordered.CS.a.POP$LOCUS, 
-xlab="", 
-ylab=paste("Active COVID-2019 cases per 100K, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), 
+horiz=TRUE,
+ylab="", 
+xlab=paste("Active COVID-2019 cases per 100K, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), 
 main="Russian Federation",
-las=2)
+las=1)
+
+axis(3)
 
 dev.off()
 
 # Regions barplot cases detected for the past 7 days per 100K;
-png("../plots/19.COVID.2019.barplot.regions.per_100K.detected_for_the_past_7d.png", height=750, width=1000, res=120, pointsize=10)
-par(mar=c(6,3.5,4,0)+.1, mgp=c(1.7,.5,0), cex.axis=.6)
+png("../plots/19.COVID.2019.barplot.regions.per_100K.detected_for_the_past_7d.png", height=1200, width=750, res=120, pointsize=10)
+par(mar=c(3.5,6,4,1)+.1, mgp=c(1.7,.5,-.5), cex.axis=.6, cex.lab=.9)
 
 barplot(height=covid.2019.ru.i.reg.ordered.last.7.i.POP$last.7.i.POP,
 names.arg=covid.2019.ru.i.reg.ordered.last.7.i.POP$LOCUS, 
-xlab="", 
-ylab=paste("Sum of COVID-2019 cases detected for the past 7 days per 100K, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), 
+horiz=TRUE,
+ylab="", 
+xlab=paste("Sum of COVID-2019 cases detected for the past 7 days per 100K, as of",covid.2019.ru.i$TIMESTAMP[length(covid.2019.ru.i$TIMESTAMP)]), 
 main="Russian Federation",
-las=2)
+las=1)
+
+axis(3)
 
 dev.off()
 

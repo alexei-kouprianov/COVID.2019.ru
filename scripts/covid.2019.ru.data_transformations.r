@@ -425,10 +425,10 @@ covid.2019.ru.i.reg.df$CS.a.POP <- covid.2019.ru.CS.a.POP.slice
 covid.2019.ru.i.reg.df$last.7.i.POP <- covid.2019.ru.last.7.i.POP.slice/(covid.2019.ru.i.reg.df$POPULATION.20200101/100000)
 covid.2019.ru.i.reg.df$i.7.var.mean.3 <- covid.2019.ru.last.i.7.var.slice
 
-covid.2019.ru.i.reg.ordered.df <- covid.2019.ru.i.reg.df[order(-covid.2019.ru.i.reg.df$NUMBER),]
-covid.2019.ru.i.reg.ordered.PER.100K.df <- covid.2019.ru.i.reg.df[order(-covid.2019.ru.i.reg.df$PER.100K),]
-covid.2019.ru.i.reg.ordered.CS.a.POP <- covid.2019.ru.i.reg.df[order(-covid.2019.ru.i.reg.df$CS.a.POP),]
-covid.2019.ru.i.reg.ordered.last.7.i.POP <- covid.2019.ru.i.reg.df[order(-covid.2019.ru.i.reg.df$last.7.i.POP),]
+covid.2019.ru.i.reg.ordered.df <- covid.2019.ru.i.reg.df[order(covid.2019.ru.i.reg.df$NUMBER),]
+covid.2019.ru.i.reg.ordered.PER.100K.df <- covid.2019.ru.i.reg.df[order(covid.2019.ru.i.reg.df$PER.100K),]
+covid.2019.ru.i.reg.ordered.CS.a.POP <- covid.2019.ru.i.reg.df[order(covid.2019.ru.i.reg.df$CS.a.POP),]
+covid.2019.ru.i.reg.ordered.last.7.i.POP <- covid.2019.ru.i.reg.df[order(covid.2019.ru.i.reg.df$last.7.i.POP),]
 covid.2019.ru.i.reg.df.dm_sorted <- covid.2019.ru.i.reg.df[order(covid.2019.ru.i.reg.df$LOCUS.dm),]
 
 # Extracting billionaires from covid.2019.ru.dyn.tot; 
