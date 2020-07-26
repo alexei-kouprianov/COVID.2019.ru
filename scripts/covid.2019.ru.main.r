@@ -8,6 +8,7 @@ source("covid.2019.ru.data_loader.r")
 # Running analytic and plotting scripts
 
 source("covid.2019.ru.data_transformations.r")
+render("../Rmd/daily.report.Rmd")
 # render("../Rmd/daily.report.Rmd", run_pandoc=FALSE, clean=FALSE)
 # don't forget running 
 # $ pandoc daily.report.utf8.md -o daily.report.utf8.html
