@@ -475,9 +475,9 @@ colnames(dt.worst) <- c("LOCUS","K100","Dt")
 dt.worst <- dt.worst[order(dt.worst$Dt),]
 
 dt.best <- data.frame(
-subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log >= 49)$REGION.RUS,
-round(subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log >= 49)$PER.100K, 2),
-round(subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log >= 49)$CS.i.diff.7.2log, 2)
+subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log >= 85)$REGION.RUS,
+round(subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log >= 85)$PER.100K, 2),
+round(subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log >= 85)$CS.i.diff.7.2log, 2)
 )
 colnames(dt.best) <- c("LOCUS","K100","Dt")
 dt.best <- dt.best[order(-dt.best$Dt),]
