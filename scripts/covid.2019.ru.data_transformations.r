@@ -459,25 +459,28 @@ billionaires.p <- billionaires[c(1:5,7:12,14:15)]
 
 # Rmd report objects:
 
-incr.abs.t <- subset(covid.2019.ru.i, 
+report.incr.abs.t <- subset(covid.2019.ru.i, 
 covid.2019.ru.i$TIMESTAMP == covid.2019.ru.i$TIMESTAMP[nrow(covid.2019.ru.i)] & 
 covid.2019.ru.i$NUMBER >= 100 
 # & 
 # covid.2019.ru.i$LOCUS.0 != "Moscow"
 )[,c(5,6)]
 
-dt.worst <- data.frame(
-subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log < 29)$REGION.RUS,
-round(subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log < 29)$PER.100K, 2),
-round(subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log < 29)$CS.i.diff.7.2log, 2)
+report.dt.worst <- data.frame(
+subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log < 36)$REGION.RUS,
+round(subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log < 36)$PER.100K, 2),
+round(subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log < 36)$CS.i.diff.7.2log, 2)
 )
-colnames(dt.worst) <- c("LOCUS","K100","Dt")
-dt.worst <- dt.worst[order(dt.worst$Dt),]
+colnames(report.dt.worst) <- c("LOCUS","K100","Dt")
+report.dt.worst <- report.dt.worst[order(report.dt.worst$Dt),]
 
-dt.best <- data.frame(
+report.dt.best <- data.frame(
 subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log >= 85)$REGION.RUS,
 round(subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log >= 85)$PER.100K, 2),
 round(subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log >= 85)$CS.i.diff.7.2log, 2)
 )
-colnames(dt.best) <- c("LOCUS","K100","Dt")
-dt.best <- dt.best[order(-dt.best$Dt),]
+colnames(report.dt.best) <- c("LOCUS","K100","Dt")
+report.dt.best <- report.dt.best[order(-report.dt.best$Dt),]
+
+report.Moscow <- round(covid.2019.ru.dyn.tot$"Moscow"$CS.i[nrow(covid.2019.ru.dyn.tot$"Moscow")]/1000, 2)
+report.SPb <- round(covid.2019.ru.dyn.tot$"St. Petersburg"$CS.i[nrow(covid.2019.ru.dyn.tot$"St. Petersburg")]/1000, 2)

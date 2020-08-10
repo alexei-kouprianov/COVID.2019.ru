@@ -858,7 +858,7 @@ colnames(rmc.SPb.20200418_202005__.df) <- c("eg.1","eg.2","ll.3.b","ll.3.d","ll.
 
 # Partial running model plot, log10;
 
-png("../plots/COVID.2019.fitting.rmc.partial.01.log10.png", height=750, width=1000, res=120, pointsize=10)
+png("../plots/31.COVID.2019.fitting.rmc.partial.01.log10.png", height=750, width=1000, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1)
 
 plot(log10(covid.2019.ru.i.dyn.tt$RUS.CS) ~ covid.2019.ru.i.dyn.tt$DAYS, 
@@ -929,7 +929,7 @@ dev.off()
 
 ### Running model for Moscow;
 
-png("../plots/COVID.2019.fitting.rmc.partial.03.Mos.log10.png", height=750, width=1000, res=120, pointsize=10)
+png("../plots/33.COVID.2019.fitting.rmc.partial.03.Mos.log10.png", height=750, width=1000, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1)
 
 plot(log10(covid.2019.ru.i.dyn.tt$Mos.CS) ~ covid.2019.ru.i.dyn.tt$DAYS, 
@@ -1000,7 +1000,7 @@ dev.off()
 
 ### Running model for St. Petersburg;
 
-png("../plots/COVID.2019.fitting.rmc.partial.04.SPb.log10.png", height=750, width=1000, res=120, pointsize=10)
+png("../plots/34.COVID.2019.fitting.rmc.partial.04.SPb.log10.png", height=750, width=1000, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1)
 
 plot(log10(covid.2019.ru.i.dyn.tt$SPb.CS) ~ covid.2019.ru.i.dyn.tt$DAYS, 
@@ -1061,7 +1061,7 @@ dev.off()
 
 ### Running model for RUS.Prov;
 
-png("../plots/COVID.2019.fitting.rmc.partial.02.RUS.Prov.log10.png", height=750, width=1000, res=120, pointsize=10)
+png("../plots/32.COVID.2019.fitting.rmc.partial.02.RUS.Prov.log10.png", height=750, width=1000, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1)
 
 plot(log10(covid.2019.ru.i.dyn.tt$RUS.Prov.CS) ~ covid.2019.ru.i.dyn.tt$DAYS, 

@@ -95,10 +95,10 @@ The visualizations derived from nation-wide data are as follows. For regional gr
 
 <!--![alt text](plots/COVID.2019.fitting.expGrowth_vs_LL.3.png "Fitting the data with exponent and log-logistic")
 ![alt text](plots/COVID.2019.fitting.expGrowth_vs_LL.3.log10.png "Fitting the data with exponent and log-logistic, y-logarithmic")-->
-![alt text](plots/COVID.2019.fitting.rmc.partial.01.log10.png "Fitting / extrapolating the data with exponent and log-logistic, y-logarithmic (entire Russia)")
-![alt text](plots/COVID.2019.fitting.rmc.partial.02.RUS.Prov.log10.png "Fitting / extrapolating the data with exponent and log-logistic, y-logarithmic (Russia without Moscow and St. Petersburg)")
-![alt text](plots/COVID.2019.fitting.rmc.partial.03.Mos.log10.png "Fitting / extrapolating the data with exponent and log-logistic, y-logarithmic (Moscow)")
-![alt text](plots/COVID.2019.fitting.rmc.partial.04.SPb.log10.png "Fitting / extrapolating the data with exponent and log-logistic, y-logarithmic (St. Petersburg)")
+![alt text](plots/31.COVID.2019.fitting.rmc.partial.01.log10.png "Fitting / extrapolating the data with exponent and log-logistic, y-logarithmic (entire Russia)")
+![alt text](plots/32.COVID.2019.fitting.rmc.partial.02.RUS.Prov.log10.png "Fitting / extrapolating the data with exponent and log-logistic, y-logarithmic (Russia without Moscow and St. Petersburg)")
+![alt text](plots/33.COVID.2019.fitting.rmc.partial.03.Mos.log10.png "Fitting / extrapolating the data with exponent and log-logistic, y-logarithmic (Moscow)")
+![alt text](plots/34.COVID.2019.fitting.rmc.partial.04.SPb.log10.png "Fitting / extrapolating the data with exponent and log-logistic, y-logarithmic (St. Petersburg)")
 
 ## Regional passport
 

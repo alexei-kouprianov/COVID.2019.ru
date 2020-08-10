@@ -210,7 +210,7 @@ for(i in 1:nrow(covid.2019.ru.i.reg.0.df)){
  points(
  covid.2019.ru.i.reg.0.df$LON[i], 
  covid.2019.ru.i.reg.0.df$LAT[i], 
- cex=sqrt(covid.2019.ru.i.reg.0.df$NUMBER[i])/16, 
+ cex=sqrt(covid.2019.ru.i.reg.0.df$NUMBER[i])/32, 
  pch=21, 
  bg=rainbow(ceiling(max(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, na.rm=TRUE)), 
  s = 1, v = 1, start = 0, end = 4.5/6)[round(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log[i])]
@@ -239,7 +239,7 @@ for(i in 1:nrow(covid.2019.ru.i.reg.0.df)){
  points(
  covid.2019.ru.i.reg.0.df$LON[i], 
  covid.2019.ru.i.reg.0.df$LAT[i], 
- cex=sqrt(covid.2019.ru.i.reg.0.df$PER.100K[i])/4, 
+ cex=sqrt(covid.2019.ru.i.reg.0.df$PER.100K[i])/8, 
  pch=21, 
  bg=rainbow(ceiling(max(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log, na.rm=TRUE)), s = 1, v = 1, start = 0, end = 4.5/6)[round(covid.2019.ru.i.reg.0.df$CS.i.diff.7.2log[i])]
  )

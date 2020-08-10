@@ -3,7 +3,7 @@ title: "COVID-19 in Russia, daily report"
 output: html_document
 ---
 
-**Коронавирус в России.** Графический update на **`r daily.timestamp$V1`**. Суммарное число зарегистрированных случаев по России ~ **`r round(covid.2019.ru.i.dyn.tt$RUS.CS[nrow(covid.2019.ru.i.dyn.tt)]/1000, 2)`** тыс. Прирост за сутки -- **`r round(covid.2019.ru.i.dyn.tt$RUS.newcases[nrow(covid.2019.ru.i.dyn.tt)]/1000, 2)`** тыс. Суммарный прирост за последние две недели на 100 тыс. населения -- **`r round(sum(tail(RUS.newcases, 14))/(146748590/100000), 2)`**. Суммарное по Москве -- **`r round(covid.2019.ru.dyn.tot$"Moscow"$CS.i[nrow(covid.2019.ru.dyn.tot$"Moscow")]/1000, 2)`** тыс., по Петербургу -- **`r round(covid.2019.ru.dyn.tot$"St. Petersburg"$CS.i[nrow(covid.2019.ru.dyn.tot$"St. Petersburg")]/1000, 2)`** тыс. 
+**Коронавирус в России.** Графический update на **`r daily.timestamp$V1`**. Суммарное число зарегистрированных случаев по России ~ **`r round(covid.2019.ru.i.dyn.tt$RUS.CS[nrow(covid.2019.ru.i.dyn.tt)]/1000, 2)`** тыс. Прирост за сутки -- **`r round(covid.2019.ru.i.dyn.tt$RUS.newcases[nrow(covid.2019.ru.i.dyn.tt)]/1000, 2)`** тыс. Прирост связанных с COVID смертей за сутки: **`r RUS.d.newcases[length(RUS.d.newcases)]`**. Суммарный прирост за последние две недели на 100 тыс. населения -- **`r round(sum(tail(RUS.newcases, 14))/(146748590/100000), 2)`**. Суммарное по Москве -- **`r Moscow.th.r`** тыс., по Петербургу -- **`r SPb.th.r`** тыс. 
 
 **Лидеры по абсолютному приросту за сутки**: 
 
