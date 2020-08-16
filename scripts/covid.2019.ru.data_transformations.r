@@ -281,6 +281,8 @@ for(j in 1:length(levels(covid.2019.ru$LOCUS))){
 
 for(j in 1:length(levels(covid.2019.ru$LOCUS))){
  covid.2019.ru.dyn.tot[[j]]$CS.a.POP <- covid.2019.ru.dyn.tot[[j]]$CS.a / (covid.2019.population$POPULATION.20200101[j]/100000)
+ covid.2019.ru.dyn.tot[[j]]$CFR.o <- covid.2019.ru.dyn.tot[[j]]$CS.d/covid.2019.ru.dyn.tot[[j]]$CS.i
+ covid.2019.ru.dyn.tot[[j]]$CFR.c <- covid.2019.ru.dyn.tot[[j]]$CS.d/(covid.2019.ru.dyn.tot[[j]]$CS.d + covid.2019.ru.dyn.tot[[j]]$CS.r)
 }
 
 CS.i.diff.7 <- NULL 
@@ -404,6 +406,22 @@ mean(tail(covid.2019.ru.dyn.tot[[i]]$i.7.var), na.rm=TRUE)
 )
 }
 
+covid.2019.ru.CFR.slice.df <- NULL
+
+for(i in 1:length(levels(covid.2019.ru$LOCUS))){
+covid.2019.ru.CFR.slice.df <- rbind.data.frame(
+ covid.2019.ru.CFR.slice.df,
+ cbind.data.frame(
+  covid.2019.ru.dyn.tot[[i]]$CFR.o[nrow(covid.2019.ru.dyn.tot[[i]])],
+  covid.2019.ru.dyn.tot[[i]]$CFR.c[nrow(covid.2019.ru.dyn.tot[[i]])]
+ )
+)
+}
+
+colnames(covid.2019.ru.CFR.slice.df) <- c("CFR.o", "CFR.c")
+
+
+
 #######
 
 covid.2019.ru.i.rt.slice.noInf <- subset(covid.2019.ru.i.rt.slice, covid.2019.ru.i.rt.slice < Inf)
@@ -424,12 +442,14 @@ covid.2019.ru.i.reg.df$CS.i.diff.7.2log <- covid.2019.ru.i.rt.slice.2log
 covid.2019.ru.i.reg.df$CS.a.POP <- covid.2019.ru.CS.a.POP.slice
 covid.2019.ru.i.reg.df$last.7.i.POP <- covid.2019.ru.last.7.i.POP.slice/(covid.2019.ru.i.reg.df$POPULATION.20200101/100000)
 covid.2019.ru.i.reg.df$i.7.var.mean.3 <- covid.2019.ru.last.i.7.var.slice
+covid.2019.ru.i.reg.df <- cbind.data.frame(covid.2019.ru.i.reg.df, covid.2019.ru.CFR.slice.df)
 
 covid.2019.ru.i.reg.ordered.df <- covid.2019.ru.i.reg.df[order(covid.2019.ru.i.reg.df$NUMBER),]
 covid.2019.ru.i.reg.ordered.PER.100K.df <- covid.2019.ru.i.reg.df[order(covid.2019.ru.i.reg.df$PER.100K),]
 covid.2019.ru.i.reg.ordered.CS.a.POP <- covid.2019.ru.i.reg.df[order(covid.2019.ru.i.reg.df$CS.a.POP),]
 covid.2019.ru.i.reg.ordered.last.7.i.POP <- covid.2019.ru.i.reg.df[order(covid.2019.ru.i.reg.df$last.7.i.POP),]
 covid.2019.ru.i.reg.df.dm_sorted <- covid.2019.ru.i.reg.df[order(covid.2019.ru.i.reg.df$LOCUS.dm),]
+covid.2019.ru.i.reg.df.CFR_sorted <- covid.2019.ru.i.reg.df[order(-covid.2019.ru.i.reg.df$CFR.c),]
 
 # Extracting billionaires from covid.2019.ru.dyn.tot; 
 
@@ -484,3 +504,17 @@ report.dt.best <- report.dt.best[order(-report.dt.best$Dt),]
 
 report.Moscow <- round(covid.2019.ru.dyn.tot$"Moscow"$CS.i[nrow(covid.2019.ru.dyn.tot$"Moscow")]/1000, 2)
 report.SPb <- round(covid.2019.ru.dyn.tot$"St. Petersburg"$CS.i[nrow(covid.2019.ru.dyn.tot$"St. Petersburg")]/1000, 2)
+
+report.RUS.i.cum <- round(covid.2019.ru.i.dyn.tt$RUS.CS[nrow(covid.2019.ru.i.dyn.tt)]/1000, 2) 
+report.RUS.i.today <- round(covid.2019.ru.i.dyn.tt$RUS.newcases[nrow(covid.2019.ru.i.dyn.tt)]/1000, 2)
+report.RUS.d.today <- RUS.d.newcases[length(RUS.d.newcases)]
+report.RUS.i.14.100 <- round(sum(tail(RUS.newcases, 14))/(146748590/100000), 2)
+
+report.timestamp <- daily.timestamp$V1
+
+report.CFR.reg <- covid.2019.ru.i.reg.df.CFR_sorted[,c(9,19,20)]
+
+report.CFR.reg$CFR.o <- round(report.CFR.reg$CFR.o, 4)
+report.CFR.reg$CFR.c <- round(report.CFR.reg$CFR.c, 4)
+
+report.CFR.reg <- report.CFR.reg[,c(2,3,1)]
