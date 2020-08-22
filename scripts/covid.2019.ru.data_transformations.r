@@ -487,9 +487,9 @@ covid.2019.ru.i$NUMBER >= 100
 )[,c(5,6)]
 
 report.dt.worst <- data.frame(
-subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log < 36)$REGION.RUS,
-round(subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log < 36)$PER.100K, 2),
-round(subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log < 36)$CS.i.diff.7.2log, 2)
+subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log < 43)$REGION.RUS,
+round(subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log < 43)$PER.100K, 2),
+round(subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log < 43)$CS.i.diff.7.2log, 2)
 )
 colnames(report.dt.worst) <- c("LOCUS","K100","Dt")
 report.dt.worst <- report.dt.worst[order(report.dt.worst$Dt),]
