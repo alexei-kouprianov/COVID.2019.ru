@@ -9,13 +9,20 @@ source("covid.2019.ru.data_loader.r")
 
 source("covid.2019.ru.data_transformations.r")
 # render("../Rmd/daily.report.Rmd")
-render("../Rmd/daily.report.Rmd", run_pandoc=FALSE, clean=FALSE)
+# render("../Rmd/daily.report.Rmd", run_pandoc=FALSE, clean=FALSE)
 # don't forget running 
 # $ pandoc daily.report.utf8.md -o daily.report.utf8.html
 # from ../Rmd folder;
 source("covid.2019.ru.plots.r")
 source("covid.2019.ru.growth.models.r")
 source("covid.2019.world.JHU.r")
+
+
+################################################################
+# Re-running libraries() and render() when the data grows big
+
+source("covid.2019.ru.libraries.r")
+render("../Rmd/daily.report.Rmd")
 
 ################################################################
 # Previewing some results (optional)
