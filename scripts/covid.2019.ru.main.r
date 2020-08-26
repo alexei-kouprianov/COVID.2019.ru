@@ -17,9 +17,10 @@ source("covid.2019.ru.plots.r")
 source("covid.2019.ru.growth.models.r")
 source("covid.2019.world.JHU.r")
 
-
 ################################################################
 # Re-running libraries() and render() when the data grows big
+
+# save.image() # and quit, then re-enter and run:
 
 source("covid.2019.ru.libraries.r")
 render("../Rmd/daily.report.Rmd")
