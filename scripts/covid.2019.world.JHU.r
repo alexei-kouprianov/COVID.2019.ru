@@ -338,6 +338,8 @@ bty="n")
 
 dev.off()
 
+# Deaths
+
 png(paste("../plots/world/increments/d/COVID-19.deaths.", names(w.confirmed.ls)[j], ".png", sep=""), height=750, width=1000, res=120, pointsize=10)
 
 plot(
@@ -346,6 +348,32 @@ w.deaths.ls[[j]][1:(length(w.deaths.ls[[j]])-1)],
 type="h", col=1, , axes=FALSE,
 xlab="Days since 2020-01-22",
 ylab="Deaths, daily",
+main=levels(w.confirmed$Country.Region)[j])
+
+for(i in 1:(length(rect.width)-1)){
+rect(
+xleft=sum(rect.width[1:i]),
+xright=sum(rect.width[1:(i+1)]),
+ybottom=-1,
+ytop=max(w.confirmed.ls[[j]], na.rm=TRUE),
+col=rgb(0,0,0,(.05*(i %% 2 != 0))),
+border=rgb(0,0,0,(.05*(i %% 2 != 0)))
+)
+}
+
+axis(1)
+axis(2)
+
+dev.off()
+
+png(paste("../plots/world/increments/c/COVID-19.confirmed.", names(w.confirmed.ls)[j], ".png", sep=""), height=750, width=1000, res=120, pointsize=10)
+
+plot(
+w.confirmed.ls[[j]][2:length(w.confirmed.ls[[j]])] - 
+w.confirmed.ls[[j]][1:(length(w.confirmed.ls[[j]])-1)], 
+type="h", col="darkred", , axes=FALSE,
+xlab="Days since 2020-01-22",
+ylab="Confirmed cases, daily",
 main=levels(w.confirmed$Country.Region)[j])
 
 for(i in 1:(length(rect.width)-1)){

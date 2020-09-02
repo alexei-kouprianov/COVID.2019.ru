@@ -289,6 +289,7 @@ CS.i.diff.7 <- NULL
 CS.r.diff.7 <- NULL 
 CS.d.diff.7 <- NULL 
 i.7 <- NULL
+d.7 <- NULL
 R.RPN <- NULL
 
 for(j in 1:(length(levels(covid.2019.ru$LOCUS)))){
@@ -319,6 +320,13 @@ for(j in 1:(length(levels(covid.2019.ru$LOCUS)))){
   }
   i.7 <- c(i.7, NA, NA, NA)
   covid.2019.ru.dyn.tot[[j]]$i.7 <- i.7
+
+  d.7 <- c(NA,NA,NA) 
+ for(k in 4:(nrow(covid.2019.ru.dyn.tot[[j]])-3)){
+  d.7 <- c(d.7, mean(covid.2019.ru.dyn.tot[[j]]$d[(k-3):(k+3)], na.rm=TRUE))
+  }
+  d.7 <- c(d.7, NA, NA, NA)
+  covid.2019.ru.dyn.tot[[j]]$d.7 <- d.7
 
   R.RPN <- rep(NA,8) 
  for(k in 9:(nrow(covid.2019.ru.dyn.tot[[j]]))){
@@ -495,9 +503,9 @@ colnames(report.dt.worst) <- c("LOCUS","K100","Dt")
 report.dt.worst <- report.dt.worst[order(report.dt.worst$Dt),]
 
 report.dt.best <- data.frame(
-subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log >= 85)$REGION.RUS,
-round(subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log >= 85)$PER.100K, 2),
-round(subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log >= 85)$CS.i.diff.7.2log, 2)
+subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log >= 113)$REGION.RUS,
+round(subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log >= 113)$PER.100K, 2),
+round(subset(covid.2019.ru.i.reg.df, covid.2019.ru.i.reg.df$CS.i.diff.7.2log >= 113)$CS.i.diff.7.2log, 2)
 )
 colnames(report.dt.best) <- c("LOCUS","K100","Dt")
 report.dt.best <- report.dt.best[order(-report.dt.best$Dt),]
