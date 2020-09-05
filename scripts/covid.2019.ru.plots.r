@@ -80,15 +80,16 @@ dev.off()
 png("../plots/05.COVID.2019.cumulated.log.10.by_regions.png", height=750, width=1000, res=120, pointsize=10)
 par(mar=c(6,5,4,2)+.1)
 
-plot(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$Mos.CS), 
-type="l", col=2, 
+plot(covid.2019.ru.i.dyn.tt$TIME,
+log10(covid.2019.ru.i.dyn.tt$RUS.CS - (covid.2019.ru.i.dyn.tt$Mos.CS + covid.2019.ru.i.dyn.tt$SPb.CS)),
+type="l", col=3, 
 xlab="", 
 ylab="Total COVID-2019 cases detected (logarithmic scale)", 
 main="Russian Federation",
 axes=FALSE)
 
 points(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$SPb.CS), type="l",col=4)
-points(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$RUS.CS - (covid.2019.ru.i.dyn.tt$Mos.CS + covid.2019.ru.i.dyn.tt$SPb.CS)), type="l",col=3)
+points(covid.2019.ru.i.dyn.tt$TIME, log10(covid.2019.ru.i.dyn.tt$Mos.CS), type="l",col=2)
 
 # rasterImage(cc.logo, 
 # xleft = covid.2019.ru.i.dyn.tt$TIME[1], 
