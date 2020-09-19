@@ -1197,3 +1197,31 @@ dev.off()
 # dev.off()
 
 rm(ru.shape)
+
+png("../plots/90.COVID.2019.SPb.i_smooth.png", height=750, width=1000, res=120, pointsize=10)
+par(mar=c(6,5,4,2)+.1)
+
+plot(covid.2019.ru.dyn.tot$"St. Petersburg"$TIME, covid.2019.ru.dyn.tot$"St. Petersburg"$i, type="h", col="darkred", xlab="", ylab="COVID-2019 confirmed per day, cases", main="Russian Federation / St. Petersburg", axes=FALSE)
+lines(covid.2019.ru.dyn.tot$"St. Petersburg"$TIME, covid.2019.ru.dyn.tot$"St. Petersburg"$i.7, lwd=3, col="white")
+lines(covid.2019.ru.dyn.tot$"St. Petersburg"$TIME, covid.2019.ru.dyn.tot$"St. Petersburg"$i.7, col="red")
+axis.POSIXct(1, 
+at=seq(min(covid.2019.ru.dyn.tot$"St. Petersburg"$TIME), max(covid.2019.ru.dyn.tot$"St. Petersburg"$TIME), by="week"), 
+format = "%Y-%m-%d", 
+las=2)
+axis(2)
+
+dev.off()
+
+png("../plots/90.COVID.2019.SPb.d_smooth.png", height=750, width=1000, res=120, pointsize=10)
+par(mar=c(6,5,4,2)+.1)
+
+plot(covid.2019.ru.dyn.tot$"St. Petersburg"$TIME, covid.2019.ru.dyn.tot$"St. Petersburg"$d, type="h", xlab="", ylab="COVID-2019 deaths per day, cases", main="Russian Federation / St. Petersburg", axes=FALSE)
+lines(covid.2019.ru.dyn.tot$"St. Petersburg"$TIME, covid.2019.ru.dyn.tot$"St. Petersburg"$d.7, lwd=3, col="white")
+lines(covid.2019.ru.dyn.tot$"St. Petersburg"$TIME, covid.2019.ru.dyn.tot$"St. Petersburg"$d.7, col="red")
+axis.POSIXct(1, 
+at=seq(min(covid.2019.ru.dyn.tot$"St. Petersburg"$TIME), max(covid.2019.ru.dyn.tot$"St. Petersburg"$TIME), by="week"), 
+format = "%Y-%m-%d", 
+las=2)
+axis(2)
+
+dev.off()

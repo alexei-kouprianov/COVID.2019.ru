@@ -526,3 +526,12 @@ report.CFR.reg$CFR.o <- round(report.CFR.reg$CFR.o, 4)
 report.CFR.reg$CFR.c <- round(report.CFR.reg$CFR.c, 4)
 
 report.CFR.reg <- report.CFR.reg[,c(2,3,1)]
+
+report.RUS <- cbind.data.frame(
+covid.2019.breaks$TIME,
+RUS,
+RUS.d,
+RUS.r
+)
+
+colnames(report.RUS) <- c("DATE", "DETECTED", "DEATHS", "RECOVERED")
