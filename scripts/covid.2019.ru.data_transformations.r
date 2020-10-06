@@ -535,3 +535,5 @@ RUS.r
 )
 
 colnames(report.RUS) <- c("DATE", "DETECTED", "DEATHS", "RECOVERED")
+
+report.RUS$ACTIVE <- cumsum(report.RUS$DETECTED) - (cumsum(report.RUS$DEATHS) + cumsum(report.RUS$RECOVERED))
