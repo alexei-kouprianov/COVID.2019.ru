@@ -1225,3 +1225,24 @@ las=2)
 axis(2)
 
 dev.off()
+
+png("../plots/90.COVID.2019.SPb.ratio_ir.png", height=750, width=1000, res=120, pointsize=10)
+par(mar=c(6,5,4,2)+.1)
+
+plot(
+covid.2019.ru.dyn.tot$"St. Petersburg"[,1],
+covid.2019.ru.dyn.tot$"St. Petersburg"[,3]/
+covid.2019.ru.dyn.tot$"St. Petersburg"[,2],
+type="l",
+axes=FALSE,
+main="Санкт-Петербург, COVID-19 (весна -- осень 2020)",
+xlab="",
+ylab="Отношение выздоровевшие / новые случаи")
+
+axis.POSIXct(1, 
+at=seq(min(covid.2019.ru.dyn.tot$"St. Petersburg"$TIME), max(covid.2019.ru.dyn.tot$"St. Petersburg"$TIME), by="week"), 
+format = "%Y-%m-%d", 
+las=2)
+axis(2)
+
+dev.off()
