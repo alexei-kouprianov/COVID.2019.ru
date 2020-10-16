@@ -31,7 +31,7 @@ healed_incr <- c(healed_incr, daily.data.raw[[i]]$healed_incr)
 died_incr <- c(died_incr, daily.data.raw[[i]]$died_incr)
 }
 
-daily.data.raw.df <- data.frame(
+daily.data.raw.df <- cbind.data.frame(
 title,
 code, 
 is_city,
