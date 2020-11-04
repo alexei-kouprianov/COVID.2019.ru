@@ -23,3 +23,6 @@ for(i in 1:length(levels(increment$REGION))){
 write_json(covid.2019.ru.dyn.tot.primary, "../data/primary_dataset_backup.json")
 
 save.image()
+
+# tail(covid.2019.ru.dyn.tot.primary[[68]], 25)
+# plot(covid.2019.ru.dyn.tot.primary[[68]]$TIME, covid.2019.ru.dyn.tot.primary[[68]]$i, type="h")
