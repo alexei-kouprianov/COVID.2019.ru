@@ -22,6 +22,27 @@ for(i in 1:length(levels(increment$REGION))){
 
 write_json(covid.2019.ru.dyn.tot.primary, "../data/primary_dataset_backup.json")
 
+RU.TIME <- covid.2019.ru.dyn.tot.primary[[1]]$TIME
+RU.i <- covid.2019.ru.dyn.tot.primary[[1]]$i
+RU.r <- covid.2019.ru.dyn.tot.primary[[1]]$r
+RU.d <- covid.2019.ru.dyn.tot.primary[[1]]$d
+
+
+for(i in 2:length(covid.2019.ru.dyn.tot.primary)){
+RU.i <- RU.i + covid.2019.ru.dyn.tot.primary[[i]]$i
+RU.r <- RU.r + covid.2019.ru.dyn.tot.primary[[i]]$r
+RU.d <- RU.d + covid.2019.ru.dyn.tot.primary[[i]]$d
+}
+
+covid.2019.ru.dyn <- cbind.data.frame(
+RU.TIME,
+RU.i,
+RU.r,
+RU.d
+)
+
+colnames(covid.2019.ru.dyn) <- c("TIME","i","r","d")
+
 save.image()
 
 # tail(covid.2019.ru.dyn.tot.primary[[68]], 25)
