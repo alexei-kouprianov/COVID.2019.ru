@@ -27,11 +27,10 @@ RU.i <- covid.2019.ru.dyn.tot.primary[[1]]$i
 RU.r <- covid.2019.ru.dyn.tot.primary[[1]]$r
 RU.d <- covid.2019.ru.dyn.tot.primary[[1]]$d
 
-
 for(i in 2:length(covid.2019.ru.dyn.tot.primary)){
-RU.i <- RU.i + covid.2019.ru.dyn.tot.primary[[i]]$i
-RU.r <- RU.r + covid.2019.ru.dyn.tot.primary[[i]]$r
-RU.d <- RU.d + covid.2019.ru.dyn.tot.primary[[i]]$d
+	RU.i <- RU.i + covid.2019.ru.dyn.tot.primary[[i]]$i
+	RU.r <- RU.r + covid.2019.ru.dyn.tot.primary[[i]]$r
+	RU.d <- RU.d + covid.2019.ru.dyn.tot.primary[[i]]$d
 }
 
 covid.2019.ru.dyn <- cbind.data.frame(
