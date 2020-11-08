@@ -1,5 +1,6 @@
 # setwd("/home/tinea/Documents/H_et_S/Projects/github/COVID.2019.ru/scripts/")
 
+pop <- read.table("../misc/population.txt", h=TRUE, sep="\t")
 increment <- read.table("../downloads/increment.txt", h=TRUE, sep="\t")
 increment$TIME <- strptime(increment$TIMESTAMP, "%Y-%m-%d %H:%M:%S")
 increment$REGION <- as.character(increment$REGION)
@@ -9,7 +10,7 @@ incr.ls <- NULL
 incr.ls <- as.list(incr.ls)
 
 for(i in 1:length(levels(increment$REGION))){
-	incr.ls [[i]] <- cbind.data.frame(
+	incr.ls[[i]] <- cbind.data.frame(
 		subset(increment, increment$REGION == levels(increment$REGION)[i] & increment$STATUS == "detected")$TIME,
 		subset(increment, increment$REGION == levels(increment$REGION)[i] & increment$STATUS == "detected")$NUMBER,
 		subset(increment, increment$REGION == levels(increment$REGION)[i] & increment$STATUS == "recovered")$NUMBER,
@@ -41,6 +42,30 @@ RU.d
 )
 
 colnames(covid.2019.ru.dyn) <- c("TIME","i","r","d")
+
+DETECTED <- NULL
+
+for(i in 1:length(covid.2019.ru.dyn.tot.primary[[i]]$i)){
+DETECTED <- c(DETECTED, sum(covid.2019.ru.dyn.tot.primary[[i]]$i))
+}
+
+DETECTED.7 <- NULL
+
+for(i in 1:length(covid.2019.ru.dyn.tot.primary)){
+DETECTED.7 <- c(DETECTED.7, sum(tail(covid.2019.ru.dyn.tot.primary[[i]]$i, 7)))
+}
+
+ACTIVE <- NULL
+
+for(i in 1:length(covid.2019.ru.dyn.tot.primary[[i]]$i)){
+ACTIVE <- c(ACTIVE, (sum(covid.2019.ru.dyn.tot.primary[[i]]$i) - (sum(covid.2019.ru.dyn.tot.primary[[i]]$r) + sum(covid.2019.ru.dyn.tot.primary[[i]]$d))))
+}
+
+pop.derived <- cbind.data.frame(pop, DETECTED, DETECTED.7, ACTIVE)
+
+pop.derived$DETECTED.100K <- pop.derived$DETECTED / (pop.derived$POPULATION.20200101 / 100000)
+pop.derived$DETECTED.7.100K <- pop.derived$DETECTED.7 / (pop.derived$POPULATION.20200101 / 100000)
+pop.derived$ACTIVE.100K <- pop.derived$ACTIVE / (pop.derived$POPULATION.20200101 / 100000)
 
 save.image()
 
