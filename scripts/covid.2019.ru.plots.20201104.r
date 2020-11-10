@@ -19,9 +19,9 @@ dir.create("../plots/regions/increments/d/")
 # covid.2019.ru.dyn
 
 # 03.COVID.2019.CaseFatalityRatio.dyn.png
-# 04.COVID.2019.cumulated.by_regions.png
-# 05.COVID.2019.cumulated.log.10.by_regions.png
-# 06.COVID.2019.cumulated.log10.1M.png
+# # 04.COVID.2019.cumulated.by_regions.png
+# # 05.COVID.2019.cumulated.log.10.by_regions.png
+# # 06.COVID.2019.cumulated.log10.1M.png
 # 07.COVID.2019.growth_ratio.png
 # 08.COVID.2019.hist.rdi.png
 # 09.COVID.2019.hist.dt.png
@@ -31,19 +31,15 @@ dir.create("../plots/regions/increments/d/")
 # 13.COVID.2019.map.density.regions.per_100K.png
 # 14.1.COVID.2019.map.density.regions.rdi7dt.png
 # 14.2.COVID.2019.map.density.regions.i.7.var.png
-# 15.COVID.2019.barplot.regions.png
-# 16.COVID.2019.barplot.regions.log.10.png
-# 17.COVID.2019.barplot.regions.per_100K.png
-# 18.COVID.2019.barplot.regions.per_100K.active.png
-# 19.COVID.2019.barplot.regions.per_100K.detected_for_the_past_7d.png
-# 31.COVID.2019.fitting.rmc.partial.01.log10.png
-# 32.COVID.2019.fitting.rmc.partial.02.RUS.Prov.log10.png
-# 33.COVID.2019.fitting.rmc.partial.03.Mos.log10.png
-# 34.COVID.2019.fitting.rmc.partial.04.SPb.log10.png
+# # # 31.COVID.2019.fitting.rmc.partial.01.log10.png
+# # # 32.COVID.2019.fitting.rmc.partial.02.RUS.Prov.log10.png
+# # # 33.COVID.2019.fitting.rmc.partial.03.Mos.log10.png
+# # # 34.COVID.2019.fitting.rmc.partial.04.SPb.log10.png
 # 90.COVID.2019.SPb.d_smooth.png
 # 90.COVID.2019.SPb.i_smooth.png
 # 90.COVID.2019.SPb.ratio_ir.png
 
+################################################################
 # Overview Linear
 
 png("../plots/01.COVID.2019.cumulated.TARD.png", height=750, width=1000, res=120, pointsize=10)
@@ -155,6 +151,89 @@ las = 2)
 
 dev.off()
 
+################################################################
+# Case Fatality Ratio
+
+png("../plots/03.COVID.2019.CaseFatalityRatio.dyn.png", height=750, width=1000, res=120, pointsize=10)
+par(mar=c(6,5,4,5)+.1)
+
+plot(
+covid.2019.ru.dyn$TIME[49:nrow(covid.2019.ru.dyn)], 
+cumsum(covid.2019.ru.dyn$d)[49:nrow(covid.2019.ru.dyn)]/(cumsum(covid.2019.ru.dyn$r[49:nrow(covid.2019.ru.dyn)]) + cumsum(covid.2019.ru.dyn$d[49:nrow(covid.2019.ru.dyn)])), 
+type="l", 
+ylim=c(0, max(cumsum(covid.2019.ru.dyn$d[49:nrow(covid.2019.ru.dyn)])/(cumsum(covid.2019.ru.dyn$r[49:nrow(covid.2019.ru.dyn)]) + cumsum(covid.2019.ru.dyn$d[49:nrow(covid.2019.ru.dyn)])))),
+main=paste("Russian Federation, Case Fatality Ratio / ", tail(covid.2019.ru.dyn$TIM, 1)),
+xlab="",
+ylab="Case Fatality Ratio",
+axes=FALSE
+)
+
+# Grid for months
+abline(v = seq(min(covid.2019.ru.dyn$TIME), max(covid.2019.ru.dyn$TIME), by = "month"), lty = 3, col = 8, lwd=.75)
+abline(h=seq(0,1,.01), lty=3, col=8)
+
+lines(
+covid.2019.ru.dyn$TIME[49:nrow(covid.2019.ru.dyn)],
+covid.2019.ru.dyn$d[49:nrow(covid.2019.ru.dyn)] /
+sqrt(
+covid.2019.ru.dyn$r[49:nrow(covid.2019.ru.dyn)]
+*
+covid.2019.ru.dyn$i[49:nrow(covid.2019.ru.dyn)]
+),
+lty=3
+)
+
+lines(
+covid.2019.ru.dyn$TIME[49:nrow(covid.2019.ru.dyn)], 
+cumsum(covid.2019.ru.dyn$d[49:nrow(covid.2019.ru.dyn)])/cumsum(covid.2019.ru.dyn$i[49:nrow(covid.2019.ru.dyn)]), 
+col=2)
+
+lines(
+covid.2019.ru.dyn$TIME[49:nrow(covid.2019.ru.dyn)], 
+sqrt(
+(cumsum(covid.2019.ru.dyn$d[49:nrow(covid.2019.ru.dyn)])/(cumsum(covid.2019.ru.dyn$r[49:nrow(covid.2019.ru.dyn)]) + cumsum(covid.2019.ru.dyn$d[49:nrow(covid.2019.ru.dyn)]))) *
+(cumsum(covid.2019.ru.dyn$d[49:nrow(covid.2019.ru.dyn)])/cumsum(covid.2019.ru.dyn$i[49:nrow(covid.2019.ru.dyn)]))
+), 
+lty=3,
+col=2)
+
+legend("topright",
+lty=c(1,1,3,3),
+col=c(1,2,2,1),
+bty="n",
+legend=c(
+paste("(1) Closed cases : ", round(100*cumsum(covid.2019.ru.dyn$d)[nrow(covid.2019.ru.dyn)]/(cumsum(covid.2019.ru.dyn$r)[nrow(covid.2019.ru.dyn)] + cumsum(covid.2019.ru.dyn$d)[nrow(covid.2019.ru.dyn)])
+, 2), "% for now", sep=""),
+paste("(2) All cases : ", round(100*cumsum(covid.2019.ru.dyn$d)[nrow(covid.2019.ru.dyn)]/cumsum(covid.2019.ru.dyn$i)[nrow(covid.2019.ru.dyn)]
+, 2), "% for now", sep=""),
+paste("Geometric mean of (1) and (2) : ",
+round(100 * sqrt(
+(cumsum(covid.2019.ru.dyn$d)[nrow(covid.2019.ru.dyn)]/(cumsum(covid.2019.ru.dyn$r)[nrow(covid.2019.ru.dyn)] + cumsum(covid.2019.ru.dyn$d)[nrow(covid.2019.ru.dyn)])) *
+(cumsum(covid.2019.ru.dyn$d)[nrow(covid.2019.ru.dyn)]/cumsum(covid.2019.ru.dyn$i)[nrow(covid.2019.ru.dyn)])
+), 2), "% for now", sep=""),
+paste("Dead / geom. mean of new cases and recovered : ", round(
+100*
+tail(
+covid.2019.ru.dyn$d[49:nrow(covid.2019.ru.dyn)] /
+sqrt(
+covid.2019.ru.dyn$r[49:nrow(covid.2019.ru.dyn)]
+*
+covid.2019.ru.dyn$i[49:nrow(covid.2019.ru.dyn)]
+), 1), 2), "% for now", sep="")
+)
+)
+
+axis.POSIXct(1, 
+at=seq(min(covid.2019.ru.dyn$TIME), max(covid.2019.ru.dyn$TIME), by="week"), 
+format = "%Y-%m-%d", 
+las=2)
+axis(2)
+
+dev.off()
+
+################################################################
+#
+
 # pop
 
 # > colnames(pop)
@@ -164,6 +243,7 @@ dev.off()
 # [10] "REGION.INCR"        
 # >
 
+################################################################
 # Regions barplot;
 png("../plots/15.COVID.2019.barplot.regions.png", height=1200, width=750, res=120, pointsize=10)
 par(mar=c(3.5,6,4,1)+.1, mgp=c(1.7,.5,-.5), cex.axis=.6)
@@ -183,6 +263,7 @@ axis(3, at = seq(0, 4*10^5, 1*10^5), labels=c("0", paste(seq(100, 400, 100), "K"
 
 dev.off()
 
+################################################################
 # Regions barplot logarithmic;
 png("../plots/16.COVID.2019.barplot.regions.log.10.png", height=1200, width=750, res=120, pointsize=10)
 par(mar=c(3.5,6,4,1)+.1, mgp=c(1.7,.5,-.5), cex.axis=.6)
@@ -205,6 +286,7 @@ axis(3, at=log10(c(1:9, seq(10,100,10), seq(200,1000,100), seq(2000,10000,1000),
 
 dev.off()
 
+################################################################
 # Regions barplot cases per 100K;
 png("../plots/17.COVID.2019.barplot.regions.per_100K.png", height=1200, width=750, res=120, pointsize=10)
 par(mar=c(3.5,6,4,1)+.1, mgp=c(1.7,.5,-.5), cex.axis=.6)
@@ -222,6 +304,7 @@ axis(3)
 
 dev.off()
 
+################################################################
 # Regions barplot active cases per 100K;
 png("../plots/18.COVID.2019.barplot.regions.per_100K.active.png", height=1200, width=750, res=120, pointsize=10)
 par(mar=c(3.5,6,4,1)+.1, mgp=c(1.7,.5,-.5), cex.axis=.6)
@@ -239,6 +322,7 @@ axis(3)
 
 dev.off()
 
+################################################################
 # Regions barplot cases detected for the past 7 days per 100K;
 png("../plots/19.COVID.2019.barplot.regions.per_100K.detected_for_the_past_7d.png", height=1200, width=750, res=120, pointsize=10)
 par(mar=c(3.5,6,4,1)+.1, mgp=c(1.7,.5,-.5), cex.axis=.6, cex.lab=.9)
@@ -256,8 +340,6 @@ axis(3)
 
 dev.off()
 
-
-
 ################################################################
 ################################################################
 ## Regions
@@ -268,6 +350,7 @@ dev.off()
 # Increments
 ################################################################
 
+################################################################
 # Detected
 
 for(i in 1:length(covid.2019.ru.dyn.tot.primary)){
@@ -299,6 +382,7 @@ dev.off()
 
 }
 
+################################################################
 # Deaths
 
 for(i in 1:length(covid.2019.ru.dyn.tot.primary)){
@@ -334,6 +418,7 @@ dev.off()
 # Overview
 ################################################################
 
+################################################################
 # Linear
 
 for(i in 1:length(covid.2019.ru.dyn.tot.primary)){
@@ -396,6 +481,7 @@ dev.off()
 
 }
 
+################################################################
 # Y-logarithmic
 
 for(i in 1:length(covid.2019.ru.dyn.tot.primary)){
