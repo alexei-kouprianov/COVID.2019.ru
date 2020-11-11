@@ -18,17 +18,13 @@ dir.create("../plots/regions/increments/d/")
 
 # covid.2019.ru.dyn
 
-# 03.COVID.2019.CaseFatalityRatio.dyn.png
+# Pending graphs:
 # # 04.COVID.2019.cumulated.by_regions.png
 # # 05.COVID.2019.cumulated.log.10.by_regions.png
 # # 06.COVID.2019.cumulated.log10.1M.png
 # 07.COVID.2019.growth_ratio.png
 # 08.COVID.2019.hist.rdi.png
 # 09.COVID.2019.hist.dt.png
-# 10.COVID.2019.map.regions.png
-# 11.COVID.2019.map.regions.per_100K.png
-# 12.COVID.2019.map.density.regions.png
-# 13.COVID.2019.map.density.regions.per_100K.png
 # 14.1.COVID.2019.map.density.regions.rdi7dt.png
 # 14.2.COVID.2019.map.density.regions.i.7.var.png
 # # # 31.COVID.2019.fitting.rmc.partial.01.log10.png
@@ -53,22 +49,22 @@ ylab="COVID-2019 cases detected",
 axes=FALSE
 )
 
-# Increments detcted
+# Increments detcted;
 lines(covid.2019.ru.dyn$TIME, covid.2019.ru.dyn$i, type="h", col="darkred")
 
-# Cumulated detected
+# Cumulated detected;
 lines(covid.2019.ru.dyn$TIME, cumsum(covid.2019.ru.dyn$i), col="white", lwd=5)
 lines(covid.2019.ru.dyn$TIME, cumsum(covid.2019.ru.dyn$i), col="darkred", lwd=2)
 
-# Active
+# Active;
 lines(covid.2019.ru.dyn$TIME, cumsum(covid.2019.ru.dyn$i)-(cumsum(covid.2019.ru.dyn$r)+cumsum(covid.2019.ru.dyn$d)), col="white", lwd=5)
 lines(covid.2019.ru.dyn$TIME, cumsum(covid.2019.ru.dyn$i)-(cumsum(covid.2019.ru.dyn$r)+cumsum(covid.2019.ru.dyn$d)), col=2, lwd=2)
 
-# Cumulated recovered
+# Cumulated recovered;
 lines(covid.2019.ru.dyn$TIME, cumsum(covid.2019.ru.dyn$r), col="white", lwd=5)
 lines(covid.2019.ru.dyn$TIME, cumsum(covid.2019.ru.dyn$r), col="darkgreen", lwd=2)
 
-# Cumulated deaths
+# Cumulated deaths;
 lines(covid.2019.ru.dyn$TIME, cumsum(covid.2019.ru.dyn$d), col="white", lwd=5)
 lines(covid.2019.ru.dyn$TIME, cumsum(covid.2019.ru.dyn$d), col=1, lwd=2)
 
@@ -81,7 +77,7 @@ legend=c("Total cases (vertical bars = new ones)","Active cases","Recovered","De
 bty="n"
 )
 
-# Grid for months
+# Grid for months;
 abline(v = seq(min(covid.2019.ru.dyn$TIME), max(covid.2019.ru.dyn$TIME), by = "month"), lty = 3, col = 8, lwd=.75)
 
 axis(2)
@@ -108,22 +104,22 @@ ylab="COVID-2019 cases detected (logarithmic scale)",
 axes=FALSE
 )
 
-# Increments detcted
+# Increments detcted;
 lines(covid.2019.ru.dyn$TIME, log10(covid.2019.ru.dyn$i), type="h", col="darkred")
 
-# Cumulated detected
+# Cumulated detected;
 lines(covid.2019.ru.dyn$TIME, log10(cumsum(covid.2019.ru.dyn$i)), col="white", lwd=5)
 lines(covid.2019.ru.dyn$TIME, log10(cumsum(covid.2019.ru.dyn$i)), col="darkred", lwd=2)
 
-# Active
+# Active;
 lines(covid.2019.ru.dyn$TIME, log10(cumsum(covid.2019.ru.dyn$i)-(cumsum(covid.2019.ru.dyn$r)+cumsum(covid.2019.ru.dyn$d))), col="white", lwd=5)
 lines(covid.2019.ru.dyn$TIME, log10(cumsum(covid.2019.ru.dyn$i)-(cumsum(covid.2019.ru.dyn$r)+cumsum(covid.2019.ru.dyn$d))), col=2, lwd=2)
 
-# Cumulated recovered
+# Cumulated recovered;
 lines(covid.2019.ru.dyn$TIME, log10(cumsum(covid.2019.ru.dyn$r)), col="white", lwd=5)
 lines(covid.2019.ru.dyn$TIME, log10(cumsum(covid.2019.ru.dyn$r)), col="darkgreen", lwd=2)
 
-# Cumulated deaths
+# Cumulated deaths;
 lines(covid.2019.ru.dyn$TIME, log10(cumsum(covid.2019.ru.dyn$d)), col="white", lwd=5)
 lines(covid.2019.ru.dyn$TIME, log10(cumsum(covid.2019.ru.dyn$d)), col=1, lwd=2)
 
@@ -138,7 +134,7 @@ legend=c("Total cases (vertical bars = new ones)","Active cases","Recovered","De
 bty="n"
 )
 
-# Grid for months
+# Grid for months;
 abline(v = seq(min(covid.2019.ru.dyn$TIME), max(covid.2019.ru.dyn$TIME), by = "month"), lty = 3, col = 8, lwd=.75)
 
 axis(2, at=log10(c(1,10,100,1000,10000,100000,1000000,10000000)), labels=c("1","10","100","1K","10K","100K","1M","10M"))
@@ -168,7 +164,7 @@ ylab="Case Fatality Ratio",
 axes=FALSE
 )
 
-# Grid for months
+# Grid for months;
 abline(v = seq(min(covid.2019.ru.dyn$TIME), max(covid.2019.ru.dyn$TIME), by = "month"), lty = 3, col = 8, lwd=.75)
 abline(h=seq(0,1,.01), lty=3, col=8)
 
@@ -202,25 +198,25 @@ lty=c(1,1,3,3),
 col=c(1,2,2,1),
 bty="n",
 legend=c(
-paste("(1) Closed cases : ", round(100*cumsum(covid.2019.ru.dyn$d)[nrow(covid.2019.ru.dyn)]/(cumsum(covid.2019.ru.dyn$r)[nrow(covid.2019.ru.dyn)] + cumsum(covid.2019.ru.dyn$d)[nrow(covid.2019.ru.dyn)])
-, 2), "% for now", sep=""),
-paste("(2) All cases : ", round(100*cumsum(covid.2019.ru.dyn$d)[nrow(covid.2019.ru.dyn)]/cumsum(covid.2019.ru.dyn$i)[nrow(covid.2019.ru.dyn)]
-, 2), "% for now", sep=""),
-paste("Geometric mean of (1) and (2) : ",
-round(100 * sqrt(
-(cumsum(covid.2019.ru.dyn$d)[nrow(covid.2019.ru.dyn)]/(cumsum(covid.2019.ru.dyn$r)[nrow(covid.2019.ru.dyn)] + cumsum(covid.2019.ru.dyn$d)[nrow(covid.2019.ru.dyn)])) *
-(cumsum(covid.2019.ru.dyn$d)[nrow(covid.2019.ru.dyn)]/cumsum(covid.2019.ru.dyn$i)[nrow(covid.2019.ru.dyn)])
-), 2), "% for now", sep=""),
-paste("Dead / geom. mean of new cases and recovered : ", round(
-100*
-tail(
-covid.2019.ru.dyn$d[49:nrow(covid.2019.ru.dyn)] /
-sqrt(
-covid.2019.ru.dyn$r[49:nrow(covid.2019.ru.dyn)]
-*
-covid.2019.ru.dyn$i[49:nrow(covid.2019.ru.dyn)]
-), 1), 2), "% for now", sep="")
-)
+	paste("(1) Closed cases : ", round(100*cumsum(covid.2019.ru.dyn$d)[nrow(covid.2019.ru.dyn)]/(cumsum(covid.2019.ru.dyn$r)[nrow(covid.2019.ru.dyn)] + cumsum(covid.2019.ru.dyn$d)[nrow(covid.2019.ru.dyn)])
+		, 2), "% for now", sep=""),
+	paste("(2) All cases : ", round(100*cumsum(covid.2019.ru.dyn$d)[nrow(covid.2019.ru.dyn)]/cumsum(covid.2019.ru.dyn$i)[nrow(covid.2019.ru.dyn)]
+		, 2), "% for now", sep=""),
+	paste("Geometric mean of (1) and (2) : ",
+		round(100 * sqrt(
+		(cumsum(covid.2019.ru.dyn$d)[nrow(covid.2019.ru.dyn)]/(cumsum(covid.2019.ru.dyn$r)[nrow(covid.2019.ru.dyn)] + cumsum(covid.2019.ru.dyn$d)[nrow(covid.2019.ru.dyn)])) *
+		(cumsum(covid.2019.ru.dyn$d)[nrow(covid.2019.ru.dyn)]/cumsum(covid.2019.ru.dyn$i)[nrow(covid.2019.ru.dyn)])
+		), 2), "% for now", sep=""),
+	paste("Dead / geom. mean of new cases and recovered : ", round(
+		100*
+		tail(
+		covid.2019.ru.dyn$d[49:nrow(covid.2019.ru.dyn)] /
+		sqrt(
+		covid.2019.ru.dyn$r[49:nrow(covid.2019.ru.dyn)]
+		*
+		covid.2019.ru.dyn$i[49:nrow(covid.2019.ru.dyn)]
+		), 1), 2), "% for now", sep="")
+	)
 )
 
 axis.POSIXct(1, 
@@ -232,19 +228,90 @@ axis(2)
 dev.off()
 
 ################################################################
-#
+# Density maps
 
-# pop
+ru.shape <- readOGR("../misc/ESRI.shapefile")
 
-# > colnames(pop)
-#  [1] "LOCUS"               "LAT"                 "LON"                
-#  [4] "POPULATION"          "COORD.BASED"         "REGION.RUS.LONG"    
-#  [7] "REGION.RUS"          "POPULATION.20200101" "FED.DISCTRICT"      
-# [10] "REGION.INCR"        
-# >
+################################################################
+# Map / regions as areas / colour intensity proportional
+# to the total number of cases;
+
+png("../plots/10.COVID.2019.map.density.regions.png", height=750, width=1000, res=120, pointsize=10)
+par(fg="white", bg=rgb(0,.1,.2,1))
+
+plot(ru.shape[order(ru.shape$LOCUS),], xlim=c(20,180), col="white", border="white")
+plot(ru.shape[order(ru.shape$LOCUS),], xlim=c(20,180), 
+col=rgb(.3,0,0,(log10(pop.derived$DETECTED)/max(log10(pop.derived$DETECTED)))^4), 
+border=rgb(.3,0,0,((log10(pop.derived$DETECTED)/max(log10(pop.derived$DETECTED)))^4)/4), 
+add=TRUE)
+
+mtext(paste("Total COVID-2019 cases, as of", tail(RU.TIME, 1)), 
+side=1, line=1) 
+mtext("Russian Federation", font=2, cex=1.2, side=3, line=0)
+
+dev.off()
+
+################################################################
+# Map / regions as areas / colour intensity proportional
+# to the total number of cases per 100K inhabitants;
+
+png("../plots/11.COVID.2019.map.density.regions.per_100K.png", height=750, width=1000, res=120, pointsize=10)
+par(fg="white", bg=rgb(0,.1,.2,1))
+
+plot(ru.shape[order(ru.shape$LOCUS),], xlim=c(20,180), col="white", border="white")
+plot(ru.shape[order(ru.shape$LOCUS),], xlim=c(20,180), 
+col=rgb(.3,0,0,(pop.derived$DETECTED.100K/max(pop.derived$DETECTED.100K))), 
+border=rgb(.3,0,0,((pop.derived$DETECTED.100K/max(pop.derived$DETECTED.100K)))/4), 
+add=TRUE)
+
+mtext(paste("Total COVID-2019 cases per 100K, as of", tail(RU.TIME, 1)), 
+side=1, line=1) 
+mtext("Russian Federation", font=2, cex=1.2, side=3, line=0)
+
+dev.off()
+
+################################################################
+# Map / regions as areas / colour intensity proportional
+# to the number of cases registered within past seven days
+# per 100K inhabitants;
+
+png("../plots/12.COVID.2019.map.density.regions.7_days_increment.per_100K.png", height=750, width=1000, res=120, pointsize=10)
+par(fg="white", bg=rgb(0,.1,.2,1))
+
+plot(ru.shape[order(ru.shape$LOCUS),], xlim=c(20,180), col="white", border="white")
+plot(ru.shape[order(ru.shape$LOCUS),], xlim=c(20,180), 
+col=rgb(.3,0,0,(pop.derived$DETECTED.7.100K/max(pop.derived$DETECTED.7.100K))), 
+border=rgb(.3,0,0,((pop.derived$DETECTED.7.100K/max(pop.derived$DETECTED.7.100K)))/4), 
+add=TRUE)
+
+mtext(paste("COVID-2019 new cases over past 7 days per 100K, as of", tail(RU.TIME, 1)), 
+side=1, line=1) 
+mtext("Russian Federation", font=2, cex=1.2, side=3, line=0)
+
+dev.off()
+
+################################################################
+# Map / regions as areas / colour intensity proportional
+# to the total number of active cases per 100K inhabitants;
+
+png("../plots/13.COVID.2019.map.density.regions.active.per_100K.png", height=750, width=1000, res=120, pointsize=10)
+par(fg="white", bg=rgb(0,.1,.2,1))
+
+plot(ru.shape[order(ru.shape$LOCUS),], xlim=c(20,180), col="white", border="white")
+plot(ru.shape[order(ru.shape$LOCUS),], xlim=c(20,180), 
+col=rgb(.3,0,0,(pop.derived$ACTIVE.100K/max(pop.derived$ACTIVE.100K))), 
+border=rgb(.3,0,0,((pop.derived$ACTIVE.100K/max(pop.derived$ACTIVE.100K)))/4), 
+add=TRUE)
+
+mtext(paste("COVID-2019 active cases per 100K, as of", tail(RU.TIME, 1)), 
+side=1, line=1) 
+mtext("Russian Federation", font=2, cex=1.2, side=3, line=0)
+
+dev.off()
 
 ################################################################
 # Regions barplot;
+
 png("../plots/15.COVID.2019.barplot.regions.png", height=1200, width=750, res=120, pointsize=10)
 par(mar=c(3.5,6,4,1)+.1, mgp=c(1.7,.5,-.5), cex.axis=.6)
 
@@ -265,6 +332,7 @@ dev.off()
 
 ################################################################
 # Regions barplot logarithmic;
+
 png("../plots/16.COVID.2019.barplot.regions.log.10.png", height=1200, width=750, res=120, pointsize=10)
 par(mar=c(3.5,6,4,1)+.1, mgp=c(1.7,.5,-.5), cex.axis=.6)
 
@@ -288,6 +356,7 @@ dev.off()
 
 ################################################################
 # Regions barplot cases per 100K;
+
 png("../plots/17.COVID.2019.barplot.regions.per_100K.png", height=1200, width=750, res=120, pointsize=10)
 par(mar=c(3.5,6,4,1)+.1, mgp=c(1.7,.5,-.5), cex.axis=.6)
 
@@ -306,6 +375,7 @@ dev.off()
 
 ################################################################
 # Regions barplot active cases per 100K;
+
 png("../plots/18.COVID.2019.barplot.regions.per_100K.active.png", height=1200, width=750, res=120, pointsize=10)
 par(mar=c(3.5,6,4,1)+.1, mgp=c(1.7,.5,-.5), cex.axis=.6)
 
@@ -324,12 +394,13 @@ dev.off()
 
 ################################################################
 # Regions barplot cases detected for the past 7 days per 100K;
+
 png("../plots/19.COVID.2019.barplot.regions.per_100K.detected_for_the_past_7d.png", height=1200, width=750, res=120, pointsize=10)
 par(mar=c(3.5,6,4,1)+.1, mgp=c(1.7,.5,-.5), cex.axis=.6, cex.lab=.9)
 
 barplot(
-height = pop.derived[order(pop.derived$DETECTED.7),]$DETECTED.7, 
-names.arg = pop.derived[order(pop.derived$DETECTED.7),]$LOCUS, 
+height = pop.derived[order(pop.derived$DETECTED.7.100K),]$DETECTED.7.100K, 
+names.arg = pop.derived[order(pop.derived$DETECTED.7.100K),]$LOCUS, 
 horiz=TRUE,
 ylab="", 
 xlab=paste("Sum of COVID-2019 cases detected for the past 7 days per 100K, as of",max(covid.2019.ru.dyn$TIME)), 
@@ -434,27 +505,27 @@ ylab="COVID-2019 cases detected",
 axes=FALSE
 )
 
-# Shadows for all regions
+# Shadows for all regions;
 for(j in 1:length(covid.2019.ru.dyn.tot.primary)){
  lines(covid.2019.ru.dyn.tot.primary[[j]]$TIME, cumsum(covid.2019.ru.dyn.tot.primary[[j]]$i), lwd=1.5, col=rgb(0,0,0,.15))
 }
 
-# Increments detcted
+# Increments detcted;
 lines(covid.2019.ru.dyn.tot.primary[[i]]$TIME, covid.2019.ru.dyn.tot.primary[[i]]$i, type="h", col="darkred")
 
-# Cumulated detected
+# Cumulated detected;
 lines(covid.2019.ru.dyn.tot.primary[[i]]$TIME, cumsum(covid.2019.ru.dyn.tot.primary[[i]]$i), col="white", lwd=5)
 lines(covid.2019.ru.dyn.tot.primary[[i]]$TIME, cumsum(covid.2019.ru.dyn.tot.primary[[i]]$i), col="darkred", lwd=2)
 
-# Active
+# Active;
 lines(covid.2019.ru.dyn.tot.primary[[i]]$TIME, cumsum(covid.2019.ru.dyn.tot.primary[[i]]$i)-(cumsum(covid.2019.ru.dyn.tot.primary[[i]]$r)+cumsum(covid.2019.ru.dyn.tot.primary[[i]]$d)), col="white", lwd=5)
 lines(covid.2019.ru.dyn.tot.primary[[i]]$TIME, cumsum(covid.2019.ru.dyn.tot.primary[[i]]$i)-(cumsum(covid.2019.ru.dyn.tot.primary[[i]]$r)+cumsum(covid.2019.ru.dyn.tot.primary[[i]]$d)), col=2, lwd=2)
 
-# Cumulated recovered
+# Cumulated recovered;
 lines(covid.2019.ru.dyn.tot.primary[[i]]$TIME, cumsum(covid.2019.ru.dyn.tot.primary[[i]]$r), col="white", lwd=5)
 lines(covid.2019.ru.dyn.tot.primary[[i]]$TIME, cumsum(covid.2019.ru.dyn.tot.primary[[i]]$r), col="darkgreen", lwd=2)
 
-# Cumulated deaths
+# Cumulated deaths;
 lines(covid.2019.ru.dyn.tot.primary[[i]]$TIME, cumsum(covid.2019.ru.dyn.tot.primary[[i]]$d), col="white", lwd=5)
 lines(covid.2019.ru.dyn.tot.primary[[i]]$TIME, cumsum(covid.2019.ru.dyn.tot.primary[[i]]$d), col=1, lwd=2)
 
@@ -467,7 +538,7 @@ legend=c("Total cases (vertical bars = new ones)","Active cases","Recovered","De
 bty="n"
 )
 
-# Grid for months
+# Grid for months;
 abline(v = seq(min(covid.2019.ru.dyn.tot.primary[[i]]$TIME), max(covid.2019.ru.dyn.tot.primary[[i]]$TIME), by = "month"), lty = 3, col = 8, lwd=.75)
 
 axis(2)
@@ -498,27 +569,27 @@ ylab="COVID-2019 cases detected (logarithmic scale)",
 axes=FALSE
 )
 
-# Shadows for all regions
+# Shadows for all regions;
 for(j in 1:length(covid.2019.ru.dyn.tot.primary)){
  lines(covid.2019.ru.dyn.tot.primary[[j]]$TIME, log10(cumsum(covid.2019.ru.dyn.tot.primary[[j]]$i)), lwd=1.5, col=rgb(0,0,0,.15))
 }
 
-# Increments detcted
+# Increments detcted;
 lines(covid.2019.ru.dyn.tot.primary[[i]]$TIME, log10(covid.2019.ru.dyn.tot.primary[[i]]$i), type="h", col="darkred")
 
-# Cumulated detected
+# Cumulated detected;
 lines(covid.2019.ru.dyn.tot.primary[[i]]$TIME, log10(cumsum(covid.2019.ru.dyn.tot.primary[[i]]$i)), col="white", lwd=5)
 lines(covid.2019.ru.dyn.tot.primary[[i]]$TIME, log10(cumsum(covid.2019.ru.dyn.tot.primary[[i]]$i)), col="darkred", lwd=2)
 
-# Active
+# Active;
 lines(covid.2019.ru.dyn.tot.primary[[i]]$TIME, log10(cumsum(covid.2019.ru.dyn.tot.primary[[i]]$i)-(cumsum(covid.2019.ru.dyn.tot.primary[[i]]$r)+cumsum(covid.2019.ru.dyn.tot.primary[[i]]$d))), col="white", lwd=5)
 lines(covid.2019.ru.dyn.tot.primary[[i]]$TIME, log10(cumsum(covid.2019.ru.dyn.tot.primary[[i]]$i)-(cumsum(covid.2019.ru.dyn.tot.primary[[i]]$r)+cumsum(covid.2019.ru.dyn.tot.primary[[i]]$d))), col=2, lwd=2)
 
-# Cumulated recovered
+# Cumulated recovered;
 lines(covid.2019.ru.dyn.tot.primary[[i]]$TIME, log10(cumsum(covid.2019.ru.dyn.tot.primary[[i]]$r)), col="white", lwd=5)
 lines(covid.2019.ru.dyn.tot.primary[[i]]$TIME, log10(cumsum(covid.2019.ru.dyn.tot.primary[[i]]$r)), col="darkgreen", lwd=2)
 
-# Cumulated deaths
+# Cumulated deaths;
 lines(covid.2019.ru.dyn.tot.primary[[i]]$TIME, log10(cumsum(covid.2019.ru.dyn.tot.primary[[i]]$d)), col="white", lwd=5)
 lines(covid.2019.ru.dyn.tot.primary[[i]]$TIME, log10(cumsum(covid.2019.ru.dyn.tot.primary[[i]]$d)), col=1, lwd=2)
 
@@ -533,7 +604,7 @@ legend=c("Total cases (vertical bars = new ones)","Active cases","Recovered","De
 bty="n"
 )
 
-# Grid for months
+# Grid for months;
 abline(v = seq(min(covid.2019.ru.dyn.tot.primary[[i]]$TIME), max(covid.2019.ru.dyn.tot.primary[[i]]$TIME), by = "month"), lty = 3, col = 8, lwd=.75)
 
 axis(2, at=log10(c(1,10,100,1000,10000,100000,1000000)), labels=c("1","10","100","1K","10K","100K","1M"))
