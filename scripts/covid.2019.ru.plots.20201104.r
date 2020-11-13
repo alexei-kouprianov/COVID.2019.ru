@@ -618,3 +618,20 @@ las = 2)
 dev.off()
 
 }
+
+
+#   d.7 <- c(NA,NA,NA) 
+#  for(k in 4:(nrow(covid.2019.ru.dyn.tot[[j]])-3)){
+#   d.7 <- c(d.7, mean(covid.2019.ru.dyn.tot[[j]]$d[(k-3):(k+3)], na.rm=TRUE))
+#   }
+#   d.7 <- c(d.7, NA, NA, NA)
+#   covid.2019.ru.dyn.tot[[j]]$d.7 <- d.7
+#
+#   R.RPN <- rep(NA,8) 
+#  for(k in 9:(nrow(covid.2019.ru.dyn.tot[[j]]))){
+#   R.RPN <- c(R.RPN, sum(covid.2019.ru.dyn.tot[[j]]$i[(k):(k-3)], na.rm=TRUE)/sum(covid.2019.ru.dyn.tot[[j]]$i[(k-4):(k-7)], na.rm=TRUE))
+#   }
+#   R.RPN <- c(R.RPN)
+#   covid.2019.ru.dyn.tot[[j]]$R.RPN <- R.RPN
+#
+#  covid.2019.ru.dyn.tot[[j]]$i.7.var <- abs(covid.2019.ru.dyn.tot[[j]]$i - covid.2019.ru.dyn.tot[[j]]$i.7)/covid.2019.ru.dyn.tot[[j]]$i.7

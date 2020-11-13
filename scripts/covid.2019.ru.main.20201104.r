@@ -30,7 +30,8 @@ for(i in 1:length(levels(increment$REGION))){
 
 # Saving primary dynamics list of data frames to a json file;
 
-write_json(covid.2019.ru.dyn.tot.primary, "../data/primary_dataset_backup.json")
+covid.2019.ru.dyn.tot.primary.json <- toJSON(covid.2019.ru.dyn.tot.primary)
+write(covid.2019.ru.dyn.tot.primary.json, "../data/primary_dataset_backup.json")
 
 # Russia primary dynamics data frame 'covid.2019.ru.dyn';
 
