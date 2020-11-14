@@ -9,6 +9,7 @@ dir.create("../plots/regions/linear/")
 dir.create("../plots/regions/increments/")
 dir.create("../plots/regions/increments/i/")
 dir.create("../plots/regions/increments/d/")
+dir.create("../plots/regions/increments/i.7.var/")
 
 ################################################################
 ################################################################
@@ -635,3 +636,44 @@ dev.off()
 #   covid.2019.ru.dyn.tot[[j]]$R.RPN <- R.RPN
 #
 #  covid.2019.ru.dyn.tot[[j]]$i.7.var <- abs(covid.2019.ru.dyn.tot[[j]]$i - covid.2019.ru.dyn.tot[[j]]$i.7)/covid.2019.ru.dyn.tot[[j]]$i.7
+
+
+# /home/tinea/Documents/H_et_S/Projects/github/COVID.2019.ru/plots/regions/increments/R.RPN
+# /home/tinea/Documents/H_et_S/Projects/github/COVID.2019.ru/plots/regions/increments/i.7.var
+
+for(i in 1:length(covid.2019.ru.dyn.tot.derived)){
+
+	png(file = paste("../plots/regions/increments/i.7.var/COVID.2019.momentary.i.7.var.", gsub(" ", "_", names(covid.2019.ru.dyn.tot.primary)[i]), ".png", sep=""), height=750, width=1000, res=120, pointsize=10)
+	par(mar=c(6,5,4,5)+.1, lwd=2)
+
+	plot(covid.2019.ru.dyn.tot.derived[[i]]$TIME, covid.2019.ru.dyn.tot.derived[[i]]$i.7.var, 
+	type="n", 
+	ylim=c(0, 5),
+	main=paste("Russian Federation /", names(covid.2019.ru.dyn.tot.derived)[i]),
+	xlab="",
+	ylab="COVID-2019 new cases detected, residuals vs. 7-days rolling mean",
+	axes=FALSE
+	)
+
+	# Shadows for all regions;
+	for(j in 1:length(covid.2019.ru.dyn.tot.derived)){
+		lines(covid.2019.ru.dyn.tot.derived[[j]]$TIME, covid.2019.ru.dyn.tot.derived[[j]]$i.7.var, lwd=1.5, col=rgb(0,0,0,.1))
+		}
+
+	# Cumulated detected;
+	lines(covid.2019.ru.dyn.tot.derived[[i]]$TIME, covid.2019.ru.dyn.tot.derived[[i]]$i.7.var, col="white", lwd=5)
+	lines(covid.2019.ru.dyn.tot.derived[[i]]$TIME, covid.2019.ru.dyn.tot.derived[[i]]$i.7.var, col="darkred", lwd=2)
+
+	# Grid for months;
+	abline(v = seq(min(covid.2019.ru.dyn.tot.primary[[i]]$TIME), max(covid.2019.ru.dyn.tot.primary[[i]]$TIME), by = "month"), lty = 3, col = 8, lwd=.75)
+
+	axis(2)
+
+	axis.POSIXct(1,
+	at = seq(min(covid.2019.ru.dyn.tot.primary[[i]]$TIME), max(covid.2019.ru.dyn.tot.primary[[i]]$TIME), by = "week"),
+	format = "%Y-%m-%d",
+	las = 2)
+
+	dev.off()
+
+	}

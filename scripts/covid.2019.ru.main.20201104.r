@@ -87,6 +87,18 @@ pop.derived$DETECTED.100K <- pop.derived$DETECTED / (pop.derived$POPULATION.2020
 pop.derived$DETECTED.7.100K <- pop.derived$DETECTED.7 / (pop.derived$POPULATION.20200101 / 100000)
 pop.derived$ACTIVE.100K <- pop.derived$ACTIVE / (pop.derived$POPULATION.20200101 / 100000)
 
+covid.2019.ru.dyn.tot.derived <- covid.2019.ru.dyn.tot.primary
+
+for(i in 1:length(covid.2019.ru.dyn.tot.primary)){
+
+	i.7 <- c(NA,NA,NA) 
+	for(k in 4:(nrow(covid.2019.ru.dyn.tot.primary[[i]])-3)){
+		i.7 <- c(i.7, mean(covid.2019.ru.dyn.tot.primary[[i]]$i[(k-3):(k+3)], na.rm=TRUE))
+		}
+	covid.2019.ru.dyn.tot.derived[[i]]$i.7 <- c(i.7, NA, NA, NA)
+	covid.2019.ru.dyn.tot.derived[[i]]$i.7.var <- abs(covid.2019.ru.dyn.tot.derived[[i]]$i - covid.2019.ru.dyn.tot.derived[[i]]$i.7)/covid.2019.ru.dyn.tot.derived[[i]]$i.7
+}
+
 # Report variables [hidden from default ls()];
 
 .report.bad.base <- (summary(pop.derived$DETECTED.1)[5] %/% 100)*100

@@ -3,6 +3,7 @@ use warnings;
 use LWP::Simple;
 use utf8;
 use strict;
+use IO::Compress::Gzip qw(gzip $GzipError) ;
 
 # 20200429 in the filenames = the date when https://стопкоронавирус.рф/ changed their reporting format;
 
@@ -21,6 +22,8 @@ my $DD = "";
 my $MM = "";
 my $YYYY = "";
 my $JSON = "";
+my $inputfile = '../downloads/stopcoronavirus.storage.cumulative.20200429.txt';
+my $outputfile = '../downloads/stopcoronavirus.storage.cumulative.20200429.txt.gz';
 
 open (SRC01, '<stopcoronavirus.rf.20200429.txt') or die $!;
 open (TGT011, '>>../downloads/stopcoronavirus.storage.cumulative.20200429.txt') or die $!;
@@ -48,3 +51,6 @@ close TGT013;
 close TGT012;
 close TGT011;
 close SRC01;
+
+my $status = gzip $inputfile => $outputfile
+        or die "gzip failed: $GzipError\n";
