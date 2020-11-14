@@ -89,14 +89,29 @@ pop.derived$ACTIVE.100K <- pop.derived$ACTIVE / (pop.derived$POPULATION.20200101
 
 covid.2019.ru.dyn.tot.derived <- covid.2019.ru.dyn.tot.primary
 
-for(i in 1:length(covid.2019.ru.dyn.tot.primary)){
+for(i in 1:length(covid.2019.ru.dyn.tot.derived)){
 
-	i.7 <- c(NA,NA,NA) 
-	for(k in 4:(nrow(covid.2019.ru.dyn.tot.primary[[i]])-3)){
-		i.7 <- c(i.7, mean(covid.2019.ru.dyn.tot.primary[[i]]$i[(k-3):(k+3)], na.rm=TRUE))
+	i.7 <- c(NA,NA,NA)
+	for(k in 4:(nrow(covid.2019.ru.dyn.tot.derived[[i]])-3)){
+		i.7 <- c(i.7, mean(covid.2019.ru.dyn.tot.derived[[i]]$i[(k-3):(k+3)], na.rm=TRUE))
 		}
 	covid.2019.ru.dyn.tot.derived[[i]]$i.7 <- c(i.7, NA, NA, NA)
+
+	d.7 <- c(NA,NA,NA)
+	for(k in 4:(nrow(covid.2019.ru.dyn.tot.derived[[i]])-3)){
+		d.7 <- c(d.7, mean(covid.2019.ru.dyn.tot.derived[[i]]$d[(k-3):(k+3)], na.rm=TRUE))
+		}
+	covid.2019.ru.dyn.tot.derived[[i]]$d.7 <- c(d.7, NA, NA, NA)
+
+	R.RPN <- rep(NA,8) 
+	for(k in 9:(nrow(covid.2019.ru.dyn.tot.derived[[i]]))){
+	R.RPN <- c(R.RPN, sum(covid.2019.ru.dyn.tot.derived[[i]]$i[(k):(k-3)], na.rm=TRUE)/sum(covid.2019.ru.dyn.tot.derived[[i]]$i[(k-4):(k-7)], na.rm=TRUE))
+	}
+	R.RPN <- c(R.RPN)
+	covid.2019.ru.dyn.tot.derived[[i]]$R.RPN <- R.RPN
+
 	covid.2019.ru.dyn.tot.derived[[i]]$i.7.var <- abs(covid.2019.ru.dyn.tot.derived[[i]]$i - covid.2019.ru.dyn.tot.derived[[i]]$i.7)/covid.2019.ru.dyn.tot.derived[[i]]$i.7
+
 }
 
 # Report variables [hidden from default ls()];

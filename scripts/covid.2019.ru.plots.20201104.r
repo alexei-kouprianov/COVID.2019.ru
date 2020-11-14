@@ -620,26 +620,8 @@ dev.off()
 
 }
 
-
-#   d.7 <- c(NA,NA,NA) 
-#  for(k in 4:(nrow(covid.2019.ru.dyn.tot[[j]])-3)){
-#   d.7 <- c(d.7, mean(covid.2019.ru.dyn.tot[[j]]$d[(k-3):(k+3)], na.rm=TRUE))
-#   }
-#   d.7 <- c(d.7, NA, NA, NA)
-#   covid.2019.ru.dyn.tot[[j]]$d.7 <- d.7
-#
-#   R.RPN <- rep(NA,8) 
-#  for(k in 9:(nrow(covid.2019.ru.dyn.tot[[j]]))){
-#   R.RPN <- c(R.RPN, sum(covid.2019.ru.dyn.tot[[j]]$i[(k):(k-3)], na.rm=TRUE)/sum(covid.2019.ru.dyn.tot[[j]]$i[(k-4):(k-7)], na.rm=TRUE))
-#   }
-#   R.RPN <- c(R.RPN)
-#   covid.2019.ru.dyn.tot[[j]]$R.RPN <- R.RPN
-#
-#  covid.2019.ru.dyn.tot[[j]]$i.7.var <- abs(covid.2019.ru.dyn.tot[[j]]$i - covid.2019.ru.dyn.tot[[j]]$i.7)/covid.2019.ru.dyn.tot[[j]]$i.7
-
-
-# /home/tinea/Documents/H_et_S/Projects/github/COVID.2019.ru/plots/regions/increments/R.RPN
-# /home/tinea/Documents/H_et_S/Projects/github/COVID.2019.ru/plots/regions/increments/i.7.var
+################################################################
+# Excessive smoothing
 
 for(i in 1:length(covid.2019.ru.dyn.tot.derived)){
 
@@ -660,7 +642,7 @@ for(i in 1:length(covid.2019.ru.dyn.tot.derived)){
 		lines(covid.2019.ru.dyn.tot.derived[[j]]$TIME, covid.2019.ru.dyn.tot.derived[[j]]$i.7.var, lwd=1.5, col=rgb(0,0,0,.1))
 		}
 
-	# Cumulated detected;
+	# Excessive smoothing index;
 	lines(covid.2019.ru.dyn.tot.derived[[i]]$TIME, covid.2019.ru.dyn.tot.derived[[i]]$i.7.var, col="white", lwd=5)
 	lines(covid.2019.ru.dyn.tot.derived[[i]]$TIME, covid.2019.ru.dyn.tot.derived[[i]]$i.7.var, col="darkred", lwd=2)
 
@@ -677,3 +659,144 @@ for(i in 1:length(covid.2019.ru.dyn.tot.derived)){
 	dev.off()
 
 	}
+
+################################################################
+# RosPotrebNadzor reproduction number
+
+for(i in 1:length(covid.2019.ru.dyn.tot.derived)){
+
+	png(file = paste("../plots/regions/increments/R.RPN/COVID.2019.momentary.R.RPN.", gsub(" ", "_", names(covid.2019.ru.dyn.tot.primary)[i]), ".png", sep=""), height=750, width=1000, res=120, pointsize=10)
+	par(mar=c(6,5,4,5)+.1, lwd=2)
+
+	plot(covid.2019.ru.dyn.tot.derived[[i]]$TIME, covid.2019.ru.dyn.tot.derived[[i]]$R.RPN, 
+	type="n", 
+	ylim=c(0, 7),
+	main=paste("Russian Federation /", names(covid.2019.ru.dyn.tot.derived)[i]),
+	xlab="",
+	ylab="COVID-2019 new cases detected, residuals vs. 7-days rolling mean",
+	axes=FALSE
+	)
+
+	# Shadows for all regions;
+	for(j in 1:length(covid.2019.ru.dyn.tot.derived)){
+		lines(covid.2019.ru.dyn.tot.derived[[j]]$TIME, covid.2019.ru.dyn.tot.derived[[j]]$R.RPN, lwd=1.5, col=rgb(0,0,0,.1))
+		}
+
+	abline(h=1, lwd=2, col="white")
+	abline(h=1, lwd=.75)
+
+	# Cumulated detected;
+	lines(covid.2019.ru.dyn.tot.derived[[i]]$TIME, covid.2019.ru.dyn.tot.derived[[i]]$R.RPN, col="white", lwd=5)
+	lines(covid.2019.ru.dyn.tot.derived[[i]]$TIME, covid.2019.ru.dyn.tot.derived[[i]]$R.RPN, col="darkred", lwd=2)
+
+	# Grid for months;
+	abline(v = seq(min(covid.2019.ru.dyn.tot.primary[[i]]$TIME), max(covid.2019.ru.dyn.tot.primary[[i]]$TIME), by = "month"), lty = 3, col = 8, lwd=.75)
+
+	axis(2)
+
+	axis.POSIXct(1,
+	at = seq(min(covid.2019.ru.dyn.tot.primary[[i]]$TIME), max(covid.2019.ru.dyn.tot.primary[[i]]$TIME), by = "week"),
+	format = "%Y-%m-%d",
+	las = 2)
+
+	dev.off()
+
+	}
+
+
+################################################################
+# St. Petersburg newly detected increments with 7 day rolling mean
+
+png(file = "../plots/90.COVID.2019.SPb.i_smooth.png", height=750, width=1000, res=120, pointsize=10)
+par(mar=c(6,5,4,5)+.1)
+
+plot(covid.2019.ru.dyn.tot.derived[[68]]$TIME, covid.2019.ru.dyn.tot.derived[[68]]$i, 
+type="n", 
+main=paste("Russian Federation /", names(covid.2019.ru.dyn.tot.derived)[68]),
+xlab="",
+ylab="COVID-2019 cases detected",
+axes=FALSE
+)
+
+# Increments detcted;
+lines(covid.2019.ru.dyn.tot.derived[[68]]$TIME, covid.2019.ru.dyn.tot.derived[[68]]$i, type="h", col="darkred")
+
+# 7-days rolling mean;
+lines(covid.2019.ru.dyn.tot.derived[[68]]$TIME, covid.2019.ru.dyn.tot.derived[[68]]$i.7, col="white", lwd=5)
+lines(covid.2019.ru.dyn.tot.derived[[68]]$TIME, covid.2019.ru.dyn.tot.derived[[68]]$i.7, col="red", lwd=2)
+
+# Grid for months;
+abline(v = seq(min(covid.2019.ru.dyn.tot.primary[[68]]$TIME), max(covid.2019.ru.dyn.tot.primary[[68]]$TIME), by = "month"), lty = 3, col = 8, lwd=.75)
+
+axis(2)
+
+axis.POSIXct(1,
+at = seq(min(covid.2019.ru.dyn.tot.primary[[68]]$TIME), max(covid.2019.ru.dyn.tot.primary[[68]]$TIME), by = "week"),
+format = "%Y-%m-%d",
+las = 2)
+
+dev.off()
+
+################################################################
+# St. Petersburg deaths increments with 7 day rolling mean
+
+png(file = "../plots/91.COVID.2019.SPb.d_smooth.png", height=750, width=1000, res=120, pointsize=10)
+par(mar=c(6,5,4,5)+.1)
+
+plot(covid.2019.ru.dyn.tot.derived[[68]]$TIME, covid.2019.ru.dyn.tot.derived[[68]]$d, 
+type="n", 
+main=paste("Russian Federation /", names(covid.2019.ru.dyn.tot.derived)[68]),
+xlab="",
+ylab="COVID-2019 deaths",
+axes=FALSE
+)
+
+# Increments deaths;
+lines(covid.2019.ru.dyn.tot.derived[[68]]$TIME, covid.2019.ru.dyn.tot.derived[[68]]$d, type="h", col="black")
+
+# 7-days rolling mean;
+lines(covid.2019.ru.dyn.tot.derived[[68]]$TIME, covid.2019.ru.dyn.tot.derived[[68]]$d.7, col="white", lwd=5)
+lines(covid.2019.ru.dyn.tot.derived[[68]]$TIME, covid.2019.ru.dyn.tot.derived[[68]]$d.7, col="red", lwd=2)
+
+# Grid for months;
+abline(v = seq(min(covid.2019.ru.dyn.tot.primary[[68]]$TIME), max(covid.2019.ru.dyn.tot.primary[[68]]$TIME), by = "month"), lty = 3, col = 8, lwd=.75)
+
+axis(2)
+
+axis.POSIXct(1,
+at = seq(min(covid.2019.ru.dyn.tot.primary[[68]]$TIME), max(covid.2019.ru.dyn.tot.primary[[68]]$TIME), by = "week"),
+format = "%Y-%m-%d",
+las = 2)
+
+dev.off()
+
+################################################################
+# St. Petersburg detected / recovered ratio
+
+png(file = "../plots/92.COVID.2019.SPb.ratio_ir.png", height=750, width=1000, res=120, pointsize=10)
+par(mar=c(6,5,4,5)+.1)
+
+plot(covid.2019.ru.dyn.tot.derived[[68]]$TIME, covid.2019.ru.dyn.tot.derived[[68]]$i / covid.2019.ru.dyn.tot.derived[[68]]$r, 
+type="n", 
+main=paste("Russian Federation /", names(covid.2019.ru.dyn.tot.derived)[68]),
+xlab="",
+ylab="Ratio of COVID-2019 cases detected to recovered",
+axes=FALSE
+)
+
+# Grid for months;
+abline(v = seq(min(covid.2019.ru.dyn.tot.primary[[68]]$TIME), max(covid.2019.ru.dyn.tot.primary[[68]]$TIME), by = "month"), lty = 3, col = 8, lwd=.75)
+abline(h = 2, lty=3)
+
+text(covid.2019.ru.dyn.tot.primary[[68]]$TIME[14], 2, labels="y = 2", pos = 3)
+
+lines(covid.2019.ru.dyn.tot.derived[[68]]$TIME, covid.2019.ru.dyn.tot.derived[[68]]$i / covid.2019.ru.dyn.tot.derived[[68]]$r)
+
+axis(2)
+
+axis.POSIXct(1,
+at = seq(min(covid.2019.ru.dyn.tot.primary[[68]]$TIME), max(covid.2019.ru.dyn.tot.primary[[68]]$TIME), by = "week"),
+format = "%Y-%m-%d",
+las = 2)
+
+dev.off()
