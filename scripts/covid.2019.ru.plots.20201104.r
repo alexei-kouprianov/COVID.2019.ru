@@ -686,7 +686,7 @@ for(i in 1:length(covid.2019.ru.dyn.tot.derived)){
 	ylim=c(0, 7),
 	main=paste("Russian Federation /", names(covid.2019.ru.dyn.tot.derived)[i]),
 	xlab="",
-	ylab="COVID-2019 new cases detected, residuals vs. 7-days rolling mean",
+	ylab="COVID-2019 : RosPotrebNadzor's Reproduction Number",
 	axes=FALSE
 	)
 
