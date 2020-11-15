@@ -783,26 +783,26 @@ las = 2)
 dev.off()
 
 ################################################################
-# St. Petersburg detected / recovered ratio
+# St. Petersburg recovered / detected ratio
 
 png(file = "../plots/92.COVID.2019.SPb.ratio_ir.png", height=750, width=1000, res=120, pointsize=10)
 par(mar=c(6,5,4,5)+.1)
 
-plot(covid.2019.ru.dyn.tot.derived[[68]]$TIME, covid.2019.ru.dyn.tot.derived[[68]]$i / covid.2019.ru.dyn.tot.derived[[68]]$r, 
+plot(covid.2019.ru.dyn.tot.derived[[68]]$TIME, covid.2019.ru.dyn.tot.derived[[68]]$r / covid.2019.ru.dyn.tot.derived[[68]]$i, 
 type="n", 
 main=paste("Russian Federation /", names(covid.2019.ru.dyn.tot.derived)[68]),
 xlab="",
-ylab="Ratio of COVID-2019 cases detected to recovered",
+ylab="Ratio of COVID-2019 cases recovered to detected",
 axes=FALSE
 )
 
 # Grid for months;
 abline(v = seq(min(covid.2019.ru.dyn.tot.primary[[68]]$TIME), max(covid.2019.ru.dyn.tot.primary[[68]]$TIME), by = "month"), lty = 3, col = 8, lwd=.75)
-abline(h = 2, lty=3)
+abline(h = .5, lty=3)
 
-text(covid.2019.ru.dyn.tot.primary[[68]]$TIME[14], 2, labels="y = 2", pos = 3)
+text(covid.2019.ru.dyn.tot.primary[[68]]$TIME[14], .5, labels="y = 0.5", pos = 3)
 
-lines(covid.2019.ru.dyn.tot.derived[[68]]$TIME, covid.2019.ru.dyn.tot.derived[[68]]$i / covid.2019.ru.dyn.tot.derived[[68]]$r)
+lines(covid.2019.ru.dyn.tot.derived[[68]]$TIME, covid.2019.ru.dyn.tot.derived[[68]]$r / covid.2019.ru.dyn.tot.derived[[68]]$i)
 
 axis(2)
 
