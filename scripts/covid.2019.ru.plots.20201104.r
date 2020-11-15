@@ -17,8 +17,6 @@ dir.create("../plots/regions/increments/i.7.var/")
 ################################################################
 ################################################################
 
-# covid.2019.ru.dyn
-
 # Pending graphs:
 # # 04.COVID.2019.cumulated.by_regions.png
 # # 05.COVID.2019.cumulated.log.10.by_regions.png
@@ -27,14 +25,10 @@ dir.create("../plots/regions/increments/i.7.var/")
 # 08.COVID.2019.hist.rdi.png
 # 09.COVID.2019.hist.dt.png
 # 14.1.COVID.2019.map.density.regions.rdi7dt.png
-# 14.2.COVID.2019.map.density.regions.i.7.var.png
 # # # 31.COVID.2019.fitting.rmc.partial.01.log10.png
 # # # 32.COVID.2019.fitting.rmc.partial.02.RUS.Prov.log10.png
 # # # 33.COVID.2019.fitting.rmc.partial.03.Mos.log10.png
 # # # 34.COVID.2019.fitting.rmc.partial.04.SPb.log10.png
-# 90.COVID.2019.SPb.d_smooth.png
-# 90.COVID.2019.SPb.i_smooth.png
-# 90.COVID.2019.SPb.ratio_ir.png
 
 ################################################################
 # Overview Linear
@@ -246,7 +240,7 @@ col=rgb(.3,0,0,(log10(pop.derived$DETECTED)/max(log10(pop.derived$DETECTED)))^4)
 border=rgb(.3,0,0,((log10(pop.derived$DETECTED)/max(log10(pop.derived$DETECTED)))^4)/4), 
 add=TRUE)
 
-mtext(paste("Total COVID-2019 cases, as of", tail(RU.TIME, 1)), 
+mtext(paste("Total COVID-2019 cases, as of", tail(RU.TIME, 1), "\nThe lighter, the less"), 
 side=1, line=1) 
 mtext("Russian Federation", font=2, cex=1.2, side=3, line=0)
 
@@ -265,7 +259,7 @@ col=rgb(.3,0,0,(pop.derived$DETECTED.100K/max(pop.derived$DETECTED.100K))),
 border=rgb(.3,0,0,((pop.derived$DETECTED.100K/max(pop.derived$DETECTED.100K)))/4), 
 add=TRUE)
 
-mtext(paste("Total COVID-2019 cases per 100K, as of", tail(RU.TIME, 1)), 
+mtext(paste("Total COVID-2019 cases per 100K, as of", tail(RU.TIME, 1), "\nThe lighter, the less"), 
 side=1, line=1) 
 mtext("Russian Federation", font=2, cex=1.2, side=3, line=0)
 
@@ -285,7 +279,7 @@ col=rgb(.3,0,0,(pop.derived$DETECTED.7.100K/max(pop.derived$DETECTED.7.100K))),
 border=rgb(.3,0,0,((pop.derived$DETECTED.7.100K/max(pop.derived$DETECTED.7.100K)))/4), 
 add=TRUE)
 
-mtext(paste("COVID-2019 new cases over past 7 days per 100K, as of", tail(RU.TIME, 1)), 
+mtext(paste("COVID-2019 new cases over past 7 days per 100K, as of", tail(RU.TIME, 1), "\nThe lighter, the less"), 
 side=1, line=1) 
 mtext("Russian Federation", font=2, cex=1.2, side=3, line=0)
 
@@ -304,7 +298,26 @@ col=rgb(.3,0,0,(pop.derived$ACTIVE.100K/max(pop.derived$ACTIVE.100K))),
 border=rgb(.3,0,0,((pop.derived$ACTIVE.100K/max(pop.derived$ACTIVE.100K)))/4), 
 add=TRUE)
 
-mtext(paste("COVID-2019 active cases per 100K, as of", tail(RU.TIME, 1)), 
+mtext(paste("COVID-2019 active cases per 100K, as of", tail(RU.TIME, 1), , "\nThe lighter, the less"), 
+side=1, line=1) 
+mtext("Russian Federation", font=2, cex=1.2, side=3, line=0)
+
+dev.off()
+
+################################################################
+# Map / regions as areas / colour intensity proportional
+# to the total number of active cases per 100K inhabitants;
+
+png("../plots/14.COVID.2019.map.density.regions.i.7.var.rmean.7.png", height=750, width=1000, res=120, pointsize=10)
+par(fg="white", bg=rgb(0,.1,.2,1))
+
+plot(ru.shape[order(ru.shape$LOCUS),], xlim=c(20,180), col="white", border="white")
+plot(ru.shape[order(ru.shape$LOCUS),], xlim=c(20,180), 
+col=rgb(.3,0,0,(1-pop.derived$i.7.var.rmean.7/max(pop.derived$i.7.var.rmean.7))^8), 
+border=rgb(.3,0,0,(((1-(pop.derived$i.7.var.rmean.7/max(pop.derived$i.7.var.rmean.7)))^8)/4)), 
+add=TRUE)
+
+mtext(paste("COVID-2019 mean excessive smoothing over past 7 days, as of", tail(RU.TIME, 1), "\nThe lighter, the better"), 
 side=1, line=1) 
 mtext("Russian Federation", font=2, cex=1.2, side=3, line=0)
 
@@ -703,7 +716,6 @@ for(i in 1:length(covid.2019.ru.dyn.tot.derived)){
 
 	}
 
-
 ################################################################
 # St. Petersburg newly detected increments with 7 day rolling mean
 
@@ -722,8 +734,8 @@ axes=FALSE
 lines(covid.2019.ru.dyn.tot.derived[[68]]$TIME, covid.2019.ru.dyn.tot.derived[[68]]$i, type="h", col="darkred")
 
 # 7-days rolling mean;
-lines(covid.2019.ru.dyn.tot.derived[[68]]$TIME, covid.2019.ru.dyn.tot.derived[[68]]$i.7, col="white", lwd=5)
-lines(covid.2019.ru.dyn.tot.derived[[68]]$TIME, covid.2019.ru.dyn.tot.derived[[68]]$i.7, col="red", lwd=2)
+lines(covid.2019.ru.dyn.tot.derived[[68]]$TIME, covid.2019.ru.dyn.tot.derived[[68]]$i.7, col="white", lwd=3)
+lines(covid.2019.ru.dyn.tot.derived[[68]]$TIME, covid.2019.ru.dyn.tot.derived[[68]]$i.7, col="red", lwd=1.5)
 
 # Grid for months;
 abline(v = seq(min(covid.2019.ru.dyn.tot.primary[[68]]$TIME), max(covid.2019.ru.dyn.tot.primary[[68]]$TIME), by = "month"), lty = 3, col = 8, lwd=.75)
@@ -755,8 +767,8 @@ axes=FALSE
 lines(covid.2019.ru.dyn.tot.derived[[68]]$TIME, covid.2019.ru.dyn.tot.derived[[68]]$d, type="h", col="black")
 
 # 7-days rolling mean;
-lines(covid.2019.ru.dyn.tot.derived[[68]]$TIME, covid.2019.ru.dyn.tot.derived[[68]]$d.7, col="white", lwd=5)
-lines(covid.2019.ru.dyn.tot.derived[[68]]$TIME, covid.2019.ru.dyn.tot.derived[[68]]$d.7, col="red", lwd=2)
+lines(covid.2019.ru.dyn.tot.derived[[68]]$TIME, covid.2019.ru.dyn.tot.derived[[68]]$d.7, col="white", lwd=3)
+lines(covid.2019.ru.dyn.tot.derived[[68]]$TIME, covid.2019.ru.dyn.tot.derived[[68]]$d.7, col="red", lwd=1.5)
 
 # Grid for months;
 abline(v = seq(min(covid.2019.ru.dyn.tot.primary[[68]]$TIME), max(covid.2019.ru.dyn.tot.primary[[68]]$TIME), by = "month"), lty = 3, col = 8, lwd=.75)
