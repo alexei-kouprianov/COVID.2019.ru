@@ -298,7 +298,7 @@ col=rgb(.3,0,0,(pop.derived$ACTIVE.100K/max(pop.derived$ACTIVE.100K))),
 border=rgb(.3,0,0,((pop.derived$ACTIVE.100K/max(pop.derived$ACTIVE.100K)))/4), 
 add=TRUE)
 
-mtext(paste("COVID-2019 active cases per 100K, as of", tail(RU.TIME, 1), , "\nThe lighter, the less"), 
+mtext(paste("COVID-2019 active cases per 100K, as of", tail(RU.TIME, 1), "\nThe lighter, the less"), 
 side=1, line=1) 
 mtext("Russian Federation", font=2, cex=1.2, side=3, line=0)
 
