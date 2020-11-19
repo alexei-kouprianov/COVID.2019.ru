@@ -324,6 +324,50 @@ mtext("Russian Federation", font=2, cex=1.2, side=3, line=0)
 dev.off()
 
 ################################################################
+
+png("../plots/41.COVID.2019.hist.i.7.var.rmean.7.png", height=750, width=1000, res=120, pointsize=10)
+par(mar=c(6,5,4,5)+.1, mgp=c(1.7,.5,-.5))
+
+hist(pop.derived$i.7.var.rmean.7, breaks=seq(0, .58, .005), col=8, 
+main=paste("Russian Federation /", tail(RU.TIME, 1)),
+xlab="COVID-2019 mean excessive smoothing over past 7 days")
+rug(pop.derived$i.7.var.rmean.7, col=rgb(0,0,0,.4))
+abline(v=summary(pop.derived$i.7.var.rmean.7)[c(2, 5)], lty=3, col=3)
+abline(v=summary(pop.derived$i.7.var.rmean.7)[3], lty=5, col=3)
+abline(v=summary(pop.derived$i.7.var.rmean.7)[4], lty=5, col=2)
+abline(v=(median(pop.derived$i.7.var.rmean.7) + c(-1,1)*1.5*IQR((pop.derived$i.7.var.rmean.7))), lty=3, col=4)
+axis(2, at=1:20, labels=FALSE, tcl=-.25)
+
+legend(
+"topright", bty="n",
+lty=c(5, 5, 3, 3),
+lwd=1.5,
+col=c(2, 3, 3, 4),
+legend=c(
+paste("Mean (", round(summary(pop.derived$i.7.var.rmean.7)[4], 4), ")", sep=""),
+paste("Median (", round(summary(pop.derived$i.7.var.rmean.7)[3], 4), ")", sep=""),
+paste("1st and 3rd Quartiles (", round(summary(pop.derived$i.7.var.rmean.7)[2], 4), " and ", round(summary(pop.derived$i.7.var.rmean.7)[5], 4), ")", sep=""),
+paste("Median +/- 1.5 IQR (", round(median(pop.derived$i.7.var.rmean.7) - 1.5*IQR((pop.derived$i.7.var.rmean.7)), 4), " and ", round(median(pop.derived$i.7.var.rmean.7) + 1.5*IQR((pop.derived$i.7.var.rmean.7)), 4), ")", sep="")
+)
+)
+
+dev.off()
+
+png("../plots/42.COVID.2019.boxplot.i.7.var.rmean.7.png", height=750, width=500, res=120, pointsize=10)
+par(mar=c(1,5,3,5)+.1, mgp=c(1.7,.5,-.5))
+
+boxplot(pop.derived$i.7.var.rmean.7, pch=20, cex=.7, col=8, frame=FALSE,
+main=paste("Russian Federation /", tail(RU.TIME, 1)),
+ylab="COVID-2019 mean excessive smoothing over past 7 days")
+text(x=1,
+y=tail(pop.derived[order(pop.derived$i.7.var.rmean.7),c("LOCUS","i.7.var.rmean.7")]$i.7.var.rmean.7, 12),
+labels=tail(pop.derived[order(pop.derived$i.7.var.rmean.7),c("LOCUS","i.7.var.rmean.7")]$LOCUS, 12),
+pos=c(2,4),
+cex=.7)
+
+dev.off()
+
+################################################################
 # Regions barplot;
 
 png("../plots/15.COVID.2019.barplot.regions.png", height=1200, width=750, res=120, pointsize=10)
