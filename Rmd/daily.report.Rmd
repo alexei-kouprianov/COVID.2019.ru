@@ -32,3 +32,5 @@ knitr::kable(.report.incr.abs.t$PRINT, caption="")
 * < https://github.com/alexei-kouprianov/COVID.2019.ru/tree/master/plots/regions >
 
 **Скрипт и данные.** < https://github.com/alexei-kouprianov/COVID.2019.ru >
+
+**Исходные данные.** < https://стопкоронавирус.рф/information/ >
