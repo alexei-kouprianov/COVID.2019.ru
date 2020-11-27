@@ -44,10 +44,11 @@ Go to the COVID.2019.ru/scripts/ folder and run from the command line:
 
 Then, go to R and run scripts stored in:
 
+    covid.2019.ru.libraries.r
     covid.2019.ru.main.20201104.r
     covid.2019.ru.plots.20201104.r
 
-The urrent scheme still needs a saved R environment. I am working on it and it will be updated shortly.
+The current scheme still needs a saved R environment. I am working on it and it will be updated shortly.
 
 An outdated procedure (worked for me from 2020-06-04 through 2020-10-13 until I've run out of memory):
 

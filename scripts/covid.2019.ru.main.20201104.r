@@ -1,5 +1,61 @@
 # setwd("/home/tinea/Documents/H_et_S/Projects/github/COVID.2019.ru/scripts/")
 
+###################################################################
+###################################################################
+##
+## ATTENTION! Do not execute this part of code mindlessly!
+##
+## Uncomment the following section only in case you need to recover
+##
+## covid.2019.ru.dyn.tot.primary
+##
+## from ../data/primary_dataset_backup.json
+##
+###################################################################
+###################################################################
+
+# # primary_dataset_backup.json.ls <- fromJSON(file="../data/primary_dataset_backup.json")
+# #
+# # dataset.recovered.primary.ls <- NULL
+# # dataset.recovered.primary.ls <- as.list(dataset.recovered.primary.ls)
+# #
+# # for(i in 1:length(primary_dataset_backup.json.ls)){
+# # 	ISOdatetime.recovered <- ISOdatetime(
+# # 	year = primary_dataset_backup.json.ls[[i]]$TIME$year + 1900,
+# # 	month = primary_dataset_backup.json.ls[[i]]$TIME$mon + 1,
+# # 	day = primary_dataset_backup.json.ls[[i]]$TIME$mday,
+# # 	hour = primary_dataset_backup.json.ls[[i]]$TIME$hour,
+# # 	min = primary_dataset_backup.json.ls[[i]]$TIME$min,
+# # 	sec = primary_dataset_backup.json.ls[[i]]$TIME$sec,
+# # 	tz = "MSK")
+# #
+# # dataset.recovered.primary.ls[[i]] <- cbind.data.frame(
+# # 	ISOdatetime.recovered, 
+# # 	primary_dataset_backup.json.ls[[i]]$i,
+# # 	primary_dataset_backup.json.ls[[i]]$r,
+# # 	primary_dataset_backup.json.ls[[i]]$d
+# # 	)
+# #
+# # colnames(dataset.recovered.primary.ls[[i]]) <- c("TIME", "i", "r", "d")
+# #
+# # }
+# #
+# # names(dataset.recovered.primary.ls) <- names(primary_dataset_backup.json.ls)
+# #
+# # covid.2019.ru.dyn.tot.primary <- dataset.recovered.primary.ls
+
+###################################################################
+###################################################################
+##
+## Uncomment the preceding section only in case you need to recover
+##
+## covid.2019.ru.dyn.tot.primary
+##
+## from ../data/primary_dataset_backup.json
+##
+###################################################################
+###################################################################
+
 # Loading population table and daily increments;
 
 pop <- read.table("../misc/population.txt", h=TRUE, sep="\t")
