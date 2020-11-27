@@ -48,7 +48,7 @@ Then, go to R and run scripts stored in:
     covid.2019.ru.main.20201104.r
     covid.2019.ru.plots.20201104.r
 
-Please, read carefully the comments in `covid.2019.ru.main.20201104.r`. A vitally important part of the script is commented. It sshould not be implemented carelessly, so, please, uncomment and execute it mindfully.
+Please, read carefully the comments in `covid.2019.ru.main.20201104.r`. A vitally important part of the script is commented. It should not be implemented carelessly, so, please, uncomment and execute it mindfully.
 
 An outdated procedure (worked for me from 2020-06-04 through 2020-10-13 until I've run out of memory):
 
