@@ -34,9 +34,22 @@ Fitting and prognostic scripts ceased to work properly towards the end of April 
 
 While working on this project I had to change data gathering procedures several times. During the early weeks, until 2020-03-24, I relied mostly on the media publishing updates from time to time. Then, from 2020-03-24/25 through 2020-04-07 I shifted to the website of RosPotrebNadzor, which published daily reports with a breakdown by regions. Then, from 2020-04-08 on, стопкоронавирус.рф became the main source of information (also, some information on recovered and deceased from it has been used retrospectively to fill in the gaps). RosPotrebNadzor was rather inconsistent in data formats mostly relying on HTML representation of simple lists. стопкоронавирус.рф changed their reporting format twice, most notably on 2020-04-29. Since 2020-04-29 the data have been published as a valid JSON chunk embedded in the code of the webpage.
 
-As for now, the procedure of data extraction works as follows:
+As for now, the procedure of data extraction and express-analysis works as follows:
 
 Go to the COVID.2019.ru/scripts/ folder and run from the command line:
+
+    perl stopcoronavirus.extractor.20200429.pl
+    Rscript covid.2019.converter.r 
+    perl covid.2019.disaggregator.pl
+
+Then, go to R and run scripts stored in:
+
+    covid.2019.ru.main.20201104.r
+    covid.2019.ru.plots.20201104.r
+
+The urrent scheme still needs a saved R environment. I am working on it and it will be updated shortly.
+
+An outdated procedure (worked for me from 2020-06-04 through 2020-10-13 until I've run out of memory):
 
     perl stopcoronavirus.extractor.20200429.pl
     Rscript covid.2019.converter.r 
