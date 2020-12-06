@@ -393,3 +393,222 @@ axis(2)
 dev.off()
 
 } # for loop closed;
+
+
+# China
+
+dir.create("../plots/world/China/increments/c/", recursive=TRUE)
+dir.create("../plots/world/China/increments/d/", recursive=TRUE)
+
+for(i in 1:(ncol(w.confirmed.ls[[37]]))){
+png(paste("../plots/world/China/increments/c/COVID-19.confirmed.China.", colnames(w.confirmed.ls[[37]])[i], ".png", sep=""), height=750, width=1000, res=120, pointsize=10)
+
+China.curr.prov.c <- as.data.frame(w.confirmed.ls[[37]])[2:nrow(w.confirmed.ls[[37]]),i] - 
+as.data.frame(w.confirmed.ls[[37]])[1:(nrow(w.confirmed.ls[[37]])-1),i] 
+
+plot(
+as.data.frame(w.confirmed.ls[[37]])[2:nrow(w.confirmed.ls[[37]]),i] - 
+as.data.frame(w.confirmed.ls[[37]])[1:(nrow(w.confirmed.ls[[37]])-1),i], 
+type="h", col="darkred",
+main=paste("China /", names(as.data.frame(w.confirmed.ls[[37]])[i])), 
+axes=FALSE, 
+ylab="New COVID-19 confirmed cases per day", 
+xlab="Days since 2020-01-22")
+
+for(i in 1:(length(rect.width)-1)){
+rect(
+xleft=sum(rect.width[1:i]),
+xright=sum(rect.width[1:(i+1)]),
+ybottom=-1,
+ytop=(max(China.curr.prov.c, na.rm=TRUE)+1)*5,
+col=rgb(0,0,0,(.05*(i %% 2 != 0))),
+border=rgb(0,0,0,(.05*(i %% 2 != 0)))
+)
+}
+
+axis(1)
+if(max(China.curr.prov.c, na.rm=TRUE) <= 5){
+axis(2, at = c(0:max(China.curr.prov.c, na.rm=TRUE)), labels=c(0:max(China.curr.prov.c, na.rm=TRUE)))
+} else {axis(2)}
+
+dev.off()
+} # China provinces for(){} loop closed;
+
+for(i in 1:(ncol(w.deaths.ls[[37]]))){
+png(paste("../plots/world/China/increments/d/COVID-19.deaths.China.", colnames(w.confirmed.ls[[37]])[i], ".png", sep=""), height=750, width=1000, res=120, pointsize=10)
+
+China.curr.prov.d <- as.data.frame(w.deaths.ls[[37]])[2:nrow(w.deaths.ls[[37]]),i] - 
+as.data.frame(w.deaths.ls[[37]])[1:(nrow(w.deaths.ls[[37]])-1),i]
+
+plot(
+as.data.frame(w.deaths.ls[[37]])[2:nrow(w.deaths.ls[[37]]),i] - 
+as.data.frame(w.deaths.ls[[37]])[1:(nrow(w.deaths.ls[[37]])-1),i], 
+type="h", col="black",
+main=paste("China /", names(as.data.frame(w.deaths.ls[[37]])[i])), 
+axes=FALSE, 
+ylab="New COVID-19 associated deaths per day", 
+xlab="Days since 2020-01-22")
+
+for(i in 1:(length(rect.width)-1)){
+rect(
+xleft=sum(rect.width[1:i]),
+xright=sum(rect.width[1:(i+1)]),
+ybottom=-1,
+ytop=(max(China.curr.prov.d, na.rm=TRUE)+1)*5,
+col=rgb(0,0,0,(.05*(i %% 2 != 0))),
+border=rgb(0,0,0,(.05*(i %% 2 != 0)))
+)
+}
+
+axis(1)
+if(max(China.curr.prov.d, na.rm=TRUE) <= 5){
+axis(2, at = c(0:max(China.curr.prov.d, na.rm=TRUE)), labels=c(0:max(China.curr.prov.d, na.rm=TRUE)))
+} else {axis(2)}
+
+dev.off()
+
+} # China provinces for(){} loop closed;
+
+China.c.df <- as.data.frame(w.confirmed.ls[[37]])
+China.d.df <- as.data.frame(w.deaths.ls[[37]])
+China.r.df <- as.data.frame(w.recovered.ls[[37]])
+
+China.c.df$TOT <- rowSums(China.c.df)
+China.d.df$TOT <- rowSums(China.d.df)
+China.r.df$TOT <- rowSums(China.r.df)
+
+png("../plots/world/China/COVID-19.confirmed.China.png", height=750, width=1000, res=120, pointsize=10)
+
+plot(
+China.c.df$TOT[2:nrow(China.c.df)] - 
+China.c.df$TOT[1:(nrow(China.c.df)-1)], 
+type="h", col="darkred",
+main="China",
+frame=FALSE, 
+ylab="New COVID-19 confirmed cases per day", 
+xlab="Days since 2020-01-22")
+
+for(i in 1:(length(rect.width)-1)){
+rect(
+xleft=sum(rect.width[1:i]),
+xright=sum(rect.width[1:(i+1)]),
+ybottom=-1,
+ytop=max(w.confirmed.ls[[j]], na.rm=TRUE)*5,
+col=rgb(0,0,0,(.05*(i %% 2 != 0))),
+border=rgb(0,0,0,(.05*(i %% 2 != 0)))
+)
+}
+
+axis(1)
+axis(2)
+
+dev.off()
+
+png("../plots/world/China/COVID-19.deaths.China.png", height=750, width=1000, res=120, pointsize=10)
+
+plot(
+China.d.df$TOT[2:nrow(China.d.df)] - 
+China.d.df$TOT[1:(nrow(China.d.df)-1)], 
+type="h", col="black",
+main="China",
+frame=FALSE, 
+ylab="New COVID-19-associated deaths per day", 
+xlab="Days since 2020-01-22")
+
+for(i in 1:(length(rect.width)-1)){
+rect(
+xleft=sum(rect.width[1:i]),
+xright=sum(rect.width[1:(i+1)]),
+ybottom=-1,
+ytop=max(w.deaths.ls[[j]], na.rm=TRUE)*5,
+col=rgb(0,0,0,(.05*(i %% 2 != 0))),
+border=rgb(0,0,0,(.05*(i %% 2 != 0)))
+)
+}
+
+axis(1)
+axis(2)
+
+dev.off()
+
+png("../plots/world/China/COVID-19.China.lin.png", height=750, width=1000, res=120, pointsize=10)
+
+plot(
+China.c.df$TOT, 
+type="n",
+main="China",
+axes=FALSE,
+ylab="COVID-19 cases (linear scale)",
+xlab="Days since 2020-01-22")
+
+for(i in 1:(length(rect.width)-1)){
+rect(
+xleft=sum(rect.width[1:i]),
+xright=sum(rect.width[1:(i+1)]),
+ybottom=-1,
+ytop=max(China.c.df$TOT, na.rm=TRUE)*5,
+col=rgb(0,0,0,(.05*(i %% 2 != 0))),
+border=rgb(0,0,0,(.05*(i %% 2 != 0)))
+)
+}
+
+lines(China.c.df$TOT[2:nrow(China.c.df)]-China.c.df$TOT[1:(nrow(China.c.df)-1)], type="h", col="darkred", lwd=2)
+lines(China.d.df$TOT[2:nrow(China.d.df)]-China.d.df$TOT[1:(nrow(China.d.df)-1)], type="h", col="black", lwd=2)
+
+lines(China.c.df$TOT, col="darkred", lwd=2)
+
+lines(China.d.df$TOT, col="white", lwd=5)
+lines(China.d.df$TOT, col="black", lwd=2)
+
+lines(China.r.df$TOT, col="white", lwd=5)
+lines(China.r.df$TOT, col="darkgreen", lwd=2)
+
+lines(China.c.df$TOT - (China.d.df$TOT + China.r.df$TOT), col="white", lwd=5)
+lines(China.c.df$TOT - (China.d.df$TOT + China.r.df$TOT), col="red", lwd=2)
+
+axis(1)
+axis(2)
+
+dev.off()
+
+png("../plots/world/China/COVID-19.China.log.png", height=750, width=1000, res=120, pointsize=10)
+
+plot(
+log10(China.c.df$TOT), 
+type="n",
+ylim=c(0, max(log10(China.c.df$TOT), na.rm=TRUE)),
+main="China",
+axes=FALSE,
+ylab="COVID-19 cases (logarythmic scale)",
+xlab="Days since 2020-01-22")
+
+lines(log10(China.c.df$TOT[2:nrow(China.c.df)]-China.c.df$TOT[1:(nrow(China.c.df)-1)]), type="h", col="darkred", lwd=2)
+lines(log10(China.d.df$TOT[2:nrow(China.d.df)]-China.d.df$TOT[1:(nrow(China.d.df)-1)]), type="h", col="black", lwd=2)
+
+lines(log10(China.c.df$TOT), col="darkred", lwd=2)
+
+lines(log10(China.d.df$TOT), col="white", lwd=5)
+lines(log10(China.d.df$TOT), col="black", lwd=2)
+
+lines(log10(China.r.df$TOT), col="white", lwd=5)
+lines(log10(China.r.df$TOT), col="darkgreen", lwd=2)
+
+lines(log10(China.c.df$TOT - (China.d.df$TOT + China.r.df$TOT)), col="white", lwd=5)
+lines(log10(China.c.df$TOT - (China.d.df$TOT + China.r.df$TOT)), col="red", lwd=2)
+
+for(i in 1:(length(rect.width)-1)){
+rect(
+xleft=sum(rect.width[1:i]),
+xright=sum(rect.width[1:(i+1)]),
+ybottom=-1,
+ytop=100,
+col=rgb(0,0,0,(.05*(i %% 2 != 0))),
+border=rgb(0,0,0,(.05*(i %% 2 != 0)))
+)
+}
+
+axis(1)
+axis(2, at=log10(1*10^(0:6)), labels=c(1,10,100,"1K","10K","100K","1M"))
+axis(2, at=log10(c(1:9, seq(10,100,10), seq(200,1000,100), seq(2000,10000,1000), seq(20000,100000,10000), seq(200000,1000000,100000), seq(2000000,10000000,1000000))), labels=FALSE)
+
+dev.off()
