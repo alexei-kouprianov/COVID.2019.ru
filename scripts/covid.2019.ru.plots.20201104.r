@@ -328,15 +328,23 @@ dev.off()
 png("../plots/41.COVID.2019.hist.i.7.var.rmean.7.png", height=750, width=1000, res=120, pointsize=10)
 par(mar=c(6,5,4,5)+.1, mgp=c(1.7,.5,-.5))
 
-hist(pop.derived$i.7.var.rmean.7, breaks=seq(0, .58, .005), col=8, 
+hist.ad_hoc <- hist(pop.derived$i.7.var.rmean.7, 
+breaks=seq(0, ceiling(max(pop.derived$i.7.var.rmean.7)/.005)*.005, .005),
+col=8,
 main=paste("Russian Federation /", tail(RU.TIME, 1)),
-xlab="COVID-2019 mean excessive smoothing over past 7 days")
+xlab="COVID-2019 mean excessive smoothing over past 7 days"
+)
+
 rug(pop.derived$i.7.var.rmean.7, col=rgb(0,0,0,.4))
+
 abline(v=summary(pop.derived$i.7.var.rmean.7)[c(2, 5)], lty=3, col=3)
 abline(v=summary(pop.derived$i.7.var.rmean.7)[3], lty=5, col=3)
 abline(v=summary(pop.derived$i.7.var.rmean.7)[4], lty=5, col=2)
 abline(v=(median(pop.derived$i.7.var.rmean.7) + c(-1,1)*1.5*IQR((pop.derived$i.7.var.rmean.7))), lty=3, col=4)
-axis(2, at=1:20, labels=FALSE, tcl=-.25)
+
+axis(1, at=seq(0, (ceiling(max(pop.derived$i.7.var.rmean.7)/.01)*.01), .01), labels=FALSE, tcl=-.25)
+axis(1, at=seq(0, (floor(max(pop.derived$i.7.var.rmean.7)/.1)*.1), .1), labels=FALSE, tcl=-.5)
+axis(2, at=1:max(hist.ad_hoc$counts), labels=FALSE, tcl=-.25)
 
 legend(
 "topright", bty="n",
@@ -356,12 +364,12 @@ dev.off()
 png("../plots/42.COVID.2019.boxplot.i.7.var.rmean.7.png", height=750, width=500, res=120, pointsize=10)
 par(mar=c(1,5,3,5)+.1, mgp=c(1.7,.5,-.5))
 
-boxplot(pop.derived$i.7.var.rmean.7, pch=20, cex=.7, col=8, frame=FALSE,
+boxplot.ad_hoc <- boxplot(pop.derived$i.7.var.rmean.7, pch=20, cex=.7, col=8, frame=FALSE,
 main=paste("Russian Federation /", tail(RU.TIME, 1)),
 ylab="COVID-2019 mean excessive smoothing over past 7 days")
 text(x=1,
-y=tail(pop.derived[order(pop.derived$i.7.var.rmean.7),c("LOCUS","i.7.var.rmean.7")]$i.7.var.rmean.7, 12),
-labels=tail(pop.derived[order(pop.derived$i.7.var.rmean.7),c("LOCUS","i.7.var.rmean.7")]$LOCUS, 12),
+y=tail(pop.derived[order(pop.derived$i.7.var.rmean.7),c("LOCUS","i.7.var.rmean.7")]$i.7.var.rmean.7, length(boxplot.ad_hoc$out)),
+labels=tail(pop.derived[order(pop.derived$i.7.var.rmean.7),c("LOCUS","i.7.var.rmean.7")]$LOCUS, length(boxplot.ad_hoc$out)),
 pos=c(2,4),
 cex=.7)
 
