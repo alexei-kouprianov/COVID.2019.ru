@@ -4,6 +4,7 @@
 ################################################################
 ################################################################
 
+dir.create("../plots/")
 dir.create("../plots/regions/")
 dir.create("../plots/regions/linear/")
 dir.create("../plots/regions/increments/")
