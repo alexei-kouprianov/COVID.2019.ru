@@ -9,6 +9,8 @@
 
 # requires covid.2019.ru.main.20201104.r
 
+july.2020.base <- 3705 # This is a calculated parameter based on preliminary estimates of excessive mortality by 2020-07-31, in the public version of the script it is added as a constant for simplicity;
+
 spb.m.d <- covid.2019.ru.dyn.tot.primary$"St. Petersburg"[184:nrow(covid.2019.ru.dyn.tot.primary$"St. Petersburg"),]
 spb.m.d$d.CS <- july.2020.base + cumsum(spb.m.d$d)
 spb.m.d$DAYS <- 1:nrow(spb.m.d)
