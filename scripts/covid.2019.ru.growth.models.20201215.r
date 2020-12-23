@@ -7,6 +7,9 @@
 ################################################################
 ################################################################
 
+library(drc)
+library(aomisc)
+
 # requires covid.2019.ru.main.20201104.r
 
 july.2020.base <- 3705 # This is a calculated parameter based on preliminary estimates of excessive mortality by 2020-07-31, in the public version of the script it is added as a constant for simplicity;
