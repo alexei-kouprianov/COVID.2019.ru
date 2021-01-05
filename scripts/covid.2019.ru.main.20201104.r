@@ -200,4 +200,4 @@ save.image()
 render("../Rmd/daily.report.Rmd")
 
 # plot(covid.2019.ru.dyn.tot.primary[[68]]$TIME, covid.2019.ru.dyn.tot.primary[[68]]$i, type="h")
-tail(covid.2019.ru.dyn.tot.primary[[68]], 25)
+tail(covid.2019.ru.dyn.tot.primary[[68]], 10)
