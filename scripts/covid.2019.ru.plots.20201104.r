@@ -865,3 +865,39 @@ format = "%Y-%m-%d",
 las = 2)
 
 dev.off()
+
+# Updating xlsx data files;
+
+file.remove(
+	c(
+	"../data/xlsx/data.01.xlsx",
+	"../data/xlsx/data.02.xlsx",
+	"../data/xlsx/data.03.xlsx",
+	"../data/xlsx/data.04.xlsx",
+	"../data/xlsx/data.05.xlsx"
+	)
+)
+
+regionNamesXLSX <- names(covid.2019.ru.dyn.tot.primary)
+
+regionNamesXLSX[17] <- "Crimea"
+
+for(i in 1:17){
+	write.xlsx(covid.2019.ru.dyn.tot.primary[[i]], file = "../data/xlsx/data.01.xlsx", sheetName = regionNamesXLSX[i], row.names = FALSE, append=TRUE)
+}
+
+for(i in 18:34){
+	write.xlsx(covid.2019.ru.dyn.tot.primary[[i]], file = "../data/xlsx/data.02.xlsx", sheetName = regionNamesXLSX[i], row.names = FALSE, append=TRUE)
+}
+
+for(i in 35:51){
+	write.xlsx(covid.2019.ru.dyn.tot.primary[[i]], file = "../data/xlsx/data.03.xlsx", sheetName = regionNamesXLSX[i], row.names = FALSE, append=TRUE)
+}
+
+for(i in 52:68){
+	write.xlsx(covid.2019.ru.dyn.tot.primary[[i]], file = "../data/xlsx/data.04.xlsx", sheetName = regionNamesXLSX[i], row.names = FALSE, append=TRUE)
+}
+
+for(i in 69:85){
+	write.xlsx(covid.2019.ru.dyn.tot.primary[[i]], file = "../data/xlsx/data.05.xlsx", sheetName = regionNamesXLSX[i], row.names = FALSE, append=TRUE)
+}
