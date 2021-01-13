@@ -866,45 +866,19 @@ las = 2)
 
 dev.off()
 
-# Updating xlsx data files;
+################################################################
+################################################################
+# Export to XLSX files in RosStat format
+################################################################
+################################################################
 
-file.remove(
-	c(
-	"../data/xlsx/data.01.xlsx",
-	"../data/xlsx/data.02.xlsx",
-	"../data/xlsx/data.03.xlsx",
-	"../data/xlsx/data.04.xlsx",
-	"../data/xlsx/data.05.xlsx"
-	)
-)
-
-regionNamesXLSX <- names(covid.2019.ru.dyn.tot.primary)
-
-regionNamesXLSX[17] <- "Crimea"
-
-for(i in 1:17){
-	write.xlsx(covid.2019.ru.dyn.tot.primary[[i]], file = "../data/xlsx/data.01.xlsx", sheetName = regionNamesXLSX[i], row.names = FALSE, append=TRUE)
-}
-
-for(i in 18:34){
-	write.xlsx(covid.2019.ru.dyn.tot.primary[[i]], file = "../data/xlsx/data.02.xlsx", sheetName = regionNamesXLSX[i], row.names = FALSE, append=TRUE)
-}
-
-for(i in 35:51){
-	write.xlsx(covid.2019.ru.dyn.tot.primary[[i]], file = "../data/xlsx/data.03.xlsx", sheetName = regionNamesXLSX[i], row.names = FALSE, append=TRUE)
-}
-
-for(i in 52:68){
-	write.xlsx(covid.2019.ru.dyn.tot.primary[[i]], file = "../data/xlsx/data.04.xlsx", sheetName = regionNamesXLSX[i], row.names = FALSE, append=TRUE)
-}
-
-for(i in 69:85){
-	write.xlsx(covid.2019.ru.dyn.tot.primary[[i]], file = "../data/xlsx/data.05.xlsx", sheetName = regionNamesXLSX[i], row.names = FALSE, append=TRUE)
-}
+# Creating empty objects to collect COVID-19 cases;
 
 CONFIRMED.df <- NULL
 RECOVERED.df <- NULL
 DEATHS.df <- NULL
+
+# Collecting COVID-19 cases by regions into Regions x Dates data frames;
 
 for(i in 1:length(covid.2019.ru.dyn.tot.primary)){
 CONFIRMED.df <- rbind.data.frame(CONFIRMED.df, cbind.data.frame(pop$REGION.RosStat[i], t(covid.2019.ru.dyn.tot.primary[[i]]$i)))
@@ -912,15 +886,23 @@ RECOVERED.df <- rbind.data.frame(RECOVERED.df, cbind.data.frame(pop$REGION.RosSt
 DEATHS.df <- rbind.data.frame(DEATHS.df, cbind.data.frame(pop$REGION.RosStat[i], t(covid.2019.ru.dyn.tot.primary[[i]]$i)))
 }
 
+# Assigning column names to data frames;
+
 colnames(CONFIRMED.df) <- c("REGION", as.character(covid.2019.ru.dyn.tot.primary[[1]]$TIME))
 colnames(RECOVERED.df) <- c("REGION", as.character(covid.2019.ru.dyn.tot.primary[[1]]$TIME))
 colnames(DEATHS.df) <- c("REGION", as.character(covid.2019.ru.dyn.tot.primary[[1]]$TIME))
+
+# Sorting data frames RosStat style;
 
 CONFIRMED.df <- CONFIRMED.df[order(CONFIRMED.df$REGION),]
 RECOVERED.df <- RECOVERED.df[order(RECOVERED.df$REGION),]
 DEATHS.df <- DEATHS.df[order(DEATHS.df$REGION),]
 
+# Removing the previous version of the XLSX file;
+
 file.remove("../data/xlsx/data.xlsx")
+
+# Printing the new XLSX file;
 
 write.xlsx(CONFIRMED.df, file = "../data/xlsx/data.xlsx", sheetName = "CONFIRMED", row.names = FALSE)
 write.xlsx(RECOVERED.df, file = "../data/xlsx/data.xlsx", sheetName = "RECOVERED", row.names = FALSE, append = TRUE)
