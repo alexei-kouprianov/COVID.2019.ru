@@ -901,3 +901,27 @@ for(i in 52:68){
 for(i in 69:85){
 	write.xlsx(covid.2019.ru.dyn.tot.primary[[i]], file = "../data/xlsx/data.05.xlsx", sheetName = regionNamesXLSX[i], row.names = FALSE, append=TRUE)
 }
+
+CONFIRMED.df <- NULL
+RECOVERED.df <- NULL
+DEATHS.df <- NULL
+
+for(i in 1:length(covid.2019.ru.dyn.tot.primary)){
+CONFIRMED.df <- rbind.data.frame(CONFIRMED.df, cbind.data.frame(pop$REGION.RosStat[i], t(covid.2019.ru.dyn.tot.primary[[i]]$i)))
+RECOVERED.df <- rbind.data.frame(RECOVERED.df, cbind.data.frame(pop$REGION.RosStat[i], t(covid.2019.ru.dyn.tot.primary[[i]]$i)))
+DEATHS.df <- rbind.data.frame(DEATHS.df, cbind.data.frame(pop$REGION.RosStat[i], t(covid.2019.ru.dyn.tot.primary[[i]]$i)))
+}
+
+colnames(CONFIRMED.df) <- c("REGION", as.character(covid.2019.ru.dyn.tot.primary[[1]]$TIME))
+colnames(RECOVERED.df) <- c("REGION", as.character(covid.2019.ru.dyn.tot.primary[[1]]$TIME))
+colnames(DEATHS.df) <- c("REGION", as.character(covid.2019.ru.dyn.tot.primary[[1]]$TIME))
+
+CONFIRMED.df <- CONFIRMED.df[order(CONFIRMED.df$REGION),]
+RECOVERED.df <- RECOVERED.df[order(RECOVERED.df$REGION),]
+DEATHS.df <- DEATHS.df[order(DEATHS.df$REGION),]
+
+file.remove("../data/xlsx/data.xlsx")
+
+write.xlsx(CONFIRMED.df, file = "../data/xlsx/data.xlsx", sheetName = "CONFIRMED", row.names = FALSE)
+write.xlsx(RECOVERED.df, file = "../data/xlsx/data.xlsx", sheetName = "RECOVERED", row.names = FALSE, append = TRUE)
+write.xlsx(DEATHS.df, file = "../data/xlsx/data.xlsx", sheetName = "DEATHS", row.names = FALSE, append = TRUE)

@@ -60,12 +60,16 @@
 
 pop <- read.table("../misc/population.txt", h=TRUE, sep="\t")
 increment <- read.table("../downloads/increment.txt", h=TRUE, sep="\t")
+REGION.RosStat.df <- read.table("../misc/REGION.RosStat.txt", h=TRUE, sep="\t")
 
 # Transformning variables;
 
 increment$TIME <- strptime(increment$TIMESTAMP, "%Y-%m-%d %H:%M:%S")
 increment$REGION <- as.character(increment$REGION)
-increment$REGION <- factor(increment$REGION, levels=as.character(pop$REGION.INCR))
+increment$REGION <- factor(increment$REGION, levels = as.character(pop$REGION.INCR))
+
+pop$REGION.RosStat <- as.character(pop$REGION.RosStat)
+pop$REGION.RosStat <- factor(pop$REGION.RosStat, levels = as.character(REGION.RosStat.df$REGION.RosStat.levels))
 
 # Appending new increments by regions to primary dynamics list of data frames 'covid.2019.ru.dyn.tot.primary';
 
