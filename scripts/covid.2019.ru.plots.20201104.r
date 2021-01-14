@@ -882,8 +882,8 @@ DEATHS.df <- NULL
 
 for(i in 1:length(covid.2019.ru.dyn.tot.primary)){
 CONFIRMED.df <- rbind.data.frame(CONFIRMED.df, cbind.data.frame(pop$REGION.RosStat[i], t(covid.2019.ru.dyn.tot.primary[[i]]$i)))
-RECOVERED.df <- rbind.data.frame(RECOVERED.df, cbind.data.frame(pop$REGION.RosStat[i], t(covid.2019.ru.dyn.tot.primary[[i]]$i)))
-DEATHS.df <- rbind.data.frame(DEATHS.df, cbind.data.frame(pop$REGION.RosStat[i], t(covid.2019.ru.dyn.tot.primary[[i]]$i)))
+RECOVERED.df <- rbind.data.frame(RECOVERED.df, cbind.data.frame(pop$REGION.RosStat[i], t(covid.2019.ru.dyn.tot.primary[[i]]$r)))
+DEATHS.df <- rbind.data.frame(DEATHS.df, cbind.data.frame(pop$REGION.RosStat[i], t(covid.2019.ru.dyn.tot.primary[[i]]$d)))
 }
 
 # Assigning column names to data frames;
