@@ -191,7 +191,7 @@ pop.derived$ACTIVE.100K <- pop.derived$ACTIVE / (pop.derived$POPULATION.20200101
 .report.RUS.i.today <- round(tail(RU.i, 1)/1000, 1)
 .report.RUS.d.today <- tail(RU.d, 1)
 .report.RUS.i.14.100 <- round(sum(tail(RU.i, 14)) / (146748590 / 100000), 2)
-.report.incr.abs.t <- subset(pop.derived, pop.derived$DETECTED.1 >= .report.bad.base)[, c(7,13)]
+.report.incr.abs.t <- subset(pop.derived, pop.derived$DETECTED.1 >= .report.bad.base)[, c("REGION.INCR","DETECTED.1")]
    .report.incr.abs.t <- .report.incr.abs.t[order(-.report.incr.abs.t$DETECTED.1),]
    .report.incr.abs.t$PRINT <- paste(.report.incr.abs.t[,1], .report.incr.abs.t[,2], sep=" : ")
 .report.Moscow <- round(tail(cumsum(covid.2019.ru.dyn.tot.primary[[46]]$i/1000), 1), 1)
