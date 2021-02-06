@@ -204,4 +204,14 @@ save.image()
 render("../Rmd/daily.report.Rmd")
 
 # plot(covid.2019.ru.dyn.tot.primary[[68]]$TIME, covid.2019.ru.dyn.tot.primary[[68]]$i, type="h")
-tail(covid.2019.ru.dyn.tot.primary[[68]], 10)
+covid.2019.ru.dyn.tot.primary.SPb <- cbind.data.frame(
+		tail(covid.2019.ru.dyn.tot.primary[[68]], 10),
+		tail(
+			cumsum(covid.2019.ru.dyn.tot.primary[[68]]$i) - 
+			(cumsum(covid.2019.ru.dyn.tot.primary[[68]]$r) + 
+			cumsum(covid.2019.ru.dyn.tot.primary[[68]]$d)), 10)
+	)
+
+colnames(covid.2019.ru.dyn.tot.primary.SPb) <- c(colnames(covid.2019.ru.dyn.tot.primary[[68]]), "a")
+
+print(covid.2019.ru.dyn.tot.primary.SPb)
