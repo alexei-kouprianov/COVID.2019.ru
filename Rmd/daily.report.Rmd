@@ -27,10 +27,8 @@ knitr::kable(.report.incr.abs.t$PRINT, caption="")
 
 **Техническое.** В виду многочисленности графиков по регионам, отсылаю за ними к папкам в репозитории. 
 
-**Прямые ссылки:**
+* **Графики по регионам:** < https://github.com/alexei-kouprianov/COVID.2019.ru/tree/master/plots/regions >
 
-* < https://github.com/alexei-kouprianov/COVID.2019.ru/tree/master/plots/regions >
+* **Скрипт и данные.** < https://github.com/alexei-kouprianov/COVID.2019.ru >
 
-**Скрипт и данные.** < https://github.com/alexei-kouprianov/COVID.2019.ru >
-
-**Исходные данные.** < https://стопкоронавирус.рф/information/ >
+* **Исходные данные.** < https://стопкоронавирус.рф/information/ >
