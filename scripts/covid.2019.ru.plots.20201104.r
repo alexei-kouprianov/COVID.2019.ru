@@ -392,8 +392,8 @@ main="Russian Federation",
 las=1, 
 axes=FALSE)
 
-axis(1, at = seq(0, 4*10^5, 1*10^5), labels=c("0", paste(seq(100, 400, 100), "K", sep="")))
-axis(3, at = seq(0, 4*10^5, 1*10^5), labels=c("0", paste(seq(100, 400, 100), "K", sep="")))
+axis(1, at = seq(0, 10*10^5, 1*10^5), labels=c("0", paste(seq(100, 1000, 100), "K", sep="")))
+axis(3, at = seq(0, 10*10^5, 1*10^5), labels=c("0", paste(seq(100, 1000, 100), "K", sep="")))
 
 dev.off()
 
