@@ -908,6 +908,10 @@ write.xlsx(CONFIRMED.df, file = "../data/xlsx/data.xlsx", sheetName = "CONFIRMED
 write.xlsx(RECOVERED.df, file = "../data/xlsx/data.xlsx", sheetName = "RECOVERED", row.names = FALSE, append = TRUE)
 write.xlsx(DEATHS.df, file = "../data/xlsx/data.xlsx", sheetName = "DEATHS", row.names = FALSE, append = TRUE)
 
+# Backup;
+
+save.image()
+
 # GitHub commit;
 
 print(paste("Updated to", tail(covid.2019.ru.dyn.tot.primary[[1]]$TIME, 1), "MSK;"))
